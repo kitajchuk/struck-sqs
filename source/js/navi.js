@@ -56,12 +56,16 @@ const navi = {
     close () {
         this.isOpen = false;
         core.dom.html.removeClass( "is-navi-open" );
+
+        this.closeContact();
     },
 
 
     closeContact () {
         this.isContactOpen = false;
         core.dom.html.removeClass( "is-contact-open" );
+
+        core.emitter.fire( "app--contactclose" );
     },
 
 

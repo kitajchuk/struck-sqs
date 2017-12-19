@@ -46,8 +46,8 @@
             <div class="contact__form js-contact-form">
                 <div class="h2 -light">Contact</div>
                 <div class="m -light -bump3">\ {websiteSettings.contactPhoneNumber}</div>
-                <div class="m -light">\ {websiteSettings.contactEmail}</div>
-                <div class="m -light">\ press@struck.com</div>
+                <div class="m -light">\ <a href="mailto:newbiz@struck.com" target="_blank">newbiz@struck.com</a></div>
+                <div class="m -light">\ <a href="mailto:press@struck.com" target="_blank">press@struck.com</a></div>
                 <div class="m -color">\ Locations</div>
                 <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_41600" placeholder="*Name" />
                 <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_24222" placeholder="Company" />

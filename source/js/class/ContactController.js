@@ -1,4 +1,5 @@
 import $ from "properjs-hobo";
+import * as core from "../core";
 
 
 
@@ -31,6 +32,10 @@ class ContactController {
         this.submit.on( "click", () => {
             this.gather();
             this.send();
+        });
+
+        core.emitter.on( "app--contactclose", () => {
+            this.clear();
         });
     }
 
