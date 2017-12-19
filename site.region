@@ -20,23 +20,63 @@
         {squarespace-headers}
     </head>
     <body>
-        {@|apply header.block}
-        <squarespace:navigation navigationId="navi" template="navi" />
-        <main class="main js-main" data-content-field="main-content" data-website-id="{website.id}" {.section collection}data-collection-id="{collection.id}" data-collection-title="{.if collection.homepage}{website.siteTitle}{.or}{collection.title} – {website.siteTitle}{.end}"{.end} {.section item}data-item-id="{item.id}" data-item-title="{item.title} – {collection.title} – {website.siteTitle}"{.end}>
-            {.equal? collection.typeName "page"}
-                {.section collection}
-                    {@|apply page.block}
+        <nav class="navi js-navi -wrap -fzero" data-content-field="navigation-navi">
+            <div class="navi__header">
+                <div class="icon icon--ex js-controller--navi">
+                    <span class="ex1"></span>
+                    <span class="ex2"></span>
+                </div>
+            </div>
+            <squarespace:navigation navigationId="navi" template="navi" />
+            <ul class="navi__social social">
+                {.repeated section website.socialAccounts}
+                    <li class="social__li -column">
+                        <a href="{profileUrl}" class="social__a m -light" target="_blank">{serviceName}</a>
+                    </li>
                 {.end}
-            {.or}
-                {squarespace.main-content}
-            {.end}
-            <h1 class="h1 -wrap -exp">This is bold.</h1>
-            <h2 class="h2 -fmedium -wrap -exp">This is medium</h2>
-            <h3 class="h3 -fregular -wrap -exp">This is regular</h3>
-            <h3 class="h3 -flight -wrap -exp">This is light.</h3>
-            <h3 class="h3 -fthin -wrap -exp">This is thin</h3>
+            </ul>
+        </nav>
+        <menu class="contact js-contact -wrap -fzero">
+            <div class="contact__header">
+                <div class="icon icon--ex js-controller--contact">
+                    <span class="ex1"></span>
+                    <span class="ex2"></span>
+                </div>
+            </div>
+            <div class="contact__form js-contact-form">
+                <div class="h2 -light">Contact</div>
+                <div class="m -light -bump3">\ {websiteSettings.contactPhoneNumber}</div>
+                <div class="m -light">\ {websiteSettings.contactEmail}</div>
+                <div class="m -light">\ press@struck.com</div>
+                <div class="m -color">\ Locations</div>
+                <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_41600" placeholder="*Name" />
+                <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_24222" placeholder="Company" />
+                <input class="inp js-contact-field -bump3" type="text" name="email-yui_3_17_2_1_1513626979285_25400" placeholder="*Email" />
+                <input class="inp js-contact-field -bump3" type="text" name="phone-yui_3_17_2_1_1513626979285_43483" placeholder="Phone" />
+                <textarea class="inp inp--txt js-contact-field -bump3" name="textarea-yui_3_17_2_17_1513626979285_3714" placeholder="*Message"></textarea>
+                <div class="m -light -bump">*Required</div>
+                <div class="-bump6">
+                    <div class="-column -column--2of4">
+                        <button class="btn btn--light js-contact-submit">Submit</button>
+                    </div>
+                    <div class="-column -column--2of4 -text--right">
+                        <div class="m -grey -curse js-contact-reset">Reset Form</div>
+                    </div>
+                </div>
+            </div>
+        </menu>
+        <main class="main js-main">
+            {@|apply header.block}
+            <section class="page js-page -fzero" data-content-field="main-content" data-website-id="{website.id}" {.section collection}data-collection-id="{collection.id}" data-collection-title="{.if collection.homepage}{website.siteTitle}{.or}{collection.title} – {website.siteTitle}{.end}"{.end} {.section item}data-item-id="{item.id}" data-item-title="{item.title} – {collection.title} – {website.siteTitle}"{.end}>
+                {.equal? collection.typeName "page"}
+                    {@|apply page.block}
+                {.or}
+                    {squarespace.main-content}
+                {.end}
+                {@|apply module-contact.block}
+            </section>
+            {@|apply footer.block}
         </main>
-        {@|apply footer.block}
         {@|apply intro.block}
         <script type="text/javascript" src="/scripts/app.js?v={squarespace.template-revision}"></script>
         {@|apply google.block}

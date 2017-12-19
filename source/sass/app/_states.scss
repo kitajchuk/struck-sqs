@@ -2,13 +2,7 @@
  * Document States
 *******************************************************************************/
 .is-hoverable {
-    .a,
-    .cms a {
-        &:hover {
-            color: $black;
-            border-bottom-color: $black;
-            }
-    }
+    // Hover specific here?
 }
 
 .is-touchable {

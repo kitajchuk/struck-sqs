@@ -28,6 +28,9 @@
 .cms ul li {
     @include ul-li();
     }
+.m {
+    @include m();
+    }
 
 
 /******************************************************************************
@@ -36,9 +39,6 @@
 .a,
 .cms a {
     @include a();
-    border-bottom: 1px solid transparent;
-    transition: color $fast-duration $ease,
-                border-bottom-color $fast-duration $ease;
     }
 
 
@@ -56,4 +56,8 @@
 .h3,
 .cms h3 {
     @include h3();
+    }
+.h4,
+.cms h4 {
+    @include h4();
     }

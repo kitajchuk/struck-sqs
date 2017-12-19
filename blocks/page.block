@@ -1,6 +1,6 @@
-<div class="page -wrap -exp-1" data-uid="{urlId}">
-    {.if mainContent}
-        {mainContent}
+<div class="page__wrap -wrap -exp" data-uid="{collection.urlId}">
+    {.if collection.mainContent}
+        {collection.mainContent}
     {.or}
         {squarespace.main-content}
     {.end}

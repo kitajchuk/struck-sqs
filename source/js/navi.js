@@ -20,9 +20,12 @@ const navi = {
      */
     init () {
         this.isOpen = false;
+        this.isContactOpen = false;
         this.element = core.dom.navi;
         this.items = this.element.find( ".js-navi-a" );
         this.trigger = core.dom.body.find( ".js-controller--navi" );
+        this.contact = core.dom.contact;
+        this.contactTrigger = core.dom.body.find( ".js-controller--contact" );
         this.bind();
     },
 
@@ -31,20 +34,34 @@ const navi = {
         this.trigger.on( "click", () => {
             this.toggle();
         });
+
+        this.contactTrigger.on( "click", () => {
+            this.toggleContact();
+        });
     },
 
 
     open () {
         this.isOpen = true;
-        this.element.addClass( "is-active" );
         core.dom.html.addClass( "is-navi-open" );
+    },
+
+
+    openContact () {
+        this.isContactOpen = true;
+        core.dom.html.addClass( "is-contact-open" );
     },
 
 
     close () {
         this.isOpen = false;
-        this.element.removeClass( "is-active" );
         core.dom.html.removeClass( "is-navi-open" );
+    },
+
+
+    closeContact () {
+        this.isContactOpen = false;
+        core.dom.html.removeClass( "is-contact-open" );
     },
 
 
@@ -60,6 +77,16 @@ const navi = {
 
         } else {
             this.open();
+        }
+    },
+
+
+    toggleContact () {
+        if ( this.isContactOpen ) {
+            this.closeContact();
+
+        } else {
+            this.openContact();
         }
     }
 };

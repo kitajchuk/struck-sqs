@@ -1,3 +1,7 @@
 .svg {
     transition: fill $fast-duration $ease;
     }
+.svg--logo {
+    fill: $red;
+    height: $logo-height;
+    }

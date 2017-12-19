@@ -1,6 +1,8 @@
 .header {
-    height: $header-height;
     left: 0;
+    padding-left: $header-padding;
+    padding-right: $header-padding;
+    padding-top: $header-padding;
     position: fixed;
     top: 0;
     width: 100%;

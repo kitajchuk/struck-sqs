@@ -58,12 +58,12 @@ const dom = {
     /**
      *
      * @public
-     * @member main
+     * @member page
      * @memberof core.dom
-     * @description The cached main node.
+     * @description The cached page node.
      *
      */
-    main: $( config.mainSelector ),
+    page: $( config.pageSelector ),
 
 
     /**
@@ -74,7 +74,18 @@ const dom = {
      * @description The cached <nav> nodes.
      *
      */
-    navi: $( config.naviSelector )
+    navi: $( config.naviSelector ),
+
+
+    /**
+     *
+     * @public
+     * @member contact
+     * @memberof core.dom
+     * @description The cached <contact> nodes.
+     *
+     */
+    contact: $( config.contactSelector )
 };
 
 

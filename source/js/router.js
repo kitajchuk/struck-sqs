@@ -25,7 +25,7 @@ const router = {
         this.pageClass = "";
         this.pageDuration = core.util.getElementDuration( core.dom.html[ 0 ] );
         this.controllers = new Controllers({
-            el: core.dom.main,
+            el: core.dom.page,
             cb: () => {
                 core.emitter.fire( "app--page-teardown" );
             }
@@ -110,18 +110,18 @@ const router = {
      */
     parseDoc ( html ) {
         let doc = document.createElement( "html" );
-        let main = null;
+        let page = null;
 
         doc.innerHTML = html;
 
         doc = $( doc );
-        main = doc.find( core.config.mainSelector );
+        page = doc.find( core.config.pageSelector );
 
         return {
             doc: doc,
-            main: main,
-            html: main[ 0 ].innerHTML,
-            data: main.data()
+            page: page,
+            html: page[ 0 ].innerHTML,
+            data: page.data()
         };
     },
 
@@ -184,7 +184,7 @@ const router = {
     changeContent ( data ) {
         const doc = this.parseDoc( data.response );
 
-        core.dom.main[ 0 ].innerHTML = doc.html;
+        core.dom.page[ 0 ].innerHTML = doc.html;
 
         core.emitter.fire( "app--analytics-pageview", doc );
 

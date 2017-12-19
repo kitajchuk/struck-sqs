@@ -1,12 +1,61 @@
 .navi {
-    &.is-active {
-        pointer-events: none;
+    background-color: $red;
+    color: $white;
+    height: 100vh;
+    left: 0;
+    overflow-y: auto;
+    padding-top: $main-padding;
+    position: fixed;
+    top: 0;
+    transform: translate3d( -100%, 0, 0 );
+    transition: transform $fast-duration $ease;
+    width: 50vw;
 
-        .navi__ul {
-            pointer-events: auto;
-            }
+    @include state( "navi", "open" ) {
+        transform: translate3d( 0, 0, 0 );
     }
 }
-.navi__a {
-    color: $black;
+.navi__header {
+    left: 0;
+    padding-left: $header-padding;
+    padding-right: $header-padding;
+    padding-top: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }
+.navi__social {
+    bottom: 0;
+    left: 0;
+    padding-bottom: 60px;
+    padding-left: $padding-1;
+    position: fixed;
+    width: 100%;
+    }
+
+.contact {
+    background-color: $black3;
+    color: $white;
+    height: 100vh;
+    left: 0;
+    overflow-y: auto;
+    padding-top: $main-padding;
+    position: fixed;
+    top: 0;
+    transform: translate3d( -100%, 0, 0 );
+    transition: transform $fast-duration $ease;
+    width: 50vw;
+
+    @include state( "contact", "open" ) {
+        transform: translate3d( 0, 0, 0 );
+    }
+}
+.contact__header {
+    left: 0;
+    padding-left: $header-padding;
+    padding-right: $header-padding;
+    padding-top: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
     }

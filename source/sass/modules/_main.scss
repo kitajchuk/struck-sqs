@@ -1,5 +1,19 @@
 .main {
-    padding-top: $header-height;
+    position: relative;
+    transition: transform $fast-duration $ease;
+
+    @include state( "navi", "open" ) {
+        transform: translate3d( 50vw, 0, 0 );
+    }
+
+    @include state( "contact", "open" ) {
+        transform: translate3d( 50vw, 0, 0 );
+    }
+}
+
+.page {
+    padding-top: $main-padding;
+    position: relative;
     transition: opacity $fast-duration $ease;
 
     &.is-inactive {
@@ -7,3 +21,24 @@
         pointer-events: none;
         }
 }
+
+.footer {
+    padding-bottom: $header-padding;
+    padding-top: $header-padding;
+
+    .sqs-block {
+        p {
+            @include m();
+            }
+    }
+}
+
+.social {}
+.social__li {
+    & + .social__li {
+        margin-left: 120px;
+        }
+}
+.social__a {
+    text-transform: capitalize;
+    }

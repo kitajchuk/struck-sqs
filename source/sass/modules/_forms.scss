@@ -1,11 +1,26 @@
-.form__input {
-    background-color: transparent;
-    border: 0;
-    box-sizing: border-box;
-    color: inherit;
-    line-height: 1;
-    outline: 0;
-    -webkit-appearance: none;
-    width: 100%;
-    @include p();
+.inp {
+    @include inp();
+
+    &.is-error {
+        background-color: $red;
+        }
+    }
+.inp::placeholder {
+    color: $white;
+    }
+.inp--txt {
+    height: 120px;
+    }
+.btn {
+    @include btn();
+    }
+.btn--alt {
+    border-bottom-color: $red2;
+    border-left-color: $red2;
+    color: $red3;
+    }
+.btn--light {
+    border-bottom-color: $white;
+    border-left-color: $white;
+    color: $white;
     }

@@ -40,6 +40,11 @@
     line-height: $p-line;
     @include font-family-regular();
 }
+@mixin m() {
+    font-size: $m-size;
+    line-height: $m-line;
+    @include font-family-bold();
+}
 @mixin li() {
     padding-left: 20px;
     @include p();
@@ -71,7 +76,48 @@
 @mixin h3() {
     font-size: $h3-size;
     line-height: $h3-line;
-    @include font-family-bold();
+    @include font-family-medium();
+}
+@mixin h4() {
+    font-size: $h4-size;
+    line-height: $h4-line;
+    @include font-family-regular();
+}
+@mixin quo() {
+    font-size: $quo-size;
+    line-height: $quo-line;
+    @include font-family-medium();
+}
+@mixin btn() {
+    @include p();
+    background-color: transparent;
+    border-bottom: 2px solid $red;
+    border-left: 2px solid $red;
+    border-right: 0;
+    border-top: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: $black ;
+    cursor: pointer;
+    font-size: $btn-size;
+    line-height: 1;
+    padding: 5px 80px 20px;
+    outline: 0;
+    -webkit-appearance: none;
+    width: auto;
+}
+@mixin inp() {
+    @include p();
+    background-color: $black2;
+    border: 0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: $white;
+    line-height: 1;
+    outline: 0;
+    padding: 20px;
+    -webkit-appearance: none;
+    width: 100%;
 }
 
 

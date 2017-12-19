@@ -1,11 +1,15 @@
-<nav class="navi js-navi screen screen--dark -exp-2 -wrap -fzero" data-content-field="navigation-navi">
-    <ul class="navi__ul screen__wrap">
-        {.repeated section items}
-            {.section collection}
-                <li class="navi__li navi__li--{title|slugify}">
-                    <a class="navi__a navi__a--{title|slugify} js-navi-a js-navi--{title|slugify} h3 a" href="{fullUrl}">{title}</a>
-                </li>
-            {.end}
+<ul class="navi__ul">
+    {.repeated section items}
+        {.section collection}
+            {.var @slug title|slugify}
+            <li class="navi__li navi__li--{@slug}">
+                {# Contact Form #}
+                {.equal? id "5a381e53085229e36d2161f3"}
+                    <a class="navi__a navi__a--{@slug} js-navi-a js-navi--{@slug} js-controller--contact h2 -light" href="#">{title}</a>
+                {.or}
+                    <a class="navi__a navi__a--{@slug} js-navi-a js-navi--{@slug} h2 -light" href="{fullUrl}">{title}</a>
+                {.end}
+            </li>
         {.end}
-    </ul>
-</nav>
+    {.end}
+</ul>

@@ -68,12 +68,12 @@ const config = {
     /**
      *
      * @public
-     * @member mainSelector
+     * @member pageSelector
      * @memberof core.config
-     * @description The string selector used for <main> node.
+     * @description The string selector used for <page> node.
      *
      */
-    mainSelector: ".js-main",
+    pageSelector: ".js-page",
 
 
     /**
@@ -134,23 +134,12 @@ const config = {
     /**
      *
      * @public
-     * @member carouselSelector
+     * @member contactSelector
      * @memberof core.config
-     * @description The string selector used for carousels.
+     * @description The string selector used for <contact>.
      *
      */
-    carouselSelector: ".js-carousel",
-
-
-    /**
-     *
-     * @public
-     * @member formSelector
-     * @memberof core.config
-     * @description The string selector used for <forms>.
-     *
-     */
-    formSelector: ".js-form",
+    contactSelector: ".js-contact",
 
 
     /**
