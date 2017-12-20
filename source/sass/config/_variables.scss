@@ -48,7 +48,8 @@ $expander-2: 18vw;
 *******************************************************************************/
 $logo-height: 60px;
 $header-padding: 40px;
-$main-padding: 12vw;
+$page-padding: 160px;
+$page-padding-2: #{"~\"calc( #{$page-padding} + 3vw )\""};
 
 
 
@@ -56,29 +57,45 @@ $main-padding: 12vw;
 /******************************************************************************
  * Typography
 *******************************************************************************/
-$m-size: 14px;
+$m-size: 11px;
+$m-size-2: #{"~\"calc( #{$m-size} + 0.16vw )\""};
+$m-size-3: 14px;
 $m-line: 1.7142857143;
-$p-size: 18px;
-$p-size-2: 16px;
+$m-kern: 0.4px;
+$p-size: 14px;
+$p-size-2: #{"~\"calc( #{$p-size} + 0.209vw )\""};
+$p-size-3: 18px;
 $p-line: 1.5555555556;
-$h1-size: 96px;
+$h1-size: 42px;
+$h1-size-2: #{"~\"calc( #{$h1-size} + 2.82vw )\""};
+$h1-size-3: 96px;
 $h1-line: 1;
-$h2-size: 64px;
+$h2-size: 32px;
+$h2-size-2: #{"~\"calc( #{$h2-size} + 1.67vw )\""};
+$h2-size-3: 64px;
 $h2-line: 1.21875;
-$h3-size: 32px;
+$h3-size: 27px;
+$h3-size-2: #{"~\"calc( #{$h3-size} + 0.26vw )\""};
+$h3-size-3: 32px;
 $h3-line: 1.125;
-$h4-size: 28px;
+$h4-size: 21px;
+$h4-size-2: #{"~\"calc( #{$h4-size} + 0.356vw )\""};
+$h4-size-3: 28px;
 $h4-line: 1.3571428571;
-$quo-size: 54px;
+$quo-size: 21px;
+$quo-size-2: #{"~\"calc( #{$quo-size} + 1.62vw )\""};
+$quo-size-3: 52px;
+$quo-quos: 52px;
+$quo-quos-2: #{"~\"calc( #{$quo-quos} + 2.29vw )\""};
+$quo-quos-3: 96px;
 $quo-line: 1.4444444444;
-$btn-size: 18px;
+$btn-size: 14px;
 
 
 
 /******************************************************************************
  * Breakpoints
 *******************************************************************************/
-$break-desktop-large: 2200px;
 $break-desktop: 1920px;
 $break-laptop-full: 1680px;
 $break-laptop-medium: 1440px;
@@ -89,6 +106,9 @@ $break-tablet-small: 768px;
 $break-mobile-full: 640px;
 $break-mobile-medium: 480px;
 $break-mobile-small: 320px;
+
+$mobile-breakpoint: $break-tablet-small;
+$desktop-breakpoint: $break-desktop;
 
 
 

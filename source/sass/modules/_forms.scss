@@ -14,8 +14,13 @@
 .btn {
     @include btn();
 
+    @include respond-min( $desktop-breakpoint ) {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
     & + .btn {
-        margin-left: 60px;
+        margin-left: $padding-1 / 2;
         }
 }
 .btn--alt {

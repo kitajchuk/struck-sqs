@@ -2,12 +2,19 @@
  * Paragraphs
 *******************************************************************************/
 .p,
-.cms p {
+.cms p,
+.sqs-block p {
     @include p();
 
-    a {
-        border-bottom: 1px solid inherit;
-        }
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $p-size-2;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $p-size-3;
+    }
+
+    i,
     em {
         @include em();
         }
@@ -15,22 +22,35 @@
     strong {
         @include font-family-bold();
         }
-    }
+}
 .li,
-.cms li {
+.cms li,
+.sqs-block li {
     @include li();
     }
 .ol .li,
-.cms ol li {
+.cms ol li,
+.sqs-block ol li {
     @include ol-li();
     }
 .ul .li,
-.cms ul li {
+.cms ul li,
+.sqs-block ul li {
     @include ul-li();
     }
-.m {
+.m,
+.m p,
+.footer .sqs-block p {
     @include m();
+
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $m-size-2;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $m-size-3;
     }
+}
 
 
 /******************************************************************************
@@ -46,21 +66,56 @@
  * Headlines / Quotes
 *******************************************************************************/
 .h1,
-.cms h1 {
+.cms h1,
+.sqs-block h1 {
     @include h1();
+
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $h1-size-2;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $h1-size-3;
     }
+}
 .h2,
-.cms h2 {
+.cms h2,
+.sqs-block h2 {
     @include h2();
+
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $h2-size-2;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $h2-size-3;
     }
+}
 .h3,
-.cms h3 {
+.cms h3,
+.sqs-block h3 {
     @include h3();
+
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $h3-size-2;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $h3-size-3;
     }
+}
 .h4,
 .cms h4 {
     @include h4();
+
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $h4-size-2;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $h4-size-3;
     }
+}
 .quo {}
 .quo__src {
     color: $red;
@@ -69,11 +124,28 @@
     @include quo();
     margin-top: 20px !important;
 
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $quo-size-2;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $quo-size-3;
+    }
+
     &:after {
-        @include h1();
+        @include font-family-bold();
         color: $red4;
         content: "\201C \201D";
         display: block;
+        font-size: $quo-quos;
         margin-top: 20px;
+
+        @include respond-min( $mobile-breakpoint ) {
+            font-size: $quo-quos-2;
+        };
+
+        @include respond-min( $desktop-breakpoint ) {
+            font-size: $quo-quos-3;
+        }
     }
 }

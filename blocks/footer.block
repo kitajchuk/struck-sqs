@@ -1,9 +1,9 @@
 <footer class="footer js-footer ghost -wrap -fzero">
     <div class="ghost__child -full">
-        <div class="-column -column--2of4">
+        <div class="footer__col -column -column--2of4">
             <squarespace:block-field id="footer-blocks" columns="12" />
         </div>
-        <div class="-column -column--2of4 -text--right">
+        <div class="footer__col -column -column--2of4">
             <ul class="footer__social social">
                 {.repeated section website.socialAccounts}
                     <li class="social__li -column">

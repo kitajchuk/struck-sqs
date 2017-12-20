@@ -53,6 +53,13 @@
 .-bump6 {
     margin-top: 60px;
     }
+.-pagepad {
+    padding-top: $page-padding;
+
+    @include respond-min( $mobile-breakpoint ) {
+        padding-top: $page-padding-2;
+    }
+}
 
 
 

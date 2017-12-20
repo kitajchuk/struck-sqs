@@ -12,56 +12,9 @@
     display: inline-block;
     float: none !important;
     padding: 0 !important;
-}
+    }
 
-// Typography
+// Blocks
 .sqs-block {
     padding: 0 !important;
-
-    h1 {
-        @include h1();
-        }
-    h2 {
-        @include h2();
-        }
-    h3 {
-        @include h3();
-        }
-    h1,
-    h2,
-    h3 {
-        strong {
-            @include font-family-bold();
-            }
     }
-
-
-    em {
-        @include em();
-        }
-
-
-    ol,
-    ul {
-        @include li();
-
-        strong {
-            @include font-family-bold();
-            }
-    }
-    ol li {
-        @include ol-li();
-        }
-    ul li {
-        @include ul-li();
-        }
-
-
-    p {
-        @include p();
-
-        strong {
-            @include font-family-bold();
-            }
-    }
-}

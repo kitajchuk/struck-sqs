@@ -20,7 +20,7 @@
         {squarespace-headers}
     </head>
     <body>
-        <nav class="navi js-navi -wrap -fzero" data-content-field="navigation-navi">
+        <nav class="navi js-navi -wrap -fzero -pagepad" data-content-field="navigation-navi">
             <div class="navi__header">
                 <div class="icon icon--ex js-controller--navi">
                     <span class="ex1"></span>
@@ -36,7 +36,7 @@
                 {.end}
             </ul>
         </nav>
-        <menu class="contact js-contact -wrap -fzero">
+        <menu class="contact js-contact -wrap -fzero -pagepad">
             <div class="contact__header">
                 <div class="icon icon--ex js-controller--contact">
                     <span class="ex1"></span>
@@ -67,7 +67,7 @@
         </menu>
         <main class="main">
             {@|apply header.block}
-            <section class="page js-page -fzero" data-content-field="main-content" data-website-id="{website.id}" {.section collection}data-collection-id="{collection.id}" data-collection-title="{.if collection.homepage}{website.siteTitle}{.or}{collection.title} – {website.siteTitle}{.end}"{.end} {.section item}data-item-id="{item.id}" data-item-title="{item.title} – {collection.title} – {website.siteTitle}"{.end}>
+            <section class="page js-page -fzero -pagepad" data-content-field="main-content" data-website-id="{website.id}" {.section collection}data-collection-id="{collection.id}" data-collection-title="{.if collection.homepage}{website.siteTitle}{.or}{collection.title} – {website.siteTitle}{.end}"{.end} {.section item}data-item-id="{item.id}" data-item-title="{item.title} – {collection.title} – {website.siteTitle}"{.end}>
                 {.equal? collection.typeName "page"}
                     {@|apply page.block}
                 {.or}

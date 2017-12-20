@@ -12,7 +12,6 @@
 }
 
 .page {
-    padding-top: $main-padding;
     position: relative;
     transition: opacity $fast-duration $ease;
 
@@ -39,10 +38,6 @@
 }
 
 .module-linker {
-    .m p {
-        font-size: $btn-size;
-        @include font-family-bold();
-        }
     h1 {
         position: relative;
 
@@ -61,18 +56,26 @@
 .footer {
     padding-bottom: $header-padding;
     padding-top: $header-padding;
+    }
+.footer__social {
+    text-align: right;
 
-    .sqs-block {
-        p {
-            @include m();
-            }
+    @include respond( $mobile-breakpoint ) {
+        padding-top: $padding-1;
+        text-align: left;
+    }
+}
+.footer__col {
+    @include respond( $mobile-breakpoint ) {
+        display: block;
+        width: 100%;
     }
 }
 
 .social {}
 .social__li {
     & + .social__li {
-        margin-left: 120px;
+        margin-left: $padding-1;
         }
 }
 .social__a {
