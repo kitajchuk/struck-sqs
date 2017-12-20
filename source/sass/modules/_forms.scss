@@ -13,7 +13,11 @@
     }
 .btn {
     @include btn();
-    }
+
+    & + .btn {
+        margin-left: 60px;
+        }
+}
 .btn--alt {
     border-bottom-color: $red2;
     border-left-color: $red2;

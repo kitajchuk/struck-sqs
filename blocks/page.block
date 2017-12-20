@@ -1,7 +1,22 @@
-<div class="page__wrap -wrap -exp" data-uid="{collection.urlId}">
-    {.if collection.mainContent}
-        {collection.mainContent}
+<div class="page__wrap" data-uid="{collection.urlId}">
+    {# Kit of Parts #}
+    {.equal? collection.id "5a380abc41920241ebc31acf"}
+        <div class="kop">
+            {.if collection.mainContent}
+                {collection.mainContent}
+            {.or}
+                {squarespace.main-content}
+            {.end}
+        </div>
+        {@|apply module-goto.block}
+        {@|apply module-instagram.block}
+        {@|apply module-contact.block}
+        {@|apply module-reintroduce.block}
     {.or}
-        {squarespace.main-content}
+        {.if collection.mainContent}
+            {collection.mainContent}
+        {.or}
+            {squarespace.main-content}
+        {.end}
     {.end}
 </div>

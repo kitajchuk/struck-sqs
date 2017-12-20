@@ -1,0 +1,6 @@
+<figure class="quo">
+    {.if source}
+        <figcaption class="quo__src m">{source|safe}</figcaption>
+    {.end}
+    <blockquote class="quo__txt">{quote|safe}</blockquote>
+</figure>

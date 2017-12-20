@@ -1,0 +1,6 @@
+<div class="module-reintroduce module-linker -bggrey -wrapl -exp">
+    <div class="m -caps -grey2">
+        <squarespace:block-field id="module-reintroduce-meta-blocks" columns="12" />
+    </div>
+    <squarespace:block-field id="module-reintroduce-text-blocks" columns="12" />
+</div>

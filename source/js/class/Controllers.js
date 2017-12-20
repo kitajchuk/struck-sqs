@@ -1,10 +1,7 @@
 import * as core from "../core";
 import ImageController from "./ImageController";
 import ContactController from "./ContactController";
-// import AnimateController from "./AnimateController";
-// import VideoController from "./VideoController";
-// import AspectController from "./AspectController";
-// import CoverController from "./CoverController";
+import SocialController from "./SocialController";
 
 
 /**
@@ -58,13 +55,9 @@ class Controllers {
     exec () {
         this.controllers = [];
 
-        // this.push( "video", this.element.find( core.config.videoSelector ), VideoController, true );
-        // this.push( "animate", core.dom.body.find( core.config.animSelector ), AnimateController, true );
-        // this.push( "cover", core.dom.body.find( core.config.coverSelector ), CoverController, true );
         this.push( "contact", core.dom.body.find( core.config.contactSelector ), ContactController, true );
+        this.push( "social", core.dom.body.find( core.config.socialSelector ), SocialController, true );
 
-        // this.aspect = this.element.find( core.config.aspectSelector );
-        // this.aspectController = new AspectController( this.aspect );
         this.images = this.element.find( core.config.lazyImageSelector );
         this.imageController = new ImageController( this.images );
         this.imageController.on( "preloaded", () => {
@@ -78,10 +71,6 @@ class Controllers {
 
 
     destroy () {
-        // if ( this.aspectController ) {
-        //     this.aspectController.destroy();
-        // }
-
         if ( this.imageController ) {
             this.imageController.destroy();
         }

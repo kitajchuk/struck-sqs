@@ -43,7 +43,7 @@
 
 
 /******************************************************************************
- * Headlines
+ * Headlines / Quotes
 *******************************************************************************/
 .h1,
 .cms h1 {
@@ -61,3 +61,19 @@
 .cms h4 {
     @include h4();
     }
+.quo {}
+.quo__src {
+    color: $red;
+    }
+.quo__txt {
+    @include quo();
+    margin-top: 20px !important;
+
+    &:after {
+        @include h1();
+        color: $red4;
+        content: "\201C \201D";
+        display: block;
+        margin-top: 20px;
+    }
+}

@@ -3,6 +3,11 @@
 *******************************************************************************/
 .is-hoverable {
     // Hover specific here?
+    .module-linker {
+        h1:hover:after {
+            width: 100%;
+        }
+    }
 }
 
 .is-touchable {

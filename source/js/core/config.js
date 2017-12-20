@@ -112,34 +112,23 @@ const config = {
     /**
      *
      * @public
-     * @member animSelector
-     * @memberof core.config
-     * @description The string selector used for animatables.
-     *
-     */
-    animSelector: ".js-animate",
-
-
-    /**
-     *
-     * @public
-     * @member coverSelector
-     * @memberof core.config
-     * @description The string selector used for covers.
-     *
-     */
-    coverSelector: ".js-cover",
-
-
-    /**
-     *
-     * @public
      * @member contactSelector
      * @memberof core.config
      * @description The string selector used for <contact>.
      *
      */
     contactSelector: ".js-contact",
+
+
+    /**
+     *
+     * @public
+     * @member socialSelector
+     * @memberof core.config
+     * @description The string selector used for <social>.
+     *
+     */
+    socialSelector: ".js-social",
 
 
     /**

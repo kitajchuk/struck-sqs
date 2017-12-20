@@ -65,7 +65,7 @@
                 </div>
             </div>
         </menu>
-        <main class="main js-main">
+        <main class="main">
             {@|apply header.block}
             <section class="page js-page -fzero" data-content-field="main-content" data-website-id="{website.id}" {.section collection}data-collection-id="{collection.id}" data-collection-title="{.if collection.homepage}{website.siteTitle}{.or}{collection.title} – {website.siteTitle}{.end}"{.end} {.section item}data-item-id="{item.id}" data-item-title="{item.title} – {collection.title} – {website.siteTitle}"{.end}>
                 {.equal? collection.typeName "page"}
@@ -73,7 +73,6 @@
                 {.or}
                     {squarespace.main-content}
                 {.end}
-                {@|apply module-contact.block}
             </section>
             {@|apply footer.block}
         </main>

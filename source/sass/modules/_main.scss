@@ -22,6 +22,42 @@
         }
 }
 
+.kop {
+    .sqs-block-html,
+    .sqs-block-code,
+    .sqs-block-quote {
+        .sqs-block-content {
+            padding-left: $padding-1;
+            padding-right: $padding-1;
+        }
+    }
+    .sqs-block-spacer {
+        background-color: $red4;
+        height: 1px;
+        margin: $expander-1 0;
+        }
+}
+
+.module-linker {
+    .m p {
+        font-size: $btn-size;
+        @include font-family-bold();
+        }
+    h1 {
+        position: relative;
+
+        &:after {
+            background-color: $red4;
+            content: "";
+            display: block;
+            height: 2px;
+            margin-top: 30px;
+            transition: width $fast-duration $ease;
+            width: 100px;
+        }
+    }
+}
+
 .footer {
     padding-bottom: $header-padding;
     padding-top: $header-padding;
@@ -42,3 +78,16 @@
 .social__a {
     text-transform: capitalize;
     }
+
+.instagram {
+    overflow: auto;
+    padding: 60px 0 0 30px;
+    white-space: nowrap;
+    }
+.instagram__post {
+    width: 445px;
+
+    & + .instagram__post {
+        margin-left: 20px;
+        }
+}
