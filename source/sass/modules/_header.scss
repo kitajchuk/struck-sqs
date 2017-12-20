@@ -5,6 +5,17 @@
     padding-top: $header-padding;
     position: fixed;
     top: 0;
+    transition: opacity $fast-duration $ease,
+                transform $fast-duration $ease;
     width: 100%;
     z-index: $z_layer_header;
+
+    @include state( "scroll", "down" ) {
+        opacity: 0;
+        pointer-events: none;
     }
+
+    @include state( "navi", "open" ) {
+        transform: translate3d( 50vw, 0, 0 );
+    }
+}

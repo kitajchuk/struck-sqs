@@ -8,6 +8,7 @@ import * as core from "./core";
 import navi from "./navi";
 import intro from "./intro";
 import Analytics from "./class/Analytics";
+import ScrollController from "properjs-scrollcontroller";
 
 
 /**
@@ -23,6 +24,7 @@ class App {
         this.navi = navi;
         this.intro = intro;
         this.router = router;
+        this.scroller = new ScrollController();
 
         this.bind();
         this.init();
@@ -36,6 +38,14 @@ class App {
 
         this.core.emitter.on( "app--page-teardown", () => {
             this.core.log( "App Page Teardown" );
+        });
+
+        this.scroller.on( "scrolldown", () => {
+            this.core.dom.html.removeClass( "is-scroll-up" ).addClass( "is-scroll-down" );
+        });
+
+        this.scroller.on( "scrollup", () => {
+            this.core.dom.html.removeClass( "is-scroll-down" ).addClass( "is-scroll-up" );
         });
     }
 
