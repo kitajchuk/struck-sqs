@@ -1,17 +1,11 @@
 <div class="page__wrap" data-uid="{collection.urlId}">
     {# Kit of Parts #}
     {.equal? collection.id "5a380abc41920241ebc31acf"}
-        <div class="kop">
-            {.if collection.mainContent}
-                {collection.mainContent}
-            {.or}
-                {squarespace.main-content}
-            {.end}
-        </div>
-        {@|apply module-goto.block}
-        {@|apply module-instagram.block}
-        {@|apply module-contact.block}
-        {@|apply module-reintroduce.block}
+        {@|apply page-kop.block}
+
+    {# Careers #}
+    {.or equal? collection.id "5a3af88153450af67d77ffc1"}
+        {@|apply page-careers.block}
     {.or}
         {.if collection.mainContent}
             {collection.mainContent}

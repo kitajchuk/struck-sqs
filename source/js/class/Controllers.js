@@ -2,6 +2,7 @@ import * as core from "../core";
 import ImageController from "./ImageController";
 import ContactController from "./ContactController";
 import SocialController from "./SocialController";
+import JobsboardController from "./JobsboardController";
 
 
 /**
@@ -57,6 +58,7 @@ class Controllers {
 
         this.push( "contact", core.dom.body.find( core.config.contactSelector ), ContactController, true );
         this.push( "social", core.dom.body.find( core.config.socialSelector ), SocialController, true );
+        this.push( "jobsboard", core.dom.body.find( core.config.jobsboardSelector ), JobsboardController, true );
 
         this.images = this.element.find( core.config.lazyImageSelector );
         this.imageController = new ImageController( this.images );

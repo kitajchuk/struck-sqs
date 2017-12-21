@@ -1,0 +1,26 @@
+<div class="page__mast">
+    <div class="h2 -wrap">{collection.title}</div>
+    <div class="-bump2">
+        {.section collection.mainImage}
+            {@|apply image.block}
+        {.end}
+    </div>
+</div>
+<div class="page__cta -wrap -exp">
+    <div class="-wrap">
+        <div class="m -caps -color">
+            <squarespace:block-field id="page-careers-cta-meta-blocks" columns="12" />
+        </div>
+        <squarespace:block-field id="page-careers-cta-text-blocks" columns="12" />
+    </div>
+</div>
+<div class="page__content -wrap">
+    <squarespace:block-field id="page-careers-content-blocks" columns="12" />
+</div>
+<div class="page__jobs -wrap -exp">
+    <div class="jobs js-jobsboard -wrap"></div>
+</div>
+<div class="page__modules -wrap">
+    {@|apply module-instagram.block}
+    {@|apply module-contact.block}
+</div>

@@ -1,6 +1,7 @@
-.main {
+.page {
     position: relative;
-    transition: transform $fast-duration $ease;
+    transition: opacity $fast-duration $ease,
+                transform $fast-duration $ease;
 
     @include state( "navi", "open" ) {
         transform: translate3d( 50vw, 0, 0 );
@@ -9,15 +10,15 @@
     @include state( "contact", "open" ) {
         transform: translate3d( 50vw, 0, 0 );
     }
-}
-
-.page {
-    position: relative;
-    transition: opacity $fast-duration $ease;
 
     &.is-inactive {
         opacity: 0;
         pointer-events: none;
+        }
+}
+.page__wrap[data-uid="careers"] {
+    .page__cta > .-wrap {
+        padding-right: 16vw;
         }
 }
 
@@ -50,25 +51,6 @@
             transition: width $fast-duration $ease;
             width: 100px;
         }
-    }
-}
-
-.footer {
-    padding-bottom: $header-padding;
-    padding-top: $header-padding;
-    }
-.footer__social {
-    text-align: right;
-
-    @include respond( $mobile-breakpoint ) {
-        padding-top: $padding-1;
-        text-align: left;
-    }
-}
-.footer__col {
-    @include respond( $mobile-breakpoint ) {
-        display: block;
-        width: 100%;
     }
 }
 

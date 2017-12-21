@@ -1,5 +1,3 @@
-<div class="-wrap">
-    <div class="module-contact -bgcolor -wrap -exp2 -light -curse js-controller--contact">
-        <squarespace:block-field id="module-contact-blocks" columns="12" />
-    </div>
+<div class="module-contact -bgcolor -wrap -exp2 -light -curse js-controller--contact">
+    <squarespace:block-field id="module-contact-blocks" columns="12" />
 </div>

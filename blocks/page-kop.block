@@ -1,0 +1,13 @@
+<div class="kop">
+    {.if collection.mainContent}
+        {collection.mainContent}
+    {.or}
+        {squarespace.main-content}
+    {.end}
+</div>
+{@|apply module-goto.block}
+<div class="-wrap">
+    {@|apply module-instagram.block}
+    {@|apply module-contact.block}
+</div>
+{@|apply module-reintroduce.block}

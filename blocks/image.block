@@ -1,10 +1,12 @@
 {.if item}
     {.var @url item.assetUrl}
     {.var @vars item.systemDataVariants}
+    {.var @bleed info.stretch}
 {.or}
     {.var @url assetUrl}
     {.var @vars systemDataVariants}
+    {.var @bleed @url}
 {.end}
-<div class="media {.if info.stretch}{.or}-wrap{.end}">
+<div class="media {.if @bleed}{.or}-wrap{.end}">
     <img class="media__node image js-lazy-image" data-img-src="{@url}" data-variants="{@vars}" />
 </div>

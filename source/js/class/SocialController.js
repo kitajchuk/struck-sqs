@@ -1,6 +1,6 @@
 import $ from "properjs-hobo";
 import * as core from "../core";
-import viewSocialIG from "../views/social-ig";
+import viewInstagram from "../views/instagram";
 
 
 
@@ -41,7 +41,7 @@ class SocialController {
             }
 
         }).then(( json ) => {
-            this.igEl[ 0 ].innerHTML = viewSocialIG( json );
+            this.igEl[ 0 ].innerHTML = viewInstagram( json );
             core.util.loadImages( this.igEl.find( core.config.lazyImageSelector ) );
         });
     }

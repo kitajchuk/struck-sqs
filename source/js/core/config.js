@@ -134,6 +134,17 @@ const config = {
     /**
      *
      * @public
+     * @member jobsboardSelector
+     * @memberof core.config
+     * @description The string selector used for <jobsboard>.
+     *
+     */
+    jobsboardSelector: ".js-jobsboard",
+
+
+    /**
+     *
+     * @public
      * @member lazyImageAttr
      * @memberof core.config
      * @description The string attribute for lazy image source URLs.
