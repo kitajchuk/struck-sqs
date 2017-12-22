@@ -45,7 +45,7 @@
             </div>
             <div class="contact__form js-contact-form">
                 <div class="h2 -light">Contact</div>
-                <div class="m -light -bump3">\ {websiteSettings.contactPhoneNumber}</div>
+                <div class="m -light -bump3">\ <a href="tel:{websiteSettings.contactPhoneNumber}" target="_blank">{websiteSettings.contactPhoneNumber}</a></div>
                 <div class="m -light">\ <a href="mailto:newbiz@struck.com" target="_blank">newbiz@struck.com</a></div>
                 <div class="m -light">\ <a href="mailto:press@struck.com" target="_blank">press@struck.com</a></div>
                 <div class="m -color">\ Locations</div>

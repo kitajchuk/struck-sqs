@@ -1,0 +1,20 @@
+<div class="page__mast -wrap">
+    <div class="h2 -mast">
+        <squarespace:block-field id="module-home-masthead" columns="12" />
+    </div>
+</div>
+<div class="page__ -wrap -exp">
+    <div class="m">[Portfolio/Case Studies go here&hellip;]</div>
+    <div class="-bump3">
+        <div class="-column">
+            <squarespace:block-field id="module-home-button-case-studies" columns="12" />
+        </div>
+        <div class="-column -push">
+            <squarespace:block-field id="module-home-button-portfolio" columns="12" />
+        </div>
+    </div>
+</div>
+<div class="page__modules -wrap">
+    {@|apply module-instagram.block}
+    {@|apply module-contact.block}
+</div>

@@ -1,3 +1,10 @@
-<div class="module-contact -bgcolor -wrap -exp2 -light -curse js-controller--contact">
-    <squarespace:block-field id="module-contact-blocks" columns="12" />
+<div class="module-contact hover-text -bgcolor -wrap -exp2 -light -curse js-controller--contact">
+    <div class="hover-text__wrap">
+        <div class="hover-text__static">
+            <squarespace:block-field id="module-contact-cta-static" columns="12" />
+        </div>
+        <div class="hover-text__hover">
+            <squarespace:block-field id="module-contact-cta-hover" columns="12" />
+        </div>
+    </div>
 </div>

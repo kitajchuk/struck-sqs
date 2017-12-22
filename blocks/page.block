@@ -1,16 +1,34 @@
+{.if collection.mainContent}
+    {.var @content collection.mainContent}
+
+{.or}
+    {.var @content squarespace.main-content}
+{.end}
+
 <div class="page__wrap" data-uid="{collection.urlId}">
     {# Kit of Parts #}
     {.equal? collection.id "5a380abc41920241ebc31acf"}
         {@|apply page-kop.block}
 
+    {# Home #}
+    {.or equal? collection.id "5a3d805e24a6946755571ece"}
+        {@|apply page-home.block}
+
     {# Careers #}
     {.or equal? collection.id "5a3af88153450af67d77ffc1"}
         {@|apply page-careers.block}
+
+    {# Contact #}
+    {.or equal? collection.id "5a381e53085229e36d2161f3"}
+        <div class="-wrap">
+            {@content}
+            <div class="-exp">
+                <squarespace:block-field id="module-contact-cta-static" columns="12" />
+                <squarespace:block-field id="module-contact-cta-hover" columns="12" />
+            </div>
+        </div>
+
     {.or}
-        {.if collection.mainContent}
-            {collection.mainContent}
-        {.or}
-            {squarespace.main-content}
-        {.end}
+        {@content}
     {.end}
 </div>
