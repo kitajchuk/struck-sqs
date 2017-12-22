@@ -4,7 +4,7 @@
 .is-hoverable {
     // Hover specific here?
     .module-linker {
-        h1:hover:after {
+        a:hover:after {
             width: 100%;
         }
     }

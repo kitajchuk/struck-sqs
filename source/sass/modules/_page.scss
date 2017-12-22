@@ -11,15 +11,52 @@
         transform: translate3d( 50vw, 0, 0 );
     }
 
-    &.is-inactive {
+    @include state( "page", "controller" ) {
         opacity: 0;
         pointer-events: none;
-        }
+    }
 }
 .page__wrap[data-uid="careers"] {
     .page__cta > .-wrap {
         padding-right: 16vw;
         }
+}
+
+.jobsboard {}
+.jobsboard__all,
+.jobsboard__one {
+    visibility: hidden;
+
+    &.is-active {
+        visibility: visible;
+        }
+    &.is-inactive {
+        display: none;
+        }
+    }
+.jobs {}
+.jobs__post {
+    border-top: 1px solid $black3;
+    padding: 4vw 0;
+    }
+.jobs_1,
+.jobs_2 {
+    position: relative;
+
+    &:before {
+        content: "1.";
+        display: inline-block;
+        left: 0;
+        padding-right: 2vw;
+        position: absolute;
+        top: 0;
+        transform: translateX( -3vw );
+    }
+}
+.jobs_2 {
+    &:before {
+        content: "2.";
+    }
 }
 
 .kop {
@@ -39,7 +76,7 @@
 }
 
 .module-linker {
-    h1 {
+    a {
         position: relative;
 
         &:after {

@@ -23,19 +23,17 @@ const navi = {
         this.isContactOpen = false;
         this.element = core.dom.navi;
         this.items = this.element.find( ".js-navi-a" );
-        this.trigger = core.dom.body.find( ".js-controller--navi" );
         this.contact = core.dom.contact;
-        this.contactTrigger = core.dom.body.find( ".js-controller--contact" );
         this.bind();
     },
 
 
     bind () {
-        this.trigger.on( "click", () => {
+        core.dom.body.on( "click", ".js-controller--navi", () => {
             this.toggle();
         });
 
-        this.contactTrigger.on( "click", () => {
+        core.dom.body.on( "click", ".js-controller--contact", () => {
             this.toggleContact();
         });
     },

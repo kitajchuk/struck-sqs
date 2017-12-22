@@ -167,6 +167,7 @@ const router = {
      *
      */
     changePageOut ( /* data */ ) {
+        core.dom.html.addClass( "is-page-controller" );
         this.controllers.destroy();
         navi.close();
     },
@@ -205,6 +206,7 @@ const router = {
      *
      */
     changePageIn ( /* data */ ) {
+        core.dom.html.removeClass( "is-page-controller" );
         this.controllers.exec();
         this.execSquarespace();
 
