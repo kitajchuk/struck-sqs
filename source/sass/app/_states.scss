@@ -18,6 +18,12 @@
             transform: translate3d( 0, 0, 0 );
             }
     }
+    .svg--logo:hover {
+        fill: $red2;
+        }
+    .navi__a:hover {
+        color: $red2;
+        }
 }
 
 .is-touchable {

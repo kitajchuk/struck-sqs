@@ -16,9 +16,13 @@
         pointer-events: none;
     }
 }
-.page__wrap[data-uid="careers"] {
-    .page__cta > .-wrap {
-        padding-right: 16vw;
+#module-home-about-headline,
+#page-careers-cta-text-blocks {
+    padding-right: 16vw;
+    }
+#module-home-about-button {
+    .btn {
+        @include btn-alt();
         }
 }
 
@@ -58,6 +62,21 @@
         content: "2.";
     }
 }
+
+.touts {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    }
+.touts__item {
+    width: 13vw;
+    }
+.touts__media {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    //outline: 1px solid red;
+    }
 
 .kop {
     .sqs-block-html,
@@ -143,7 +162,7 @@
     white-space: nowrap;
     }
 .instagram__post {
-    width: 445px;
+    width: 24vw;
 
     & + .instagram__post {
         margin-left: 20px;

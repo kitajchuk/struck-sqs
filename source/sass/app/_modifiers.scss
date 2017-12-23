@@ -2,16 +2,22 @@
  * Display
 *******************************************************************************/
 .-exp {
+    padding-bottom: $padding-1;
+    padding-top: $padding-1;
+    }
+.-expt {
+    padding-top: $padding-1;
+    }
+.-expb {
+    padding-bottom: $padding-1;
+    }
+.-exp2 {
     padding-bottom: $expander-1;
     padding-top: $expander-1;
     }
-.-exp2 {
+.-exp3 {
     padding-bottom: $expander-2;
     padding-top: $expander-2;
-    }
-.-exp3 {
-    padding-bottom: $expander-1;
-    padding-top: $padding-1;
     }
 .-wrap {
     padding-left: $padding-1;
@@ -19,6 +25,9 @@
     }
 .-wrapl {
     padding-left: $padding-1;
+    }
+.-wrapr {
+    padding-right: $padding-1;
     }
 .-vtop {
     vertical-align: top;
@@ -34,6 +43,9 @@
     }
 .-block {
     display: block;
+    }
+.-square {
+    padding-bottom: 100%;
     }
 .-bump {
     margin-top: 10px;
@@ -63,6 +75,20 @@
         padding-top: $page-padding-2;
     }
 }
+.-hr {
+    background-color: $black;
+    height: 1px;
+    margin-bottom: $padding-1;
+    margin-top: $padding-1;
+    }
+.-fpo {
+    background-color: $red;
+    color: $white;
+    padding-bottom: $padding-1;
+    padding-left: $padding-1;
+    padding-right: $padding-1;
+    padding-top: $padding-1;
+    }
 
 
 
@@ -133,6 +159,9 @@
     }
 .-color {
     color: $red;
+    }
+.-color2 {
+    color: $red3;
     }
 .-bgcolor {
     background-color: $red;

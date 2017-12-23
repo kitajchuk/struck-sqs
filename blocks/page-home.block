@@ -3,9 +3,9 @@
         <squarespace:block-field id="module-home-masthead" columns="12" />
     </div>
 </div>
-<div class="page__ -wrap -exp">
-    <div class="m">[Portfolio/Case Studies go here&hellip;]</div>
-    <div class="-bump3">
+<div class="page__gridwall -wrap -exp">
+    <div class="m -fpo">[FPO: Projects + Case Studies will go here&hellip;]</div>
+    <div class="-bump6">
         <div class="-column">
             <squarespace:block-field id="module-home-button-case-studies" columns="12" />
         </div>
@@ -14,7 +14,33 @@
         </div>
     </div>
 </div>
-<div class="page__modules -wrap">
+<div class="page__videoreel">
+    <squarespace:block-field id="module-home-video-reel" columns="12" />
+</div>
+<div class="page__about -wrapl -bgcolor -exp">
+    <div class="-wrapl">
+        <div class="m -caps -color2">
+            <squarespace:block-field id="module-home-about-meta" columns="12" />
+        </div>
+        <div class="-light">
+            <squarespace:block-field id="module-home-about-headline" columns="12" />
+        </div>
+        <div class="m -light -bump3">
+            <squarespace:block-field id="module-home-about-categories" columns="12" />
+        </div>
+        <div class="-expt">
+            <squarespace:block-field id="module-home-about-button" columns="12" />
+        </div>
+    </div>
+</div>
+<div class="page__content -wrap -bggrey -exp">
+    <div class="-wrap">
+        <div class="touts js-view" data-uid="clients" data-url="/clients"></div>
+        <div class="-hr"></div>
+        <squarespace:block-field id="module-home-quote" columns="12" />
+    </div>
+</div>
+<div class="page__modules -wrap -expt">
     {@|apply module-instagram.block}
     {@|apply module-contact.block}
 </div>

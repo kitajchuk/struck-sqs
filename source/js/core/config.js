@@ -145,6 +145,17 @@ const config = {
     /**
      *
      * @public
+     * @member viewSelector
+     * @memberof core.config
+     * @description The string selector used for <view>.
+     *
+     */
+    viewSelector: ".js-view",
+
+
+    /**
+     *
+     * @public
      * @member lazyImageAttr
      * @memberof core.config
      * @description The string attribute for lazy image source URLs.

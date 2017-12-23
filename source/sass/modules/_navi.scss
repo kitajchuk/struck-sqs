@@ -25,6 +25,8 @@
     width: 100%;
     }
 .navi__a {
+    transition: color $base-duration $ease;
+
     &.is-active {
         color: $red2;
         }

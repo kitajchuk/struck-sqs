@@ -24,12 +24,8 @@
         }
 }
 .btn--alt {
-    border-bottom-color: $red2;
-    border-left-color: $red2;
-    color: $red3;
+    @include btn-alt();
     }
 .btn--light {
-    border-bottom-color: $white;
-    border-left-color: $white;
-    color: $white;
+    @include btn-lit();
     }

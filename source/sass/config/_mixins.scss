@@ -108,6 +108,16 @@
     -webkit-appearance: none;
     width: auto;
 }
+@mixin btn-alt() {
+    border-bottom-color: $red2;
+    border-left-color: $red2;
+    color: $red3;
+}
+@mixin btn-lit() {
+    border-bottom-color: $white;
+    border-left-color: $white;
+    color: $white;
+}
 @mixin inp() {
     @include p();
     background-color: $black2;

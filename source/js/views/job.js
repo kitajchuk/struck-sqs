@@ -15,7 +15,7 @@ export default ( job ) => {
             </div>
         </div>
         <div class="page__content -wrap">
-            <div class="m -wrap">[Greenhouse content goes here&hellip;]</div>
+            <div class="m -wrap -fpo">[FPO: Greenhouse content will go here&hellip;]</div>
         </div>
         <div class="page__cta module-linker -wrapl -exp">
             <div class="-wrapl">
