@@ -24,7 +24,6 @@ class JobsboardController {
 
         this.load().then(( json ) => {
             this.json = json;
-            console.log( this );
 
             if ( this.query.career ) {
                 this.loadOne();
