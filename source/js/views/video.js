@@ -1,8 +1,4 @@
-import paramalama from "paramalama";
-
-
 export default ( blockJson, contentJson ) => {
-    const params = paramalama( blockJson.url );
     const url = blockJson.url.replace( /\?.*?$/, "" );
     const qrs = "?&api=1&loop=0";
     const path = "https://player.vimeo.com/video/";
