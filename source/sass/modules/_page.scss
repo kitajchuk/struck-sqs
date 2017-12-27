@@ -25,6 +25,9 @@
         @include btn-alt();
         }
 }
+#module-home-quote {
+    padding-bottom: $padding-1;
+    }
 
 .jobsboard {}
 .jobsboard__all,
@@ -66,16 +69,25 @@
 .touts {
     align-items: flex-end;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 -($padding-1 / 4);
     }
 .touts__item {
-    width: 13vw;
-    }
+    padding: $padding-1 ($padding-1 / 4) 0 ($padding-1 / 4);
+    width: 20%;
+
+    // @include respond( $break-ipad-pro-width ) {
+    //     width: 25%;
+    // }
+}
 .touts__media {
     align-items: center;
     display: flex;
     height: 100px;
-    //outline: 1px solid red;
+    }
+.touts__image {
+    max-width: 100%;
     }
 
 .kop {
@@ -157,14 +169,28 @@
     }
 
 .instagram {
-    overflow: auto;
-    padding: 60px 0 0 30px;
-    white-space: nowrap;
+    padding: 60px 0 0;
     }
 .instagram__post {
+    cursor: inherit;
+    margin-left: 20px;
     width: 24vw;
+}
 
-    & + .instagram__post {
-        margin-left: 20px;
-        }
+.drag {
+    cursor: -webkit-grab;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    }
+.drag__node {
+    cursor: -webkit-grab;
+    display: inline-flex;
+    position: relative;
+    width: auto;
+
+    @include state( "drag", "start" ) {
+        cursor: -webkit-grabbing;
+    }
 }

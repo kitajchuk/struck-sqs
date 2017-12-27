@@ -156,6 +156,17 @@ const config = {
     /**
      *
      * @public
+     * @member dragSelector
+     * @memberof core.config
+     * @description The string selector used for <drag>.
+     *
+     */
+    dragSelector: ".js-drag",
+
+
+    /**
+     *
+     * @public
      * @member lazyImageAttr
      * @memberof core.config
      * @description The string attribute for lazy image source URLs.

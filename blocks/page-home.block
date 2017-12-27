@@ -33,7 +33,7 @@
         </div>
     </div>
 </div>
-<div class="page__content -wrap -bggrey -exp">
+<div class="page__content -wrap -bggrey">
     <div class="-wrap">
         <div class="touts js-view" data-uid="clients" data-url="/clients"></div>
         <div class="-hr"></div>

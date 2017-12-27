@@ -5,6 +5,7 @@ import SocialController from "./SocialController";
 import JobsboardController from "./JobsboardController";
 import ViewController from "./ViewController";
 import VideoController from "./VideoController";
+import DragController from "./DragController";
 
 
 /**
@@ -63,6 +64,7 @@ class Controllers {
         this.push( "jobsboard", core.dom.body.find( core.config.jobsboardSelector ), JobsboardController, true );
         this.push( "view", core.dom.body.find( core.config.viewSelector ), ViewController, true );
         this.push( "video", core.dom.body.find( ".sqs-block-video" ), VideoController, true );
+        this.push( "drag", core.dom.body.find( core.config.dragSelector ), DragController, true );
 
         this.images = this.element.find( core.config.lazyImageSelector );
         this.imageController = new ImageController( this.images );

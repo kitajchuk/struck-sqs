@@ -2,5 +2,7 @@
     <div class="-wrap">
         <squarespace:block-field id="module-instagram-blocks" columns="12" />
     </div>
-    <div class="instagram js-social-instagram"></div>
+    <div class="instagram drag js-drag">
+        <div class="instagram__feed drag__node js-social-instagram js-drag-node"></div>
+    </div>
 </div>
