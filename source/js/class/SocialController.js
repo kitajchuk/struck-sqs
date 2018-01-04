@@ -1,6 +1,7 @@
 import $ from "properjs-hobo";
 import * as core from "../core";
 import viewInstagram from "../views/instagram";
+import viewMedium from "../views/medium";
 
 
 
@@ -16,6 +17,7 @@ class SocialController {
     constructor ( element ) {
         this.element = element;
         this.igEl = this.element.find( ".js-social-instagram" );
+        this.mdEl = this.element.find( ".js-social-medium" );
 
         this.load();
     }
@@ -25,6 +27,23 @@ class SocialController {
         if ( this.igEl.length ) {
             this.loadIG();
         }
+
+        if ( this.mdEl.length ) {
+            this.loadMD();
+        }
+    }
+
+
+    loadMD () {
+        $.ajax({
+            url: "https://hook.io/kitajchuk/struck-medium-feed",
+            method: "GET",
+            dataType: "json"
+
+        }).then(( json ) => {
+            this.mdEl[ 0 ].innerHTML = viewMedium( json );
+            core.util.loadImages( this.mdEl.find( core.config.lazyImageSelector ) );
+        });
     }
 
 

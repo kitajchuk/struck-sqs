@@ -29,7 +29,11 @@
         left: 0;
         position: absolute;
         width: 100%;
+
+        @include state( "cover", "view" ) {
+            background-color: $white;
         }
+    }
 
     .top {
         top: 0;

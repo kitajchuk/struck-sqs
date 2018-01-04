@@ -1,0 +1,4 @@
+<div class="page__scroll">
+    <div class="page__scroll__text m -caps -light">Scroll</div>
+    <div class="page__scroll__line"></div>
+</div>

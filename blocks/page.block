@@ -14,6 +14,11 @@
     {.or equal? collection.id "5a3d805e24a6946755571ece"}
         {@|apply page-home.block}
 
+    {# Who We Are #}
+    {.or equal? collection.id "5a3da5910d9297d1687ba423"}
+        {@|apply page-whoweare.block}
+
+
     {# Careers #}
     {.or equal? collection.id "5a3af88153450af67d77ffc1"}
         {@|apply page-careers.block}

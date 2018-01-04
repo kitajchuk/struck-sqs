@@ -1,0 +1,36 @@
+<div class="page__cover cover js-cover ghost -cover js-lazy-image" data-img-src="{collection.mainImage.assetUrl}" data-variants="{collection.mainImage.systemDataVariants}">
+    <div class="cover__overlay"></div>
+    <div class="ghost__child -wrap">
+        <div class="page__mast -wrap">
+            <div class="m -caps -light">
+                <squarespace:block-field id="module-whoweare-mastmeta" columns="12" />
+            </div>
+            <div class="h2 -light">
+                <squarespace:block-field id="module-whoweare-masthead" columns="12" />
+            </div>
+        </div>
+    </div>
+    {@|apply module-scroll.block}
+</div>
+<div class="page__attrs"></div>
+<div class="page__locations"></div>
+<div class="page__content -wrap">
+    <squarespace:block-field id="module-whoweare-gallery" columns="12" />
+    <div class="-wrap -exp">
+        <squarespace:block-field id="module-whoweare-quote" columns="12" />
+    </div>
+</div>
+<div class="page__images">
+    <squarespace:block-field id="module-whoweare-images" columns="12" />
+</div>
+<div class="page__howwedo">
+
+</div>
+<div class="page__recognize">
+
+</div>
+<div class="page__modules -wrap -expt">
+    {@|apply module-medium.block}
+    {@|apply module-instagram.block}
+    {@|apply module-contact.block}
+</div>

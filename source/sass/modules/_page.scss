@@ -15,7 +15,28 @@
         opacity: 0;
         pointer-events: none;
     }
+
+    @include state( "who-we-are", "page" ) {
+        padding-top: 0;
+    }
 }
+.page__scroll {
+    bottom: 0;
+    left: $padding-1 * 2;
+    position: absolute;
+    transform: translateY( 40px );
+    }
+.page__scroll__text {
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: rotate( 90deg ) translateX( -100% ) translateY( 100% );
+    }
+.page__scroll__line {
+    background-color: $red4;
+    height: 200px;
+    width: 2px;
+    }
 #module-home-about-headline,
 #page-careers-cta-text-blocks {
     padding-right: 16vw;
@@ -89,6 +110,41 @@
 .touts__image {
     max-width: 100%;
     }
+
+.posts {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -($padding-1 / 4);
+    }
+.posts__item {
+    padding: 0 ($padding-1 / 4);
+    width: 25%;
+    }
+.posts__title {
+    border-top: 1px solid $grey2;
+    display: block;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    }
+.posts__avatar {
+    border-radius: 48px;
+    height: 48px;
+    width: 48px;
+    }
+.posts__author {
+    padding-left: 10px;
+    width: #{"~\"calc( 100% - 48px )\""};
+
+    span {
+        background-color: $grey;
+        border-radius: 2px;
+        height: 2px;
+        margin: 0 4px;
+        width: 2px;
+        }
+}
 
 .kop {
     .sqs-block-html,

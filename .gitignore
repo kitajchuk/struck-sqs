@@ -22,3 +22,8 @@ sftp-config.json
 build
 .npmrc
 .env
+
+
+
+# Hook.io
+struck-medium-feed/_data.json

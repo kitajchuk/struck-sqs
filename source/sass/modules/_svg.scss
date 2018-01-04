@@ -4,4 +4,8 @@
 .svg--logo {
     fill: $red;
     height: $logo-height;
+
+    @include state( "cover", "view" ) {
+        fill: $white;
     }
+}

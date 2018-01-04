@@ -1,0 +1,16 @@
+.cover {
+    background-color: $black;
+    height: 100vh;
+    // overflow: hidden;
+    position: relative;
+    width: 100vw;
+    }
+.cover__overlay {
+    background-color: $black;
+    height: 100%;
+    left: 0;
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    }
