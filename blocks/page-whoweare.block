@@ -33,36 +33,49 @@
         </div>
     </div>
 </div>
-<div class="page__locations -wrap -exp2">
-    <div class="locations -wrapl">
-        <div class="locations__info -column">
+<div class="page__locations -wrap -exp">
+    <div class="onetwo -wrapl">
+        <div class="onetwo__info -column">
             <div class="m -caps -color">
                 <squarespace:block-field id="module-whoweare-locmeta" columns="12" />
             </div>
             <squarespace:block-field id="module-whoweare-locbody" columns="12" />
         </div>
-        <div class="locations__image -column -wrapl">
+        <div class="onetwo__image -column -wrapl">
             <squarespace:block-field id="module-whoweare-locimage" columns="12" />
         </div>
     </div>
+    <div class="m -fpo -bump6">[FPO: Location addresses go here&hellip;]</div>
 </div>
-<div class="page__content -wrap">
-    <squarespace:block-field id="module-whoweare-gallery" columns="12" />
-    <div class="-wrap -exp">
-        <squarespace:block-field id="module-whoweare-quote" columns="12" />
+<div class="page__content">
+    <div class="-wrap">
+        <squarespace:block-field id="module-whoweare-gallery" columns="12" />
+        <div class="-wrap -exp">
+            <squarespace:block-field id="module-whoweare-quote" columns="12" />
+        </div>
     </div>
-</div>
-<div class="page__images">
     <squarespace:block-field id="module-whoweare-images" columns="12" />
 </div>
-<div class="page__howwedo">
-
+<div class="page__wework -wrap -exp">
+    <div class="onetwo">
+        <div class="onetwo__image -column">
+            <squarespace:block-field id="module-whoweare-weworkimage" columns="12" />
+        </div>
+        <div class="onetwo__info -column -wrapl -expt">
+            <div class="m -caps -color">
+                <squarespace:block-field id="module-whoweare-weworkmeta" columns="12" />
+            </div>
+            <squarespace:block-field id="module-whoweare-weworkbody" columns="12" />
+        </div>
+    </div>
 </div>
-<div class="page__recognize">
-
+<div class="page__recognize -wrap">
+    <div class="m -fpo">[FPO: Awards block goes here&hellip;]</div>
 </div>
-<div class="page__modules -wrap -expt">
-    {@|apply module-medium.block}
+<div class="page__modules -wrap">
+    <div class="-exp">
+        {@|apply module-medium.block}
+    </div>
     {@|apply module-instagram.block}
     {@|apply module-contact.block}
 </div>

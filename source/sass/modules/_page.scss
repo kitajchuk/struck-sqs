@@ -48,7 +48,7 @@
 #module-home-about-headline,
 #page-careers-cta-text-blocks {
     padding-right: 16vw;
-    }
+}
 #module-home-about-button {
     .btn {
         @include btn-alt();
@@ -56,16 +56,16 @@
 }
 #module-home-quote {
     padding-bottom: $padding-1;
+}
+#module-whoweare-images {
+    .sqs-gallery-block-stacked .image-wrapper {
+        line-height: 0;
+        margin: 0;
+
+        & + .image-wrapper {
+            padding-top: $padding-1;
+            }
     }
-#module-whoweare-locbody {
-    .sqs-block-horizontalrule hr {
-        background-color: $grey2;
-        color: $grey2;
-        margin: $padding-1 0 ($padding-1 / 2);
-        }
-    .sqs-block-button {
-        margin-top: $padding-1;
-        }
 }
 
 
@@ -105,7 +105,7 @@
 .attrs__num {
     position: absolute;
     left: 4vw;
-    top: 12px;
+    top: 14px;
 
     @include respond( $mobile-breakpoint ) {
         left: 2vw;
@@ -117,28 +117,59 @@
 /******************************************************************************
  * Who We Are — Locations element
 *******************************************************************************/
-.locations {
-    align-items: center;
+.onetwo {
+    align-items: flex-start;
     display: flex;
     justify-content: space-between;
+
+    .sqs-block-horizontalrule hr {
+        background-color: $grey2;
+        color: $grey2;
+        margin: 60px 0 30px;
+        }
+    .sqs-block-button {
+        margin-top: 60px;
+        }
 
     @include respond( $mobile-breakpoint ) {
         flex-wrap: wrap;
         padding-right: $padding-1;
     }
+
+    .page__wework & {
+        @include respond( $mobile-breakpoint ) {
+            padding-right: 0;
+        }
+    }
 }
-.locations__info {
+.onetwo__info {
+    &:last-child {
+        @include respond( $mobile-breakpoint ) {
+            padding-left: 0 !important;
+        }
+    }
+
     @include respond( $mobile-breakpoint ) {
         width: 100%;
     }
 }
-.locations__image {
+.onetwo__image {
     width: 300%;
 
-    @include respond( $mobile-breakpoint ) {
-        padding-left: 0 !important;
-        padding-top: $padding-1;
-        width: 100%;
+    &:first-child {
+        width: 500%;
+
+        @include respond( $mobile-breakpoint ) {
+            width: 100%;
+        }
+    }
+
+    &:last-child {
+        @include respond( $mobile-breakpoint ) {
+            padding-left: 0 !important;
+            padding-top: $padding-1;
+            width: 100%;
+        }
     }
 }
 
