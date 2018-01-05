@@ -52,6 +52,11 @@ const router = {
     },
 
 
+    bindSystemLinks () {
+        core.dom.body.find( "[href='#js-controller--contact']" ).addClass( "js-controller--contact" );
+    },
+
+
     /**
      *
      * @public
@@ -95,6 +100,7 @@ const router = {
     initPage ( data ) {
         this.changeClass( data );
         this.controllers.exec();
+        this.bindSystemLinks();
     },
 
 
@@ -209,7 +215,7 @@ const router = {
         core.dom.html.removeClass( "is-page-controller" );
         this.controllers.exec();
         this.execSquarespace();
-
+        this.bindSystemLinks();
     },
 
 

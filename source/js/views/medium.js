@@ -25,8 +25,10 @@ export default ( data ) => {
         return `<div class="posts__item">
             <a class="posts__title h4 -fbold" href="${baseUrlBlog}${post.uniqueSlug}" target="_blank">${post.title}</a>
             <a class="posts__text p" href="${baseUrlBlog}${post.uniqueSlug}" target="_blank">${postText}</a>
-            <a class="posts__meta -block" href="${baseUrl}@${postUser.username}" target="_blank">
-                <div class="posts__mmeta posts__avatar -column -cover js-lazy-image" data-img-src="${baseUrlImages}${postUser.imageId}"></div>
+            <a class="posts__meta" href="${baseUrl}@${postUser.username}" target="_blank">
+                <div class="posts__mmeta -column">
+                    <div class="posts__avatar -cover js-lazy-image" data-img-src="${baseUrlImages}${postUser.imageId}"></div>
+                </div>
                 <div class="posts__mmeta posts__author -column">
                     <div class="m m--static -fmedium">${postUser.name}</div>
                     <div class="m m--static -fmedium -grey">${postUser.bio}</div>

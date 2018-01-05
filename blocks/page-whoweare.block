@@ -12,8 +12,40 @@
     </div>
     {@|apply module-scroll.block}
 </div>
-<div class="page__attrs"></div>
-<div class="page__locations"></div>
+<div class="page__attrs attrs -bgcolor -wrap -exp2 js-cover">
+    <div class="-wrap">
+        <div class="m -caps -color2">
+            <squarespace:block-field id="module-whoweare-attrsmeta" columns="12" />
+        </div>
+        <div class="attrs__group -light -bump">
+            <div class="attrs__attr -column">
+                <div class="m attrs__num">1.</div>
+                <squarespace:block-field id="module-whoweare-attr1" columns="12" />
+            </div>
+            <div class="attrs__attr -column">
+                <div class="m attrs__num">2.</div>
+                <squarespace:block-field id="module-whoweare-attr2" columns="12" />
+            </div>
+            <div class="attrs__attr -column">
+                <div class="m attrs__num">3.</div>
+                <squarespace:block-field id="module-whoweare-attr3" columns="12" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page__locations -wrap -exp2">
+    <div class="locations -wrapl">
+        <div class="locations__info -column">
+            <div class="m -caps -color">
+                <squarespace:block-field id="module-whoweare-locmeta" columns="12" />
+            </div>
+            <squarespace:block-field id="module-whoweare-locbody" columns="12" />
+        </div>
+        <div class="locations__image -column -wrapl">
+            <squarespace:block-field id="module-whoweare-locimage" columns="12" />
+        </div>
+    </div>
+</div>
 <div class="page__content -wrap">
     <squarespace:block-field id="module-whoweare-gallery" columns="12" />
     <div class="-wrap -exp">
