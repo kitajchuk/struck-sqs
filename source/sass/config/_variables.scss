@@ -50,6 +50,7 @@ $logo-height: 60px;
 $header-padding: 40px;
 $page-padding: 160px;
 $page-padding-2: #{"~\"calc( #{$page-padding} + 3vw )\""};
+$posts-avatar-width: 45px;
 
 
 
@@ -107,6 +108,7 @@ $break-mobile-full: 640px;
 $break-mobile-medium: 480px;
 $break-mobile-small: 320px;
 
+$tablet-breakpoint: $break-tablet-full;
 $mobile-breakpoint: $break-tablet-small;
 $desktop-breakpoint: $break-desktop;
 

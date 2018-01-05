@@ -1,6 +1,8 @@
 export default ( data ) => {
-    const baseUrl = "https://medium.com/greater-than/";
-    const baseUrlImg = "https://cdn-images-1.medium.com/fit/c/64/64/";
+    const baseUrl = "https://medium.com/";
+    const baseUrlBlog = `${baseUrl}greater-than/`;
+    const baseUrlImages = "https://cdn-images-1.medium.com/fit/c/64/64/";
+    const mediumSvgLogo = require( `../../../blocks/svg-medium-logo.block` );
     const getUser = ( userId ) => {
         return data.users.find(( user ) => {
             return (user.userId === userId);
@@ -21,20 +23,22 @@ export default ( data ) => {
         const postText = (post.previewContent.bodyModel.paragraphs[ 2 ] || post.previewContent.bodyModel.paragraphs[ 1 ] || post.previewContent.bodyModel.paragraphs[ 0 ]).text;
 
         return `<div class="posts__item">
-            <a class="posts__title h4 -fbold" href="${baseUrl}${post.uniqueSlug}" target="_blank">${post.title}</a>
-            <div class="posts__text p">${postText}</div>
-            <div class="posts__meta -bump3">
-                <div class="posts__avatar -column -vtop -cover js-lazy-image" data-img-src="${baseUrlImg}${postUser.imageId}"></div>
-                <div class="posts__author -column -vtop">
-                    <div class="m -fmedium">${postUser.name}</div>
-                    <div class="m -fmedium -grey">${postUser.bio}</div>
-                    <div class="m -fmedium -grey">
+            <a class="posts__title h4 -fbold" href="${baseUrlBlog}${post.uniqueSlug}" target="_blank">${post.title}</a>
+            <a class="posts__text p" href="${baseUrlBlog}${post.uniqueSlug}" target="_blank">${postText}</a>
+            <a class="posts__meta -block" href="${baseUrl}@${postUser.username}" target="_blank">
+                <div class="posts__mmeta posts__avatar -column -cover js-lazy-image" data-img-src="${baseUrlImages}${postUser.imageId}"></div>
+                <div class="posts__mmeta posts__author -column">
+                    <div class="m m--static -fmedium">${postUser.name}</div>
+                    <div class="m m--static -fmedium -grey">${postUser.bio}</div>
+                    <div class="m m--static -fmedium -grey">
                         <div class="-column">${getDate( post.createdAt )}</div>
                         <span class="-column"></span>
                         <div class="-column">${getRead( post.virtuals.readingTime )}</div>
                     </div>
                 </div>
-            </div>
+                <div class="posts__mmeta posts__platform -column">${mediumSvgLogo}</div>
+            </a>
         </div>`;
-    });
+
+    }).join( "" );
 };

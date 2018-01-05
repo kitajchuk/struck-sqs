@@ -98,9 +98,9 @@
     padding: $padding-1 ($padding-1 / 4) 0 ($padding-1 / 4);
     width: 20%;
 
-    // @include respond( $break-ipad-pro-width ) {
-    //     width: 25%;
-    // }
+    @include respond( $mobile-breakpoint ) {
+        width: 50%;
+    }
 }
 .touts__media {
     align-items: center;
@@ -111,17 +111,26 @@
     max-width: 100%;
     }
 
+
 .posts {
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 -($padding-1 / 4);
+    margin: 0 -($padding-1 / 3);
     }
 .posts__item {
-    padding: 0 ($padding-1 / 4);
+    padding: 0 ($padding-1 / 3);
     width: 25%;
+
+    @include respond( $tablet-breakpoint ) {
+        width: 50%;
     }
+
+    @include respond( $mobile-breakpoint ) {
+        width: 100%;
+    }
+}
 .posts__title {
     border-top: 1px solid $grey2;
     display: block;
@@ -129,13 +138,13 @@
     padding-top: 30px;
     }
 .posts__avatar {
-    border-radius: 48px;
-    height: 48px;
-    width: 48px;
+    border-radius: $posts-avatar-width;
+    height: $posts-avatar-width;
+    width: $posts-avatar-width;
     }
 .posts__author {
-    padding-left: 10px;
-    width: #{"~\"calc( 100% - 48px )\""};
+    padding: 0 10px;
+    max-width: #{"~\"calc( 100% - #{$posts-avatar-width} - #{$posts-avatar-width} )\""};
 
     span {
         background-color: $grey;
@@ -145,6 +154,18 @@
         width: 2px;
         }
 }
+.posts__platform {
+    height: $posts-avatar-width;
+    width: $posts-avatar-width;
+    }
+.posts__meta {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    }
+.posts__mmeta {}
 
 .kop {
     .sqs-block-html,

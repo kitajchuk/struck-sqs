@@ -51,6 +51,15 @@
         font-size: $m-size-3;
     }
 }
+.m--static {
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $m-size;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $m-size;
+    }
+}
 
 
 /******************************************************************************
