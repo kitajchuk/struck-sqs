@@ -8,8 +8,8 @@ export default ( job ) => {
         eeoc: 160456
     };
     const getMeta = ( id ) => {
-        const meta = job.metadata.find(( meta ) => {
-            return (meta.id === id);
+        const meta = job.metadata.find(( mmeta ) => {
+            return (mmeta.id === id);
         });
         const metas = meta.value.split( /\n|\r/g );
 
@@ -20,18 +20,18 @@ export default ( job ) => {
     };
     const getList = ( body ) => {
         return `<ul class="ul -bump2">
-            ${body.map(( item, i ) => {
+            ${body.map(( item ) => {
                 return `<li class="li -bump">${item}</li>`;
 
             }).join( "" )}
         </ul>`;
     };
-    const struckIs = getMeta( metaIDs.struckIs );
+    // const struckIs = getMeta( metaIDs.struckIs );
     const weNeed = getMeta( metaIDs.weNeed );
     const youAre = getMeta( metaIDs.youAre );
     const youHave = getMeta( metaIDs.youHave );
     const youWill = getMeta( metaIDs.youWill );
-    const eeoc = getMeta( metaIDs.eeoc );
+    // const eeoc = getMeta( metaIDs.eeoc );
 
     return `
         <div class="page__mast -wrap">
