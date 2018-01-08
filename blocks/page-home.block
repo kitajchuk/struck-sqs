@@ -5,11 +5,11 @@
 </div>
 <div class="page__gridwall -wrap -exp">
     <div class="m -fpo">[FPO: Projects + Case Studies will go here&hellip;]</div>
-    <div class="-bump6">
-        <div class="-column">
+    <div class="btns -bump6">
+        <div class="btns__btn -column">
             <squarespace:block-field id="module-home-button-case-studies" columns="12" />
         </div>
-        <div class="-column -push">
+        <div class="btns__btn -column">
             <squarespace:block-field id="module-home-button-portfolio" columns="12" />
         </div>
     </div>
@@ -18,7 +18,7 @@
     <squarespace:block-field id="module-home-video-reel" columns="12" />
 </div>
 <div class="page__about -wrapl -bgcolor -exp js-cover">
-    <div class="-wrapl">
+    <div class="-wrap">
         <div class="m -caps -color2">
             <squarespace:block-field id="module-home-about-meta" columns="12" />
         </div>

@@ -38,7 +38,13 @@
     top: 50%;
     transform: translate3d( -50%, -50%, 0 );
     width: 6.875vw;
+
+    @include respond( $tablet-breakpoint ) {
+        border-radius: 64px;
+        height: 64px;
+        width: 64px;
     }
+}
 .embed__playbtn__label {
     left: 50%;
     letter-spacing: 5px;
@@ -46,12 +52,20 @@
     position: absolute;
     top: 50%;
     transform: translate3d( -46%, -50%, 0 );
+
+    @include respond( $tablet-breakpoint ) {
+        font-size: $m-size;
     }
+}
 .embed__filter {
     clip-path: circle( 3.4375vw at 50% 50% );
     filter: blur( 13px );
     transform: translate3d( 0, 0, 0 );
+
+    @include respond( $tablet-breakpoint ) {
+        clip-path: circle( 32px at 50% 50% );
     }
+}
 
 .sqs-block-video {
 

@@ -14,6 +14,10 @@
     @include state( "navi", "open" ) {
         transform: translate3d( 0, 0, 0 );
     }
+
+    @include respond( $mobile-breakpoint-medium ) {
+        width: #{"~\"calc( 100vw - 65px )\""};
+    }
 }
 .navi__header {
     left: 0;
@@ -23,7 +27,13 @@
     position: fixed;
     top: 0;
     width: 100%;
+
+    @include respond( $mobile-breakpoint ) {
+        padding-left: $mobile-padding;
+        padding-right: $mobile-padding;
+        padding-top: 36px;
     }
+}
 .navi__a {
     transition: color $base-duration $ease;
 
@@ -56,6 +66,10 @@
     @include state( "contact", "open" ) {
         transform: translate3d( 0, 0, 0 );
     }
+
+    @include respond( $mobile-breakpoint-medium ) {
+        width: #{"~\"calc( 100vw - 65px )\""};
+    }
 }
 .contact__header {
     left: 0;
@@ -65,4 +79,10 @@
     position: fixed;
     top: 0;
     width: 100%;
+
+    @include respond( $mobile-breakpoint ) {
+        padding-left: $mobile-padding;
+        padding-right: $mobile-padding;
+        padding-top: 36px;
     }
+}

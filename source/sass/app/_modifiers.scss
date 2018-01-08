@@ -22,13 +22,33 @@
 .-wrap {
     padding-left: $padding-1;
     padding-right: $padding-1;
+
+    // & > .-wrap {
+    //     @include respond( $mobile-breakpoint ) {
+    //         padding-left: 0;
+    //         padding-right: 0;
+    //     }
+    // }
+
+    @include respond( $mobile-breakpoint ) {
+        padding-left: $mobile-padding;
+        padding-right: $mobile-padding;
     }
+}
 .-wrapl {
     padding-left: $padding-1;
+
+    @include respond( $mobile-breakpoint ) {
+        padding-left: $mobile-padding;
     }
+}
 .-wrapr {
     padding-right: $padding-1;
+
+    @include respond( $mobile-breakpoint ) {
+        padding-right: $mobile-padding;
     }
+}
 .-vtop {
     vertical-align: top;
     }
@@ -134,7 +154,12 @@
         height: 6px;
         margin-top: 30px;
         width: 36px;
+
+        @include respond( $mobile-breakpoint ) {
+            height: 4px;
+            margin-top: $padding-1 / 2;
         }
+    }
 }
 .-text--center {
     text-align: center;

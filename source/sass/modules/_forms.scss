@@ -19,9 +19,10 @@
         padding-right: 80px;
     }
 
-    & + .btn {
-        margin-left: $padding-1 / 2;
-        }
+    @include respond( $mobile-breakpoint ) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 .btn--alt {
     @include btn-alt();
@@ -29,3 +30,20 @@
 .btn--light {
     @include btn-lit();
     }
+.btns {}
+.btns__btn {
+    @include respond( $mobile-breakpoint-small ) {
+        display: block;
+        width: 100%;
+    }
+
+    & + .btns__btn {
+        @include respond-min( $mobile-breakpoint-small ) {
+            margin-left: $padding-1 / 2;
+        }
+
+        @include respond( $mobile-breakpoint-small ) {
+            margin-top: $padding-1;
+        }
+    }
+}

@@ -8,10 +8,18 @@
 
     @include state( "navi", "open" ) {
         transform: translate3d( 50vw, 0, 0 );
+
+        @include respond( $mobile-breakpoint-medium ) {
+            transform: translate3d( #{"~\"calc( 100vw - 65px )\""}, 0, 0 );
+        }
     }
 
     @include state( "contact", "open" ) {
         transform: translate3d( 50vw, 0, 0 );
+
+        @include respond( $mobile-breakpoint-medium ) {
+            transform: translate3d( #{"~\"calc( 100vw - 65px )\""}, 0, 0 );
+        }
     }
 
     @include state( "page", "controller" ) {
@@ -28,7 +36,12 @@
     left: $padding-1 * 2;
     position: absolute;
     transform: translateY( 40px );
+
+    @include respond( $mobile-breakpoint ) {
+        left: $mobile-padding * 2;
+        transform: translateY( $mobile-padding );
     }
+}
 .page__scroll__text {
     left: 0;
     position: absolute;
@@ -40,6 +53,12 @@
     height: 200px;
     width: 2px;
     }
+.page__modules {
+    @include respond( $mobile-breakpoint ) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
 
 
 /******************************************************************************
@@ -232,6 +251,10 @@
     @include respond( $mobile-breakpoint ) {
         width: 50%;
     }
+
+    @include respond( $mobile-breakpoint-small ) {
+        width: 100%;
+    }
 }
 .touts__media {
     align-items: center;
@@ -252,7 +275,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 (-$padding-1 / 3);
+
+    @include respond( $mobile-breakpoint ) {
+        padding-left: $mobile-padding;
+        padding-right: $mobile-padding;
     }
+}
 .posts__item {
     padding: 0 ($padding-1 / 3);
     width: 25%;
@@ -404,6 +432,10 @@
     cursor: inherit;
     margin-left: 20px;
     width: 24vw;
+
+    @include respond( $mobile-breakpoint ) {
+        width: 36vw;
+    }
 }
 
 
