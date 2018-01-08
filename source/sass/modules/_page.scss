@@ -9,7 +9,7 @@
     @include state( "navi", "open" ) {
         transform: translate3d( 50vw, 0, 0 );
 
-        @include respond( $mobile-breakpoint-medium ) {
+        @include respond( $mobile-breakpoint-navi ) {
             transform: translate3d( #{"~\"calc( 100vw - 65px )\""}, 0, 0 );
         }
     }
@@ -17,7 +17,7 @@
     @include state( "contact", "open" ) {
         transform: translate3d( 50vw, 0, 0 );
 
-        @include respond( $mobile-breakpoint-medium ) {
+        @include respond( $mobile-breakpoint-navi ) {
             transform: translate3d( #{"~\"calc( 100vw - 65px )\""}, 0, 0 );
         }
     }
@@ -232,16 +232,30 @@
         content: "2.";
     }
 }
+.job {}
+.job__cols {
+    margin: 0 (-$padding-1 / 2);
+    }
+.job__col {
+    padding: 0 ($padding-1 / 2);
+    width: 33.333333%;
+
+    & + .job__col {
+        @include respond( $mobile-breakpoint ) {
+            margin-top: $padding-1;
+        }
+    }
+
+    @include respond( $mobile-breakpoint ) {
+        width: 100%;
+    }
+}
 
 
 /******************************************************************************
  * Homepage/What We Do — Client touts elements
 *******************************************************************************/
 .touts {
-    align-items: flex-end;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin: 0 (-$padding-1 / 4);
     }
 .touts__item {
@@ -270,10 +284,6 @@
  * Module — Medium posts
 *******************************************************************************/
 .posts {
-    align-items: flex-start;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin: 0 (-$padding-1 / 3);
 
     @include respond( $mobile-breakpoint ) {
@@ -294,10 +304,8 @@
     }
 }
 .posts__title {
-    border-top: 1px solid $grey2;
     display: block;
     padding-bottom: 20px;
-    padding-top: 30px;
     }
 .posts__meta {
     align-items: center;
@@ -459,3 +467,24 @@
         cursor: -webkit-grabbing;
     }
 }
+
+
+/******************************************************************************
+ * Module — Title lockup like on Job details
+*******************************************************************************/
+.mastline {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .p,
+    .h2 {
+        line-height: 1;
+        }
+}
+.mastline__line {
+    background-color: $red4;
+    flex-grow: 1;
+    height: 2px;
+    margin: 0 ($padding-1 / 2);
+    }

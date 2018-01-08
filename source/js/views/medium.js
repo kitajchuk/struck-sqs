@@ -22,8 +22,8 @@ export default ( data ) => {
         const postUser = getUser( post.creatorId );
         const postText = (post.previewContent.bodyModel.paragraphs[ 2 ] || post.previewContent.bodyModel.paragraphs[ 1 ] || post.previewContent.bodyModel.paragraphs[ 0 ]).text;
 
-        return `<div class="posts__item">
-            <a class="posts__title h4 -fbold" href="${baseUrlBlog}${post.uniqueSlug}" target="_blank">${post.title}</a>
+        return `<div class="posts__item -column -vtop">
+            <a class="posts__title h4 -fbold -northborder" href="${baseUrlBlog}${post.uniqueSlug}" target="_blank">${post.title}</a>
             <a class="posts__text p" href="${baseUrlBlog}${post.uniqueSlug}" target="_blank">${postText}</a>
             <a class="posts__meta" href="${baseUrl}@${postUser.username}" target="_blank">
                 <div class="posts__mmeta -column">

@@ -4,7 +4,12 @@
     &.is-error {
         background-color: $red;
         }
+
+    @include respond( $mobile-breakpoint-navi ) {
+        margin-top: 10px !important;
+        padding: 10px;
     }
+}
 .inp::placeholder {
     color: $white;
     }

@@ -23,7 +23,7 @@
             <div class="jobs js-jobsboard-jobs -wrap"></div>
         </div>
     </div>
-    <div class="jobsboard__one js-jobsboard-one"></div>
+    <div class="jobsboard__one job js-jobsboard-one"></div>
 </div>
 <div class="page__modules -wrap">
     {@|apply module-instagram.block}

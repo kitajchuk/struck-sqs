@@ -101,6 +101,10 @@
     margin-bottom: $padding-1;
     margin-top: $padding-1;
     }
+.-northborder {
+    border-top: 1px solid $grey2;
+    padding-top: 30px;
+    }
 .-fpo {
     background-color: $red;
     color: $white;

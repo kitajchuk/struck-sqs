@@ -27,7 +27,24 @@
 .cms li,
 .sqs-block li {
     @include li();
+
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $p-size-2;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $p-size-3;
     }
+
+    i,
+    em {
+        @include em();
+        }
+    b,
+    strong {
+        @include font-family-bold();
+        }
+}
 .ol .li,
 .cms ol li,
 .sqs-block ol li {

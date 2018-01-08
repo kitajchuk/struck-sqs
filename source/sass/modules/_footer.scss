@@ -6,7 +6,7 @@
     @include state( "navi", "open" ) {
         transform: translate3d( 50vw, 0, 0 );
 
-        @include respond( $mobile-breakpoint-medium ) {
+        @include respond( $mobile-breakpoint-navi ) {
             transform: translate3d( #{"~\"calc( 100vw - 65px )\""}, 0, 0 );
         }
     }

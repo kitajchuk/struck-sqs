@@ -41,11 +41,19 @@ class App {
         });
 
         this.scroller.on( "scrolldown", () => {
-            this.core.dom.html.removeClass( "is-scroll-up" ).addClass( "is-scroll-down" );
+            const scrollPos = this.scroller.getScrollY();
+
+            if ( scrollPos >= (window.innerHeight / 2) ) {
+                this.core.dom.html.removeClass( "is-scroll-up" ).addClass( "is-scroll-down" );
+            }
         });
 
         this.scroller.on( "scrollup", () => {
-            this.core.dom.html.removeClass( "is-scroll-down" ).addClass( "is-scroll-up" );
+            const scrollPos = this.scroller.getScrollY();
+
+            if ( scrollPos >= (window.innerHeight / 2) ) {
+                this.core.dom.html.removeClass( "is-scroll-down" ).addClass( "is-scroll-up" );
+            }
         });
     }
 

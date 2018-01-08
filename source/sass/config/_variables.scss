@@ -48,7 +48,7 @@ $expander-2: 18vw;
 *******************************************************************************/
 $logo-height: 60px;
 $header-padding: 40px;
-$page-padding: 160px;
+$page-padding: 110px;
 $page-padding-2: #{"~\"calc( #{$page-padding} + 3vw )\""};
 $posts-avatar-width: 45px;
 $mobile-padding: 20px;
@@ -111,7 +111,7 @@ $break-mobile-small: 320px;
 
 $tablet-breakpoint: $break-tablet-full;
 $mobile-breakpoint: $break-tablet-small;
-$mobile-breakpoint-medium: $break-mobile-full;
+$mobile-breakpoint-navi: $break-mobile-full;
 $mobile-breakpoint-small: $break-mobile-medium;
 $desktop-breakpoint: $break-desktop;
 

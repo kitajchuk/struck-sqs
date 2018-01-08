@@ -47,7 +47,6 @@
     @include font-family-bold();
 }
 @mixin li() {
-    padding-left: 20px;
     @include p();
 }
 @mixin ol-li() {
