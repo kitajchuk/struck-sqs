@@ -2,9 +2,7 @@
     <div class="h2 -mast">
         <squarespace:block-field id="module-case-studies-masthead" columns="12" />
     </div>
-    <div class="-bump3">
-        <div class="m -caps">Filter By</div>
-    </div>
+    {@|apply module-filters.block}
 </div>
 <div class="page__gridwall -wrap -exp">
     <div class="m -fpo">[FPO: Projects will go here&hellip;]</div>

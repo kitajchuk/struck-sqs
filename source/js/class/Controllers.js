@@ -7,6 +7,7 @@ import ViewController from "./ViewController";
 import VideoController from "./VideoController";
 import DragController from "./DragController";
 import CoverController from "./CoverController";
+import AspectController from "./AspectController";
 
 
 /**
@@ -71,6 +72,8 @@ class Controllers {
         this.images = this.element.find( core.config.lazyImageSelector );
         this.imageController = new ImageController( this.images );
         this.imageController.on( "preloaded", () => {
+            this.aspects = this.element.find( core.config.aspectSelector );
+            this.aspectController = new AspectController( this.aspects );
             this.init();
 
             if ( this.callback ) {
@@ -83,6 +86,10 @@ class Controllers {
     destroy () {
         if ( this.imageController ) {
             this.imageController.destroy();
+        }
+
+        if ( this.aspectController ) {
+            this.aspectController.destroy();
         }
 
         this.kill();

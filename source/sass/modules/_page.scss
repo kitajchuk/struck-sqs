@@ -243,6 +243,9 @@
 }
 
 
+/******************************************************************************
+ * Module with label and numbered items
+*******************************************************************************/
 .nums {
     align-items: flex-start;
     display: flex;
@@ -281,6 +284,90 @@
         transform: translateX( -3vw );
     }
 }
+
+
+/******************************************************************************
+ * Filters, as in tags for Portfolio and Casestudies
+*******************************************************************************/
+.filters {
+    overflow-x: auto;
+    white-space: nowrap;
+    }
+.filters__item,
+.filters__label {
+    line-height: 1;
+    }
+.filters__item {
+    &.is-active {
+        color: $red;
+
+        &:before {
+            color: $black;
+            }
+    }
+
+    & + .filters__item {
+        &:before {
+            content: "\\";
+            display: inline-block;
+            padding: 0 10px;
+            transform: translateY( -2px );
+            vertical-align: middle;
+            }
+    }
+}
+
+
+.grid {
+    margin: 0 -10px;
+    }
+.grid__item {
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    }
+.grid__item--2up {
+    width: 50%;
+
+    @include respond( $tablet-breakpoint ) {
+        width: 66.666666%;
+    }
+
+    @include respond( $mobile-breakpoint ) {
+        width: 100%;
+    }
+}
+.grid__item--4up {
+    width: 25%;
+
+    @include respond( $tablet-breakpoint ) {
+        width: 33.333333%;
+    }
+
+    @include respond( $mobile-breakpoint ) {
+        width: 50%;
+    }
+}
+.grid__info {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    }
+.grid__title {
+    left: 0;
+    padding: 20px 0 0 20px;
+    position: absolute;
+    top: 0;
+    }
+.grid__meta {
+    bottom: 0;
+    left: 0;
+    padding: 0 0 20px 20px;
+    position: absolute;
+    white-space: nowrap;
+    }
 
 
 /******************************************************************************

@@ -2,12 +2,22 @@
     <div class="h2 -mast">
         <squarespace:block-field id="module-portfolio-masthead" columns="12" />
     </div>
-    <div class="-bump3">
-        <div class="m -caps">Filter By</div>
-    </div>
+    {@|apply module-filters.block}
 </div>
-<div class="page__gridwall -wrap -exp">
-    <div class="m -fpo">[FPO: Projects will go here&hellip;]</div>
+<div class="page__grid grid -wrap -exp">
+    {.repeated section items}
+        <a class="grid__item grid__item--4up -column" href="{fullUrl}">
+            <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original="415x492"></div>
+            <div class="grid__info">
+                <div class="grid__title m -light -caps">{title}</div>
+                <div class="grid__meta">
+                    {.repeated section tags}
+                        <div class="filters__item p -light -column">{@}</div>
+                    {.end}
+                </div>
+            </div>
+        </a>
+    {.end}
 </div>
 <div class="page__modules">
     {@|apply module-goto.block}

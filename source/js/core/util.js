@@ -290,5 +290,6 @@ export {
     isElementLoadable,
     isElementVisible,
     getElementsInView,
-    getElementDuration
+    getElementDuration,
+    getOriginalDims
 };

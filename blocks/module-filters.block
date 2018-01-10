@@ -1,0 +1,9 @@
+<menu class="filters -bump3">
+    <div class="filters__label m -caps -column">Filter By</div>
+    <div class="filters__list -column -push">
+        <a class="filters__item p -column {.if tagFilter}{.or}is-active{.end}" href="{collection.fullUrl}">all</a>
+        {.repeated section collection.tags}
+            <a class='filters__item p -column {.equal? tagFilter @}is-active{.end}' href="{collection.fullUrl}?tag={@}">{@}</a>
+        {.end}
+    </div>
+</menu>
