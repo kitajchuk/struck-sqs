@@ -56,12 +56,12 @@
     </div>
     <squarespace:block-field id="module-whoweare-images" columns="12" />
 </div>
-<div class="page__wework -wrap -exp">
+<div class="page__wework -wrap -expt">
     <div class="onetwo">
         <div class="onetwo__image -column">
             <squarespace:block-field id="module-whoweare-weworkimage" columns="12" />
         </div>
-        <div class="onetwo__info -column -wrapl -expt">
+        <div class="onetwo__info -column -wrapl -exp">
             <div class="m -caps -color">
                 <squarespace:block-field id="module-whoweare-weworkmeta" columns="12" />
             </div>
@@ -69,8 +69,19 @@
         </div>
     </div>
 </div>
-<div class="page__recognize -wrap">
-    <div class="m -fpo">[FPO: Awards block goes here&hellip;]</div>
+<div class="page__awards cover cover--auto js-cover">
+    <div class="cover__image">
+        <squarespace:block-field id="module-whoweare-awardsimage" columns="12" />
+    </div>
+    <div class="cover__overlay"></div>
+    <div class="cover__content ghost -wrap">
+        <div class="ghost__child -wrap">
+            <div class="h2 -light">
+                <squarespace:block-field id="module-whoweare-awardshead" columns="12" />
+            </div>
+            <div class="m -fpo -bump3">[FPO: Award stats go here&hellip;]</div>
+        </div>
+    </div>
 </div>
 <div class="page__modules -wrap">
     <div class="-exp">

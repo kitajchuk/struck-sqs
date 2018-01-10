@@ -12,13 +12,13 @@ export default ( jobs ) => {
         const description = getMeta( job, metaIDs.description );
 
         return `
-            <a class="jobs__post -block" href="/careers/?career=${job.id}">
-                <div class="jobs_0 m -color -column -column--1of3 -vtop">${job.title}</div>
-                <div class="jobs_1 m -column -column--1of3 -vtop">
-                    <div class="-column -vtop">${job.location.name}</div>
+            <a class="nums jobs__post -block" href="/careers/?career=${job.id}">
+                <div class="nums__item nums__item--3up m -color -column -vtop">${job.title}</div>
+                <div class="nums__item nums__item--3up nums__item--lab m -column -vtop" data-num="1.">
+                    <div class="-column">${job.location.name}</div>
                 </div>
-                <div class="jobs_2 m -column -column--1of3 -vtop">
-                    <div class="-column -fregular -vtop">${description.value}</div>
+                <div class="nums__item nums__item--3up nums__item--lab m -column -vtop" data-num="2.">
+                    <div class="-column -fregular">${description.value}</div>
                 </div>
             </a>
         `;

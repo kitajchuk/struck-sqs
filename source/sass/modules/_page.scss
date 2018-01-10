@@ -59,6 +59,13 @@
         padding-right: 0 !important;
     }
 }
+.page__wework {
+    position: relative;
+    z-index: 2;
+    }
+.page__awards {
+    z-index: 1;
+    }
 
 
 /******************************************************************************
@@ -156,6 +163,8 @@
     }
 
     .page__wework & {
+        align-items: flex-end;
+
         @include respond( $mobile-breakpoint ) {
             padding-right: 0;
         }
@@ -176,6 +185,7 @@
     width: 300%;
 
     &:first-child {
+        transform: translateY( $padding-1 );
         width: 500%;
 
         @include respond( $mobile-breakpoint ) {
@@ -213,25 +223,6 @@
     border-top: 1px solid $black3;
     padding: 4vw 0;
     }
-.jobs_1,
-.jobs_2 {
-    position: relative;
-
-    &:before {
-        content: "1.";
-        display: inline-block;
-        left: 0;
-        padding-right: 2vw;
-        position: absolute;
-        top: 0;
-        transform: translateX( -3vw );
-    }
-}
-.jobs_2 {
-    &:before {
-        content: "2.";
-    }
-}
 .job {}
 .job__cols {
     margin: 0 (-$padding-1 / 2);
@@ -248,6 +239,46 @@
 
     @include respond( $mobile-breakpoint ) {
         width: 100%;
+    }
+}
+
+
+.nums {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    }
+.nums__item {
+    width: 25%;
+
+    & + .nums__item {
+        @include respond( $mobile-breakpoint ) {
+            margin-top: 10px;
+        }
+    }
+
+    @include respond( $mobile-breakpoint ) {
+        width: 100%;
+    }
+}
+.nums__item--3up {
+    width: 33.333333%;
+
+    @include respond( $mobile-breakpoint ) {
+        width: 100%;
+    }
+}
+.nums__item--lab {
+    position: relative;
+
+    &:before {
+        content: attr( data-num );
+        display: inline-block;
+        left: 0;
+        padding-right: 2vw;
+        position: absolute;
+        top: 0;
+        transform: translateX( -3vw );
     }
 }
 
