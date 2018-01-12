@@ -117,6 +117,12 @@
     border-left-color: $white;
     color: $white;
 }
+@mixin btn-blk() {
+    background-color: $black;
+    border: 0;
+    color: $white;
+    padding: 20px 30px;
+}
 @mixin inp() {
     @include p();
     background-color: $black2;

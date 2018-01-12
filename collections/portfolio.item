@@ -1,0 +1,8 @@
+{# Portfolio / Projects #}
+{.equal? item.customContent.customType "customProject"}
+    {@|apply item-project.block}
+
+{# Case Studies #}
+{.or equal? item.customContent.customType "customCasestudy"}
+    {@|apply item-casestudy.block}
+{.end}

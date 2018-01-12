@@ -66,6 +66,23 @@
 .page__awards {
     z-index: 1;
     }
+.page__intro,
+.page__statement {
+    padding-right: 24vw;
+    }
+
+
+
+/******************************************************************************
+ * Simple little columns like on Project pages
+*******************************************************************************/
+.cols {
+    margin: 0 (-$padding-1 / 2);
+    }
+.cols__col {
+    padding: 0 ($padding-1 / 2);
+    width: 50%;
+    }
 
 
 /******************************************************************************
@@ -83,15 +100,13 @@
 #module-home-quote {
     padding-bottom: $padding-1;
 }
-#module-whoweare-images {
-    .sqs-gallery-block-stacked .image-wrapper {
-        line-height: 0;
-        margin: 0;
+.sqs-gallery-block-stacked .image-wrapper {
+    line-height: 0;
+    margin: 0;
 
-        & + .image-wrapper {
-            padding-top: $padding-1;
-            }
-    }
+    & + .image-wrapper {
+        padding-top: $padding-1;
+        }
 }
 
 
@@ -249,23 +264,32 @@
 .nums {
     align-items: flex-start;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     }
-.nums__item {
-    width: 25%;
+.nums__item {}
+.nums__item--auto {
+    max-width: 25%;
+
+    & + .nums__item {
+        @include respond( $tablet-breakpoint ) {
+            margin-top: 10px;
+        }
+    }
+
+    @include respond( $tablet-breakpoint ) {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+.nums__item--3up {
+    width: 33.333333%;
 
     & + .nums__item {
         @include respond( $mobile-breakpoint ) {
             margin-top: 10px;
         }
     }
-
-    @include respond( $mobile-breakpoint ) {
-        width: 100%;
-    }
-}
-.nums__item--3up {
-    width: 33.333333%;
 
     @include respond( $mobile-breakpoint ) {
         width: 100%;
@@ -318,6 +342,9 @@
 }
 
 
+/******************************************************************************
+ * Grids as in Homepage, Portfolio and Casestudies
+*******************************************************************************/
 .grid {
     margin: 0 -10px;
     }

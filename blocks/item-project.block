@@ -1,0 +1,74 @@
+<div class="page__mast -wrap">
+    <div class="m -caps -color">
+        <squarespace:block-field id="module-project-{item.id}-mastmeta" columns="12" />
+    </div>
+    <squarespace:block-field id="module-project-{item.id}-masthead" columns="12" />
+</div>
+<div class="page__video js-cover -bump3">
+    <squarespace:block-field id="module-project-{item.id}-video" columns="12" />
+</div>
+<div class="page__intro -wrapl -exp">
+    <div class="-wrapl">
+        <div class="m -caps -color">
+            <squarespace:block-field id="module-project-{item.id}-intrometa" columns="12" />
+        </div>
+        <squarespace:block-field id="module-project-{item.id}-introhead" columns="12" />
+        <div class="cols -expt">
+            <div class="cols__col -column -vtop">
+                <div class="-northborder">
+                    <squarespace:block-field id="module-project-{item.id}-introcol1" columns="12" />
+                </div>
+            </div>
+            <div class="cols__col -column -vtop">
+                <div class="-northborder">
+                    <squarespace:block-field id="module-project-{item.id}-introcol2" columns="12" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page__gallery -wrap">
+    <squarespace:block-field id="module-project-{item.id}-gallery" columns="12" />
+</div>
+<div class="page__details -wrap -exp">
+    <div class="-wrap">
+        <div class="nums -northborder">
+            <div class="nums__item nums__item--auto m -caps -color -column -vtop">
+                <squarespace:block-field id="module-project-{item.id}-details1" columns="12" />
+            </div>
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="i.">
+                <squarespace:block-field id="module-project-{item.id}-details2" columns="12" />
+            </div>
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="ii.">
+                <squarespace:block-field id="module-project-{item.id}-details3" columns="12" />
+            </div>
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="iii.">
+                <squarespace:block-field id="module-project-{item.id}-details4" columns="12" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page__images -wrap">
+    <squarespace:block-field id="module-project-{item.id}-images" columns="12" />
+</div>
+<div class="page__statement -wrapl -exp">
+    <div class="-wrapl">
+        <squarespace:block-field id="module-project-{item.id}-statement" columns="12" />
+    </div>
+</div>
+{.if item.customContent.hasCasestudy}
+    <div class="page__casestudy -text--right">
+        <a href="#" class="btn btn--dark" target="_blank">+View full case study</a>
+    </div>
+{.end}
+<div class="page__related -wrap">
+    <div class="-wrap">
+        <div class="m -fpo">[FPO: Related items go here&hellip;]</div>
+    </div>
+</div>
+<div class="page__button -wrap -exp -text--center">
+    <a href="{collection.fullUrl}" class="btn">Back to List</a>
+</div>
+<div class="page__modules -wrap">
+    {@|apply module-contact.block}
+</div>

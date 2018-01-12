@@ -35,6 +35,9 @@
 .btn--light {
     @include btn-lit();
     }
+.btn--dark {
+    @include btn-blk();
+    }
 .btns {}
 .btns__btn {
     @include respond( $mobile-breakpoint-small ) {

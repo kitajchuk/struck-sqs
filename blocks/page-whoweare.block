@@ -45,7 +45,22 @@
             <squarespace:block-field id="module-whoweare-locimage" columns="12" />
         </div>
     </div>
-    <div class="m -fpo -bump6">[FPO: Location addresses go here&hellip;]</div>
+    <div class="-wrap -expt">
+        <div class="nums -northborder">
+            <div class="nums__item nums__item--auto m -caps -color -column -vtop">
+                <squarespace:block-field id="module-whoweare-locmeta2" columns="12" />
+            </div>
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="1.">
+                <squarespace:block-field id="module-whoweare-locaddy1" columns="12" />
+            </div>
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="2.">
+                <squarespace:block-field id="module-whoweare-locaddy2" columns="12" />
+            </div>
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="3.">
+                <squarespace:block-field id="module-whoweare-locaddy3" columns="12" />
+            </div>
+        </div>
+    </div>
 </div>
 <div class="page__content">
     <div class="-wrap">
