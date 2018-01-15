@@ -27,13 +27,6 @@
     padding-left: $padding-1;
     padding-right: $padding-1;
 
-    // & > .-wrap {
-    //     @include respond( $mobile-breakpoint ) {
-    //         padding-left: 0;
-    //         padding-right: 0;
-    //     }
-    // }
-
     @include respond( $mobile-breakpoint ) {
         padding-left: $mobile-padding;
         padding-right: $mobile-padding;
@@ -205,6 +198,10 @@
             height: 4px;
             margin-top: $padding-1 / 2;
         }
+    }
+
+    &.-light:after {
+        background-color: $white;
     }
 }
 .-text--center {

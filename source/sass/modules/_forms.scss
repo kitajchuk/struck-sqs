@@ -28,6 +28,11 @@
         padding-left: 30px;
         padding-right: 30px;
     }
+
+    .page__results & {
+        border-bottom-color: $black;
+        border-left-color: $black;
+    }
 }
 .btn--alt {
     @include btn-alt();

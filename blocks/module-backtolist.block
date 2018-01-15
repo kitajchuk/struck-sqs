@@ -1,0 +1,3 @@
+<div class="page__button -wrap -exp -text--center">
+    <a href="{collection.fullUrl}" class="btn">Back to List</a>
+</div>

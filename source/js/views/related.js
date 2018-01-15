@@ -14,11 +14,11 @@ export default ( json, data ) => {
     });
 
     const item = core.util.shuffle( items ).pop();
-    const image = (item.customContent.relatedImage || item);
+    const image = item ? (item.customContent.relatedImage || item) : null;
 
     //data-variants="${image.systemDataVariants}"
 
-    return `
+    return item ? `
         <div class="related__info -column -vtop">
             <div class="m -caps">${item.title}</div>
             <div class="h4 -fmedium">${item.customContent.relatedBlurb}</div>
@@ -31,5 +31,5 @@ export default ( json, data ) => {
                 <img class="media__node js-lazy-image -wrapl" data-img-src="${image.assetUrl}" />
             </div>
         </div>
-    `;
+    ` : ``;
 };

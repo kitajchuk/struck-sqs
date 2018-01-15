@@ -29,3 +29,15 @@
 .is-touchable {
     // Touch specific here?
 }
+
+// Page specific
+.is-who-we-are-page {
+    .page {
+        padding-top: 0;
+        }
+}
+.is-case-studies-page.is-uid-page {
+    .page {
+        padding-top: 0;
+        }
+}

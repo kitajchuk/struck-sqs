@@ -26,10 +26,6 @@
         opacity: 0;
         pointer-events: none;
     }
-
-    @include state( "who-we-are", "page" ) {
-        padding-top: 0;
-    }
 }
 .page__scroll {
     bottom: 0;
@@ -114,6 +110,13 @@
     }
 
     &.is-active {
+        .related__info {
+            transform: translate3d( $padding-1 / 2, 0, 0 );
+
+            &:after {
+                width: 180px;
+            }
+        }
         .related__image {
             opacity: 1;
             transform: translate3d( $padding-1, 0, 0 );
@@ -124,7 +127,22 @@
 .related__project {}
 .related__info {
     max-width: 320px;
+    position: relative;
+    transition: transform $base-duration $ease;
     width: 100%;
+    z-index: 2;
+
+    &:after {
+        background-color: $red;
+        content: "";
+        height: 2px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        transform: translateX( 100% );
+        transition: width $base-duration $ease;
+        width: 0;
+    }
 
     @include respond( $mobile-breakpoint ) {
         max-width: 50%;
@@ -142,6 +160,7 @@
     transition: opacity $base-duration $ease,
                 transform $base-duration $ease;
     width: #{"~\"calc( 100% - 320px )\""};
+    z-index: 1;
 
     @include respond( $mobile-breakpoint ) {
         opacity: 1;
@@ -168,8 +187,8 @@
     }
 .cols__col {
     padding: 0 ($padding-1 / 2);
-    width: 50%;
-    }
+    width: 33.333333%;
+}
 
 
 /******************************************************************************
@@ -242,10 +261,6 @@
  * Who We Are — Locations element
 *******************************************************************************/
 .onetwo {
-    align-items: flex-start;
-    display: flex;
-    justify-content: space-between;
-
     .sqs-block-horizontalrule hr {
         background-color: $grey2;
         color: $grey2;
@@ -269,6 +284,8 @@
     }
 }
 .onetwo__info {
+    width: 40%;
+
     &:last-child {
         @include respond( $mobile-breakpoint ) {
             padding-left: 0;
@@ -276,27 +293,29 @@
         }
     }
 
+    @include respond( $tablet-breakpoint ) {
+        width: 50%;
+    }
+
     @include respond( $mobile-breakpoint ) {
         width: 100%;
     }
 }
 .onetwo__image {
-    width: 300%;
+    width: 60%;
 
-    &:first-child {
-        // transform: translateY( $padding-1 );
-        width: 500%;
+    @include respond( $tablet-breakpoint ) {
+        width: 50%;
+    }
 
-        @include respond( $mobile-breakpoint ) {
-            width: 100%;
-        }
+    @include respond( $mobile-breakpoint ) {
+        width: 100%;
     }
 
     &:last-child {
         @include respond( $mobile-breakpoint ) {
             padding-left: 0;
             padding-top: $padding-1;
-            width: 100%;
         }
     }
 }
