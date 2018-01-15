@@ -7,7 +7,7 @@
 <div class="page__video js-cover -bump3">
     <squarespace:block-field id="module-project-{item.id}-video" columns="12" />
 </div>
-<div class="page__intro -wrapl -exp">
+<div class="page__intro -wrapl -exp -paddr">
     <div class="-wrapl">
         <div class="m -caps -color">
             <squarespace:block-field id="module-project-{item.id}-intrometa" columns="12" />
@@ -51,19 +51,23 @@
 <div class="page__images -wrap">
     <squarespace:block-field id="module-project-{item.id}-images" columns="12" />
 </div>
-<div class="page__statement -wrapl -exp">
+<div class="page__statement -wrapl -exp -paddr">
     <div class="-wrapl">
         <squarespace:block-field id="module-project-{item.id}-statement" columns="12" />
     </div>
 </div>
 {.if item.customContent.hasCasestudy}
-    <div class="page__casestudy -text--right">
-        <a href="#" class="btn btn--dark" target="_blank">+View full case study</a>
-    </div>
+    <div class="page__casestudy -text--right js-view" data-uid="csbutton" data-url="/case-studies" data-url-id="{item.urlId}"></div>
 {.end}
 <div class="page__related -wrap">
     <div class="-wrap">
-        <div class="m -fpo">[FPO: Related items go here&hellip;]</div>
+        <div class="related js-toggles -bggrey -exp2">
+            <div class="related__label m -color -caps -wrap">
+                <squarespace:block-field id="module-project-{item.id}-relatedmeta" columns="12" />
+            </div>
+            <div class="related__item js-toggles-item related__casestudy js-view -wrap -exp0 is-active" data-uid="related" data-url="/case-studies" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View case study"></div>
+            <div class="related__item js-toggles-item related__project js-view -wrap -exp0" data-uid="related" data-url="{collection.fullUrl}" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View project"></div>
+        </div>
     </div>
 </div>
 <div class="page__button -wrap -exp -text--center">

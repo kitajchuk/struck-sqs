@@ -17,7 +17,7 @@
 <div class="page__video js-cover">
     <squarespace:block-field id="module-home-video-reel" columns="12" />
 </div>
-<div class="page__about -wrapl -bgcolor -exp js-cover">
+<div class="page__about -wrapl -bgcolor -exp -paddr2 js-cover">
     <div class="-wrap">
         <div class="m -caps -color2">
             <squarespace:block-field id="module-home-about-meta" columns="12" />

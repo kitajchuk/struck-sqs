@@ -102,7 +102,7 @@ class View {
         // Webpack es6Module { __esModule: true, default: f }
         const view = require( `../views/${this.uid}` );
 
-        this.element[ 0 ].innerHTML = view.default( this.json );
+        this.element[ 0 ].innerHTML = view.default( this.json, this.data );
     }
 
 

@@ -50,13 +50,13 @@
             <div class="nums__item nums__item--auto m -caps -color -column -vtop">
                 <squarespace:block-field id="module-whoweare-locmeta2" columns="12" />
             </div>
-            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="1.">
+            <div class="nums__item nums__item--auto nums__item--lab m mp -column -vtop" data-num="1.">
                 <squarespace:block-field id="module-whoweare-locaddy1" columns="12" />
             </div>
-            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="2.">
+            <div class="nums__item nums__item--auto nums__item--lab m mp -column -vtop" data-num="2.">
                 <squarespace:block-field id="module-whoweare-locaddy2" columns="12" />
             </div>
-            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="3.">
+            <div class="nums__item nums__item--auto nums__item--lab m mp -column -vtop" data-num="3.">
                 <squarespace:block-field id="module-whoweare-locaddy3" columns="12" />
             </div>
         </div>
@@ -71,12 +71,12 @@
     </div>
     <squarespace:block-field id="module-whoweare-images" columns="12" />
 </div>
-<div class="page__wework -wrap -expt">
+<div class="page__wework -wrap -exp">
     <div class="onetwo">
         <div class="onetwo__image -column">
             <squarespace:block-field id="module-whoweare-weworkimage" columns="12" />
         </div>
-        <div class="onetwo__info -column -wrapl -exp">
+        <div class="onetwo__info -column -wrapl">
             <div class="m -caps -color">
                 <squarespace:block-field id="module-whoweare-weworkmeta" columns="12" />
             </div>

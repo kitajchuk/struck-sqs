@@ -8,6 +8,7 @@ import VideoController from "./VideoController";
 import DragController from "./DragController";
 import CoverController from "./CoverController";
 import AspectController from "./AspectController";
+import TogglesController from "./TogglesController";
 
 
 /**
@@ -68,6 +69,7 @@ class Controllers {
         this.push( "video", core.dom.body.find( ".sqs-block-video" ), VideoController, true );
         this.push( "drag", core.dom.body.find( core.config.dragSelector ), DragController, true );
         this.push( "cover", core.dom.body.find( core.config.coverSelector ), CoverController, true );
+        this.push( "toggle", core.dom.body.find( core.config.togglesSelector ), TogglesController, true );
 
         this.images = this.element.find( core.config.lazyImageSelector );
         this.imageController = new ImageController( this.images );
