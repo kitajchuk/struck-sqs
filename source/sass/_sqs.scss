@@ -37,3 +37,32 @@ body.sqs-edit-mode .sqs-layout[data-type="block-field"].empty {
         background: $red2 !important;
     }
 }
+
+// Gallery arrow controls
+.sqs-gallery-controls .previous,
+.sqs-gallery-controls .next {
+    background: none !important;
+    border: 2px solid $white !important;
+    border-radius: 42px !important;
+    height: 42px !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    width: 42px !important;
+
+    &:before {
+        left: 50% !important;
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateX( -50% ) translateY( -50% ) !important;
+    }
+
+    @include respond( $mobile-breakpoint-small ) {
+        display: none !important;
+    }
+}
+.sqs-gallery-controls .next {
+    transform: translateY( -50% ) translateX( -30px ) !important;
+}
+.sqs-gallery-controls .previous {
+    transform: translateY( -50% ) translateX( 30px ) !important;
+}

@@ -1,5 +1,6 @@
 .inp {
     @include inp();
+    transition: background-color $fast-duration $ease;
 
     &.is-error {
         background-color: $red;
@@ -18,6 +19,7 @@
     }
 .btn {
     @include btn();
+    transition: color $fast-duration $ease;
 
     @include respond-min( $desktop-breakpoint ) {
         padding-left: 80px;
@@ -45,8 +47,14 @@
 
     span {
         border-bottom: 1px solid $white;
+        transition: border-color $fast-duration $ease;
         }
 }
+.btn--clean {
+    border: 0;
+    color: $grey;
+    padding: 0;
+    }
 .btns {}
 .btns__btn {
     @include respond( $mobile-breakpoint-small ) {

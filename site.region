@@ -60,7 +60,7 @@
                         <button class="btn btn--light js-contact-submit">Submit</button>
                     </div>
                     <div class="-column -column--2of4 -text--right">
-                        <div class="m -grey -curse js-contact-reset">Reset Form</div>
+                        <div class="btn btn--clean -grey -curse js-contact-reset">Reset Form</div>
                     </div>
                 </div>
             </div>

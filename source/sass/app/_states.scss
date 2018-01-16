@@ -2,12 +2,14 @@
  * Document States
 *******************************************************************************/
 .is-hoverable {
-    // Hover specific here?
+    // Red underline big text
     .module-linker {
         a:hover:after {
             width: 100%;
         }
     }
+
+    // Like what you see?
     .hover-text__wrap:hover {
         .hover-text__static {
             opacity: 0;
@@ -18,12 +20,59 @@
             transform: translate3d( 0, 0, 0 );
             }
     }
+
+    // Top right
     .svg--logo:hover {
-        fill: $red2;
-        }
+        fill: $black;
+    }
+
+    // From left
     .navi__a:hover {
         color: $red2;
+    }
+
+    // Feedback here
+    .filters__item:hover {
+        span {
+            color: $red;
         }
+    }
+
+    // Buttons...
+    .btn:hover {
+        color: $red;
+    }
+    .btn--alt:hover {
+        color: $black;
+    }
+    .btn--dark:hover {
+        span {
+            border-bottom-color: $red;
+        }
+    }
+
+    // Social links...
+    .social__a:hover {
+        color: $red;
+    }
+    .navi {
+        .social__a:hover {
+            color: $red2;
+        }
+    }
+
+    // Grids....
+    .grid__item:hover {
+        .grid__hover {
+            opacity: 1;
+        }
+        .grid__desc {
+            h3, p {
+                opacity: 1;
+                transform: translate3d( 0, 0, 0 );
+            }
+        }
+    }
 }
 
 .is-touchable {

@@ -1,12 +1,12 @@
 <div class="page__mast -wrap">
     <div class="h2 -mast">
-        <squarespace:block-field id="module-case-studies-masthead" columns="12" />
+        <squarespace:block-field id="module-portfolio-masthead" columns="12" />
     </div>
     {@|apply module-filters.block}
 </div>
 {@|apply module-grid.block}
 <div class="page__modules">
-    {@|apply module-reintroduce.block}
+    {@|apply module-goto.block}
     <div class="-wrap -expt">
         {@|apply module-instagram.block}
         {@|apply module-contact.block}

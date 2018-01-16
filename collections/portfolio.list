@@ -1,6 +1,6 @@
 {# Portfolio / Projects #}
 {.equal? collection.id "5a381d96ec212d303255000b"}
-    {@|apply page-portfolio.block}
+    {@|apply page-projects.block}
 
 {# Case Studies #}
 {.or equal? collection.id "5a381da824a6949ae324f655"}

@@ -33,7 +33,7 @@
         </div>
     </div>
 </div>
-<div class="page__locations -wrap -exp">
+<div class="page__locations -wrap -exp" id="locations">
     <div class="onetwo -wrapl">
         <div class="onetwo__info -column">
             <div class="m -caps -color">
