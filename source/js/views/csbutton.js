@@ -1,4 +1,6 @@
 export default ( json, data ) => {
+    json = json[ 0 ];
+
     let html = "";
     const item = json.items.find(( itm ) => {
         return (itm.urlId === data.urlId);

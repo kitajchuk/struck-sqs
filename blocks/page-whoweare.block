@@ -33,35 +33,7 @@
         </div>
     </div>
 </div>
-<div class="page__locations -wrap -exp" id="locations">
-    <div class="onetwo -wrapl">
-        <div class="onetwo__info -column">
-            <div class="m -caps -color">
-                <squarespace:block-field id="module-whoweare-locmeta" columns="12" />
-            </div>
-            <squarespace:block-field id="module-whoweare-locbody" columns="12" />
-        </div>
-        <div class="onetwo__image -column -wrapl">
-            <squarespace:block-field id="module-whoweare-locimage" columns="12" />
-        </div>
-    </div>
-    <div class="-wrap -expt">
-        <div class="nums -northborder">
-            <div class="nums__item nums__item--auto m -caps -color -column -vtop">
-                <squarespace:block-field id="module-whoweare-locmeta2" columns="12" />
-            </div>
-            <div class="nums__item nums__item--auto nums__item--lab m mp -column -vtop" data-num="1.">
-                <squarespace:block-field id="module-whoweare-locaddy1" columns="12" />
-            </div>
-            <div class="nums__item nums__item--auto nums__item--lab m mp -column -vtop" data-num="2.">
-                <squarespace:block-field id="module-whoweare-locaddy2" columns="12" />
-            </div>
-            <div class="nums__item nums__item--auto nums__item--lab m mp -column -vtop" data-num="3.">
-                <squarespace:block-field id="module-whoweare-locaddy3" columns="12" />
-            </div>
-        </div>
-    </div>
-</div>
+{@|apply page-locations.block}
 <div class="page__content">
     <div class="-wrap">
         <squarespace:block-field id="module-whoweare-gallery" columns="12" />

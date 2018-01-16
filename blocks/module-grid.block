@@ -21,6 +21,9 @@
                             <div class="filters__item p -light -column">{@}</div>
                         {.end}
                     </div>
+                    <div class="grid__cta">
+                        <div class="p -fbold -light">+ <span>View {.equal? customContent.customType "customProject"}Project{.or}Case Study{.end}</span></div>
+                    </div>
                 </div>
             </div>
         </a>

@@ -2,6 +2,8 @@ import * as core from "../core";
 
 
 export default ( json, data ) => {
+    json = json[ 0 ];
+
     const tags = data.tags.split( "," );
     const items = [];
 

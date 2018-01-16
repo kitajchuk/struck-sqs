@@ -48,7 +48,7 @@
                 <div class="m -light -bump3">\ <a href="tel:{websiteSettings.contactPhoneNumber}" target="_blank">{websiteSettings.contactPhoneNumber}</a></div>
                 <div class="m -light">\ <a href="mailto:newbiz@struck.com" target="_blank">newbiz@struck.com</a></div>
                 <div class="m -light">\ <a href="mailto:press@struck.com" target="_blank">press@struck.com</a></div>
-                <div class="m -color">\ Locations</div>
+                <div class="m -color">\ <a href="/locations/">Locations</a></div>
                 <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_41600" placeholder="*Name" />
                 <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_24222" placeholder="Company" />
                 <input class="inp js-contact-field -bump3" type="text" name="email-yui_3_17_2_1_1513626979285_25400" placeholder="*Email" />

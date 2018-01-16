@@ -1,4 +1,6 @@
 export default ( json ) => {
+    json = json[ 0 ];
+
     return json.items.map(( item ) => {
         return `<div class="touts__item -column">
             <div class="touts__media">

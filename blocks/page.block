@@ -23,6 +23,10 @@
     {.or equal? collection.id "5a3af88153450af67d77ffc1"}
         {@|apply page-careers.block}
 
+    {# Locations #}
+    {.or equal? collection.id "5a5d4d43652dea16057ec4db"}
+        {@|apply page-locations.block}
+
     {# Contact #}
     {.or equal? collection.id "5a381e53085229e36d2161f3"}
         <div class="-wrap">

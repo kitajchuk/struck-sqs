@@ -3,8 +3,8 @@
         <squarespace:block-field id="module-home-masthead" columns="12" />
     </div>
 </div>
-<div class="page__gridwall -wrap -exp">
-    <div class="m -fpo">[FPO: Projects + Case Studies will go here&hellip;]</div>
+<div class="page__featured -wrap -exp">
+    <div class="page__grid grid js-view" data-uid="grid" data-url="/portfolio,/case-studies"></div>
     <div class="btns -bump6">
         <div class="btns__btn -column">
             <squarespace:block-field id="module-home-button-case-studies" columns="12" />

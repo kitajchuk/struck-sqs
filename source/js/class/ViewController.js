@@ -1,6 +1,7 @@
 import * as core from "../core";
 import $ from "properjs-hobo";
 import paramalama from "paramalama";
+import AspectController from "./AspectController";
 
 
 /**
@@ -17,7 +18,7 @@ class View {
         this.element = element;
         this.data = this.element.data();
         this.uid = this.data.uid;
-        this.endpoint = this.data.url;
+        this.endpoints = this.data.url.split( "," );
         this.json = null;
 
         this.init();
@@ -66,6 +67,27 @@ class View {
         return new Promise(( resolve ) => {
             const cache = core.cache.get( `view--${this.uid}` );
             const query = paramalama( window.location.search );
+            const jsons = [];
+            const runner = () => {
+                if ( !this.endpoints.length ) {
+                    resolve( jsons );
+
+                } else {
+                    $.ajax({
+                        url: this.endpoints.pop(),
+                        dataType: "json",
+                        method: "GET",
+                        data: query
+
+                    }).then(( json ) => {
+                        // core.cache.set( `view--${this.uid}`, response );
+
+                        jsons.push( json );
+
+                        runner();
+                    });
+                }
+            };
 
             // Set these for Squarespace API JSON fetching
             query.format = "json";
@@ -74,17 +96,7 @@ class View {
                 resolve( cache );
 
             } else {
-                $.ajax({
-                    url: this.endpoint,
-                    dataType: "json",
-                    method: "GET",
-                    data: query
-
-                }).then(( json ) => {
-                    // core.cache.set( `view--${this.uid}`, response );
-
-                    resolve( json );
-                });
+                runner();
             }
         });
     }
@@ -115,7 +127,11 @@ class View {
      *
      */
     exec () {
-        core.util.loadImages( this.element.find( core.config.lazyImageSelector ) );
+        this.imageLoader = core.util.loadImages(
+            this.element.find( core.config.lazyImageSelector ),
+            core.util.noop
+        );
+        this.aspectController = new AspectController( this.element.find( core.config.aspectSelector ) );
     }
 
 
