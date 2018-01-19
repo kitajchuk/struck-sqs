@@ -1,5 +1,5 @@
 <div class="page__cover cover js-cover -cover js-lazy-image" data-img-src="{item.customContent.relatedImage.assetUrl}" data-variants="{item.customContent.relatedImage.systemDataVariants}">
-    <div class="-wrap -exp2">
+    <div class="-wrap -pagepad">
         <div class="m -caps -color">
             <squarespace:block-field id="module-casestudy-{item.id}-covermeta" columns="12" />
         </div>
@@ -10,13 +10,17 @@
     </div>
     {@|apply module-scroll.block}
 </div>
-<div class="page__intro -wrapl -exp -paddr">
-    <div class="-wrapl">
-        <div class="m -caps -color">
-            <squarespace:block-field id="module-casestudy-{item.id}-challengemeta" columns="12" />
+<div class="page__intro -exp">
+    <div class="-wrapl -paddr">
+        <div class="-wrapl">
+            <div class="m -caps -color">
+                <squarespace:block-field id="module-casestudy-{item.id}-challengemeta" columns="12" />
+            </div>
+            <squarespace:block-field id="module-casestudy-{item.id}-challengehead" columns="12" />
         </div>
-        <squarespace:block-field id="module-casestudy-{item.id}-challengehead" columns="12" />
-        <div class="cols cols--tre -expt">
+    </div>
+    <div class="-expt -wrap">
+        <div class="cols -wrap">
             <div class="cols__col -column -vtop">
                 <div class="-northborder">
                     <squarespace:block-field id="module-casestudy-{item.id}-challengecol1" columns="12" />

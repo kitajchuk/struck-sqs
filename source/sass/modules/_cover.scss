@@ -4,7 +4,11 @@
     // overflow: hidden;
     position: relative;
     width: 100vw;
+
+    @include respond( $mobile-breakpoint ) {
+        height: 60vh;
     }
+}
 .cover--auto {
     height: auto;
     }

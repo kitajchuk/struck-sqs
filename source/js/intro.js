@@ -28,15 +28,27 @@ const intro = {
     teardown () {
         core.emitter.off( "app--page-teardown", intro.teardown );
 
-        intro.logo.on( "animationend", () => {
+        // intro.logo.on( "animationend", () => {
+        //     intro.element.removeClass( "is-active" );
+        // });
+        //
+        // intro.element.on( "transitionend", () => {
+        //     intro.element.remove();
+        //
+        //     core.emitter.fire( "app--intro-teardown" );
+        // });
+
+        setTimeout(() => {
             intro.element.removeClass( "is-active" );
-        });
 
-        intro.element.on( "transitionend", () => {
-            intro.element.remove();
+            setTimeout(() => {
+                intro.element.remove();
 
-            core.emitter.fire( "app--intro-teardown" );
-        });
+                core.emitter.fire( "app--intro-teardown" );
+
+            }, 200 );
+
+        }, 2000 );
     }
 };
 

@@ -2,31 +2,28 @@ export default ( json/*, data*/ ) => {
     const items = [].concat( json[ 0 ].items ).concat( json[ 1 ].items );
 
     return items.map(( item ) => {
-        let hoverHtml = "";
         const classMod = (item.customContent.customType === "customProject" ? "4up" : "2up");
-        const aspectRatio = (item.customContent.customType === "customProject" ? "415x492" : item.originalSize);
         const postType = (item.customContent.customType === "customProject" ? "Project" : "Case Study");
+        const gridImage = (item.customContent.animatedGif ? item.customContent.animatedGif : item);
+        const aspectRatio = (item.customContent.customType === "customProject" ? "415x492" : gridImage.originalSize);
         const tagsHtml = item.tags.map(( tag ) => {
             return `<div class="filters__item p -light -column">${tag}</div>`;
 
         }).join( "" );
 
-        if ( item.customContent.hasHoverstate ) {
-            hoverHtml = `<div class="grid__desc cms -light">
-                ${item.excerpt}
-            </div>`;
-
-        } else if ( item.customContent.spotColor ) {
-            hoverHtml = `<div class="grid__color" style="background-color:${item.customContent.spotColor};"></div>`;
-        }
-
         return item.starred ? `
             <a class="grid__item grid__item--${classMod} -column" href="${item.fullUrl}">
                 <div class="grid__item-wrap">
-                    <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="${item.assetUrl}" data-variants="${item.systemDataVariants}" data-original="${aspectRatio}"></div>
-                    <div class="grid__hover">
-                        ${hoverHtml}
-                    </div>
+                    <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="${gridImage.assetUrl}" data-variants="${gridImage.systemDataVariants}" data-original="${aspectRatio}"></div>
+                    ${item.customContent.spotColor ? `
+                        <div class="grid__color" style="background-color:${item.customContent.spotColor};"></div>
+                    ` : `
+                        <div class="grid__hover">
+                            <div class="grid__desc cms -light">
+                                ${item.excerpt}
+                            </div>
+                        </div>
+                    `}
                     <div class="grid__info">
                         <div class="grid__title m -light -caps">${item.title}</div>
                         <div class="grid__meta">

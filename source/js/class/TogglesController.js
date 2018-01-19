@@ -1,4 +1,5 @@
 import $ from "properjs-hobo";
+import * as core from "../core";
 
 
 /**
@@ -14,11 +15,15 @@ class Toggles {
     constructor ( element ) {
         this.element = element;
         this.toggles = this.element.find( ".js-toggles-item" );
-        this.bind();
+
+        if ( !core.detect.isDevice() ) {
+            this.bind();
+        }
     }
 
 
     bind () {
+        this.toggles.eq( 0 ).addClass( "is-active" );
         this.element.on( "mouseenter", ".js-toggles-item", ( e ) => {
             const targ = $( e.target );
             const elem = targ.is( ".js-toggles-item" ) ? targ : targ.closest( ".js-toggles-item" );

@@ -34,8 +34,9 @@
     transform: translateY( 40px );
 
     @include respond( $mobile-breakpoint ) {
-        left: $mobile-padding * 2;
-        transform: translateY( $mobile-padding );
+        // left: $mobile-padding * 2;
+        // transform: translateY( $mobile-padding );
+        display: none;
     }
 }
 .page__scroll__text {
@@ -142,6 +143,10 @@
         transform: translateX( 100% );
         transition: width $fast-duration $ease;
         width: 0;
+
+        @include respond( $mobile-breakpoint ) {
+            display: none;
+        }
     }
 
     @include respond( $mobile-breakpoint ) {
@@ -188,6 +193,12 @@
 .cols__col {
     padding: 0 ($padding-1 / 2);
     width: 33.333333%;
+
+    @include respond( $mobile-breakpoint-navi ) {
+        margin-bottom: $mobile-padding;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 
@@ -277,10 +288,10 @@
 
     .page__wework & {
         align-items: center;
+    }
 
-        @include respond( $mobile-breakpoint ) {
-            padding-right: 0;
-        }
+    @include respond( $mobile-breakpoint ) {
+        padding-right: 0;
     }
 }
 .onetwo__info {
@@ -377,7 +388,7 @@
     width: 33.333333%;
     }
 .nums__item {
-    @include respond( $mobile-breakpoint-small ) {
+    @include respond( $mobile-breakpoint-navi ) {
         margin-bottom: $mobile-padding;
         max-width: 100%;
         width: 100%;
@@ -492,7 +503,7 @@
     }
 .grid__title {
     left: 0;
-    padding: 30px 0 0 30px;
+    padding: $mobile-padding 0 0 $mobile-padding;
     position: absolute;
     top: 0;
     }
@@ -500,7 +511,7 @@
 .grid__meta {
     bottom: 0;
     left: 0;
-    padding: 0 0 30px 30px;
+    padding: 0 0 $mobile-padding $mobile-padding;
     position: absolute;
     transition: transform $fast-duration $ease,
                 opacity $fast-duration $ease;
@@ -523,10 +534,11 @@
     left: 0;
     position: absolute;
     top: 0;
+    transition: opacity $base-duration $ease;
     width: 100%;
     }
 .grid__desc {
-    padding: $padding-1 0 30px 30px;
+    padding: 60px 0 $mobile-padding $mobile-padding;
 
     h3, p {
         opacity: 0;
