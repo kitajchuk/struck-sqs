@@ -101,3 +101,10 @@
         padding-top: 0;
         }
 }
+
+// Hide empty block-fields
+html:not( .squarespace-damask ) {
+    .is-hidden-empty {
+        display: none !important;
+    }
+}

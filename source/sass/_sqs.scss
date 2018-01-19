@@ -18,6 +18,11 @@
 .sqs-block {
     padding: 0 !important;
     }
+.sqs-block-image {
+    img {
+        display: inline-block !important;
+    }
+}
 
 // Editor
 body.sqs-edit-mode .sqs-layout[data-type="block-field"].empty {

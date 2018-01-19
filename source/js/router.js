@@ -101,6 +101,7 @@ const router = {
         this.changeClass( data );
         this.controllers.exec();
         this.bindSystemLinks();
+        this.execEmptyBlocks();
     },
 
 
@@ -216,6 +217,7 @@ const router = {
         this.controllers.exec();
         this.execSquarespace();
         this.bindSystemLinks();
+        this.execEmptyBlocks();
     },
 
 
@@ -271,6 +273,10 @@ const router = {
             window.Squarespace.initializeSummaryV2Block( window.Y );
 
         }, 0 );
+    },
+    execEmptyBlocks () {
+        //window.Y.Lang.isValue( window.CONFIG_PANEL );
+        core.dom.body.find( ".sqs-layout.empty" ).parent().addClass( "is-hidden-empty" );
     }
 };
 

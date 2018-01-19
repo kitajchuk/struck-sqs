@@ -203,6 +203,9 @@
 }
 
 
+/******************************************************************************
+ * Stats lineup as in Case studies or Who We Are...
+*******************************************************************************/
 .stats {
     align-items: flex-start;
     display: flex;
@@ -425,13 +428,29 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    .page__stats & {
+        margin: 0 (-$padding-1 / 2);
+
+        @include respond( $mobile-breakpoint-navi ) {
+            margin: 0;
+        }
     }
+}
 .nums__item--auto {
     max-width: 25%;
     }
 .nums__item--3up {
     width: 33.333333%;
     }
+.nums__item--big {
+    margin: ($padding-1 / 2) 0;
+    width: 33.333333%;
+
+    @include respond( $tablet-breakpoint ) {
+        width: 50%;
+    }
+}
 .nums__item {
     @include respond( $mobile-breakpoint-navi ) {
         margin-bottom: $mobile-padding;
@@ -445,12 +464,47 @@
         @include font-family-medium();
     }
 
-    &:first-child {
+    &:first-child:not( .nums__item--lab ) {
         @include respond( $tablet-breakpoint-small ) {
             margin-bottom: 20px;
             max-width: 100%;
             width: 100%;
         }
+    }
+
+    .page__stats & {
+        h1 {
+            font-size: $h1-size;
+            margin-bottom: 20px;
+
+            @include respond-min( $mobile-breakpoint ) {
+                font-size: $h1-size;
+            };
+
+            @include respond-min( $tablet-breakpoint ) {
+                font-size: $h1-size-static;
+            };
+
+            @include respond-min( $desktop-breakpoint ) {
+                font-size: $h1-size-static;
+            }
+        }
+
+        p strong {
+            color: $red;
+            margin-top: 20px;
+        }
+
+        > .sqs-layout {
+            padding: 0 ($padding-1 / 2);
+        }
+
+        .sqs-block-horizontalrule hr {
+            background-color: $white;
+            color: $white;
+            margin: 40px 0;
+            max-width: 300px;
+            }
     }
 }
 .nums__item--lab {
@@ -464,6 +518,20 @@
         position: absolute;
         top: 0;
         transform: translateX( -3vw );
+        @include m();
+
+        @include respond-min( $mobile-breakpoint ) {
+            font-size: $m-size-2;
+        };
+
+        @include respond-min( $desktop-breakpoint ) {
+            font-size: $m-size-3;
+        }
+
+        .page__stats & {
+            top: 10px;
+            transform: none;
+        }
     }
 }
 

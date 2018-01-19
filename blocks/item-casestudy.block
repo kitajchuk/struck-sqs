@@ -61,8 +61,16 @@
     <squarespace:block-field id="module-casestudy-{item.id}-video" columns="12" />
 </div>
 <div class="page__solution -wrap -exp">
-    <div class="-wrap">
-        <div class="m -fpo">[FPO: Solution content will go here&hellip;]</div>
+    <div class="onetwo -wrapl">
+        <div class="onetwo__info -column">
+            <div class="m -caps -color">
+                <squarespace:block-field id="module-casestudy-{item.id}-solutionsmeta" columns="12" />
+            </div>
+            <squarespace:block-field id="module-casestudy-{item.id}-solutionsbody" columns="12" />
+        </div>
+        <div class="onetwo__image -column -wrapl -text--center">
+            <squarespace:block-field id="module-casestudy-{item.id}-solutionsimage" columns="12" />
+        </div>
     </div>
 </div>
 <div class="page__images js-cover">
@@ -93,9 +101,26 @@
     </div>
 </div>
 {.if item.customContent.hasStats}
-    <div class="page__stats cover cover--auto js-cover -wrap -exp2">
-        <div class="-wrap">
-
+    <div class="page__stats cover cover--auto js-cover -wrap -exp3">
+        <div class="nums -light -wraph">
+            <div class="nums__item nums__item--big nums__item--lab" data-num="1.">
+                <squarespace:block-field id="module-casestudy-{item.id}-stats1" columns="12" />
+            </div>
+            <div class="nums__item nums__item--big nums__item--lab" data-num="2.">
+                <squarespace:block-field id="module-casestudy-{item.id}-stats2" columns="12" />
+            </div>
+            <div class="nums__item nums__item--big nums__item--lab" data-num="3.">
+                <squarespace:block-field id="module-casestudy-{item.id}-stats3" columns="12" />
+            </div>
+            <div class="nums__item nums__item--big nums__item--lab" data-num="4.">
+                <squarespace:block-field id="module-casestudy-{item.id}-stats4" columns="12" />
+            </div>
+            <div class="nums__item nums__item--big nums__item--lab" data-num="5.">
+                <squarespace:block-field id="module-casestudy-{item.id}-stats5" columns="12" />
+            </div>
+            <div class="nums__item nums__item--big nums__item--lab" data-num="6.">
+                <squarespace:block-field id="module-casestudy-{item.id}-stats6" columns="12" />
+            </div>
         </div>
     </div>
 {.end}
