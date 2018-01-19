@@ -12,6 +12,26 @@
 .cover--auto {
     height: auto;
     }
+.cover__image {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .image {
+        max-width: none;
+    }
+
+    > .sqs-layout {
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate3d( -50%, -50%, 0 );
+        width: 100%;
+    }
+}
 .cover__overlay {
     background-color: $black;
     height: 100%;
@@ -21,10 +41,4 @@
     top: 0;
     width: 100%;
     }
-.cover__content {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    }
+.cover__content {}

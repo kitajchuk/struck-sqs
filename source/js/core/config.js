@@ -200,6 +200,17 @@ const config = {
     /**
      *
      * @public
+     * @member fsmediaSelector
+     * @memberof core.config
+     * @description The string selector used for <fsmedia>.
+     *
+     */
+    fsmediaSelector: ".js-fs-media",
+
+
+    /**
+     *
+     * @public
      * @member lazyImageAttr
      * @memberof core.config
      * @description The string attribute for lazy image source URLs.

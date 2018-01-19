@@ -56,8 +56,8 @@
         </div>
     </div>
 </div>
-<div class="page__awards cover cover--auto js-cover">
-    <div class="cover__image">
+<div class="page__awards cover cover--auto js-cover -bgblack -exp3">
+    <div class="cover__image js-fs-media">
         <squarespace:block-field id="module-whoweare-awardsimage" columns="12" />
     </div>
     <div class="cover__overlay"></div>
@@ -66,7 +66,32 @@
             <div class="h2 -light">
                 <squarespace:block-field id="module-whoweare-awardshead" columns="12" />
             </div>
-            <div class="m -fpo -bump3">[FPO: Award stats go here&hellip;]</div>
+            <div class="stats -bump6">
+                <div class="stats__col -column -light">
+                    <div class="stats__circle">
+                        <squarespace:block-field id="module-whoweare-awards1value" columns="12" />
+                    </div>
+                    <div class="stats__label p -fbold -caps -bump4">
+                        <squarespace:block-field id="module-whoweare-awards1label" columns="12" />
+                    </div>
+                </div>
+                <div class="stats__col -column -light">
+                    <div class="stats__circle">
+                        <squarespace:block-field id="module-whoweare-awards2value" columns="12" />
+                    </div>
+                    <div class="stats__label p -fbold -caps -bump4">
+                        <squarespace:block-field id="module-whoweare-awards2label" columns="12" />
+                    </div>
+                </div>
+                <div class="stats__col -column -light">
+                    <div class="stats__circle">
+                        <squarespace:block-field id="module-whoweare-awards3value" columns="12" />
+                    </div>
+                    <div class="stats__label p -fbold -caps -bump4">
+                        <squarespace:block-field id="module-whoweare-awards3label" columns="12" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

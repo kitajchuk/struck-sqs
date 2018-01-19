@@ -147,7 +147,7 @@ const loadImages = function ( images, handler, useVariant ) {
     };
     let $img = null;
     let data = null;
-    let dims = null;
+    // let dims = null;
     let vars = null;
     let width = null;
     let variant = null;
@@ -178,16 +178,16 @@ const loadImages = function ( images, handler, useVariant ) {
         source = data.imgSrc.replace( rQuery, "" );
 
         // Pre-process portrait vs landscape using originalSize
-        if ( data.originalSize ) {
-            dims = getOriginalDims( data.originalSize );
-
-            if ( dims.width > dims.height ) {
-                $img.addClass( "image--wide" );
-
-            } else {
-                $img.addClass( "image--tall" );
-            }
-        }
+        // if ( data.originalSize ) {
+        //     dims = getOriginalDims( data.originalSize );
+        //
+        //     if ( dims.width > dims.height ) {
+        //         $img.addClass( "image--wide" );
+        //
+        //     } else {
+        //         $img.addClass( "image--tall" );
+        //     }
+        // }
 
         if ( useVariant && data.variants ) {
             vars = data.variants.split( "," ).map( map );

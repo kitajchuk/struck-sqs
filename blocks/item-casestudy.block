@@ -92,11 +92,13 @@
         </div>
     </div>
 </div>
-<div class="page__stats cover cover--auto js-cover -wrap -exp2">
-    <div class="-wrap">
+{.if item.customContent.hasStats}
+    <div class="page__stats cover cover--auto js-cover -wrap -exp2">
+        <div class="-wrap">
 
+        </div>
     </div>
-</div>
+{.end}
 <div class="-expt">
     {@|apply module-related.block}
 </div>

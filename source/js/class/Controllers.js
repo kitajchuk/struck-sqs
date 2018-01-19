@@ -9,6 +9,7 @@ import DragController from "./DragController";
 import CoverController from "./CoverController";
 import AspectController from "./AspectController";
 import TogglesController from "./TogglesController";
+import FSMediaController from "./FSMediaController";
 
 
 /**
@@ -70,6 +71,7 @@ class Controllers {
         this.push( "drag", core.dom.body.find( core.config.dragSelector ), DragController, true );
         this.push( "cover", core.dom.body.find( core.config.coverSelector ), CoverController, true );
         this.push( "toggle", core.dom.body.find( core.config.togglesSelector ), TogglesController, true );
+        this.push( "fsmedia", core.dom.body.find( core.config.fsmediaSelector ), FSMediaController, true );
 
         this.images = this.element.find( core.config.lazyImageSelector );
         this.imageController = new ImageController( this.images );

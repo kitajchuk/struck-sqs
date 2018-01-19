@@ -2,11 +2,13 @@
     {.var @url item.assetUrl}
     {.var @vars item.systemDataVariants}
     {.var @bleed info.stretch}
+    {.var @dims item.originalSize}
 {.or}
     {.var @url assetUrl}
     {.var @vars systemDataVariants}
     {.var @bleed @url}
+    {.var @dims originalSize}
 {.end}
-<div class="media {.if @bleed}{.or}-wrap{.end}">
-    <img class="media__node image js-lazy-image" data-img-src="{@url}" data-variants="{@vars}" />
+<div class="media js-media {.if @bleed}{.or}-wrap{.end}">
+    <img class="media__node js-media-node image js-lazy-image" data-img-src="{@url}" data-variants="{@vars}" data-original="{@dims}" />
 </div>
