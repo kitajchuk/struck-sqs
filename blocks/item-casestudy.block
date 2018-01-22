@@ -61,42 +61,63 @@
     <squarespace:block-field id="module-casestudy-{item.id}-video" columns="12" />
 </div>
 <div class="page__solution -wrap -exp">
-    <div class="onetwo -wrapl">
-        <div class="onetwo__info -column">
-            <div class="m -caps -color">
-                <squarespace:block-field id="module-casestudy-{item.id}-solutionsmeta" columns="12" />
+    <div class="-rel">
+        <div class="onetwo -wrapl">
+            <div class="onetwo__info -column">
+                <div class="m -caps -color">
+                    <squarespace:block-field id="module-casestudy-{item.id}-solutionsmeta" columns="12" />
+                </div>
+                <squarespace:block-field id="module-casestudy-{item.id}-solutionsbody" columns="12" />
             </div>
-            <squarespace:block-field id="module-casestudy-{item.id}-solutionsbody" columns="12" />
+            <div class="onetwo__image -column -wrapl -text--center">
+                <squarespace:block-field id="module-casestudy-{item.id}-solutionsimage" columns="12" />
+            </div>
         </div>
-        <div class="onetwo__image -column -wrapl -text--center">
-            <squarespace:block-field id="module-casestudy-{item.id}-solutionsimage" columns="12" />
+        <div class="page__zone">
+            <div class="page__zone__num m -caps -caps -column">01</div>
+            <div class="page__zone__line -column"></div>
+            <div class="page__zone__label m -column">Brand&nbsp;Promise</div>
         </div>
     </div>
 </div>
 <div class="page__images js-cover">
     <squarespace:block-field id="module-casestudy-{item.id}-images1" columns="12" />
 </div>
-<div class="page__gallery -wrap -exp">
+<div class="page__gallery -wrap -expt">
     <squarespace:block-field id="module-casestudy-{item.id}-gallery" columns="12" />
 </div>
-<div class="page__quote -wrap -paddr">
-    <div class="-wrap -exp">
-        <squarespace:block-field id="module-casestudy-{item.id}-quote" columns="12" />
+<div class="page__quote -wrap -exp">
+    <div class="-rel">
+        <div class="-wrap -paddr -exp">
+            <squarespace:block-field id="module-casestudy-{item.id}-quote" columns="12" />
+        </div>
+        <div class="page__zone">
+            <div class="page__zone__num m -caps -caps -column">02</div>
+            <div class="page__zone__line -column"></div>
+            <div class="page__zone__label m -column">Real&nbsp;Testimonial</div>
+        </div>
     </div>
 </div>
 <div class="page__images js-cover">
     <squarespace:block-field id="module-casestudy-{item.id}-images2" columns="12" />
 </div>
 <div class="page__results -wrap -exp">
-    <div class="onetwo">
-        <div class="onetwo__image -column">
-            <squarespace:block-field id="module-casestudy-{item.id}-resultsimage" columns="12" />
-        </div>
-        <div class="onetwo__info -column -wrapl">
-            <div class="m -caps -color">
-                <squarespace:block-field id="module-casestudy-{item.id}-resultsmeta" columns="12" />
+    <div class="-rel">
+        <div class="onetwo">
+            <div class="onetwo__image -column">
+                <squarespace:block-field id="module-casestudy-{item.id}-resultsimage" columns="12" />
             </div>
-            <squarespace:block-field id="module-casestudy-{item.id}-resultsbody" columns="12" />
+            <div class="onetwo__info -column -wrapl">
+                <div class="m -caps -color">
+                    <squarespace:block-field id="module-casestudy-{item.id}-resultsmeta" columns="12" />
+                </div>
+                <squarespace:block-field id="module-casestudy-{item.id}-resultsbody" columns="12" />
+            </div>
+        </div>
+        <div class="page__zone">
+            <div class="page__zone__num m -caps -caps -column">03</div>
+            <div class="page__zone__line -column"></div>
+            <div class="page__zone__label m -column">Results</div>
         </div>
     </div>
 </div>

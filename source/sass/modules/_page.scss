@@ -34,8 +34,6 @@
     transform: translateY( 40px );
 
     @include respond( $mobile-breakpoint ) {
-        // left: $mobile-padding * 2;
-        // transform: translateY( $mobile-padding );
         display: none;
     }
 }
@@ -43,13 +41,50 @@
     left: 0;
     position: absolute;
     top: 0;
-    transform: rotate( 90deg ) translateX( -100% ) translateY( 100% );
+    transform: rotate( 90deg ) translateX( -150% ) translateY( -2px );
+    transform-origin: left;
     }
 .page__scroll__line {
     background-color: $red4;
     height: 200px;
     width: 2px;
     }
+.page__zone {
+    height: 100%;
+    right: 0;
+    position: absolute;
+    top: 0;
+
+    @include respond( $tablet-breakpoint ) {
+        display: none;
+    }
+}
+.page__zone__line {
+    background-color: $grey2;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+.page__zone__num,
+.page__zone__label {
+    background-color: $white;
+    padding: 5px 20px;
+    transform-origin: left;
+    z-index: 1;
+}
+.page__zone__num {
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: rotate( 90deg ) translatex( -65% );
+}
+.page__zone__label {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transform: rotate( 90deg ) translatex( -75% );
+}
 .page__modules {
     @include respond( $mobile-breakpoint ) {
         padding-left: 0;
@@ -361,11 +396,7 @@
     }
 }
 .onetwo__image {
-    width: 60%;
-
-    @include respond( $tablet-breakpoint ) {
-        width: 50%;
-    }
+    width: 50%;
 
     @include respond( $mobile-breakpoint ) {
         width: 100%;
