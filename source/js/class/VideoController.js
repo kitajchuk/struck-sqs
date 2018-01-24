@@ -1,6 +1,7 @@
 import $ from "properjs-hobo";
 import * as core from "../core";
 import videoView from "../views/video";
+import Controller from "properjs-controller";
 
 
 
@@ -18,6 +19,7 @@ class Video {
         this.parent = this.element.parent();
         this.data = this.element.data();
         this.isPlaying = false;
+        this.controller = new Controller();
 
         this.bind();
         this.load();
@@ -50,6 +52,15 @@ class Video {
             this.parent.append( this.element );
             this.iframe = this.element.find( ".js-embed-iframe" );
             this.iframe[ 0 ].src = this.iframe.data().src;
+            this.animate = this.element.find( ".js-lazy-anim" );
+
+            this.controller.go(() => {
+                if ( core.util.isElementVisible( this.animate[ 0 ] ) ) {
+                    this.animate.addClass( "is-animated" );
+
+                    this.controller.stop();
+                }
+            });
 
             core.util.loadImages( this.element.find( core.config.lazyImageSelector ), core.util.noop );
         });
@@ -97,6 +108,8 @@ class Video {
 
 
     destroy () {
+        this.controller.stop();
+
         if ( this._onMessage ) {
             window.removeEventListener( "message", this._onMessage, false );
         }

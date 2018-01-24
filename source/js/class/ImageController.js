@@ -1,6 +1,7 @@
 import * as util from "../core/util";
 import log from "../core/log";
 import Controller from "properjs-controller";
+import $ from "properjs-hobo";
 
 
 /**
@@ -19,6 +20,7 @@ class ImageController extends Controller {
         this.$preload = util.getElementsInView( $images );
         this.$lazyload = $images.not( this.$preload );
         this.loaders = {};
+        this.animate = [];
 
         if ( this.$preload.length ) {
             this.handleLoading( this.$preload, "preload", util.noop );
@@ -33,6 +35,14 @@ class ImageController extends Controller {
         if ( this.$lazyload.length ) {
             this.handleLoading( this.$lazyload, "lazyload", util.isElementLoadable );
         }
+
+        this.go(() => {
+            this.animate.forEach(( anim, i ) => {
+                if ( util.isElementVisible( anim[ 0 ] ) ) {
+                    anim.addClass( "is-animated" );
+                }
+            });
+        });
     }
 
 
@@ -55,6 +65,12 @@ class ImageController extends Controller {
         this.loaders[ event ] = util.loadImages( $images, handler );
         this.loaders[ event ].on( "load", ( elem ) => {
             curr++;
+
+            const anim = $( elem ).parent( ".js-lazy-anim" );
+
+            if ( anim.length ) {
+                this.animate.push( anim );
+            }
 
             this.fire( event, {
                 done: curr,
@@ -80,6 +96,8 @@ class ImageController extends Controller {
      */
     destroy () {
         let loader = null;
+
+        this.stop();
 
         for ( loader in this.loaders ) {
             if ( this.loaders.hasOwnProperty( loader ) ) {

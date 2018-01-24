@@ -177,18 +177,6 @@ const loadImages = function ( images, handler, useVariant ) {
         width = ($img[ 0 ].clientWidth || $img[ 0 ].parentNode.clientWidth || window.innerWidth);
         source = data.imgSrc.replace( rQuery, "" );
 
-        // Pre-process portrait vs landscape using originalSize
-        // if ( data.originalSize ) {
-        //     dims = getOriginalDims( data.originalSize );
-        //
-        //     if ( dims.width > dims.height ) {
-        //         $img.addClass( "image--wide" );
-        //
-        //     } else {
-        //         $img.addClass( "image--tall" );
-        //     }
-        // }
-
         if ( useVariant && data.variants ) {
             vars = data.variants.split( "," ).map( map );
             variant = getClosestValue( vars, width );

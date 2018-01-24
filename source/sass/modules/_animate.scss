@@ -1,27 +1,24 @@
 /******************************************************************************
  * Animations
 *******************************************************************************/
-.animate {
+.anim {
+    transition-delay: $base-duration / 2;
     transition-duration: $base-duration;
     transition-timing-function: $ease;
-
-    &.is-static {
-        transition-duration: 0ms;
-        }
 }
-.animate--fade {
+.anim--op {
     opacity: 0;
     transition-property: opacity;
 
-    &.is-animate {
+    &.is-animated {
         opacity: 1;
         }
 }
-.animate--lift {
-    transform: translateY( $expander-1 );
+.anim--tr-t {
+    transform: translateY( $padding-1 );
     transition-property: transform;
 
-    &.is-animate {
+    &.is-animated {
         transform: translateY( 0 );
         }
 }

@@ -11,7 +11,7 @@ export default ( blockJson, contentJson ) => {
     const aspect = (blockJson.height || 9) / (blockJson.width || 16) * 100;
 
     return `
-        <div class="embed js-embed">
+        <div class="embed js-embed anim anim--op js-lazy-anim">
             <div class="embed__aspect" style="padding-bottom:${aspect}%;">
                 <iframe class="embed__element js-embed-iframe" data-src="${source}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
