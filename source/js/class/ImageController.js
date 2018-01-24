@@ -37,7 +37,7 @@ class ImageController extends Controller {
         }
 
         this.go(() => {
-            this.animate.forEach(( anim, i ) => {
+            this.animate.forEach(( anim ) => {
                 if ( util.isElementVisible( anim[ 0 ] ) ) {
                     anim.addClass( "is-animated" );
                 }

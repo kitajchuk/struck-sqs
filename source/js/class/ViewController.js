@@ -2,6 +2,7 @@ import * as core from "../core";
 import $ from "properjs-hobo";
 import paramalama from "paramalama";
 import AspectController from "./AspectController";
+import Controller from "properjs-controller";
 
 
 /**
@@ -20,6 +21,7 @@ class View {
         this.uid = this.data.uid;
         this.endpoints = this.data.url.split( "," );
         this.json = null;
+        this.controller = new Controller();
 
         this.init();
     }
@@ -131,7 +133,15 @@ class View {
             this.element.find( core.config.lazyImageSelector ),
             core.util.noop
         );
+        this.animate = this.element.find( ".js-lazy-anim" );
         this.aspectController = new AspectController( this.element.find( core.config.aspectSelector ) );
+        this.controller.go(() => {
+            this.animate.forEach(( anim, i ) => {
+                if ( core.util.isElementVisible( anim ) ) {
+                    this.animate.eq( i ).addClass( "is-animated" );
+                }
+            });
+        });
     }
 
 
@@ -143,7 +153,9 @@ class View {
      * @method destroy
      *
      */
-    destroy () {}
+    destroy () {
+        this.controller.stop();
+    }
 }
 
 

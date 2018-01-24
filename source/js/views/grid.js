@@ -13,7 +13,7 @@ export default ( json/*, data*/ ) => {
 
         return item.starred ? `
             <a class="grid__item grid__item--${classMod} -column" href="${item.fullUrl}">
-                <div class="grid__item-wrap">
+                <div class="grid__item-wrap anim anim--op js-lazy-anim">
                     <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="${gridImage.assetUrl}" data-variants="${gridImage.systemDataVariants}" data-original="${aspectRatio}"></div>
                     ${item.customContent.spotColor ? `
                         <div class="grid__color" style="background-color:${item.customContent.spotColor};"></div>
