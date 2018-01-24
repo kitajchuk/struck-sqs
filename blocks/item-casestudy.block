@@ -1,4 +1,4 @@
-<div class="page__cover cover js-cover -cover js-lazy-image" data-img-src="{item.customContent.relatedImage.assetUrl}" data-variants="{item.customContent.relatedImage.systemDataVariants}">
+<div class="page__cover cover js-cover -cover js-lazy-image" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}">
     <div class="-wrap -pagepad">
         <div class="m -caps -color">
             <squarespace:block-field id="module-casestudy-{item.id}-covermeta" columns="12" />
