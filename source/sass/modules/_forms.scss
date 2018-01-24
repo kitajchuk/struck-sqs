@@ -44,12 +44,7 @@
     }
 .btn--dark {
     @include btn-blk();
-
-    span {
-        border-bottom: 1px solid $white;
-        transition: border-color $fast-duration $ease;
-        }
-}
+    }
 .btn--clean {
     border: 0;
     color: $grey;

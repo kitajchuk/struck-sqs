@@ -66,3 +66,28 @@
         transform: rotate( 45deg );
         }
 }
+.icon--plus {
+    height: 12px;
+    width: 12px;
+
+    span {
+        background-color: $white;
+        left: 0;
+        position: absolute;
+        }
+
+    .ex1 {
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX( -50% );
+        width: 2px;
+        }
+    .ex2 {
+        height: 2px;
+        left: 0;
+        top: 50%;
+        transform: translateY( -50% );
+        width: 100%;
+        }
+}

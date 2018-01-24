@@ -45,9 +45,17 @@
     .btn--alt:hover {
         color: $black;
     }
-    .btn--dark:hover {
-        span {
-            border-bottom-color: $red;
+    .csbutton:hover {
+        border-radius: 0;
+        width: 210px;
+
+        .csbutton__text {
+            opacity: 1;
+            transform: translate3d( 0, -50%, 0 );
+        }
+
+        .csbutton__fill {
+            transform: scale3d( 1, 1, 1 );
         }
     }
 
