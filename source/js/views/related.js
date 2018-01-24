@@ -9,7 +9,7 @@ export default ( json, data ) => {
 
     json.items.forEach(( itm ) => {
         for ( let i = tags.length; i--; ) {
-            if ( itm.id !== data.itemId && itm.tags.indexOf( tags[ i ] ) !== -1 ) {
+            if ( itm.id !== data.itemId && (itm.tags && itm.tags.indexOf( tags[ i ] ) !== -1) ) {
                 items.push( itm );
             }
         }

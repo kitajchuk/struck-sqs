@@ -5,11 +5,11 @@ export default ( json/*, data*/ ) => {
         const classMod = (item.customContent.customType === "customProject" ? "4up" : "2up");
         const postType = (item.customContent.customType === "customProject" ? "Project" : "Case Study");
         const gridImage = (item.customContent.animatedGif ? item.customContent.animatedGif : item);
-        const aspectRatio = (item.customContent.customType === "customProject" ? "415x492" : gridImage.originalSize);
-        const tagsHtml = item.tags.map(( tag ) => {
+        const aspectRatio = (item.customContent.customType === "customProject" ? "415x492" : "850x492");
+        const tagsHtml = item.tags ? item.tags.map(( tag ) => {
             return `<div class="filters__item p -light -column">${tag}</div>`;
 
-        }).join( "" );
+        }).join( "" ) : "";
 
         return item.starred ? `
             <a class="grid__item grid__item--${classMod} -column" href="${item.fullUrl}">

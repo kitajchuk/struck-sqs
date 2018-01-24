@@ -122,11 +122,12 @@ $desktop-breakpoint: $break-desktop;
 /******************************************************************************
  * Animations
 *******************************************************************************/
-$ease: cubic-bezier( 0.25, 0.1, 0.25, 1 );
-$slow-duration: 800ms;
-$long-duration: 600ms;
-$base-duration: 400ms;
-$fast-duration: 200ms;
+// $ease: cubic-bezier( 0.25, 0.1, 0.25, 1 );
+$ease: cubic-bezier( 0.475, 0.425, 0, 0.995 );
+// $slow-duration: 800ms;
+// $long-duration: 600ms;
+$base-duration: 350ms;
+$fast-duration: 350ms;
 
 
 

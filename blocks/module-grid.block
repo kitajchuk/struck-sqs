@@ -4,11 +4,11 @@
             <div class="grid__item-wrap">
                 {.if customContent.spotColor}
                     {.if customContent.animatedGif}
-                        <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="{customContent.animatedGif.assetUrl}" data-variants="{customContent.animatedGif.systemDataVariants}" data-original='{.equal? customContent.customType "customProject"}415x492{.or}{customContent.animatedGif.originalSize}{.end}'></div>
+                        <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="{customContent.animatedGif.assetUrl}" data-variants="{customContent.animatedGif.systemDataVariants}" data-original='{.equal? customContent.customType "customProject"}415x492{.or}850x492{.end}'></div>
                     {.end}
                     <div class="grid__color" style="background-color:{customContent.spotColor};"></div>
                 {.or}
-                    <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original='{.equal? customContent.customType "customProject"}415x492{.or}{originalSize}{.end}'></div>
+                    <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original='{.equal? customContent.customType "customProject"}415x492{.or}850x492{.end}'></div>
                     <div class="grid__hover">
                         <div class="grid__desc cms -light">
                             {excerpt}

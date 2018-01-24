@@ -8,7 +8,7 @@ export default ( blockJson, contentJson ) => {
     const path = "https://player.vimeo.com/video/";
     const id = url.split( "/" ).pop();
     const source = `${path}${id}${qrs}`;
-    const aspect = blockJson.height / blockJson.width * 100;
+    const aspect = (blockJson.height || 9) / (blockJson.width || 16) * 100;
 
     return `
         <div class="embed js-embed">
