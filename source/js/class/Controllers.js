@@ -63,11 +63,11 @@ class Controllers {
     exec () {
         this.controllers = [];
 
+        this.push( "video", core.dom.body.find( ".sqs-block-video" ), VideoController, true );
         this.push( "contact", core.dom.body.find( core.config.contactSelector ), ContactController, true );
         this.push( "social", core.dom.body.find( core.config.socialSelector ), SocialController, true );
         this.push( "jobsboard", core.dom.body.find( core.config.jobsboardSelector ), JobsboardController, true );
         this.push( "view", core.dom.body.find( core.config.viewSelector ), ViewController, true );
-        this.push( "video", core.dom.body.find( ".sqs-block-video" ), VideoController, true );
         this.push( "drag", core.dom.body.find( core.config.dragSelector ), DragController, true );
         this.push( "cover", core.dom.body.find( core.config.coverSelector ), CoverController, true );
         this.push( "toggle", core.dom.body.find( core.config.togglesSelector ), TogglesController, true );

@@ -99,7 +99,8 @@
 }
 
 // Page specific
-.is-who-we-are-page {
+.is-who-we-are-page,
+.is-what-we-do-page {
     .page {
         padding-top: 0;
         }
@@ -111,8 +112,8 @@
 }
 
 // Hide empty block-fields
-html:not( .squarespace-damask ) {
-    .is-hidden-empty {
-        display: none !important;
-    }
-}
+// html:not( .squarespace-damask ) {
+//     .is-hidden-empty {
+//         display: none !important;
+//     }
+// }

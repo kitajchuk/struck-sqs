@@ -14,13 +14,16 @@ class FSMedia {
     constructor ( element ) {
         this.element = element;
         this.mediaNode = this.element.find( ".js-media-node" );
-        this.mediaData = this.mediaNode.data();
-        this.mediaDims = core.util.getOriginalDims( this.mediaData.original );
-        this.mediaRatio = this.mediaDims.width / this.mediaDims.height;
-        this.resizer = new ResizeController();
 
-        this.bind();
-        this.onresize();
+        if ( this.mediaNode.length ) {
+            this.mediaData = this.mediaNode.data();
+            this.mediaDims = core.util.getOriginalDims( this.mediaData.original );
+            this.mediaRatio = this.mediaDims.width / this.mediaDims.height;
+            this.resizer = new ResizeController();
+
+            this.bind();
+            this.onresize();
+        }
     }
 
 

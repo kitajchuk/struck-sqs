@@ -18,6 +18,10 @@
     {.or equal? collection.id "5a3da5910d9297d1687ba423"}
         {@|apply page-whoweare.block}
 
+    {# What We Do #}
+    {.or equal? collection.id "5a3da59d0852297f08f18634"}
+        {@|apply page-whatwedo.block}
+
 
     {# Careers #}
     {.or equal? collection.id "5a3af88153450af67d77ffc1"}

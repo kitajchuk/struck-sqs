@@ -9,11 +9,12 @@ export default ( blockJson, contentJson ) => {
     const id = url.split( "/" ).pop();
     const source = `${path}${id}${qrs}`;
     const aspect = (blockJson.height || 9) / (blockJson.width || 16) * 100;
+    const original = `${(blockJson.width || 16)}x${(blockJson.height || 9)}`;
 
     return `
         <div class="embed js-embed anim anim--op js-lazy-anim">
             <div class="embed__aspect" style="padding-bottom:${aspect}%;">
-                <iframe class="embed__element js-embed-iframe" data-src="${source}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe class="embed__element js-embed-iframe js-media-node" data-src="${source}" data-original="${original}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
             ${!core.detect.isDevice() ? `<div class="embed__poster embed__overlay js-embed-poster js-lazy-image -cover -text--center" data-img-src="${contentJson.assetUrl}" data-variants="${contentJson.systemDataVariants}">
                 <div class="embed__poster embed__filter js-embed-poster js-lazy-image -cover" data-img-src="${contentJson.assetUrl}" data-variants="${contentJson.systemDataVariants}"></div>

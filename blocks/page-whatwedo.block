@@ -1,0 +1,75 @@
+<div class="page__video js-cover">
+    <squarespace:block-field id="module-whatwedo-fsvideo" columns="12" />
+</div>
+<div class="page__intro -expt">
+    <div class="-wrap">
+        <div class="-wrap">
+            <div class="m -caps -color">
+                <squarespace:block-field id="module-whatwedo-intrometa" columns="12" />
+            </div>
+            <squarespace:block-field id="module-whatwedo-introhead" columns="12" />
+        </div>
+    </div>
+    <div class="-expt -wrap">
+        <div class="cols -wrap">
+            <div class="cols__col -column -vtop">
+                <div class="-northborder -expb">
+                    <squarespace:block-field id="module-whatwedo-introcol1" columns="12" />
+                </div>
+            </div>
+            <div class="cols__col -column -vtop">
+                <div class="-northborder -expb">
+                    <squarespace:block-field id="module-whatwedo-introcol2" columns="12" />
+                </div>
+            </div>
+            <div class="cols__col -column -vtop">
+                <div class="-northborder -expb">
+                    <squarespace:block-field id="module-whatwedo-introcol3" columns="12" />
+                </div>
+            </div>
+            <div class="cols__col -column -vtop">
+                <div class="-northborder -expb">
+                    <squarespace:block-field id="module-whatwedo-introcol4" columns="12" />
+                </div>
+            </div>
+            <div class="cols__col -column -vtop">
+                <div class="-northborder -expb">
+                    <squarespace:block-field id="module-whatwedo-introcol5" columns="12" />
+                </div>
+            </div>
+            <div class="cols__col -column -vtop">
+                <div class="-northborder -expb">
+                    <squarespace:block-field id="module-whatwedo-introcol6" columns="12" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page__content -wrap -bggrey">
+    <div class="-wrap">
+        <div class="touts js-view -expb  " data-uid="clients" data-url="/clients"></div>
+    </div>
+</div>
+<div class="page__gallery -wrap -expt">
+    <squarespace:block-field id="module-whatwedo-gallery" columns="12" />
+</div>
+<div class="page__partner -wrap -exp">
+    <div class="onetwo">
+        <div class="onetwo__image -column">
+            <squarespace:block-field id="module-whatwedo-partnerimage" columns="12" />
+        </div>
+        <div class="onetwo__info -column -wrapl">
+            <div class="m -caps -color">
+                <squarespace:block-field id="module-whatwedo-partnermeta" columns="12" />
+            </div>
+            <squarespace:block-field id="module-whatwedo-partnerbody" columns="12" />
+        </div>
+    </div>
+</div>
+<div class="page__images js-cover">
+    <squarespace:block-field id="module-whatwedo-images" columns="12" />
+</div>
+<div class="page__modules -wrap -expt">
+    {@|apply module-instagram.block}
+    {@|apply module-contact.block}
+</div>
