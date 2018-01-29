@@ -172,7 +172,7 @@ const config = {
      * @description The string selector used for <cover>.
      *
      */
-    coverSelector: ".js-cover",
+    coverSelector: ".js-cover, .sqs-gallery-block-stacked .image-wrapper",
 
 
     /**
