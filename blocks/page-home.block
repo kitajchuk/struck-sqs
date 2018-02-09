@@ -37,9 +37,7 @@
     <div class="-wrap">
         <div class="touts js-view" data-uid="clients" data-url="/clients"></div>
         <div class="-hr anim anim--tr js-lazy-anim"></div>
-        <div class=" anim anim--tr js-lazy-anim">
-            <squarespace:block-field id="module-home-quote" columns="12" />
-        </div>
+        <squarespace:block-field id="module-home-quote" columns="12" />
     </div>
 </div>
 <div class="page__modules -wrap -expt">

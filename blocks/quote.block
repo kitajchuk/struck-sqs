@@ -1,6 +1,6 @@
 <figure class="quo">
     {.if source}
-        <figcaption class="quo__src m -caps">{source|safe}</figcaption>
+        <figcaption class="quo__src m -caps anim anim--tr js-lazy-anim">{source|safe}</figcaption>
     {.end}
-    <blockquote class="quo__txt">{quote|safe}</blockquote>
+    <blockquote class="quo__txt anim anim--tr js-lazy-anim">{quote|safe}</blockquote>
 </figure>
