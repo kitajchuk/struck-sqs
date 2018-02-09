@@ -49,6 +49,7 @@ class Video {
             this.iframe[ 0 ].src = this.iframe.data().src;
 
             core.util.loadImages( this.element.find( core.config.lazyImageSelector ), core.util.noop );
+            core.emitter.fire( "app--anim-request" );
         });
     }
 

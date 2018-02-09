@@ -2,7 +2,7 @@ import $ from "properjs-hobo";
 import viewJob from "../views/job";
 import viewJobs from "../views/jobs";
 import paramalama from "paramalama";
-// import * as core from "../core";
+import * as core from "../core";
 
 
 
@@ -31,6 +31,8 @@ class JobsboardController {
             } else {
                 this.loadAll();
             }
+
+            core.emitter.fire( "app--anim-request" );
         });
     }
 

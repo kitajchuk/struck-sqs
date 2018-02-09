@@ -132,6 +132,8 @@ class View {
             core.util.noop
         );
         this.aspectController = new AspectController( this.element.find( core.config.aspectSelector ) );
+
+        core.emitter.fire( "app--anim-request" );
     }
 
 

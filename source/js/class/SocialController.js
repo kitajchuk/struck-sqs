@@ -43,6 +43,7 @@ class SocialController {
         }).then(( json ) => {
             this.mdEl[ 0 ].innerHTML = viewMedium( json );
             core.util.loadImages( this.mdEl.find( core.config.lazyImageSelector ) );
+            core.emitter.fire( "app--anim-request" );
         });
     }
 
@@ -62,6 +63,7 @@ class SocialController {
         }).then(( json ) => {
             this.igEl[ 0 ].innerHTML = viewInstagram( json );
             core.util.loadImages( this.igEl.find( core.config.lazyImageSelector ) );
+            core.emitter.fire( "app--anim-request" );
         });
     }
 

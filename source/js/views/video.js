@@ -12,7 +12,7 @@ export default ( blockJson, contentJson ) => {
     const original = `${(blockJson.width || 16)}x${(blockJson.height || 9)}`;
 
     return `
-        <div class="embed js-embed anim anim--op js-lazy-anim">
+        <div class="embed js-embed">
             <div class="embed__aspect" style="padding-bottom:${aspect}%;">
                 <iframe class="embed__element js-embed-iframe js-media-node" data-src="${source}" data-original="${original}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
