@@ -1,7 +1,7 @@
-// import throttle from "properjs-throttle";
-import Stagger from "properjs-stagger";
+// import Stagger from "properjs-stagger";
 import ScrollController from "properjs-scrollcontroller";
 import * as core from "../core";
+import Controller from "properjs-controller";
 
 
 /**
@@ -15,8 +15,7 @@ import * as core from "../core";
  */
 class AnimateController {
     constructor ( elements ) {
-        // Make a native Array[] out of Hobo()
-        this.elements = [].slice.call( elements );
+        this.elements = elements;
         this.start();
     }
 
@@ -40,7 +39,7 @@ class AnimateController {
 
 
     handle () {
-        this.elements = [].slice.call( core.dom.page.find( core.config.lazyAnimSelector ).not( ".is-animated" ) );
+        this.elements = core.dom.page.find( core.config.lazyAnimSelector ).not( "[data-animate='true']" );
 
         if ( !this.elements.length ) {
             this.scroller.stop();
@@ -59,26 +58,26 @@ class AnimateController {
 
 
     animate ( elems ) {
-        // Remove elements from the Array[]
-        elems.forEach(( elem ) => {
-            this.elements.splice(
-                this.elements.indexOf( elem ),
-                1
-            );
-        });
+        elems.attr( "data-animate", "true" );
 
         // Sequence the animation of the elements
-        new Stagger({
-            steps: elems.length,
-            delay: 50
+        const animator = new Controller();
+        let lastTime = Date.now();
+        let currElem = 0;
 
-        }).step(( i ) => {
-            elems[ i ].className += " is-animated";
+        animator.go(() => {
+            const currTime = Date.now();
 
-        }).done(() => {
-            core.log( "[AnimateController] Stagger Complete" );
+            if ( currElem === elems.length ) {
+                animator.stop();
+                core.log( "[AnimateController] Animation Complete!" );
 
-        }).start();
+            } else if ( (currTime - lastTime) >= 100 ) {
+                lastTime = currTime;
+                elems[ currElem ].className += " is-animated";
+                currElem++;
+            }
+        });
     }
 
 

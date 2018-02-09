@@ -1,14 +1,12 @@
 <footer class="footer js-footer ghost -wrap -fzero">
     <div class="ghost__child -full">
         <div class="footer__col -column -column--2of4">
-            <div class="anim anim--tr js-lazy-anim">
-                <squarespace:block-field id="footer-blocks" columns="12" />
-            </div>
+            <squarespace:block-field id="footer-blocks" columns="12" />
         </div>
         <div class="footer__col -column -column--2of4">
             <ul class="footer__social social">
                 {.repeated section website.socialAccounts}
-                    <li class="social__li -column anim anim--tr js-lazy-anim">
+                    <li class="social__li -column">
                         <a href="{profileUrl}" class="social__a m" target="_blank">{serviceName}</a>
                     </li>
                 {.end}
