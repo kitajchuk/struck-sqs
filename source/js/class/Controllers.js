@@ -10,6 +10,7 @@ import CoverController from "./CoverController";
 import AspectController from "./AspectController";
 import TogglesController from "./TogglesController";
 import FSMediaController from "./FSMediaController";
+import AnimateController from "./AnimateController";
 
 
 /**
@@ -64,21 +65,24 @@ class Controllers {
         this.controllers = [];
 
         this.push( "video", core.dom.body.find( ".sqs-block-video" ), VideoController, true );
+        this.push( "view", core.dom.body.find( core.config.viewSelector ), ViewController, true );
+        this.push( "cover", core.dom.body.find( core.config.coverSelector ), CoverController, true );
+        this.push( "fsmedia", core.dom.body.find( core.config.fsmediaSelector ), FSMediaController, true );
+        this.push( "toggle", core.dom.body.find( core.config.togglesSelector ), TogglesController, true );
+        this.push( "drag", core.dom.body.find( core.config.dragSelector ), DragController, true );
         this.push( "contact", core.dom.body.find( core.config.contactSelector ), ContactController, true );
         this.push( "social", core.dom.body.find( core.config.socialSelector ), SocialController, true );
         this.push( "jobsboard", core.dom.body.find( core.config.jobsboardSelector ), JobsboardController, true );
-        this.push( "view", core.dom.body.find( core.config.viewSelector ), ViewController, true );
-        this.push( "drag", core.dom.body.find( core.config.dragSelector ), DragController, true );
-        this.push( "cover", core.dom.body.find( core.config.coverSelector ), CoverController, true );
-        this.push( "toggle", core.dom.body.find( core.config.togglesSelector ), TogglesController, true );
-        this.push( "fsmedia", core.dom.body.find( core.config.fsmediaSelector ), FSMediaController, true );
 
         this.images = this.element.find( core.config.lazyImageSelector );
         this.imageController = new ImageController( this.images );
+        this.aspects = this.element.find( core.config.aspectSelector );
+        this.aspectController = new AspectController( this.aspects );
         this.imageController.on( "preloaded", () => {
-            this.aspects = this.element.find( core.config.aspectSelector );
-            this.aspectController = new AspectController( this.aspects );
             this.init();
+
+            this.animates = this.element.find( core.config.lazyAnimSelector );
+            this.animController = new AnimateController( this.animates );
 
             if ( this.callback ) {
                 this.callback();
@@ -94,6 +98,10 @@ class Controllers {
 
         if ( this.aspectController ) {
             this.aspectController.destroy();
+        }
+
+        if ( this.animController ) {
+            this.animController.destroy();
         }
 
         this.kill();

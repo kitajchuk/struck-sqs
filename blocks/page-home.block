@@ -1,15 +1,15 @@
 <div class="page__mast -wrap">
-    <div class="h2 -mast">
+    <div class="h2 -mast anim anim--op js-lazy-anim">
         <squarespace:block-field id="module-home-masthead" columns="12" />
     </div>
 </div>
 <div class="page__featured -wrap -exp">
     <div class="page__grid grid js-view" data-uid="grid" data-url="/portfolio,/case-studies"></div>
     <div class="btns -bump6">
-        <div class="btns__btn -column">
+        <div class="btns__btn -column anim anim--op js-lazy-anim">
             <squarespace:block-field id="module-home-button-case-studies" columns="12" />
         </div>
-        <div class="btns__btn -column">
+        <div class="btns__btn -column anim anim--op js-lazy-anim">
             <squarespace:block-field id="module-home-button-portfolio" columns="12" />
         </div>
     </div>
@@ -19,16 +19,16 @@
 </div>
 <div class="page__about -wrapl -bgcolor -exp -paddr2 js-cover">
     <div class="-wrap">
-        <div class="m -caps -color2">
+        <div class="m -caps -color2 anim anim--op js-lazy-anim">
             <squarespace:block-field id="module-home-about-meta" columns="12" />
         </div>
-        <div class="-light">
+        <div class="-light anim anim--op js-lazy-anim">
             <squarespace:block-field id="module-home-about-headline" columns="12" />
         </div>
-        <div class="m -light -bump3">
+        <div class="m -light -bump3 anim anim--op js-lazy-anim">
             <squarespace:block-field id="module-home-about-categories" columns="12" />
         </div>
-        <div class="-expt">
+        <div class="-expt anim anim--op js-lazy-anim">
             <squarespace:block-field id="module-home-about-button" columns="12" />
         </div>
     </div>
@@ -36,8 +36,10 @@
 <div class="page__content -wrap -bggrey">
     <div class="-wrap">
         <div class="touts js-view" data-uid="clients" data-url="/clients"></div>
-        <div class="-hr"></div>
-        <squarespace:block-field id="module-home-quote" columns="12" />
+        <div class="-hr anim anim--op js-lazy-anim"></div>
+        <div class=" anim anim--op js-lazy-anim">
+            <squarespace:block-field id="module-home-quote" columns="12" />
+        </div>
     </div>
 </div>
 <div class="page__modules -wrap -expt">

@@ -2,7 +2,7 @@ import $ from "properjs-hobo";
 import * as core from "../core";
 import viewInstagram from "../views/instagram";
 import viewMedium from "../views/medium";
-import Controller from "properjs-controller";
+import AnimateController from "./AnimateController"
 
 
 
@@ -35,17 +35,6 @@ class SocialController {
     }
 
 
-    waitMD () {
-        this.controllerMD = new Controller();
-        this.controllerMD.go(() => {
-            if ( core.util.isElementVisible( this.mdAnim[ 0 ] ) ) {
-                this.mdAnim.addClass( "is-animated" );
-                this.controllerMD.stop();
-            }
-        });
-    }
-
-
     loadMD () {
         $.ajax({
             url: "https://hook.io/kitajchuk/struck-medium-feed",
@@ -54,20 +43,8 @@ class SocialController {
 
         }).then(( json ) => {
             this.mdEl[ 0 ].innerHTML = viewMedium( json );
-            this.mdAnim = this.mdEl.find( ".js-lazy-anim" );
             core.util.loadImages( this.mdEl.find( core.config.lazyImageSelector ) );
-            this.waitMD();
-        });
-    }
-
-
-    waitIG () {
-        this.controllerIG = new Controller();
-        this.controllerIG.go(() => {
-            if ( core.util.isElementVisible( this.igAnim[ 0 ] ) ) {
-                this.igAnim.addClass( "is-animated" );
-                this.controllerIG.stop();
-            }
+            this.mdAnimController = new AnimateController( this.mdEl.find( core.config.lazyAnimSelector ) );
         });
     }
 
@@ -86,20 +63,19 @@ class SocialController {
 
         }).then(( json ) => {
             this.igEl[ 0 ].innerHTML = viewInstagram( json );
-            this.igAnim = this.igEl.find( ".js-lazy-anim" );
             core.util.loadImages( this.igEl.find( core.config.lazyImageSelector ) );
-            this.waitIG();
+            this.igAnimController = new AnimateController( this.igEl.find( core.config.lazyAnimSelector ) );
         });
     }
 
 
     destroy () {
-        if ( this.controllerIG ) {
-            this.controllerIG.stop();
+        if ( this.igAnimController ) {
+            this.igAnimController.destroy();
         }
 
-        if ( this.controllerMD ) {
-            this.controllerMD.stop();
+        if ( this.mdAnimController ) {
+            this.mdAnimController.destroy();
         }
     }
 }

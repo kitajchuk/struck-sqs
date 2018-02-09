@@ -116,14 +116,13 @@ const getClosestValue = function ( arr, closestTo ) {
 
 
 const getElementsInView = function ( $nodes ) {
-    let i = $nodes.length;
     const $ret = $( [] );
 
-    for ( i; i--; ) {
-        if ( isElementVisible( $nodes[ i ] ) ) {
-            $ret.push( $nodes[ i ] );
+    $nodes.forEach(( node ) => {
+        if ( isElementVisible( node ) ) {
+            $ret.push( node );
         }
-    }
+    });
 
     return $ret;
 };

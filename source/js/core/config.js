@@ -112,6 +112,17 @@ const config = {
     /**
      *
      * @public
+     * @member lazyAnimSelector
+     * @memberof core.config
+     * @description The string selector used for animating elements.
+     *
+     */
+    lazyAnimSelector: ".js-lazy-anim",
+
+
+    /**
+     *
+     * @public
      * @member contactSelector
      * @memberof core.config
      * @description The string selector used for <contact>.

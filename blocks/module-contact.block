@@ -1,5 +1,5 @@
 <div class="module-contact hover-text -bgcolor -wrap -exp3 -light -curse js-controller--contact">
-    <div class="hover-text__wrap">
+    <div class="hover-text__wrap anim anim--op js-lazy-anim">
         <div class="hover-text__static">
             <squarespace:block-field id="module-contact-cta-static" columns="12" />
         </div>
