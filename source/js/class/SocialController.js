@@ -2,7 +2,7 @@ import $ from "properjs-hobo";
 import * as core from "../core";
 import viewInstagram from "../views/instagram";
 import viewMedium from "../views/medium";
-import AnimateController from "./AnimateController"
+import AnimateController from "./AnimateController";
 
 
 

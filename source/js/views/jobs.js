@@ -12,7 +12,7 @@ export default ( jobs ) => {
         const description = getMeta( job, metaIDs.description );
 
         return `
-            <a class="nums jobs__post -block" href="/careers/?career=${job.id}">
+            <a class="nums jobs__post -block anim anim--op js-lazy-anim" href="/careers/?career=${job.id}">
                 <div class="nums__item nums__item--3up m -color -column -vtop">${job.title}</div>
                 <div class="nums__item nums__item--3up nums__item--lab m -column -vtop" data-num="1.">
                     <div class="-column">${job.location.name}</div>

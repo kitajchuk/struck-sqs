@@ -2,7 +2,8 @@ import $ from "properjs-hobo";
 import viewJob from "../views/job";
 import viewJobs from "../views/jobs";
 import paramalama from "paramalama";
-// import * as core from "../core";
+import AnimateController from "./AnimateController";
+import * as core from "../core";
 
 
 
@@ -39,6 +40,7 @@ class JobsboardController {
         this.all.addClass( "is-active" );
         this.one.addClass( "is-inactive" );
         this.jobs[ 0 ].innerHTML = viewJobs( this.json.jobs );
+        this.animController = new AnimateController( this.element.find( core.config.lazyAnimSelector ) );
     }
 
 
@@ -46,6 +48,7 @@ class JobsboardController {
         this.one.addClass( "is-active" );
         this.all.addClass( "is-inactive" );
         this.one[ 0 ].innerHTML = viewJob( this.findJob() );
+        this.animController = new AnimateController( this.element.find( core.config.lazyAnimSelector ) );
     }
 
 
@@ -68,7 +71,11 @@ class JobsboardController {
     }
 
 
-    destroy () {}
+    destroy () {
+        if ( this.animController ) {
+            this.animController.destroy();
+        }
+    }
 }
 
 

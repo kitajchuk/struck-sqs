@@ -34,29 +34,29 @@ export default ( job ) => {
     // const eeoc = getMeta( metaIDs.eeoc );
 
     return `
-        <div class="page__mast -wrap">
+        <div class="page__mast -wrap anim anim--op js-lazy-anim">
             <div class="mastline">
                 <div class="h2 -column">${job.title}</div>
                 <div class="mastline__line -column"></div>
                 <div class="p -fbold -column">${job.location.name}</div>
             </div>
             <div class="-wrap -expt">
-                <div class="m -caps -color">${weNeed.head}</div>
-                <div class="h2">${weNeed.body.join( "" )}</div>
+                <div class="m -caps -color anim anim--op js-lazy-anim">${weNeed.head}</div>
+                <div class="h2 anim anim--op js-lazy-anim">${weNeed.body.join( "" )}</div>
             </div>
         </div>
         <div class="page__cms -wrap -exp">
             <div class="-wrap">
                 <div class="job__cols">
-                    <div class="job__col -column -vtop">
+                    <div class="job__col -column -vtop anim anim--op js-lazy-anim">
                         <div class="p -fbold -northborder">${youAre.head}</div>
                         ${getList( youAre.body )}
                     </div>
-                    <div class="job__col -column -vtop">
+                    <div class="job__col -column -vtop anim anim--op js-lazy-anim">
                         <div class="p -fbold -northborder">${youHave.head}</div>
                         ${getList( youHave.body )}
                     </div>
-                    <div class="job__col -column -vtop">
+                    <div class="job__col -column -vtop anim anim--op js-lazy-anim">
                         <div class="p -fbold -northborder">${youWill.head}</div>
                         ${getList( youWill.body )}
                     </div>
@@ -65,8 +65,8 @@ export default ( job ) => {
         </div>
         <div class="page__cta module-linker -wrapl -expb">
             <div class="-wrapl">
-                <div class="m -caps -color">Love. Fight. Adapt.</div>
-                <a href="${job.absolute_url}/#application" class="h2" target="_blank">And apply now.</a>
+                <div class="m -caps -color anim anim--op js-lazy-anim">Love. Fight. Adapt.</div>
+                <a href="${job.absolute_url}/#application" class="h2 anim anim--op js-lazy-anim" target="_blank">And apply now.</a>
             </div>
         </div>
     `;
