@@ -73,6 +73,7 @@
                 {squarespace.main-content}
             {.end}
         </main>
+        {@|apply module-scroll.block}
         {@|apply footer.block}
         {@|apply intro.block}
         <script type="text/javascript" src="/scripts/greensock.tweenlite.js?v={squarespace.template-revision}"></script>

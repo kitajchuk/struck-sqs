@@ -1,4 +1,4 @@
-<div class="page__cover cover js-cover ghost -cover js-lazy-image" data-img-src="{collection.mainImage.assetUrl}" data-variants="{collection.mainImage.systemDataVariants}">
+<div class="page__cover cover js-cover js-cover-scroll ghost -cover js-lazy-image" data-img-src="{collection.mainImage.assetUrl}" data-variants="{collection.mainImage.systemDataVariants}">
     <div class="cover__overlay"></div>
     <div class="ghost__child -wrap">
         <div class="page__mast -wrap">
@@ -10,7 +10,6 @@
             </div>
         </div>
     </div>
-    {@|apply module-scroll.block}
 </div>
 <div class="page__attrs attrs -bgcolor -wrap -exp2 js-cover">
     <div class="-wrap">

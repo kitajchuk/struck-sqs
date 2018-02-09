@@ -1,4 +1,4 @@
-<div class="page__cover cover js-cover -cover js-lazy-image" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}">
+<div class="page__cover cover js-cover js-cover-scroll -cover js-lazy-image" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}">
     <div class="-wrap -pagepad">
         <div class="m -caps -color">
             <squarespace:block-field id="module-casestudy-{item.id}-covermeta" columns="12" />
@@ -8,7 +8,6 @@
         </div>
         <div class="h4 -light -fbold -bump3">A Case Study.</div>
     </div>
-    {@|apply module-scroll.block}
 </div>
 <div class="page__intro -exp">
     <div class="-wrapl -paddr">

@@ -1,11 +1,13 @@
-<div class="page__mast -wrap">
-    <div class="m -caps -color">
-        <squarespace:block-field id="module-project-{item.id}-mastmeta" columns="12" />
+<div class="page__cover js-cover-scroll">
+    <div class="page__mast -wrap">
+        <div class="m -caps -color">
+            <squarespace:block-field id="module-project-{item.id}-mastmeta" columns="12" />
+        </div>
+        <squarespace:block-field id="module-project-{item.id}-masthead" columns="12" />
     </div>
-    <squarespace:block-field id="module-project-{item.id}-masthead" columns="12" />
-</div>
-<div class="page__video js-cover -bump3">
-    <squarespace:block-field id="module-project-{item.id}-video" columns="12" />
+    <div class="page__video js-cover -bump3">
+        <squarespace:block-field id="module-project-{item.id}-video" columns="12" />
+    </div>
 </div>
 <div class="page__intro -exp">
     <div class="-wrapl -paddr">

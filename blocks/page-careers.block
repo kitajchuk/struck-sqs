@@ -1,6 +1,6 @@
 <div class="page__content jobsboard js-jobsboard">
     <div class="jobsboard__all js-jobsboard-all">
-        <div class="page__mast">
+        <div class="page__mast js-cover-scroll">
             <div class="h2 -wrap">{collection.title}</div>
             <div class="-bump2">
                 {.section collection.mainImage}
