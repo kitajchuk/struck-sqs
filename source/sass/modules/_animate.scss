@@ -14,11 +14,13 @@
         opacity: 1;
         }
 }
-.anim--tr-t {
+.anim--tr {
+    opacity: 0;
     transform: translateY( $padding-1 );
-    transition-property: transform;
+    transition-property: transform opacity;
 
     &.is-animated {
+        opacity: 1;
         transform: translateY( 0 );
         }
 }

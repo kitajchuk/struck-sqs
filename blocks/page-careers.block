@@ -1,7 +1,7 @@
 <div class="page__content jobsboard js-jobsboard">
     <div class="jobsboard__all js-jobsboard-all">
         <div class="page__mast js-cover-scroll">
-            <div class="h2 -wrap anim anim--op js-lazy-anim">{collection.title}</div>
+            <div class="h2 -wrap anim anim--tr js-lazy-anim">{collection.title}</div>
             <div class="-bump2">
                 {.section collection.mainImage}
                     {@|apply image.block}
@@ -10,15 +10,15 @@
         </div>
         <div class="page__cta -wrapl -exp -paddr">
             <div class="-wrapl">
-                <div class="m -caps -color anim anim--op js-lazy-anim">
+                <div class="m -caps -color anim anim--tr js-lazy-anim">
                     <squarespace:block-field id="page-careers-cta-meta-blocks" columns="12" />
                 </div>
-                <div class="anim anim--op js-lazy-anim">
+                <div class="anim anim--tr js-lazy-anim">
                     <squarespace:block-field id="page-careers-cta-text-blocks" columns="12" />
                 </div>
             </div>
         </div>
-        <div class="page__cms -wrap anim anim--op js-lazy-anim">
+        <div class="page__cms -wrap anim anim--tr js-lazy-anim">
             <squarespace:block-field id="page-careers-content-blocks" columns="12" />
         </div>
         <div class="page__jobs -wrap -exp">

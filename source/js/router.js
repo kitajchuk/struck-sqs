@@ -35,7 +35,9 @@ const router = {
 
         core.emitter.on( "app--page-teardown", () => this.topper() );
         core.emitter.on( "app--anim-request", () => {
-            this.controllers.animController.handle();
+            if ( this.controllers.animController ) {
+                this.controllers.animController.handle();
+            }
         });
 
         core.log( "[Router initialized]", this );

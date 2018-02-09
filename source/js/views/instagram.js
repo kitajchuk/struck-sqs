@@ -1,7 +1,7 @@
 export default ( json ) => {
     return json.data.map(( post ) => {
         return `
-            <a class="media instagram__post -column anim anim--op js-lazy-anim" href="${post.link}" target="_blank">
+            <a class="media instagram__post -column anim anim--tr js-lazy-anim" href="${post.link}" target="_blank">
                 <div class="media__node js-lazy-image -full -square -cover" data-img-src="${post.images.standard_resolution.url}"></div>
             </a>
         `;

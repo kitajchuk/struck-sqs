@@ -1,5 +1,5 @@
 <div class="page__mast -wrap">
-    <div class="h2 -mast">
+    <div class="h2 -mast anim anim--op js-lazy-anim">
         <squarespace:block-field id="module-case-studies-masthead" columns="12" />
     </div>
     {@|apply module-filters.block}
