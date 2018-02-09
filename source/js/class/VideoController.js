@@ -1,7 +1,6 @@
 import $ from "properjs-hobo";
 import * as core from "../core";
 import videoView from "../views/video";
-import AnimateController from "./AnimateController";
 
 
 
@@ -50,7 +49,6 @@ class Video {
             this.iframe[ 0 ].src = this.iframe.data().src;
 
             core.util.loadImages( this.element.find( core.config.lazyImageSelector ), core.util.noop );
-            this.animController = new AnimateController( this.element.find( core.config.lazyAnimSelector ) );
         });
     }
 
@@ -98,10 +96,6 @@ class Video {
     destroy () {
         if ( this._onMessage ) {
             window.removeEventListener( "message", this._onMessage, false );
-        }
-
-        if ( this.animController ) {
-            this.animController.destroy();
         }
     }
 }

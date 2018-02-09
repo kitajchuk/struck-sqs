@@ -23,7 +23,7 @@ const router = {
      */
     init () {
         this.pageClass = "";
-        this.pageDuration = core.util.getElementDuration( core.dom.html[ 0 ] );
+        this.pageDuration = core.util.getElementDuration( core.dom.page[ 0 ] );
         this.controllers = new Controllers({
             el: core.dom.page,
             cb: () => {
@@ -99,9 +99,14 @@ const router = {
      */
     initPage ( data ) {
         this.changeClass( data );
-        this.controllers.exec();
         this.bindSystemLinks();
         this.execEmptyBlocks();
+        this.controllers.exec();
+
+        setTimeout(() => {
+            this.controllers.animate();
+
+        }, this.pageDuration );
     },
 
 
@@ -199,6 +204,9 @@ const router = {
         // Ensure topout prior to preload being done...
         this.topper();
 
+        // Execute `pre` controller actions
+        this.controllers.exec();
+
         this.changeClass( data );
     },
 
@@ -214,10 +222,14 @@ const router = {
      */
     changePageIn ( /* data */ ) {
         core.dom.html.removeClass( "is-page-controller" );
-        this.controllers.exec();
         this.execSquarespace();
         this.bindSystemLinks();
         this.execEmptyBlocks();
+
+        setTimeout(() => {
+            this.controllers.animate();
+
+        }, this.pageDuration );
     },
 
 

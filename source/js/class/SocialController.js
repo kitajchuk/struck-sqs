@@ -2,7 +2,6 @@ import $ from "properjs-hobo";
 import * as core from "../core";
 import viewInstagram from "../views/instagram";
 import viewMedium from "../views/medium";
-import AnimateController from "./AnimateController";
 
 
 
@@ -44,7 +43,6 @@ class SocialController {
         }).then(( json ) => {
             this.mdEl[ 0 ].innerHTML = viewMedium( json );
             core.util.loadImages( this.mdEl.find( core.config.lazyImageSelector ) );
-            this.mdAnimController = new AnimateController( this.mdEl.find( core.config.lazyAnimSelector ) );
         });
     }
 
@@ -64,20 +62,11 @@ class SocialController {
         }).then(( json ) => {
             this.igEl[ 0 ].innerHTML = viewInstagram( json );
             core.util.loadImages( this.igEl.find( core.config.lazyImageSelector ) );
-            this.igAnimController = new AnimateController( this.igEl.find( core.config.lazyAnimSelector ) );
         });
     }
 
 
-    destroy () {
-        if ( this.igAnimController ) {
-            this.igAnimController.destroy();
-        }
-
-        if ( this.mdAnimController ) {
-            this.mdAnimController.destroy();
-        }
-    }
+    destroy () {}
 }
 
 

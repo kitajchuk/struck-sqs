@@ -81,13 +81,16 @@ class Controllers {
         this.imageController.on( "preloaded", () => {
             this.init();
 
-            this.animates = this.element.find( core.config.lazyAnimSelector );
-            this.animController = new AnimateController( this.animates );
-
             if ( this.callback ) {
                 this.callback();
             }
         });
+    }
+
+
+    animate () {
+        this.animates = this.element.find( core.config.lazyAnimSelector );
+        this.animController = new AnimateController( this.animates );
     }
 
 

@@ -1,4 +1,4 @@
-import throttle from "properjs-throttle";
+// import throttle from "properjs-throttle";
 import Stagger from "properjs-stagger";
 import ScrollController from "properjs-scrollcontroller";
 import * as core from "../core";
@@ -31,16 +31,17 @@ class AnimateController {
      */
     start () {
         this.scroller = new ScrollController();
-        this.scroller.on( "scroll", throttle(() => {
+        this.scroller.on( "scroll", () => {
             this.handle();
-
-        }, 100 ) );
+        });
 
         this.handle();
     }
 
 
     handle () {
+        this.elements = [].slice.call( core.dom.page.find( core.config.lazyAnimSelector ).not( ".is-animated" ) );
+
         if ( !this.elements.length ) {
             this.scroller.stop();
             this.scroller = null;
@@ -69,7 +70,7 @@ class AnimateController {
         // Sequence the animation of the elements
         new Stagger({
             steps: elems.length,
-            delay: 100
+            delay: 50
 
         }).step(( i ) => {
             elems[ i ].className += " is-animated";

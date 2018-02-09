@@ -75,10 +75,10 @@ class App {
 
         // Views
         this.navi.init();
-        this.intro.init();
-
-        // Controller
-        this.router.init();
+        this.intro.exec().then(() => {
+            // Controller
+            this.router.init();
+        });
 
         // Analytics
         this.analytics = new Analytics();

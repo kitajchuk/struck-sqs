@@ -2,7 +2,6 @@ import * as core from "../core";
 import $ from "properjs-hobo";
 import paramalama from "paramalama";
 import AspectController from "./AspectController";
-import AnimateController from "./AnimateController";
 
 
 /**
@@ -133,7 +132,6 @@ class View {
             core.util.noop
         );
         this.aspectController = new AspectController( this.element.find( core.config.aspectSelector ) );
-        this.animController = new AnimateController( this.element.find( core.config.lazyAnimSelector ) );
     }
 
 
@@ -148,10 +146,6 @@ class View {
     destroy () {
         if ( this.aspectController ) {
             this.aspectController.destroy();
-        }
-
-        if ( this.animController ) {
-            this.animController.destroy();
         }
     }
 }
