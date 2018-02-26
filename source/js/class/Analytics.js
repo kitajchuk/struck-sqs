@@ -42,9 +42,9 @@ class Analytics {
 
     doGTMPageView () {
         if ( window.dataLayer ) {
-            dataLayer.push({
+            window.dataLayer.push({
                 "gtm.start": Date.now(),
-                event: "gtm.js"
+                "event": "gtm.js"
             });
         }
     }
