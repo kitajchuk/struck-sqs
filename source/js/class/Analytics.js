@@ -19,11 +19,9 @@ let _instance = null;
 class Analytics {
     constructor () {
         if ( !_instance ) {
-            core.emitter.on( "app--analytics-pageview", this.pushTrack.bind( this ) );
+            core.emitter.on( "app--analytics-pageview", this.doPageView.bind( this ) );
 
             core.log( "Analytics initialized" );
-
-            this.apiEndpoint = "/api/census/RecordHit";
 
             _instance = this;
         }
@@ -32,29 +30,45 @@ class Analytics {
     }
 
 
+    doSQSPageView ( pageTitle, websiteId, pageData ) {
+        this.recordHit( websiteId, pageData, pageTitle ).then(( res ) => {
+            core.log( "Analytics", res );
+
+        }).catch(( error ) => {
+            core.log( "warn", error );
+        });
+    }
+
+
+    doGTMPageView () {
+        if ( window.dataLayer ) {
+            dataLayer.push({
+                "gtm.start": Date.now(),
+                event: "gtm.js"
+            });
+        }
+    }
+
+
     /**
      *
      * @public
-     * @method pushTrack
+     * @method doPageView
      * @param {object} doc The doc object created by router {$doc, $page, pageData, pageHtml}
      * @memberof class.Analytics
      * @description Parse static context from responseText and track it.
      *
      */
-    pushTrack ( doc ) {
+    doPageView ( doc ) {
         const pageTitle = (doc.data.itemTitle || doc.data.collectionTitle);
         const websiteId = doc.data.websiteId;
         const pageData = doc.data.itemId ? { itemId: doc.data.itemId } : { collectionId: doc.data.collectionId };
 
         // Squarespace Metrics
-        if ( core.env.isProd() ) {
-            this.recordHit( websiteId, pageData, pageTitle ).then(( res ) => {
-                core.log( "Analytics", res );
+        this.doSQSPageView( pageTitle, websiteId, pageData );
 
-            }).catch(( error ) => {
-                core.log( "warn", error );
-            });
-        }
+        // Google Tag Manager
+        this.doGTMPageView();
 
         this.setDocumentTitle( pageTitle );
     }
@@ -111,7 +125,7 @@ class Analytics {
         }
 
         return $.ajax({
-            url: `${this.apiEndpoint}?crumb=${Store.crumb}`,
+            url: `/api/census/RecordHit?crumb=${Store.crumb}`,
             method: "POST",
             data: {
                 event: "View",
