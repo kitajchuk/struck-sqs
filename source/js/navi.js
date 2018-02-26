@@ -1,4 +1,6 @@
 import * as core from "./core";
+import Analytics from "./class/Analytics";
+import ContactController from "./class/ContactController";
 
 
 /**
@@ -23,7 +25,8 @@ const navi = {
         this.isContactOpen = false;
         this.element = core.dom.navi;
         this.items = this.element.find( ".js-navi-a" );
-        this.contact = core.dom.contact;
+        this.analytics = new Analytics();
+        this.contact = new ContactController();
         this.bind();
     },
 
@@ -48,6 +51,12 @@ const navi = {
     openContact () {
         this.isContactOpen = true;
         core.dom.html.addClass( "is-contact-open" );
+        this.analytics.doEvent(
+            "form",
+            "form impression",
+            "Contact Form",
+            "TRUE"
+        );
     },
 
 

@@ -42,7 +42,7 @@
             <ul class="navi__social social">
                 {.repeated section website.socialAccounts}
                     <li class="social__li -column">
-                        <a href="{profileUrl}" class="social__a m -light" target="_blank">{serviceName}</a>
+                        <a href="{profileUrl}" class="social__a m -light js-gtm-event" data-ec="navigation" data-ea="header" data-el="{serviceName}" target="_blank">{serviceName}</a>
                     </li>
                 {.end}
             </ul>

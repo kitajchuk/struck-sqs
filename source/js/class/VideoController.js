@@ -1,6 +1,7 @@
 import $ from "properjs-hobo";
 import * as core from "../core";
 import videoView from "../views/video";
+import Analytics from "./Analytics";
 
 
 
@@ -18,6 +19,13 @@ class Video {
         this.parent = this.element.parent();
         this.data = this.element.data();
         this.isPlaying = false;
+        this.analytics = new Analytics();
+        this.milestones = [
+            { hit: 25, met: false },
+            { hit: 50, met: false },
+            { hit: 75, met: false },
+            { hit: 100, met: false }
+        ];
 
         this.bind();
         this.load();
@@ -66,25 +74,52 @@ class Video {
 
 
     onMessage ( e ) {
-        if ( e.data ) {
-            const data = JSON.parse( e.data );
+        const data = JSON.parse( e.data );
+        const title = this.data.blockJson.html.match( /title\=\"(.*?)\"/ );
 
-            if ( data.event === "ready" ) {
-                this.postEmbed( "addEventListener", "play" );
-                this.postEmbed( "addEventListener", "pause" );
-                this.postEmbed( "addEventListener", "finish" );
+        if ( data.event === "ready" ) {
+            this.postEmbed( "addEventListener", "play" );
+            this.postEmbed( "addEventListener", "pause" );
+            this.postEmbed( "addEventListener", "finish" );
+            this.postEmbed( "addEventListener", "playProgress" );
 
-            } else if ( data.event === "play" ) {
-                this.isPlaying = true;
-                this.element.addClass( "is-embed-playing" );
+        } else if ( data.event === "play" ) {
+            this.isPlaying = true;
+            this.element.addClass( "is-embed-playing" );
+            this.analytics.doEvent(
+                "video",
+                "play",
+                (title ? title[ 1 ] : "TitleNotParsed"),
+                "FALSE"
+            );
 
-            } else if ( data.event === "pause" ) {
-                this.isPlaying = false;
+        } else if ( data.event === "pause" ) {
+            this.isPlaying = false;
+            this.analytics.doEvent(
+                "video",
+                "pause",
+                (title ? title[ 1 ] : "TitleNotParsed"),
+                "FALSE"
+            );
 
-            } else if ( data.event === "finish" ) {
-                this.isPlaying = false;
-                this.element.removeClass( "is-embed-playing" );
-            }
+        } else if ( data.event === "finish" ) {
+            this.isPlaying = false;
+            this.element.removeClass( "is-embed-playing" );
+
+        } else if ( data.event === "playProgress" ) {
+            this.milestones.forEach(( milestone ) => {
+                const percent = data.data.percent * 100;
+
+                if ( percent >= milestone.hit && !milestone.met ) {
+                    milestone.met = true;
+                    this.analytics.doEvent(
+                        "video",
+                        `${milestone.hit}%`,
+                        (title ? title[ 1 ] : "TitleNotParsed"),
+                        "FALSE"
+                    );
+                }
+            });
         }
     }
 

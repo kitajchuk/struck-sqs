@@ -22,8 +22,10 @@
     }
 
     // Top right
-    .svg--logo:hover {
-        fill: $black;
+    .header__logo:hover {
+        .-svg--logo {
+            fill: $black;
+        }
     }
 
     // From left

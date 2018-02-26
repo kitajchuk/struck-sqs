@@ -23,6 +23,8 @@ class Analytics {
 
             core.log( "Analytics initialized" );
 
+            this.bind();
+
             _instance = this;
         }
 
@@ -30,13 +32,47 @@ class Analytics {
     }
 
 
-    doSQSPageView ( pageTitle, websiteId, pageData ) {
-        this.recordHit( websiteId, pageData, pageTitle ).then(( res ) => {
-            core.log( "Analytics", res );
+    bind () {
+        core.dom.body.on( "click", ".js-gtm-event", ( e ) => {
+            if ( window.dataLayer ) {
+                const target = $( e.target );
+                const eventEl = target.is( ".js-gtm-event" ) ? target : target.closest( ".js-gtm-event" );
+                const eventData = eventEl.data();
 
-        }).catch(( error ) => {
-            core.log( "warn", error );
+                this.doEvent(
+                    eventData.ec,
+                    eventData.ea,
+                    eventData.el,
+                    "FALSE"
+                );
+            }
         });
+    }
+
+
+    doEvent ( ec, ea, el, nie ) {
+        if ( window.dataLayer ) {
+            window.dataLayer.push({
+                event: "struckEventTracking",
+                struckEC: ec,
+                struckEA: ea,
+                struckEL: el,
+                NonInteractionEvent: nie
+            });
+
+            core.log( "Analytics GTM Event", ec, ea, el, nie );
+        }
+    }
+
+
+    doSQSPageView ( pageTitle, websiteId, pageData ) {
+        this.recordHit( websiteId, pageData, pageTitle )
+            .then(() => {
+                core.log( "Analytics SQS Pageview" );
+
+            }).catch(( error ) => {
+                core.log( "warn", error );
+            });
     }
 
 
@@ -46,6 +82,8 @@ class Analytics {
                 "gtm.start": Date.now(),
                 "event": "gtm.js"
             });
+
+            core.log( "Analytics GTM Pageview" );
         }
     }
 

@@ -1,7 +1,8 @@
-.svg {
+.-svg {
+    pointer-events: none;
     transition: fill $fast-duration $ease;
     }
-.svg--logo {
+.-svg--logo {
     fill: $red;
     height: $logo-height;
 
@@ -13,7 +14,7 @@
         height: 40px;
     }
 }
-.svg--medium-logo {
+.-svg--medium-logo {
     fill: $grey2;
     height: $posts-avatar-width;
     width: $posts-avatar-width;

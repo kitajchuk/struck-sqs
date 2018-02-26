@@ -1,9 +1,9 @@
 <menu class="filters -bump3">
     <div class="filters__label m -caps -column anim anim--tr js-lazy-anim">Filter By</div>
     <div class="filters__list -column -push">
-        <a class="filters__item p -column {.if tagFilter}{.or}is-active{.end} anim anim--tr js-lazy-anim" href="{collection.fullUrl}"><span>all</span></a>
+        <a class="filters__item p -column {.if tagFilter}{.or}is-active{.end} anim anim--tr js-lazy-anim js-gtm-event" data-ec="site interaction" data-ea="filter usage" data-el="{@}" href="{collection.fullUrl}"><span>all</span></a>
         {.repeated section collection.tags}
-            <a class='filters__item p -column {.equal? tagFilter @}is-active{.end} anim anim--tr js-lazy-anim' href="{collection.fullUrl}?tag={@}"><span>{@}</span></a>
+            <a class='filters__item p -column {.equal? tagFilter @}is-active{.end} anim anim--tr js-lazy-anim js-gtm-event' data-ec="site interaction" data-ea="filter usage" data-el="{@}" href="{collection.fullUrl}?tag={@}"><span>{@}</span></a>
         {.end}
     </div>
 </menu>

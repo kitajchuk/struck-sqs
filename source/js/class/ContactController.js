@@ -1,5 +1,11 @@
 import $ from "properjs-hobo";
 import * as core from "../core";
+import Analytics from "./Analytics";
+
+
+
+// Singleton
+let _instance = null;
 
 
 
@@ -12,15 +18,22 @@ import * as core from "../core";
  *
  */
 class ContactController {
-    constructor ( element ) {
-        this.element = element;
-        this.form = this.element.find( ".js-contact-form" );
-        this.fields = this.element.find( ".js-contact-field" );
-        this.submit = this.element.find( ".js-contact-submit" );
-        this.reset = this.element.find( ".js-contact-reset" );
-        this.data = {};
+    constructor () {
+        if ( !_instance ) {
+            this.element = core.dom.contact;
+            this.form = this.element.find( ".js-contact-form" );
+            this.fields = this.element.find( ".js-contact-field" );
+            this.submit = this.element.find( ".js-contact-submit" );
+            this.reset = this.element.find( ".js-contact-reset" );
+            this.analytics = new Analytics();
+            this.data = {};
 
-        this.bind();
+            this.bind();
+
+            _instance = this;
+        }
+
+        return _instance;
     }
 
 
@@ -110,8 +123,22 @@ class ContactController {
                 }
             }
 
+            this.analytics.doEvent(
+                "form",
+                "form submit: error",
+                "Contact Form",
+                "FALSE"
+            );
+
         } else {
             this.clear();
+
+            this.analytics.doEvent(
+                "form",
+                "form submit: success",
+                "Contact Form",
+                "FALSE"
+            );
         }
     }
 
@@ -125,6 +152,14 @@ class ContactController {
             }).catch(( response ) => {
                 this.handle( response );
             });
+
+        }).catch(() => {
+            this.analytics.doEvent(
+                "form",
+                "form submit: error",
+                "Contact Form",
+                "FALSE"
+            );
         });
     }
 
