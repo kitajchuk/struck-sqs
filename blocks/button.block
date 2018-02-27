@@ -1,3 +1,6 @@
-<a href="{buttonLink}" class="btn btn--{buttonSize}" {.if newWindow}target="_blank"{.end}>
+<a href="{buttonLink}" class="btn btn--{buttonSize} js-gtm-event" {.if newWindow}target="_blank"{.or}data-ec="site interaction" data-ea="{buttonLink|safe}" data-el="{buttonText}"{.end}>
     {buttonText}
 </a>
+<script>
+    console.log( {@|json-pretty} );
+</script>

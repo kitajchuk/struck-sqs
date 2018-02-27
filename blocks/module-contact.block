@@ -1,4 +1,4 @@
-<div class="module-contact hover-text -bgcolor -wrap -exp3 -light -curse js-controller--contact js-gtm-event js-gtm-event--lazy" data-ec="site interaction" data-ea="form" data-el="">
+<div class="module-contact hover-text -bgcolor -wrap -exp3 -light -curse js-controller--contact js-gtm-event js-gtm-event--lazy-el" data-ec="site interaction" data-ea="form" data-el="">
     <div class="hover-text__wrap anim anim--tr js-lazy-anim">
         <div class="hover-text__static">
             <squarespace:block-field id="module-contact-cta-static" columns="12" />

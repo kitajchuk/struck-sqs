@@ -34,10 +34,10 @@ class Analytics {
 
 
     lazy () {
-        const elems = core.dom.body.find( ".js-gtm-event--lazy" );
+        const labels = core.dom.body.find( ".js-gtm-event--lazy-el" );
 
-        elems.forEach(( el, i ) => {
-            const elem = elems.eq( i );
+        labels.forEach(( el, i ) => {
+            const elem = labels.eq( i );
 
             elem.attr( "data-el", elem[ 0 ].innerText.replace( /\n/g, " " ) );
         });

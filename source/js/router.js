@@ -58,7 +58,14 @@ const router = {
 
 
     bindSystemLinks () {
-        core.dom.body.find( "[href='#js-controller--contact']" ).addClass( "js-controller--contact" );
+        const contacts = core.dom.body.find( "[href='#js-controller--contact']" );
+
+        contacts.addClass( "js-controller--contact" );
+        contacts.forEach(( el, i ) => {
+            const elem = contacts.eq( i );
+
+            elem.attr( "data-ea", "form" );
+        });
     },
 
 
