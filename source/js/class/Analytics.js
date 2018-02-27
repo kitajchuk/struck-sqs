@@ -47,8 +47,9 @@ class Analytics {
 
         actions.forEach(( el, i ) => {
             const elem = actions.eq( i );
+            const action = elem.data( "ea" ) || "";
 
-            elem.attr( "data-ea", elem.data( "ea" ).replace( /^\/|\/$/g, "" ) );
+            elem.attr( "data-ea", action.replace( /^\/|\/$/g, "" ) );
         });
     }
 
