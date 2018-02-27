@@ -1,18 +1,20 @@
 export default ( json/*, data*/ ) => {
     const items = [].concat( json[ 0 ].items ).concat( json[ 1 ].items );
+    const collection = json.collection;
 
     return items.map(( item ) => {
         const classMod = (item.customContent.customType === "customProject" ? "4up" : "2up");
         const postType = (item.customContent.customType === "customProject" ? "Project" : "Case Study");
         const gridImage = (item.customContent.animatedGif ? item.customContent.animatedGif : item);
         const aspectRatio = (item.customContent.customType === "customProject" ? "415x492" : "850x492");
+        const eventAction = (item.customContent.customType === "customProject" ? "portfolio" : "case-studies");
         const tagsHtml = item.tags ? item.tags.map(( tag ) => {
             return `<div class="filters__item p -light -column">${tag}</div>`;
 
         }).join( "" ) : "";
 
         return item.starred ? `
-            <a class="grid__item grid__item--${classMod} -column" href="${item.fullUrl}">
+            <a class="grid__item grid__item--${classMod} -column js-gtm-event" data-ec="site interaction" data-ea="${eventAction}" data-el="${item.title}" href="${item.fullUrl}">
                 <div class="grid__item-wrap anim anim--tr js-lazy-anim">
                     <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="${gridImage.assetUrl}" data-variants="${gridImage.systemDataVariants}" data-original="${aspectRatio}"></div>
                     ${item.customContent.spotColor ? `

@@ -1,6 +1,6 @@
 <div class="page__grid grid -wrap -exp">
     {.repeated section items}
-        <a class='grid__item grid__item--{.equal? customContent.customType "customProject"}4up{.or}2up{.end} -column' href="{fullUrl}">
+        <a class='grid__item grid__item--{.equal? customContent.customType "customProject"}4up{.or}2up{.end} -column js-gtm-event' data-ec="site interaction" data-ea="{collection.urlId}" data-el="{title}" href="{fullUrl}">
             <div class="grid__item-wrap anim anim--tr js-lazy-anim">
                 {.if customContent.spotColor}
                     {.if customContent.animatedGif}
