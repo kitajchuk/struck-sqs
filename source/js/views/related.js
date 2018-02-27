@@ -17,6 +17,7 @@ export default ( json, data ) => {
 
     const item = core.util.shuffle( items ).pop();
     const image = item ? (item.customContent.relatedImage || item) : null;
+    const eventAction = (item.customContent.customType === "customProject" ? "portfolio" : "case-studies");
 
     //data-variants="${image.systemDataVariants}"
 
@@ -25,7 +26,7 @@ export default ( json, data ) => {
             <div class="m -caps">${item.title}</div>
             <div class="h4 -fmedium">${item.customContent.relatedBlurb}</div>
             <div class="-bump3">
-                <a class="m -color -plusline" href="${item.fullUrl}">+ <span>${data.cta}</span></a>
+                <a class="m -color -plusline js-gtm-event" data-ec="site interaction" data-ea="${eventAction}" data-el="Related: ${item.title}" href="${item.fullUrl}">+ <span>${data.cta}</span></a>
             </div>
         </div>
         <div class="related__image -column -vtop">
