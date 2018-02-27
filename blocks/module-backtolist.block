@@ -1,3 +1,3 @@
 <div class="page__button -wrap -exp -text--center">
-    <a href="{collection.fullUrl}" class="btn">Back to List</a>
+    <a href="{collection.fullUrl}" class="btn js-gtm-event" data-ec="site interaction" data-ea="{collection.urlId}" data-el="Back to List">Back to List</a>
 </div>
