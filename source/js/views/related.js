@@ -17,7 +17,7 @@ export default ( json, data ) => {
 
     const item = core.util.shuffle( items ).pop();
     const image = item ? (item.customContent.relatedImage || item) : null;
-    const eventAction = (item.customContent.customType === "customProject" ? "portfolio" : "case-studies");
+    const eventAction = item ? (item.customContent.customType === "customProject" ? "portfolio" : "case-studies") : null;
 
     //data-variants="${image.systemDataVariants}"
 
