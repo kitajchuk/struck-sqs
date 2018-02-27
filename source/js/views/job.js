@@ -66,7 +66,7 @@ export default ( job ) => {
         <div class="page__cta module-linker -wrapl -expb">
             <div class="-wrapl">
                 <div class="m -caps -color anim anim--tr js-lazy-anim">Love. Fight. Adapt.</div>
-                <a href="${job.absolute_url}/#application" class="h2 anim anim--tr js-lazy-anim" target="_blank">And apply now.</a>
+                <a href="${job.absolute_url}/#application" class="h2 anim anim--tr js-lazy-anim js-gtm-event" data-ec="site interaction" data-ea="careers" data-el="${job.title}: And apply now." target="_blank">And apply now.</a>
             </div>
         </div>
     `;
