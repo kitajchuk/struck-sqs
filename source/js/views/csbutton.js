@@ -8,7 +8,7 @@ export default ( json, data ) => {
 
     if ( item ) {
         html = `
-            <a href="${item.fullUrl}" class="csbutton" target="_blank">
+            <a href="${item.fullUrl}" class="csbutton js-gtm-event" data-ec="site interaction" data-ea="case-studies" data-el="Related case-studies: ${item.title}">
                 <span class="csbutton__icon -column">
                     <span class="icon icon--plus">
                         <span class="ex1"></span>
