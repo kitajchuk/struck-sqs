@@ -23,8 +23,10 @@ class Analytics {
 
             core.log( "Analytics initialized" );
 
-            this.bind();
-            this.lazy();
+            if ( !core.env.isConfig() ) {
+                this.bind();
+                this.lazy();
+            }
 
             _instance = this;
         }
@@ -124,7 +126,9 @@ class Analytics {
         this.setDocumentTitle( pageTitle );
 
         // Set lazy Event Labels for squarespace block-field content
-        this.lazy();
+        if ( !core.env.isConfig() ) {
+            this.lazy();
+        }
     }
 
 

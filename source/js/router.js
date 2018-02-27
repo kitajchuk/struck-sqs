@@ -79,7 +79,10 @@ const router = {
      */
     initPages () {
         this.controller = new PageController({
-            transitionTime: this.pageDuration
+            transitionTime: this.pageDuration,
+            routerOptions: {
+                async: !core.env.isConfig()
+            }
         });
 
         this.controller.setConfig([
