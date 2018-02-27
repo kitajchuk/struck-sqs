@@ -24,11 +24,23 @@ class Analytics {
             core.log( "Analytics initialized" );
 
             this.bind();
+            this.lazy();
 
             _instance = this;
         }
 
         return _instance;
+    }
+
+
+    lazy () {
+        const elems = core.dom.body.find( ".js-gtm-event--lazy" );
+
+        elems.forEach(( el, i ) => {
+            const elem = elems.eq( i );
+
+            elem.attr( "data-el", elem[ 0 ].innerText.replace( /\n/g, " " ) );
+        });
     }
 
 
@@ -108,7 +120,11 @@ class Analytics {
         // Google Tag Manager
         this.doGTMPageView();
 
+        // Update document title
         this.setDocumentTitle( pageTitle );
+
+        // Set lazy Event Labels for squarespace block-field content
+        this.lazy();
     }
 
 

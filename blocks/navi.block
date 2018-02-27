@@ -5,7 +5,7 @@
             <li class="navi__li navi__li--{@slug}">
                 {# Contact Form #}
                 {.equal? id "5a381e53085229e36d2161f3"}
-                    <a class="navi__a navi__a--{@slug} js-navi-a js-navi--{@slug} js-controller--contact h2 -light" href="#">{title}</a>
+                    <a class="navi__a navi__a--{@slug} js-navi-a js-navi--{@slug} js-controller--contact h2 -light js-gtm-event" data-ec="site interaction" data-ea="form" data-el="{title}" href="#">{title}</a>
                 {.or}
                     <a class="navi__a navi__a--{@slug} js-navi-a js-navi--{@slug} h2 -light js-gtm-event" data-ec="navigation" data-ea="header" data-el="{title}" href="{fullUrl}">{title}</a>
                 {.end}
