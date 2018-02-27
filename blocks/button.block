@@ -1,6 +1,3 @@
-<a href="{buttonLink}" class="btn btn--{buttonSize} js-gtm-event" {.if newWindow}target="_blank"{.or}data-ec="site interaction" data-ea="{buttonLink|safe}" data-el="{buttonText}"{.end}>
+<a href="{buttonLink}" class="btn btn--{buttonSize} js-gtm-event js-gtm-event--lazy-ea" {.if newWindow}target="_blank"{.or}data-ec="site interaction" data-ea="{buttonLink}" data-el="{buttonText}"{.end}>
     {buttonText}
 </a>
-<script>
-    console.log( {@|json-pretty} );
-</script>

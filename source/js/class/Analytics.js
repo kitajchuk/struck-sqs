@@ -37,11 +37,18 @@ class Analytics {
 
     lazy () {
         const labels = core.dom.body.find( ".js-gtm-event--lazy-el" );
+        const actions = core.dom.body.find( ".js-gtm-event--lazy-ea" );
 
         labels.forEach(( el, i ) => {
             const elem = labels.eq( i );
 
             elem.attr( "data-el", elem[ 0 ].innerText.replace( /\n/g, " " ) );
+        });
+
+        actions.forEach(( el, i ) => {
+            const elem = actions.eq( i );
+
+            elem.attr( "data-ea", elem.data( "ea" ).replace( /^\/|\/$/g, "" ) );
         });
     }
 
