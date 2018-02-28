@@ -2,10 +2,10 @@
     <div class="cover__overlay"></div>
     <div class="ghost__child -wrap">
         <div class="page__mast -wrap">
-            <div class="m -caps -light">
+            <div class="m -caps -light anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-whoweare-mastmeta" columns="12" />
             </div>
-            <div class="h2 -light">
+            <div class="h2 -light anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-whoweare-masthead" columns="12" />
             </div>
         </div>
@@ -13,19 +13,19 @@
 </div>
 <div class="page__attrs attrs -bgcolor -wrap -exp2 js-cover">
     <div class="-wrap">
-        <div class="m -caps -color2">
+        <div class="m -caps -color2 anim anim--tr js-lazy-anim">
             <squarespace:block-field id="module-whoweare-attrsmeta" columns="12" />
         </div>
         <div class="attrs__group -light -bump">
-            <div class="attrs__attr -column">
+            <div class="attrs__attr -column anim anim--tr js-lazy-anim">
                 <div class="m attrs__num">1.</div>
                 <squarespace:block-field id="module-whoweare-attr1" columns="12" />
             </div>
-            <div class="attrs__attr -column">
+            <div class="attrs__attr -column anim anim--tr js-lazy-anim">
                 <div class="m attrs__num">2.</div>
                 <squarespace:block-field id="module-whoweare-attr2" columns="12" />
             </div>
-            <div class="attrs__attr -column">
+            <div class="attrs__attr -column anim anim--tr js-lazy-anim">
                 <div class="m attrs__num">3.</div>
                 <squarespace:block-field id="module-whoweare-attr3" columns="12" />
             </div>
@@ -35,12 +35,16 @@
 {@|apply page-locations.block}
 <div class="page__content">
     <div class="-wrap">
-        <squarespace:block-field id="module-whoweare-gallery" columns="12" />
+        <div class="anim anim--tr js-lazy-anim">
+            <squarespace:block-field id="module-whoweare-gallery" columns="12" />
+        </div>
         <div class="-wrap -exp">
             <squarespace:block-field id="module-whoweare-quote" columns="12" />
         </div>
     </div>
-    <squarespace:block-field id="module-whoweare-images" columns="12" />
+    <div class="anim anim--tr js-lazy-anim">
+        <squarespace:block-field id="module-whoweare-images" columns="12" />
+    </div>
 </div>
 <div class="page__wework -wrap -exp">
     <div class="onetwo">
@@ -48,10 +52,12 @@
             <squarespace:block-field id="module-whoweare-weworkimage" columns="12" />
         </div>
         <div class="onetwo__info -column -wrapl">
-            <div class="m -caps -color">
+            <div class="m -caps -color anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-whoweare-weworkmeta" columns="12" />
             </div>
-            <squarespace:block-field id="module-whoweare-weworkbody" columns="12" />
+            <div class="anim anim--tr js-lazy-anim">
+                <squarespace:block-field id="module-whoweare-weworkbody" columns="12" />
+            </div>
         </div>
     </div>
 </div>
@@ -62,11 +68,11 @@
     <div class="cover__overlay"></div>
     <div class="cover__content ghost -wrap">
         <div class="ghost__child -wrap">
-            <div class="h2 -light">
+            <div class="h2 -light anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-whoweare-awardshead" columns="12" />
             </div>
             <div class="stats -bump6">
-                <div class="stats__col -column -light">
+                <div class="stats__col -column -light anim anim--tr js-lazy-anim">
                     <div class="stats__circle">
                         <squarespace:block-field id="module-whoweare-awards1value" columns="12" />
                     </div>
@@ -74,7 +80,7 @@
                         <squarespace:block-field id="module-whoweare-awards1label" columns="12" />
                     </div>
                 </div>
-                <div class="stats__col -column -light">
+                <div class="stats__col -column -light anim anim--tr js-lazy-anim">
                     <div class="stats__circle">
                         <squarespace:block-field id="module-whoweare-awards2value" columns="12" />
                     </div>
@@ -82,7 +88,7 @@
                         <squarespace:block-field id="module-whoweare-awards2label" columns="12" />
                     </div>
                 </div>
-                <div class="stats__col -column -light">
+                <div class="stats__col -column -light anim anim--tr js-lazy-anim">
                     <div class="stats__circle">
                         <squarespace:block-field id="module-whoweare-awards3value" columns="12" />
                     </div>
