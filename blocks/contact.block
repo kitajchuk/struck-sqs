@@ -1,0 +1,40 @@
+<menu class="contact js-contact -wrap -fzero -pagepad">
+    <div class="contact__header">
+        <div class="icon icon--ex js-controller--contact">
+            <span class="ex1"></span>
+            <span class="ex2"></span>
+        </div>
+    </div>
+    <div class="contact__form js-contact-form">
+        <div class="h2 -light anim anim--tr js-lazy-anim">Contact</div>
+        <div class="m -light -bump3 anim anim--tr js-lazy-anim">\ <a href="tel:{websiteSettings.contactPhoneNumber}" target="_blank">{websiteSettings.contactPhoneNumber}</a></div>
+        <div class="m -light anim anim--tr js-lazy-anim">\ <a href="mailto:newbiz@struck.com" target="_blank">newbiz@struck.com</a></div>
+        <div class="m -light anim anim--tr js-lazy-anim">\ <a href="mailto:press@struck.com" target="_blank">press@struck.com</a></div>
+        <div class="m -light anim anim--tr js-lazy-anim">\ <a href="mailto:jobs@struck.com" target="_blank">jobs@struck.com</a></div>
+        <div class="m -color anim anim--tr js-lazy-anim">\ <a href="/locations/">Locations</a></div>
+        <div class="anim anim--tr js-lazy-anim">
+            <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_41600" placeholder="*Name" />
+        </div>
+        <div class="anim anim--tr js-lazy-anim">
+            <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_24222" placeholder="Company" />
+        </div>
+        <div class="anim anim--tr js-lazy-anim">
+            <input class="inp js-contact-field -bump3" type="text" name="email-yui_3_17_2_1_1513626979285_25400" placeholder="*Email" />
+        </div>
+        <div class="anim anim--tr js-lazy-anim">
+            <input class="inp js-contact-field -bump3" type="text" name="phone-yui_3_17_2_1_1513626979285_43483" placeholder="Phone" />
+        </div>
+        <div class="anim anim--tr js-lazy-anim">
+            <textarea class="inp inp--txt js-contact-field -bump3" name="textarea-yui_3_17_2_17_1513626979285_3714" placeholder="*Message"></textarea>
+        </div>
+        <div class="m -light -bump anim anim--tr js-lazy-anim">*Required</div>
+        <div class="-bump6">
+            <div class="-column -column--2of4 anim anim--tr js-lazy-anim">
+                <button class="btn btn--light js-contact-submit">Submit</button>
+            </div>
+            <div class="-column -column--2of4 -text--right anim anim--tr js-lazy-anim">
+                <div class="btn btn--clean -grey -curse js-contact-reset">Reset Form</div>
+            </div>
+        </div>
+    </div>
+</menu>

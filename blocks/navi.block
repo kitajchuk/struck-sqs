@@ -2,7 +2,7 @@
     {.repeated section items}
         {.section collection}
             {.var @slug title|slugify}
-            <li class="navi__li navi__li--{@slug}">
+            <li class="navi__li navi__li--{@slug} anim anim--tr js-lazy-anim">
                 {# Contact Form #}
                 {.equal? id "5a381e53085229e36d2161f3"}
                     <a class="navi__a navi__a--{@slug} js-navi-a js-navi--{@slug} js-controller--contact h2 -light js-gtm-event" data-ec="site interaction" data-ea="form" data-el="{title}" href="#">{title}</a>

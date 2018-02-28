@@ -14,9 +14,15 @@ import Controller from "properjs-controller";
  *
  */
 class AnimateController {
-    constructor ( elements ) {
+    constructor ( container, elements, delay ) {
+        this.container = container;
         this.elements = elements;
-        this.start();
+        this.delay = delay || 100;
+    }
+
+
+    noop () {
+        this.animate( this.elements );
     }
 
 
@@ -39,7 +45,7 @@ class AnimateController {
 
 
     handle () {
-        this.elements = core.dom.page.find( core.config.lazyAnimSelector ).not( "[data-animate='true']" );
+        this.elements = this.container.find( core.config.lazyAnimSelector ).not( "[data-animate='true']" );
 
         if ( !this.elements.length ) {
             this.scroller.stop();
@@ -72,7 +78,7 @@ class AnimateController {
                 animator.stop();
                 core.log( "[AnimateController] Animation Complete!" );
 
-            } else if ( (currTime - lastTime) >= 100 ) {
+            } else if ( (currTime - lastTime) >= this.delay ) {
                 lastTime = currTime;
                 elems[ currElem ].className += " is-animated";
                 currElem++;

@@ -88,7 +88,8 @@ class Controllers {
 
     animate () {
         this.animates = this.element.find( core.config.lazyAnimSelector );
-        this.animController = new AnimateController( this.animates );
+        this.animController = new AnimateController( this.element, this.animates, 10 );
+        this.animController.start();
     }
 
 

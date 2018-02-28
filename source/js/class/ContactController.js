@@ -46,10 +46,6 @@ class ContactController {
             this.gather();
             this.send();
         });
-
-        core.emitter.on( "app--contactclose", () => {
-            this.clear();
-        });
     }
 
 

@@ -1,6 +1,7 @@
 import * as core from "./core";
 import Analytics from "./class/Analytics";
 import ContactController from "./class/ContactController";
+import AnimateController from "./class/AnimateController";
 
 
 /**
@@ -27,6 +28,8 @@ const navi = {
         this.items = this.element.find( ".js-navi-a" );
         this.analytics = new Analytics();
         this.contact = new ContactController();
+        this.animNavis = this.element.find( core.config.lazyAnimSelector );
+        this.animContacts = core.dom.contact.find( core.config.lazyAnimSelector );
         this.bind();
     },
 
@@ -45,6 +48,9 @@ const navi = {
     open () {
         this.isOpen = true;
         core.dom.html.addClass( "is-navi-open" );
+
+        this.animNaviController = new AnimateController( this.element, this.animNavis, 10 );
+        this.animNaviController.noop();
     },
 
 
@@ -57,12 +63,20 @@ const navi = {
             "Contact Form",
             "TRUE"
         );
+
+        this.animContactController = new AnimateController( this.element, this.animContacts, 10 );
+        this.animContactController.noop();
     },
 
 
     close () {
         this.isOpen = false;
         core.dom.html.removeClass( "is-navi-open" );
+
+        if ( this.animNaviController ) {
+            this.animNaviController.destroy();
+            this.animNavis.removeClass( "is-animated" );
+        }
 
         this.closeContact();
     },
@@ -72,7 +86,12 @@ const navi = {
         this.isContactOpen = false;
         core.dom.html.removeClass( "is-contact-open" );
 
-        core.emitter.fire( "app--contactclose" );
+        if ( this.animContactController ) {
+            this.animContactController.destroy();
+            this.animContacts.removeClass( "is-animated" );
+        }
+
+        this.contact.clear();
     },
 
 

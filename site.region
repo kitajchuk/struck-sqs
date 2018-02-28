@@ -41,42 +41,13 @@
             <squarespace:navigation navigationId="navi" template="navi" />
             <ul class="navi__social social">
                 {.repeated section website.socialAccounts}
-                    <li class="social__li -column">
+                    <li class="social__li -column anim anim--tr js-lazy-anim">
                         <a href="{profileUrl}" class="social__a m -light js-gtm-event" data-ec="navigation" data-ea="header" data-el="{serviceName}" target="_blank">{serviceName}</a>
                     </li>
                 {.end}
             </ul>
         </nav>
-        <menu class="contact js-contact -wrap -fzero -pagepad">
-            <div class="contact__header">
-                <div class="icon icon--ex js-controller--contact">
-                    <span class="ex1"></span>
-                    <span class="ex2"></span>
-                </div>
-            </div>
-            <div class="contact__form js-contact-form">
-                <div class="h2 -light">Contact</div>
-                <div class="m -light -bump3">\ <a href="tel:{websiteSettings.contactPhoneNumber}" target="_blank">{websiteSettings.contactPhoneNumber}</a></div>
-                <div class="m -light">\ <a href="mailto:newbiz@struck.com" target="_blank">newbiz@struck.com</a></div>
-                <div class="m -light">\ <a href="mailto:press@struck.com" target="_blank">press@struck.com</a></div>
-                <div class="m -light">\ <a href="mailto:jobs@struck.com" target="_blank">jobs@struck.com</a></div>
-                <div class="m -color">\ <a href="/locations/">Locations</a></div>
-                <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_41600" placeholder="*Name" />
-                <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_24222" placeholder="Company" />
-                <input class="inp js-contact-field -bump3" type="text" name="email-yui_3_17_2_1_1513626979285_25400" placeholder="*Email" />
-                <input class="inp js-contact-field -bump3" type="text" name="phone-yui_3_17_2_1_1513626979285_43483" placeholder="Phone" />
-                <textarea class="inp inp--txt js-contact-field -bump3" name="textarea-yui_3_17_2_17_1513626979285_3714" placeholder="*Message"></textarea>
-                <div class="m -light -bump">*Required</div>
-                <div class="-bump6">
-                    <div class="-column -column--2of4">
-                        <button class="btn btn--light js-contact-submit">Submit</button>
-                    </div>
-                    <div class="-column -column--2of4 -text--right">
-                        <div class="btn btn--clean -grey -curse js-contact-reset">Reset Form</div>
-                    </div>
-                </div>
-            </div>
-        </menu>
+        {@|apply contact.block}
         {@|apply header.block}
         <main class="page js-page -fzero -pagepad" data-content-field="main-content" data-website-id="{website.id}" {.section collection}data-collection-id="{collection.id}" data-collection-title="{.if collection.homepage}{website.siteTitle}{.or}{collection.title} – {website.siteTitle}{.end}"{.end} {.section item}data-item-id="{item.id}" data-item-title="{item.title} – {collection.title} – {website.siteTitle}"{.end}>
             {.equal? collection.typeName "page"}
