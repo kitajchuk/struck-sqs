@@ -1,38 +1,35 @@
 <div class="page__cover cover js-cover js-cover-scroll -cover js-lazy-image" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}">
     <div class="-wrap -pagepad">
-        <div class="m -caps -color">
+        <div class="m -caps -color anim anim--tr js-lazy-anim">
             <squarespace:block-field id="module-casestudy-{item.id}-covermeta" columns="12" />
         </div>
-        <div class="h1 -mast -light">
+        <div class="h1 -mast -light anim anim--tr js-lazy-anim">
             <squarespace:block-field id="module-casestudy-{item.id}-covertitle" columns="12" />
         </div>
-        <div class="h4 -light -fbold -bump3">A Case Study.</div>
+        <div class="h4 -light -fbold -bump3 anim anim--tr js-lazy-anim">A Case Study.</div>
     </div>
 </div>
 <div class="page__intro -exp">
     <div class="-wrapl -paddr">
         <div class="-wrapl">
-            <div class="m -caps -color">
+            <div class="m -caps -color anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-casestudy-{item.id}-challengemeta" columns="12" />
             </div>
-            <squarespace:block-field id="module-casestudy-{item.id}-challengehead" columns="12" />
+            <div class="anim anim--tr js-lazy-anim">
+                <squarespace:block-field id="module-casestudy-{item.id}-challengehead" columns="12" />
+            </div>
         </div>
     </div>
     <div class="-expt -wrap">
         <div class="cols -wrap">
-            <div class="cols__col -column -vtop">
+            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim">
                 <div class="-northborder">
                     <squarespace:block-field id="module-casestudy-{item.id}-challengecol1" columns="12" />
                 </div>
             </div>
-            <div class="cols__col -column -vtop">
+            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim">
                 <div class="-northborder">
                     <squarespace:block-field id="module-casestudy-{item.id}-challengecol2" columns="12" />
-                </div>
-            </div>
-            <div class="cols__col -column -vtop">
-                <div class="-northborder">
-                    <squarespace:block-field id="module-casestudy-{item.id}-challengecol3" columns="12" />
                 </div>
             </div>
         </div>
@@ -41,38 +38,40 @@
 <div class="page__details -wrap -exp">
     <div class="-wrap">
         <div class="nums -northborder">
-            <div class="nums__item nums__item--auto m -caps -color -column -vtop">
+            <div class="nums__item nums__item--auto m -caps -color -column -vtop anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-casestudy-{item.id}-details1" columns="12" />
             </div>
-            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="i.">
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop anim anim--tr js-lazy-anim" data-num="i.">
                 <squarespace:block-field id="module-casestudy-{item.id}-details2" columns="12" />
             </div>
-            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="ii.">
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop anim anim--tr js-lazy-anim" data-num="ii.">
                 <squarespace:block-field id="module-casestudy-{item.id}-details3" columns="12" />
             </div>
-            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="iii.">
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop anim anim--tr js-lazy-anim" data-num="iii.">
                 <squarespace:block-field id="module-casestudy-{item.id}-details4" columns="12" />
             </div>
         </div>
     </div>
 </div>
-<div class="page__video -wrap">
+<div class="page__video -wrap anim anim--tr js-lazy-anim">
     <squarespace:block-field id="module-casestudy-{item.id}-video" columns="12" />
 </div>
 <div class="page__solution -wrap -exp">
     <div class="-rel">
         <div class="onetwo -wrapl">
             <div class="onetwo__info -column">
-                <div class="m -caps -color">
+                <div class="m -caps -color anim anim--tr js-lazy-anim">
                     <squarespace:block-field id="module-casestudy-{item.id}-solutionsmeta" columns="12" />
                 </div>
-                <squarespace:block-field id="module-casestudy-{item.id}-solutionsbody" columns="12" />
+                <div class="anim anim--tr js-lazy-anim">
+                    <squarespace:block-field id="module-casestudy-{item.id}-solutionsbody" columns="12" />
+                </div>
             </div>
             <div class="onetwo__image -column -wrapl -text--center">
                 <squarespace:block-field id="module-casestudy-{item.id}-solutionsimage" columns="12" />
             </div>
         </div>
-        <div class="page__zone">
+        <div class="page__zone anim anim--tr js-lazy-anim">
             <div class="page__zone__num m -caps -caps -column">01</div>
             <div class="page__zone__line -column"></div>
             <div class="page__zone__label m -column">Brand&nbsp;Promise</div>
@@ -82,7 +81,7 @@
 <div class="page__images">
     <squarespace:block-field id="module-casestudy-{item.id}-images1" columns="12" />
 </div>
-<div class="page__gallery -wrap -expt">
+<div class="page__gallery -wrap -expt anim anim--tr js-lazy-anim">
     <squarespace:block-field id="module-casestudy-{item.id}-gallery" columns="12" />
 </div>
 <div class="page__quote -wrap -exp">
@@ -90,7 +89,7 @@
         <div class="-wrap -paddr -exp">
             <squarespace:block-field id="module-casestudy-{item.id}-quote" columns="12" />
         </div>
-        <div class="page__zone">
+        <div class="page__zone anim anim--tr js-lazy-anim">
             <div class="page__zone__num m -caps -caps -column">02</div>
             <div class="page__zone__line -column"></div>
             <div class="page__zone__label m -column">Real&nbsp;Testimonial</div>
@@ -107,13 +106,15 @@
                 <squarespace:block-field id="module-casestudy-{item.id}-resultsimage" columns="12" />
             </div>
             <div class="onetwo__info -column -wrapl">
-                <div class="m -caps -color">
+                <div class="m -caps -color anim anim--tr js-lazy-anim">
                     <squarespace:block-field id="module-casestudy-{item.id}-resultsmeta" columns="12" />
                 </div>
-                <squarespace:block-field id="module-casestudy-{item.id}-resultsbody" columns="12" />
+                <div class="anim anim--tr js-lazy-anim">
+                    <squarespace:block-field id="module-casestudy-{item.id}-resultsbody" columns="12" />
+                </div>
             </div>
         </div>
-        <div class="page__zone">
+        <div class="page__zone anim anim--tr js-lazy-anim">
             <div class="page__zone__num m -caps -caps -column">03</div>
             <div class="page__zone__line -column"></div>
             <div class="page__zone__label m -column">Results</div>
@@ -123,22 +124,22 @@
 {.if item.customContent.hasStats}
     <div class="page__stats cover cover--auto js-cover -wrap -exp3">
         <div class="nums -light -wraph">
-            <div class="nums__item nums__item--big nums__item--lab" data-num="1.">
+            <div class="nums__item nums__item--big nums__item--lab anim anim--tr js-lazy-anim" data-num="1.">
                 <squarespace:block-field id="module-casestudy-{item.id}-stats1" columns="12" />
             </div>
-            <div class="nums__item nums__item--big nums__item--lab" data-num="2.">
+            <div class="nums__item nums__item--big nums__item--lab anim anim--tr js-lazy-anim" data-num="2.">
                 <squarespace:block-field id="module-casestudy-{item.id}-stats2" columns="12" />
             </div>
-            <div class="nums__item nums__item--big nums__item--lab" data-num="3.">
+            <div class="nums__item nums__item--big nums__item--lab anim anim--tr js-lazy-anim" data-num="3.">
                 <squarespace:block-field id="module-casestudy-{item.id}-stats3" columns="12" />
             </div>
-            <div class="nums__item nums__item--big nums__item--lab" data-num="4.">
+            <div class="nums__item nums__item--big nums__item--lab anim anim--tr js-lazy-anim" data-num="4.">
                 <squarespace:block-field id="module-casestudy-{item.id}-stats4" columns="12" />
             </div>
-            <div class="nums__item nums__item--big nums__item--lab" data-num="5.">
+            <div class="nums__item nums__item--big nums__item--lab anim anim--tr js-lazy-anim" data-num="5.">
                 <squarespace:block-field id="module-casestudy-{item.id}-stats5" columns="12" />
             </div>
-            <div class="nums__item nums__item--big nums__item--lab" data-num="6.">
+            <div class="nums__item nums__item--big nums__item--lab anim anim--tr js-lazy-anim" data-num="6.">
                 <squarespace:block-field id="module-casestudy-{item.id}-stats6" columns="12" />
             </div>
         </div>

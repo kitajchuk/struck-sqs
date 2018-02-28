@@ -1,9 +1,9 @@
 <div class="page__related -wrap">
     <div class="-wrap">
         <div class="related js-toggles -bggrey -exp2">
-            <div class="related__label m -color -caps -wrap">Related Items</div>
-            <div class="related__item js-toggles-item related__casestudy js-view -wrap -exp0" data-uid="related" data-url="/case-studies" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View case study"></div>
-            <div class="related__item js-toggles-item related__project js-view -wrap -exp0" data-uid="related" data-url="/portfolio" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View project"></div>
+            <div class="related__label m -color -caps -wrap anim anim--tr js-lazy-anim">Related Items</div>
+            <div class="related__item js-toggles-item related__casestudy js-view -wrap -exp0 anim anim--tr js-lazy-anim" data-uid="related" data-url="/case-studies" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View case study"></div>
+            <div class="related__item js-toggles-item related__project js-view -wrap -exp0 anim anim--tr js-lazy-anim" data-uid="related" data-url="/portfolio" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View project"></div>
         </div>
     </div>
 </div>
