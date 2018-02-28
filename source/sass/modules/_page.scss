@@ -296,6 +296,9 @@ $csbutton-size: 56px;
         max-width: 100%;
         width: auto;
         }
+    .related__fpo {
+        width: 640px;
+        }
 }
 
 
@@ -498,6 +501,7 @@ $csbutton-size: 56px;
 .jobsboard__all,
 .jobsboard__one {
     visibility: hidden;
+    transition: visible $base-duration $ease;
 
     &.is-active {
         visibility: visible;
