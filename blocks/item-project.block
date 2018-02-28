@@ -1,31 +1,35 @@
 <div class="page__cover js-cover-scroll -pagepad">
     <div class="page__mast -wrap">
-        <div class="m -caps -color">
+        <div class="m -caps -color anim anim--tr js-lazy-anim">
             <squarespace:block-field id="module-project-{item.id}-mastmeta" columns="12" />
         </div>
-        <squarespace:block-field id="module-project-{item.id}-masthead" columns="12" />
+        <div class="anim anim--tr js-lazy-anim">
+            <squarespace:block-field id="module-project-{item.id}-masthead" columns="12" />
+        </div>
     </div>
-    <div class="page__video js-cover -bump3">
+    <div class="page__video js-cover -bump3 anim anim--tr js-lazy-anim">
         <squarespace:block-field id="module-project-{item.id}-video" columns="12" />
     </div>
 </div>
 <div class="page__intro -exp">
     <div class="-wrapl -paddr">
         <div class="-wrapl">
-            <div class="m -caps -color">
+            <div class="m -caps -color anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-project-{item.id}-intrometa" columns="12" />
             </div>
-            <squarespace:block-field id="module-project-{item.id}-introhead" columns="12" />
+            <div class="anim anim--tr js-lazy-anim">
+                <squarespace:block-field id="module-project-{item.id}-introhead" columns="12" />
+            </div>
         </div>
     </div>
     <div class="-expt -wrap">
         <div class="cols -wrap">
-            <div class="cols__col -column -vtop">
+            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim">
                 <div class="-northborder">
                     <squarespace:block-field id="module-project-{item.id}-introcol1" columns="12" />
                 </div>
             </div>
-            <div class="cols__col -column -vtop">
+            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim">
                 <div class="-northborder">
                     <squarespace:block-field id="module-project-{item.id}-introcol2" columns="12" />
                 </div>
@@ -33,22 +37,22 @@
         </div>
     </div>
 </div>
-<div class="page__gallery -wrap">
+<div class="page__gallery -wrap anim anim--tr js-lazy-anim">
     <squarespace:block-field id="module-project-{item.id}-gallery" columns="12" />
 </div>
 <div class="page__details -wrap -exp">
     <div class="-wrap">
         <div class="nums -northborder">
-            <div class="nums__item nums__item--auto m -caps -color -column -vtop">
+            <div class="nums__item nums__item--auto m -caps -color -column -vtop anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-project-{item.id}-details1" columns="12" />
             </div>
-            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="i.">
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop anim anim--tr js-lazy-anim" data-num="i.">
                 <squarespace:block-field id="module-project-{item.id}-details2" columns="12" />
             </div>
-            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="ii.">
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop anim anim--tr js-lazy-anim" data-num="ii.">
                 <squarespace:block-field id="module-project-{item.id}-details3" columns="12" />
             </div>
-            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop" data-num="iii.">
+            <div class="nums__item nums__item--auto nums__item--lab p -column -vtop anim anim--tr js-lazy-anim" data-num="iii.">
                 <squarespace:block-field id="module-project-{item.id}-details4" columns="12" />
             </div>
         </div>
@@ -58,7 +62,7 @@
     <squarespace:block-field id="module-project-{item.id}-images" columns="12" />
 </div>
 <div class="page__statement -wrapl -exp -paddr">
-    <div class="-wrapl">
+    <div class="-wrapl anim anim--tr js-lazy-anim">
         <squarespace:block-field id="module-project-{item.id}-statement" columns="12" />
     </div>
 </div>
