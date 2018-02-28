@@ -32,6 +32,7 @@ const router = {
         });
         this.bindEmpty();
         this.initPages();
+        this.prepPages();
 
         core.emitter.on( "app--page-teardown", () => this.topper() );
         core.emitter.on( "app--anim-request", () => {
@@ -66,6 +67,18 @@ const router = {
 
             elem.attr( "data-ea", "form" );
         });
+    },
+
+
+    prepPages () {
+        this.bindSystemLinks();
+        this.execEmptyBlocks();
+        this.controllers.exec();
+
+        setTimeout(() => {
+            this.controllers.animate();
+
+        }, this.pageDuration );
     },
 
 
@@ -114,14 +127,6 @@ const router = {
      */
     initPage ( data ) {
         this.changeClass( data );
-        this.bindSystemLinks();
-        this.execEmptyBlocks();
-        this.controllers.exec();
-
-        setTimeout(() => {
-            this.controllers.animate();
-
-        }, this.pageDuration );
     },
 
 
