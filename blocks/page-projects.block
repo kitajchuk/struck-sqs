@@ -1,4 +1,4 @@
-<div class="page__mast -wrap">
+<div class="page__mast -wrap -pagepad">
     <div class="h2 -mast anim anim--tr js-lazy-anim">
         <squarespace:block-field id="module-portfolio-masthead" columns="12" />
     </div>

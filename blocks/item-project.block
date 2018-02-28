@@ -1,4 +1,4 @@
-<div class="page__cover js-cover-scroll">
+<div class="page__cover js-cover-scroll -pagepad">
     <div class="page__mast -wrap">
         <div class="m -caps -color">
             <squarespace:block-field id="module-project-{item.id}-mastmeta" columns="12" />

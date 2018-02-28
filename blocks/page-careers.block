@@ -1,4 +1,4 @@
-<div class="page__content jobsboard js-jobsboard">
+<div class="page__content jobsboard js-jobsboard -pagepad">
     <div class="jobsboard__all js-jobsboard-all">
         <div class="page__mast js-cover-scroll">
             <div class="h2 -wrap anim anim--tr js-lazy-anim">{collection.title}</div>
