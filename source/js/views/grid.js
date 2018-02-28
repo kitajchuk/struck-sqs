@@ -1,6 +1,5 @@
 export default ( json/*, data*/ ) => {
     const items = [].concat( json[ 0 ].items ).concat( json[ 1 ].items );
-    const collection = json.collection;
 
     return items.map(( item ) => {
         const classMod = (item.customContent.customType === "customProject" ? "4up" : "2up");
