@@ -199,12 +199,17 @@
         display: block;
         height: 6px;
         margin-top: 30px;
-        width: 36px;
+        transition: width $base-duration $ease $base-duration;
+        width: 0;
 
         @include respond( $mobile-breakpoint ) {
             height: 4px;
             margin-top: $padding-1 / 2;
         }
+    }
+
+    &.is-animated:after {
+        width: 36px;
     }
 
     &.-light:after {
