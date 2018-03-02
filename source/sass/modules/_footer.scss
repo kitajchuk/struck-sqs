@@ -1,7 +1,7 @@
 .footer {
     padding-bottom: $header-padding;
     padding-top: $header-padding;
-    transition: transform $fast-duration $ease;
+    transition: transform $base-duration $ease;
 
     @include state( "navi", "open" ) {
         transform: translate3d( 50vw, 0, 0 );

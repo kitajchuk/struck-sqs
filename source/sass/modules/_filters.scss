@@ -12,7 +12,7 @@
     }
 .filters__item {
     span {
-        transition: color $fast-duration $ease;
+        transition: color $base-duration $ease;
     }
 
     &.is-active {

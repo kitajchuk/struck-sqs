@@ -1,6 +1,6 @@
 .inp {
     @include inp();
-    transition: background-color $fast-duration $ease;
+    transition: background-color $base-duration $ease;
 
     &.is-error {
         background-color: $red;
@@ -19,7 +19,35 @@
     }
 .btn {
     @include btn();
-    transition: color $fast-duration $ease;
+    transition: color $base-duration $ease;
+
+    &:before,
+    &:after {
+        transform: translate3d( 0, 0, 0 );
+    }
+
+    &:before {
+        background-color: $black;
+        content: "";
+        height: 0;
+        left: -2px;
+        position: absolute;
+        top: 0;
+        transition: height $fast-duration $ease;
+        transition-delay: $fast-duration;
+        width: 2px;
+    }
+    &:after {
+        background-color: $black;
+        bottom: -2px;
+        content: "";
+        height: 2px;
+        left: -2px;
+        position: absolute;
+        transition: width $fast-duration $ease;
+        transition-delay: 0ms;
+        width: 0;
+    }
 
     @include respond-min( $desktop-breakpoint ) {
         padding-left: 80px;

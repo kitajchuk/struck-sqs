@@ -3,8 +3,8 @@
 *******************************************************************************/
 .page {
     position: relative;
-    transition: opacity $fast-duration $ease,
-                transform $fast-duration $ease;
+    transition: opacity $base-duration $ease,
+                transform $base-duration $ease;
 
     @include state( "navi", "open" ) {
         transform: translate3d( 50vw, 0, 0 );

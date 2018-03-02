@@ -50,7 +50,7 @@
             display: block;
             height: 2px;
             margin-top: 30px;
-            transition: width $fast-duration $ease;
+            transition: width $base-duration $ease;
             width: 100px;
         }
     }
@@ -83,8 +83,8 @@
 .hover-text__static {
     pointer-events: none;
     position: relative;
-    transition: opacity $fast-duration $ease,
-                transform $fast-duration $ease;
+    transition: opacity $base-duration $ease,
+                transform $base-duration $ease;
     }
 .hover-text__hover {
     left: 0;
@@ -93,8 +93,8 @@
     position: absolute;
     top: 0;
     transform: translate3d( 0, 100%, 0 );
-    transition: opacity $fast-duration $ease,
-                transform $fast-duration $ease;
+    transition: opacity $base-duration $ease,
+                transform $base-duration $ease;
     }
 
 
@@ -110,7 +110,7 @@
 }
 .social__a {
     text-transform: capitalize;
-    transition: color $fast-duration $ease;
+    transition: color $base-duration $ease;
     }
 
 

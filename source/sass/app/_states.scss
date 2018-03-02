@@ -42,7 +42,16 @@
 
     // Buttons...
     .btn:hover {
-        color: $red;
+        color: $black;
+
+        &:before {
+            height: #{"~\"calc( 100% + 2px )\""};
+            transition-delay: 0ms;
+        }
+        &:after {
+            width: #{"~\"calc( 100% + 2px )\""};
+            transition-delay: $fast-duration;
+        }
     }
     .btn--alt:hover {
         color: $black;

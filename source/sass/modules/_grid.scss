@@ -76,8 +76,8 @@
     left: 0;
     padding: 0 0 $mobile-padding $mobile-padding;
     position: absolute;
-    transition: transform $fast-duration $ease,
-                opacity $fast-duration $ease;
+    transition: transform $base-duration $ease,
+                opacity $base-duration $ease;
     white-space: nowrap;
     }
 .grid__hover {
@@ -105,8 +105,8 @@
 
     h3, p {
         opacity: 0;
-        transition: transform $fast-duration $ease,
-                    opacity $fast-duration $ease;
+        transition: transform $base-duration $ease,
+                    opacity $base-duration $ease;
     }
 
     h3 {

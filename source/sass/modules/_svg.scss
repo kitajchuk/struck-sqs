@@ -1,6 +1,6 @@
 .-svg {
     pointer-events: none;
-    transition: fill $fast-duration $ease;
+    transition: fill $base-duration $ease;
     }
 .-svg--logo {
     fill: $red;

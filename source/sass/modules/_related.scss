@@ -34,7 +34,7 @@
 .related__info {
     max-width: 40%;
     pointer-events: auto;
-    transition: transform $fast-duration $ease;
+    transition: transform $base-duration $ease;
     transform: translate3d( 0, 0, 0 );
     width: 100%;
 
@@ -68,8 +68,8 @@
         right: 0;
         top: 10px;
         transform: translate3d( -100%, 0, 0 );
-        transition: opacity $fast-duration $ease,
-                    transform $fast-duration $ease;
+        transition: opacity $base-duration $ease,
+                    transform $base-duration $ease;
         width: 115px;
 
         @include respond( $break-tablet-medium ) {
@@ -127,8 +127,8 @@
     position: absolute;
     right: -60px;
     transform: translate3d( -60px, 60px, 0 );
-    transition: opacity $fast-duration $ease,
-                transform $fast-duration $ease;
+    transition: opacity $base-duration $ease,
+                transform $base-duration $ease;
     width: 62.5%;
 
     @include respond( $break-laptop-medium ) {
