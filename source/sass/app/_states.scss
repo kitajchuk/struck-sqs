@@ -60,6 +60,9 @@
             transform: scale3d( 1, 1, 1 );
         }
     }
+    .-bgcolor .btn:hover {
+        color: $black;
+    }
 
     // Social links...
     .social__a:hover {

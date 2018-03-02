@@ -245,7 +245,11 @@
     }
 .-bgcolor {
     background-color: $red;
-    }
+
+    .btn {
+        @include btn-alt();
+        }
+}
 .-bgblack {
     background-color: $black;
     }

@@ -411,11 +411,6 @@ $csbutton-size: 56px;
 /******************************************************************************
  * Squarespace block-field elements
 *******************************************************************************/
-#module-home-about-button {
-    .btn {
-        @include btn-alt();
-        }
-}
 #module-home-quote {
     padding-bottom: $padding-1;
 }
