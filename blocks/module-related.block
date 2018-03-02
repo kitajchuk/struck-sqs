@@ -1,9 +1,17 @@
-<div class="page__related -wrap">
-    <div class="-wrap">
-        <div class="related js-toggles -bggrey -exp2">
-            <div class="related__label m -color -caps -wrap anim anim--tr js-lazy-anim">Related Items</div>
-            <div class="related__item js-toggles-item related__casestudy js-view -wrap -exp0 anim anim--tr js-lazy-anim" data-uid="related" data-url="/case-studies" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View case study"></div>
-            <div class="related__item js-toggles-item related__project js-view -wrap -exp0 anim anim--tr js-lazy-anim" data-uid="related" data-url="/portfolio" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View project"></div>
+<div class="page__related">
+    <div class="related js-toggles -bggrey">
+        <div class="related__label m -color -caps -wrap anim anim--tr js-lazy-anim">Related Items</div>
+        <div class="related__toggles">
+            <div class="related__toggle -wrap -exp0 anim anim--tr js-lazy-anim">
+                <div class="related__info js-toggles-toggler js-view" data-target=".js-toggles-target--casestudy" data-uid="related" data-url="/case-studies" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View case study"></div>
+            </div>
+            <div class="related__toggle -wrap -exp0 anim anim--tr js-lazy-anim">
+                <div class="related__info js-toggles-toggler js-view" data-target=".js-toggles-target--project" data-uid="related" data-url="/portfolio" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View project"></div>
+            </div>
+        </div>
+        <div class="related__targets">
+            <div class="related__target js-toggles-target js-toggles-target--casestudy"></div>
+            <div class="related__target js-toggles-target js-toggles-target--project"></div>
         </div>
     </div>
 </div>

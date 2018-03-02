@@ -14,7 +14,8 @@ import * as core from "../core";
 class Toggles {
     constructor ( element ) {
         this.element = element;
-        this.toggles = this.element.find( ".js-toggles-item" );
+        this.toggles = this.element.find( ".js-toggles-toggler" );
+        this.targets = this.element.find( ".js-toggles-target" );
 
         if ( !core.detect.isDevice() ) {
             this.bind();
@@ -24,12 +25,18 @@ class Toggles {
 
     bind () {
         this.toggles.eq( 0 ).addClass( "is-active" );
-        this.element.on( "mouseenter", ".js-toggles-item", ( e ) => {
-            const targ = $( e.target );
-            const elem = targ.is( ".js-toggles-item" ) ? targ : targ.closest( ".js-toggles-item" );
+        this.targets.eq( 0 ).addClass( "is-active" );
+        this.element.on( "mouseenter", ".js-toggles-toggler", ( e ) => {
+            const eventTarget = $( e.target );
+            const elemToggle = eventTarget.is( ".js-toggles-toggler" ) ? eventTarget : eventTarget.closest( ".js-toggles-toggler" );
+            const elemData = elemToggle.data();
+            const elemTarget = this.element.find( elemData.target );
 
             this.toggles.removeClass( "is-active" );
-            elem.addClass( "is-active" );
+            elemToggle.addClass( "is-active" );
+
+            this.targets.removeClass( "is-active" );
+            elemTarget.addClass( "is-active" );
         });
     }
 
