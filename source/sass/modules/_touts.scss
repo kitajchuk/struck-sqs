@@ -1,0 +1,26 @@
+/******************************************************************************
+ * Homepage/What We Do — Client touts elements
+*******************************************************************************/
+.touts {
+    margin: 0 (-$padding-1 / 4);
+    }
+.touts__item {
+    padding: $padding-1 ($padding-1 / 4) 0 ($padding-1 / 4);
+    width: 20%;
+
+    @include respond( $mobile-breakpoint ) {
+        width: 50%;
+    }
+
+    @include respond( $mobile-breakpoint-small ) {
+        width: 100%;
+    }
+}
+.touts__media {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    }
+.touts__image {
+    max-width: 100%;
+    }

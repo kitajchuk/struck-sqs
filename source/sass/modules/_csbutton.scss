@@ -1,0 +1,55 @@
+/******************************************************************************
+ * Related items like on Projects and Case Studies
+*******************************************************************************/
+$csbutton-size: 56px;
+
+.csbutton {
+    @include font-family-bold();
+    background-color: $black;
+    bottom: $header-padding;
+    box-sizing: border-box;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $btn-size;
+    height: $csbutton-size;
+    line-height: 1;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    transition: width $base-duration $ease;
+    width: $csbutton-size;
+    z-index: $z_layer_header;
+
+    .csbutton__icon {
+        font-size: 0;
+        left: 22px;
+        position: absolute;
+        top: 22px;
+    }
+
+    .csbutton__text {
+        left: $csbutton-size;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        transform: translate3d( 100%, -50%, 0 );
+        transition: transform $base-duration $ease,
+                    opacity $base-duration $ease;
+        white-space: nowrap;
+    }
+
+    .csbutton__fill {
+        background-color: $red;
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: transform $base-duration $ease;
+        transform: scale3d( 0, 1, 1 );
+        transform-origin: left center;
+        width: 100%;
+        z-index: -1;
+    }
+}

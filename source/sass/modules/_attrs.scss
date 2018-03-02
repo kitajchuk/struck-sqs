@@ -1,0 +1,43 @@
+/******************************************************************************
+ * Who We Are — Attributes element
+*******************************************************************************/
+.attrs {
+    .sqs-block-horizontalrule hr {
+        background-color: $white;
+        color: $white;
+        margin: ($padding-1 / 2) 0;
+        }
+}
+.attrs__group {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 (-$padding-1);
+    }
+.attrs__attr {
+    box-sizing: content-box;
+    padding: 0 $padding-1;
+    position: relative;
+    width: 15vw;
+
+    @include respond( $mobile-breakpoint ) {
+        width: 100%;
+    }
+
+    & + .attrs__attr {
+        @include respond( $mobile-breakpoint ) {
+            margin-top: $padding-1;
+        }
+    }
+}
+.attrs__num {
+    position: absolute;
+    left: 4vw;
+    top: 14px;
+
+    @include respond( $mobile-breakpoint ) {
+        left: 2vw;
+        top: 7px;
+    }
+}

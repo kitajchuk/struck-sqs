@@ -1,0 +1,177 @@
+/******************************************************************************
+ * Simple little columns like on Project pages
+*******************************************************************************/
+.cols {
+    margin: 0 (-$padding-1 / 2);
+    }
+.cols__col {
+    padding: 0 ($padding-1 / 2);
+    width: 33.333333%;
+
+    @include respond( $mobile-breakpoint-navi ) {
+        margin-bottom: $mobile-padding;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+
+
+/******************************************************************************
+ * Kit of Parts
+*******************************************************************************/
+.kop {
+    .sqs-block-html,
+    .sqs-block-code,
+    .sqs-block-quote {
+        .sqs-block-content {
+            padding-left: $padding-1;
+            padding-right: $padding-1;
+        }
+    }
+    .sqs-block-spacer {
+        background-color: $red4;
+        height: 1px;
+        margin: $expander-1 0;
+        }
+}
+
+
+/******************************************************************************
+ * Module — Animated underline
+*******************************************************************************/
+.module-linker {
+    a {
+        position: relative;
+
+        &:after {
+            background-color: $red4;
+            content: "";
+            display: block;
+            height: 2px;
+            margin-top: 30px;
+            transition: width $fast-duration $ease;
+            width: 100px;
+        }
+    }
+}
+
+
+
+/******************************************************************************
+ * Module — Animated text hover
+*******************************************************************************/
+.hover-text {
+    h1 {
+        cursor: pointer;
+        }
+}
+.hover-text__wrap {
+    position: relative;
+
+    &:before {
+        // background-color: blue;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        }
+}
+.hover-text__static {
+    pointer-events: none;
+    position: relative;
+    transition: opacity $fast-duration $ease,
+                transform $fast-duration $ease;
+    }
+.hover-text__hover {
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translate3d( 0, 100%, 0 );
+    transition: opacity $fast-duration $ease,
+                transform $fast-duration $ease;
+    }
+
+
+
+/******************************************************************************
+ * Social links — Navi and Footer
+*******************************************************************************/
+.social {}
+.social__li {
+    & + .social__li {
+        margin-left: $padding-1;
+        }
+}
+.social__a {
+    text-transform: capitalize;
+    transition: color $fast-duration $ease;
+    }
+
+
+
+/******************************************************************************
+ * Module — Instagram posts
+*******************************************************************************/
+.instagram {
+    padding: 60px 0 0;
+    }
+.instagram__post {
+    cursor: inherit;
+    margin-left: 20px;
+    width: 24vw;
+
+    @include respond( $mobile-breakpoint ) {
+        width: 36vw;
+    }
+}
+
+
+
+/******************************************************************************
+ * Module — Greensock Draggable
+*******************************************************************************/
+.drag {
+    cursor: -webkit-grab;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    }
+.drag__node {
+    cursor: -webkit-grab;
+    display: inline-flex;
+    position: relative;
+    width: auto;
+
+    @include state( "drag", "start" ) {
+        cursor: -webkit-grabbing;
+    }
+}
+
+
+
+/******************************************************************************
+ * Module — Title lockup like on Job details
+*******************************************************************************/
+.mastline {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .p,
+    .h2 {
+        line-height: 1;
+        }
+}
+.mastline__line {
+    background-color: $red4;
+    flex-grow: 1;
+    height: 2px;
+    margin: 0 ($padding-1 / 2);
+    }

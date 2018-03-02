@@ -1,0 +1,55 @@
+/******************************************************************************
+ * Module — Medium posts
+*******************************************************************************/
+.posts {
+    margin: 0 (-$padding-1 / 3);
+
+    @include respond( $mobile-breakpoint ) {
+        padding-left: $mobile-padding;
+        padding-right: $mobile-padding;
+    }
+}
+.posts__item {
+    padding: 0 ($padding-1 / 3);
+    width: 25%;
+
+    @include respond( $tablet-breakpoint ) {
+        width: 50%;
+    }
+
+    @include respond( $mobile-breakpoint ) {
+        padding: 0 $mobile-padding;
+        width: 100%;
+    }
+}
+.posts__title {
+    display: block;
+    padding-bottom: 20px;
+    }
+.posts__meta {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    }
+.posts__mmeta {}
+.posts__avatar {
+    border-radius: $posts-avatar-width;
+    height: $posts-avatar-width;
+    width: $posts-avatar-width;
+    }
+.posts__author {
+    padding: 0 10px;
+    flex-grow: 1;
+    // max-width: #{"~\"calc( 100% - #{$posts-avatar-width} - #{$posts-avatar-width} )\""};
+
+    span {
+        background-color: $grey;
+        border-radius: 2px;
+        height: 2px;
+        margin: 0 4px;
+        width: 2px;
+        }
+}
+.posts__platform {}

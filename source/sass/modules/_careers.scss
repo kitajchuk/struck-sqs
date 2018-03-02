@@ -1,0 +1,39 @@
+/******************************************************************************
+ * Careers — Greenhouse.io jobsboard elements
+*******************************************************************************/
+.jobsboard {}
+.jobsboard__all,
+.jobsboard__one {
+    visibility: hidden;
+    transition: visible $base-duration $ease;
+
+    &.is-active {
+        visibility: visible;
+        }
+    &.is-inactive {
+        display: none;
+        }
+    }
+.jobs {}
+.jobs__post {
+    border-top: 1px solid $black3;
+    padding: 4vw 0;
+    }
+.job {}
+.job__cols {
+    margin: 0 (-$padding-1 / 2);
+    }
+.job__col {
+    padding: 0 ($padding-1 / 2);
+    width: 33.333333%;
+
+    & + .job__col {
+        @include respond( $mobile-breakpoint ) {
+            margin-top: $padding-1;
+        }
+    }
+
+    @include respond( $mobile-breakpoint ) {
+        width: 100%;
+    }
+}

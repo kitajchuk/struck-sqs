@@ -1,0 +1,33 @@
+/******************************************************************************
+ * Filters, as in tags for Portfolio and Casestudies
+*******************************************************************************/
+.filters {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    }
+.filters__item,
+.filters__label {
+    line-height: 1;
+    }
+.filters__item {
+    span {
+        transition: color $fast-duration $ease;
+    }
+
+    &.is-active {
+        span {
+            color: $red;
+            }
+    }
+
+    & + .filters__item {
+        &:before {
+            content: "\\";
+            display: inline-block;
+            padding: 0 10px;
+            transform: translateY( -2px );
+            vertical-align: middle;
+            }
+    }
+}

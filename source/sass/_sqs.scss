@@ -71,3 +71,20 @@ body.sqs-edit-mode .sqs-layout[data-type="block-field"].empty {
 .sqs-gallery-controls .previous {
     transform: translateY( -50% ) translateX( 30px ) !important;
 }
+
+
+
+/******************************************************************************
+ * Squarespace block-field elements
+*******************************************************************************/
+#module-home-quote {
+    padding-bottom: $padding-1;
+}
+.sqs-gallery-block-stacked .image-wrapper {
+    line-height: 0;
+    margin: 0;
+
+    & + .image-wrapper {
+        padding-top: $padding-1;
+        }
+}

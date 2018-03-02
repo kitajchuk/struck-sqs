@@ -1,0 +1,45 @@
+/******************************************************************************
+ * Stats lineup as in Case studies or Who We Are...
+*******************************************************************************/
+.stats {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    }
+.stats__col {
+    text-align: center;
+    }
+.stats__circle {
+    border: 3px solid $white;
+    border-radius: 120px;
+    display: inline-block;
+    height: 120px;
+    position: relative;
+    width: 120px;
+
+    @include respond( $mobile-breakpoint ) {
+        border-radius: 100px;
+        height: 100px;
+        width: 100px;
+    };
+
+    h1 {
+        font-size: $h2-size;
+
+        @include respond-min( $mobile-breakpoint ) {
+            font-size: $h1-size;
+        };
+
+        @include respond-min( $desktop-breakpoint ) {
+            font-size: $h1-size;
+        }
+    }
+
+    > .sqs-layout {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate3d( -50%, -50%, 0 );
+    }
+}
+.stats__label {}
