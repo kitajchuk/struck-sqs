@@ -99,3 +99,11 @@
 .is-touchable {
     // Touch specific here?
 }
+
+.is-navi-open {
+    overflow-y: hidden;
+
+    body {
+        overflow-y: hidden;
+    }
+}
