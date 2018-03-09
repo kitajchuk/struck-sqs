@@ -30,7 +30,7 @@
     }
 .embed__overlay {
     transition: opacity $base-duration $ease,
-                transform $base-duration $ease;
+                transform ($base-duration * 2) $ease;
 
     @include state( "embed", "playing" ) {
         opacity: 0;
@@ -41,9 +41,16 @@
         transform: scale( 1.05 );
     }
 }
+@keyframes circle {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
 .embed__playbtn {
-    border: 2px solid $white;
-    border-radius: 6.875vw;
     cursor: pointer;
     height: 6.875vw;
     left: 50%;
@@ -52,8 +59,56 @@
     transform: translate3d( -50%, -50%, 0 );
     width: 6.875vw;
 
+    .embed__svg {
+        overflow: visible;
+    }
+    .embed__svg--circle {
+        height: 100%;
+        width: 100%;
+    }
+    .embed__svg--polygon {
+        height: 18px;
+        width: 15px;
+        left: 50%;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        transform: translate3d( -50%, 50%, 0 );
+        transition: opacity $base-duration $ease,
+                    transform $base-duration $ease;
+
+        @include state( "play", "button" ) {
+            opacity: 1;
+            transform: translate3d( -50%, -50%, 0 );
+        }
+    }
+    polygon {
+        fill: $white;
+    }
+    circle {
+        stroke: $white;
+        stroke-width: 2;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1000;
+        r: 3.4375vw;
+        cx: 3.4375vw;
+        cy: 3.4375vw;
+        fill: none;
+        transform-origin: center;
+        transform: rotate( 180deg );
+
+        @include state( "play", "button" ) {
+            animation: circle 1500ms 1;
+        }
+
+        @include respond( $tablet-breakpoint ) {
+            r: 32px;
+            cx: 32px;
+            cy: 32px;
+        }
+    }
+
     @include respond( $tablet-breakpoint ) {
-        border-radius: 64px;
         height: 64px;
         width: 64px;
     }
@@ -65,6 +120,13 @@
     position: absolute;
     top: 50%;
     transform: translate3d( -46%, -50%, 0 );
+    transition: opacity $base-duration $ease,
+                transform $base-duration $ease;
+
+    @include state( "play", "button" ) {
+        opacity: 0;
+        transform: translate3d( -46%, -100%, 0 );
+    }
 
     @include respond( $tablet-breakpoint ) {
         font-size: $m-size;
@@ -73,8 +135,15 @@
 .embed__filter {
     clip-path: circle( 3.4375vw at 50% 50% );
     filter: blur( 6px );
+    transition: filter $base-duration $ease,
+                transform $base-duration $ease;
 
     @include respond( $tablet-breakpoint ) {
         clip-path: circle( 32px at 50% 50% );
+    }
+
+    @include state( "play", "button" ) {
+        filter: blur( 0px );
+        transform: scale( 1.05 );
     }
 }
