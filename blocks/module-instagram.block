@@ -1,4 +1,4 @@
-<div class="module-instagram -bgblack -exp -light js-social">
+<div class="module-instagram -bgblack -expb -light js-social">
     <div class="-wrap anim anim--tr js-lazy-anim">
         <squarespace:block-field id="module-instagram-blocks" columns="12" />
     </div>
