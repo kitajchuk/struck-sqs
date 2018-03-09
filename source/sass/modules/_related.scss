@@ -8,6 +8,7 @@
     width: 100%;
 
     @include respond( $break-laptop-medium ) {
+        max-width: $break-tablet-medium;
         padding-bottom: 60px;
         padding-top: 60px;
     }
@@ -52,10 +53,6 @@
         &:after {
             opacity: 1;
             transform: translate3d( 0, 0, 0 );
-
-            @include respond( $break-laptop-medium ) {
-                transform: translate3d( -20%, 0, 0 );
-            }
         }
     }
 
@@ -118,6 +115,10 @@
         .related__image {
             opacity: 1;
             transform: translate3d( 0, 60px, 0 );
+
+            @include respond( $break-laptop-medium ) {
+                transform: translate3d( 0, 30px, 0 );
+            }
         }
     }
 }
@@ -132,7 +133,8 @@
     width: 62.5%;
 
     @include respond( $break-laptop-medium ) {
-        right: 0;
+        right: -30px;
+        transform: translate3d( -30px, 30px, 0 );
     }
 
     @include respond( $mobile-breakpoint ) {
