@@ -41,6 +41,14 @@ class Video {
                 this.play();
             }
         });
+
+        this.element
+            .on( "mouseenter", ".js-embed-playbtn", () => {
+                this.element.addClass( "is-play-button" );
+
+            }).on( "mouseleave", ".js-embed-playbtn", () => {
+                this.element.removeClass( "is-play-button" );
+            });
     }
 
 

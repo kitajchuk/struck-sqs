@@ -11,7 +11,10 @@
     width: auto;
     }
 
-.embed {}
+.embed {
+    overflow: hidden;
+    position: relative;
+    }
 .embed__aspect {
     background-color: $black;
     position: relative;
@@ -26,11 +29,16 @@
     width: 100%;
     }
 .embed__overlay {
-    transition: opacity $base-duration $ease;
+    transition: opacity $base-duration $ease,
+                transform $base-duration $ease;
 
     @include state( "embed", "playing" ) {
         opacity: 0;
         pointer-events: none;
+    }
+
+    @include state( "play", "button" ) {
+        transform: scale( 1.05 );
     }
 }
 .embed__playbtn {
@@ -69,8 +77,4 @@
     @include respond( $tablet-breakpoint ) {
         clip-path: circle( 32px at 50% 50% );
     }
-}
-
-.sqs-block-video {
-
 }
