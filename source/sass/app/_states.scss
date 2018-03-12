@@ -47,8 +47,10 @@
         &:before {
             height: #{"~\"calc( 100% + 2px )\""};
             transition-delay: 0ms;
+            top: 0;
         }
         &:after {
+            left: -2px;
             width: #{"~\"calc( 100% + 2px )\""};
             transition-delay: $fast-duration;
         }

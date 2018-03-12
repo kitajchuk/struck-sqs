@@ -28,11 +28,11 @@
 
     &:before {
         background-color: $black;
+        bottom: -2px;
         content: "";
         height: 0;
         left: -2px;
         position: absolute;
-        top: 0;
         transition: height $base-duration $ease;
         transition-delay: $fast-duration;
         width: 2px;
@@ -42,8 +42,8 @@
         bottom: -2px;
         content: "";
         height: 2px;
-        left: -2px;
         position: absolute;
+        right: 0;
         transition: width $base-duration $ease;
         transition-delay: 0ms;
         width: 0;
