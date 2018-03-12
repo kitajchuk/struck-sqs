@@ -1,3 +1,8 @@
 <div class="page__button -wrap -exp -text--center anim anim--tr js-lazy-anim">
-    <a href="{collection.fullUrl}" class="btn js-gtm-event" data-ec="site interaction" data-ea="{collection.urlId}" data-el="Back to List">Back to List</a>
+    <a href="{collection.fullUrl}" class="btn js-gtm-event" data-ec="site interaction" data-ea="{collection.urlId}" data-el="Back to List">
+        <div class="btn__cell">
+            <div class="btn__one">Back to List</div>
+            <div class="btn__two">Back to List</div>
+        </div>
+    </a>
 </div>
