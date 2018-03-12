@@ -28,14 +28,15 @@
     top: 0;
     width: 100%;
     }
-.embed__overlay {
-    transition: opacity $base-duration $ease,
-                transform ($base-duration * 2) $ease;
-
+.embed__poster {
     @include state( "embed", "playing" ) {
         opacity: 0;
         pointer-events: none;
     }
+}
+.embed__overlay {
+    transition: opacity $base-duration $ease,
+                transform ($base-duration * 2) $ease;
 
     @include state( "play", "button" ) {
         transform: scale( 1.05 );
@@ -106,6 +107,11 @@
             cx: 32px;
             cy: 32px;
         }
+    }
+
+    @include state( "embed", "playing" ) {
+        opacity: 0;
+        pointer-events: none;
     }
 
     @include respond( $tablet-breakpoint ) {
