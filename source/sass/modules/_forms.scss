@@ -21,6 +21,22 @@
     @include btn();
     transition: color $base-duration $ease;
 
+    .btn__cell {
+        overflow: hidden;
+        position: relative;
+
+        div {
+            padding: 5px 4.2vw 20px;
+            transition: opacity $base-duration $ease,
+                        transform $base-duration $ease;
+        }
+    }
+
+    .btn__two {
+        opacity: 0;
+        position: absolute;
+    }
+
     &:before,
     &:after {
         transform: translate3d( 0, 0, 0 );
@@ -77,7 +93,11 @@
     }
 .btn--dark {
     @include btn-blk();
-    }
+
+    // .btn__cell {
+    //     padding: 20px 30px;
+    // }
+}
 .btn--clean {
     border: 0;
     color: $grey;

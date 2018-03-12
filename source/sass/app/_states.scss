@@ -54,6 +54,19 @@
             width: #{"~\"calc( 100% + 2px )\""};
             transition-delay: $fast-duration;
         }
+
+        .btn__cell {
+            div {
+                transform: translate3d( 0, -100%, 0 );
+            }
+        }
+
+        .btn__one {
+            opacity: 0;
+        }
+        .btn__two {
+            opacity: 1;
+        }
     }
     .btn--alt:hover {
         color: $black;

@@ -1,3 +1,6 @@
 <a href="{buttonLink}" class="btn btn--{buttonSize} {.if newWindow}{.or}js-gtm-event js-gtm-event--lazy-ea{.end}" {.if newWindow}target="_blank"{.or}data-ec="site interaction" data-ea="{buttonLink}" data-el="{buttonText}"{.end}>
-    {buttonText}
+    <div class="btn__cell">
+        <div class="btn__one">{buttonText}</div>
+        <div class="btn__two">{buttonText}</div>
+    </div>
 </a>
