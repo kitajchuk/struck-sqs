@@ -106,6 +106,24 @@
             opacity: 0;
         }
     }
+
+    // Icons
+    .icon-wrap--list:hover {
+        .icon--list {
+            .top {
+                &:before {
+                    transition-delay: 0ms;
+                    width: 100%;
+                }
+            }
+            .bot {
+                &:before {
+                    transition-delay: $fast-duration;
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 .is-touchable {
@@ -117,5 +135,39 @@
 
     body {
         overflow-y: hidden;
+    }
+
+    .icon-wrap--list {
+        .icon--list {
+            .top {
+                &:before {
+                    transition-delay: 0ms;
+                    width: 100%;
+                }
+            }
+            .bot {
+                &:before {
+                    transition-delay: $fast-duration;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .icon-wrap--ex {
+        .icon--ex {
+            .ex1 {
+                &:before {
+                    transition-delay: $base-duration;
+                    width: 100%;
+                }
+            }
+            .ex2 {
+                &:before {
+                    transition-delay: $base-duration + $fast-duration;
+                    width: 100%;
+                }
+            }
+        }
     }
 }

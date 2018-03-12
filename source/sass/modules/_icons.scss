@@ -33,26 +33,56 @@
         @include state( "cover", "view" ) {
             background-color: $white;
         }
+
+        &:before {
+            background-color: $red;
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            transition: width $base-duration $ease;
+            width: 0;
+        }
     }
 
     .top {
         top: 0;
+
+        &:before {
+            transition-delay: $fast-duration;
         }
+    }
     .bot {
         bottom: 0;
+
+        &:before {
+            transition-delay: 0ms;
         }
+    }
 }
 .icon--ex {
     height: 25px;
     width: 25px;
 
     span {
-        background-color: $white;
+        background-color: transparent;
         height: 2px;
         left: 0;
         position: absolute;
         width: 100%;
+
+        &:before {
+            background-color: $white;
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            transition: width $base-duration $ease;
+            width: 0;
         }
+    }
 
     .ex1,
     .ex2 {
@@ -61,10 +91,18 @@
         }
     .ex1 {
         transform: rotate( -45deg );
+
+        &:before {
+            transition-delay: $base-duration + $fast-duration;
         }
+    }
     .ex2 {
         transform: rotate( 45deg );
+
+        &:before {
+            transition-delay: $base-duration;
         }
+    }
 }
 .icon--plus {
     height: 12px;

@@ -33,9 +33,11 @@
         {## End Google Tag Manager (noscript) ##}
         <nav class="navi js-navi -wrap -fzero -pagepad" data-content-field="navigation-navi">
             <div class="navi__header">
-                <div class="icon icon--ex js-controller--navi">
-                    <span class="ex1"></span>
-                    <span class="ex2"></span>
+                <div class="icon-wrap icon-wrap--ex js-controller--navi">
+                    <div class="icon icon--ex">
+                        <span class="ex1"></span>
+                        <span class="ex2"></span>
+                    </div>
                 </div>
             </div>
             <squarespace:navigation navigationId="navi" template="navi" />
