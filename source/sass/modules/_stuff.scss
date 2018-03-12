@@ -68,9 +68,9 @@
 }
 .hover-text__wrap {
     position: relative;
+    text-align: center;
 
     &:before {
-        // background-color: blue;
         content: "";
         display: block;
         height: 100%;
@@ -95,6 +95,7 @@
     transform: translate3d( 0, 100%, 0 );
     transition: opacity $base-duration $ease,
                 transform $base-duration $ease;
+    width: 100%;
     }
 
 
