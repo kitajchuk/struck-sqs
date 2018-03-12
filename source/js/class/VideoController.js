@@ -1,4 +1,4 @@
-import $ from "properjs-hobo";
+// import $ from "properjs-hobo";
 import * as core from "../core";
 import videoView from "../views/video";
 import Analytics from "./Analytics";
@@ -53,20 +53,14 @@ class Video {
 
 
     load () {
-        $.ajax({
-            url: `/api/content-items/${this.data.blockJson.customThumb}`,
-            method: "GET",
-            dataType: "json"
+        this.image = this.element.find( "img" );
+        this.data.imageJson = this.image.data();
+        this.element[ 0 ].innerHTML = videoView( this.data.blockJson, this.data.imageJson );
+        this.iframe = this.element.find( ".js-embed-iframe" );
+        this.iframe[ 0 ].src = this.iframe.data().src;
 
-        }).then(( json ) => {
-            this.data.contentJson = json;
-            this.element[ 0 ].innerHTML = videoView( this.data.blockJson, this.data.contentJson );
-            this.iframe = this.element.find( ".js-embed-iframe" );
-            this.iframe[ 0 ].src = this.iframe.data().src;
-
-            core.util.loadImages( this.element.find( core.config.lazyImageSelector ), core.util.noop );
-            core.emitter.fire( "app--anim-request" );
-        });
+        core.util.loadImages( this.element.find( core.config.lazyImageSelector ), core.util.noop );
+        core.emitter.fire( "app--anim-request" );
     }
 
 

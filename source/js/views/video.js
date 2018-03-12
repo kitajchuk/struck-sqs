@@ -2,7 +2,8 @@ import * as core from "../core";
 
 
 
-export default ( blockJson, contentJson ) => {
+export default ( blockJson, imageJson ) => {
+    console.log( imageJson );
     const url = blockJson.url.replace( /\?.*?$/, "" );
     const qrs = "?&api=1&loop=0";
     const path = "https://player.vimeo.com/video/";
@@ -17,8 +18,8 @@ export default ( blockJson, contentJson ) => {
                 <iframe class="embed__element js-embed-iframe js-media-node" data-src="${source}" data-original="${original}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
             ${!core.detect.isDevice() ? `
-                <div class="embed__poster embed__overlay js-embed-poster js-lazy-image -cover -text--center" data-img-src="${contentJson.assetUrl}" data-variants="${contentJson.systemDataVariants}"></div>
-                <div class="embed__poster embed__filter js-embed-poster js-lazy-image -cover" data-img-src="${contentJson.assetUrl}" data-variants="${contentJson.systemDataVariants}"></div>
+                <div class="embed__poster embed__overlay js-embed-poster js-lazy-image -cover -text--center" data-img-src="${imageJson.src}"></div>
+                <div class="embed__poster embed__filter js-embed-poster js-lazy-image -cover" data-img-src="${imageJson.src}"></div>
                 <div class="embed__playbtn js-embed-playbtn">
                     <svg class="embed__svg embed__svg--circle"><circle class="js-embed-playbtn-circle" /></svg>
                     <div class="embed__playbtn__label p -fbold -caps -light">Play</div>
