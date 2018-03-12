@@ -110,9 +110,27 @@
         }
 }
 .social__a {
+    position: relative;
     text-transform: capitalize;
     transition: color $base-duration $ease;
+
+    &:after {
+        background-color: $red;
+        bottom: -5px;
+        content: "";
+        height: 2px;
+        position: absolute;
+        right: 0;
+        transition: width $base-duration $ease;
+        width: 0;
     }
+
+    .navi & {
+        &:after {
+            background-color: $red2;
+        }
+    }
+}
 
 
 

@@ -76,6 +76,12 @@
     // Social links...
     .social__a:hover {
         color: $red;
+
+        &:after {
+            left: 0;
+            right: auto;
+            width: 100%;
+        }
     }
     .navi {
         .social__a:hover {
