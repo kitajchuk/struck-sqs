@@ -38,8 +38,8 @@
             background-color: $red;
             content: "";
             height: 100%;
-            left: 0;
             position: absolute;
+            right: 0;
             top: 0;
             transition: width $base-duration $ease;
             width: 0;

@@ -116,6 +116,12 @@
     // Icons
     .icon-wrap--list:hover {
         .icon--list {
+            span {
+                &:before {
+                    left: 0;
+                    right: auto;
+                }
+            }
             .top {
                 &:before {
                     transition-delay: 0ms;
@@ -145,6 +151,12 @@
 
     .icon-wrap--list {
         .icon--list {
+            span {
+                &:before {
+                    left: 0;
+                    right: auto;
+                }
+            }
             .top {
                 &:before {
                     transition-delay: 0ms;
