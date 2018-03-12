@@ -33,7 +33,7 @@
         left: -2px;
         position: absolute;
         top: 0;
-        transition: height $fast-duration $ease;
+        transition: height $base-duration $ease;
         transition-delay: $fast-duration;
         width: 2px;
     }
@@ -44,7 +44,7 @@
         height: 2px;
         left: -2px;
         position: absolute;
-        transition: width $fast-duration $ease;
+        transition: width $base-duration $ease;
         transition-delay: 0ms;
         width: 0;
     }
@@ -62,6 +62,11 @@
     .page__results & {
         border-bottom-color: $black;
         border-left-color: $black;
+
+        &:before,
+        &:after {
+            background-color: $red;
+        }
     }
 }
 .btn--alt {
