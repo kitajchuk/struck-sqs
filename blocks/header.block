@@ -11,6 +11,7 @@
         <div class="-column -column--2of4 -text--right">
             <a href="/" class="header__logo js-gtm-event" data-ec="navigation" data-ea="logo" data-el="">
                 {@|apply svg-logo.block}
+                {@|apply svg-logo.block}
             </a>
         </div>
     </div>

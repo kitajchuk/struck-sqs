@@ -4,14 +4,9 @@
     }
 .-svg--logo {
     fill: $red;
-    height: $logo-height;
 
     @include state( "cover", "view" ) {
         fill: $white;
-    }
-
-    @include respond( $mobile-breakpoint ) {
-        height: 40px;
     }
 }
 .-svg--medium-logo {

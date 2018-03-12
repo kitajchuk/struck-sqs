@@ -24,7 +24,7 @@
     // Top right
     .header__logo:hover {
         .-svg--logo {
-            fill: $black;
+            transform: translate3d( 0, -100%, 0 );
         }
     }
 

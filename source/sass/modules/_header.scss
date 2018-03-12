@@ -39,4 +39,16 @@
 }
 .header__logo {
     display: inline-block;
+    height: $logo-height;
+    overflow: hidden;
+
+    @include respond( $mobile-breakpoint ) {
+        height: 40px;
+    }
+
+    .-svg--logo {
+        display: block;
+        height: 100%;
+        transition: transform $base-duration $ease;
+    }
 }
