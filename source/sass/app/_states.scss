@@ -1,6 +1,10 @@
 /******************************************************************************
  * Document States
 *******************************************************************************/
+.is-hidden-empty {
+    display: none !important;
+}
+
 .is-hoverable {
     // Red underline big text
     .module-linker {

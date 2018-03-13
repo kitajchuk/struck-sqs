@@ -307,8 +307,9 @@ const router = {
         }, 0 );
     },
     execEmptyBlocks () {
-        //window.Y.Lang.isValue( window.CONFIG_PANEL );
-        core.dom.body.find( ".sqs-layout.empty" ).parent().addClass( "is-hidden-empty" );
+        if ( !core.env.isConfig() ) {
+            core.dom.body.find( ".sqs-layout.empty" ).parent().addClass( "is-hidden-empty" );
+        }
     }
 };
 

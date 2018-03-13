@@ -122,7 +122,7 @@
     </div>
 </div>
 {.if item.customContent.hasStats}
-    <div class="page__stats cover cover--auto js-cover -wrap -exp3">
+    <div class="page__stats cover cover--auto js-cover -wrap -exp">
         <div class="nums -light -wraph">
             <div class="nums__item nums__item--big nums__item--lab anim anim--tr js-lazy-anim" data-num="1.">
                 <squarespace:block-field id="module-casestudy-{item.id}-stats1" columns="12" />
