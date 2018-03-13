@@ -1,8 +1,10 @@
 <menu class="contact js-contact -wrap -fzero -pagepad">
     <div class="contact__header">
-        <div class="icon icon--ex js-controller--contact">
-            <span class="ex1"></span>
-            <span class="ex2"></span>
+        <div class="icon-wrap icon-wrap--ex js-controller--contact">
+            <div class="icon icon--ex">
+                <span class="ex1"></span>
+                <span class="ex2"></span>
+            </div>
         </div>
     </div>
     <div class="contact__form js-contact-form">
@@ -30,10 +32,20 @@
         <div class="m -light -bump anim anim--tr js-lazy-anim">*Required</div>
         <div class="-bump6">
             <div class="-column -column--2of4 anim anim--tr js-lazy-anim">
-                <button class="btn btn--light js-contact-submit">Submit</button>
+                <button class="btn btn--light js-contact-submit">
+                    <div class="btn__cell">
+                        <div class="btn__one">Submit</div>
+                        <div class="btn__two">Submit</div>
+                    </div>
+                </button>
             </div>
             <div class="-column -column--2of4 -text--right anim anim--tr js-lazy-anim">
-                <div class="btn btn--clean -grey -curse js-contact-reset">Reset Form</div>
+                <div class="btn btn--clean -grey -curse js-contact-reset">
+                    <div class="btn__cell">
+                        <div class="btn__one">Reset Form</div>
+                        <div class="btn__two">Reset Form</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

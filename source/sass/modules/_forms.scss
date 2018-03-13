@@ -90,7 +90,12 @@
     }
 .btn--light {
     @include btn-lit();
+
+    &:before,
+    &:after {
+        background-color: $red;
     }
+}
 .btn--dark {
     @include btn-blk();
 
@@ -99,10 +104,20 @@
     // }
 }
 .btn--clean {
-    border: 0;
+    border-color: transparent;
     color: $grey;
-    padding: 0;
+
+    .btn__cell {
+        div {
+            padding-right: 0;
+        }
     }
+
+    &:before,
+    &:after {
+        background-color: transparent;
+    }
+}
 .btns {}
 .btns__btn {
     @include respond( $mobile-breakpoint-small ) {

@@ -72,6 +72,12 @@
             opacity: 1;
         }
     }
+    .btn--light:hover {
+        color: $white;
+    }
+    .btn--clean:hover {
+        color: $grey;
+    }
     .btn--alt:hover {
         color: $black;
     }
@@ -191,18 +197,41 @@
         }
     }
 
-    .icon-wrap--ex {
-        .icon--ex {
-            .ex1 {
-                &:before {
-                    transition-delay: $base-duration;
-                    width: 100%;
+    .navi {
+        .icon-wrap--ex {
+            .icon--ex {
+                .ex1 {
+                    &:before {
+                        transition-delay: $base-duration;
+                        width: 100%;
+                    }
+                }
+                .ex2 {
+                    &:before {
+                        transition-delay: $base-duration + $fast-duration;
+                        width: 100%;
+                    }
                 }
             }
-            .ex2 {
-                &:before {
-                    transition-delay: $base-duration + $fast-duration;
-                    width: 100%;
+        }
+    }
+}
+
+.is-contact-open {
+    .contact {
+        .icon-wrap--ex {
+            .icon--ex {
+                .ex1 {
+                    &:before {
+                        transition-delay: $base-duration;
+                        width: 100%;
+                    }
+                }
+                .ex2 {
+                    &:before {
+                        transition-delay: $base-duration + $fast-duration;
+                        width: 100%;
+                    }
                 }
             }
         }
