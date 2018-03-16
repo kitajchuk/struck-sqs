@@ -44,7 +44,19 @@
         }
     }
 
+    &.is-animated {
+        .page__stats & {
+            hr {
+                width: 100%;
+            }
+        }
+    }
+
     .page__stats & {
+        > .sqs-layout {
+            padding: 0 ($padding-1 / 2);
+        }
+
         h1 {
             font-size: $h1-size;
             margin-bottom: 20px;
@@ -62,21 +74,21 @@
             }
         }
 
-        p strong {
-            color: $red;
-            margin-top: 20px;
+        p {
+            strong {
+                color: $red;
+                margin-top: 20px;
+            }
         }
 
-        > .sqs-layout {
-            padding: 0 ($padding-1 / 2);
-        }
-
-        .sqs-block-horizontalrule hr {
+        hr {
             background-color: $white;
             color: $white;
             margin: 40px 0;
             max-width: 300px;
-            }
+            transition: width $base-duration $ease $base-duration;
+            width: 0;
+        }
     }
 }
 .nums__item--lab {

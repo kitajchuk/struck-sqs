@@ -72,9 +72,9 @@
             </div>
         </div>
         <div class="page__zone js-lazy-anim">
-            <div class="page__zone__num m -caps -caps -column anim anim--op">01</div>
-            <div class="page__zone__line -column anim anim--h100"></div>
-            <div class="page__zone__label m -column">Brand&nbsp;Promise</div>
+            <div class="page__zone__num m -caps -caps -column anim anim--tr">01</div>
+            <div class="page__zone__line -column"></div>
+            <div class="page__zone__label m -column anim anim--tr">Brand&nbsp;Promise</div>
         </div>
     </div>
 </div>
@@ -90,9 +90,9 @@
             <squarespace:block-field id="module-casestudy-{item.id}-quote" columns="12" />
         </div>
         <div class="page__zone js-lazy-anim">
-            <div class="page__zone__num m -caps -caps -column anim anim--op">02</div>
-            <div class="page__zone__line -column anim anim--h100"></div>
-            <div class="page__zone__label m -column">Real&nbsp;Testimonial</div>
+            <div class="page__zone__num m -caps -caps -column anim anim--tr">02</div>
+            <div class="page__zone__line -column"></div>
+            <div class="page__zone__label m -column anim anim--tr">Real&nbsp;Testimonial</div>
         </div>
     </div>
 </div>
@@ -115,9 +115,9 @@
             </div>
         </div>
         <div class="page__zone js-lazy-anim">
-            <div class="page__zone__num m -caps -caps -column anim anim--op">03</div>
-            <div class="page__zone__line -column anim anim--h100"></div>
-            <div class="page__zone__label m -column">Results</div>
+            <div class="page__zone__num m -caps -caps -column anim anim--tr">03</div>
+            <div class="page__zone__line -column"></div>
+            <div class="page__zone__label m -column anim anim--tr">Results</div>
         </div>
     </div>
 </div>

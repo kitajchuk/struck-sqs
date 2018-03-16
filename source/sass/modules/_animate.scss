@@ -16,19 +16,11 @@
 }
 .anim--tr {
     opacity: 0;
-    transform: translateY( $padding-1 );
+    transform: translate3d( 0, $padding-1, 0 );
     transition-property: transform opacity;
 
     &.is-animated {
         opacity: 1;
-        transform: translateY( 0 );
-        }
-}
-.anim--h100 {
-    height: 0;
-    transition-property: height;
-
-    &.is-animated {
-        height: 100%;
+        transform: translate3d( 0, 0, 0 );
         }
 }
