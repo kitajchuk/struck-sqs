@@ -65,11 +65,6 @@
         width: 0;
     }
 
-    @include respond-min( $desktop-breakpoint ) {
-        padding-left: 80px;
-        padding-right: 80px;
-    }
-
     @include respond( $mobile-breakpoint ) {
         padding-left: 30px;
         padding-right: 30px;
