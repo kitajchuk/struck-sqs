@@ -106,14 +106,16 @@
 
     h3 {
         @include font-family-bold();
+        max-width: 400px;
+        width: 100%;
         transform: translate3d( 0, $padding-1, 0 );
     }
 
     p {
         margin-top: 10px;
         max-width: 320px;
-        transform: translate3d( 0, $padding-1 * 2, 0 );
         width: 100%;
+        transform: translate3d( 0, $padding-1 * 2, 0 );
     }
 }
 .grid__cta {
