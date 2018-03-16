@@ -34,22 +34,14 @@
 .grid__item--2up {
     width: 50%;
 
-    // @include respond( $tablet-breakpoint ) {
-    //     width: 66.666666%;
-    // }
-
-    @include respond( $mobile-breakpoint ) {
+    @include respond( $tablet-breakpoint-small ) {
         width: 100%;
     }
 }
 .grid__item--4up {
     width: 25%;
 
-    // @include respond( $tablet-breakpoint ) {
-    //     width: 33.333333%;
-    // }
-
-    @include respond( $mobile-breakpoint ) {
+    @include respond( $tablet-breakpoint-small ) {
         width: 50%;
     }
 }
@@ -74,12 +66,15 @@
 .grid__meta {
     bottom: 0;
     left: 0;
-    padding: 0 0 $mobile-padding $mobile-padding;
+    padding: 0 $mobile-padding $mobile-padding $mobile-padding;
     position: absolute;
     transition: transform $base-duration $ease,
                 opacity $base-duration $ease;
     white-space: nowrap;
     }
+.grid__meta {
+    display: none;
+}
 .grid__hover {
     background-color: rgba( 0, 0, 0, 0.5 );
     height: 100%;

@@ -139,7 +139,8 @@
     }
 }
 .h4,
-.cms h4 {
+.cms h4,
+.grid__desc h3 {
     @include h4();
 
     @include respond-min( $mobile-breakpoint ) {
