@@ -87,13 +87,15 @@
     @include respond( $tablet-breakpoint ) {
         display: none;
     }
-}
-.page__zone__line {
-    background-color: $grey2;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 1px;
+
+    &.is-animated {
+        .page__zone__num {
+            opacity: 1;
+        }
+        .page__zone__line {
+            height: 100%;
+        }
+    }
 }
 .page__zone__num,
 .page__zone__label {
@@ -107,6 +109,16 @@
     position: absolute;
     top: 0;
     transform: rotate( 90deg ) translatex( -65% );
+    transition-delay: $base-duration;
+}
+.page__zone__line {
+    background-color: $grey2;
+    bottom: 0;
+    position: absolute;
+    transition-delay: $base-duration * 2;
+    transition-duration: $base-duration * 2;
+    transform: translateX( -100% );
+    width: 1px;
 }
 .page__zone__label {
     bottom: 0;

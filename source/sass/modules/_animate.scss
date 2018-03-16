@@ -24,3 +24,11 @@
         transform: translateY( 0 );
         }
 }
+.anim--h100 {
+    height: 0;
+    transition-property: height;
+
+    &.is-animated {
+        height: 100%;
+        }
+}
