@@ -141,15 +141,12 @@
 .embed__filter {
     clip-path: circle( 3.4375vw at 50% 50% );
     filter: blur( 6px );
-    transition: filter $base-duration $ease,
-                transform $base-duration $ease;
 
     @include respond( $tablet-breakpoint ) {
         clip-path: circle( 32px at 50% 50% );
     }
 
     @include state( "play", "button" ) {
-        filter: blur( 0px );
-        transform: scale( 1.05 );
+        display: none;
     }
 }
