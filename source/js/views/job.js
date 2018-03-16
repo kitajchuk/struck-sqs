@@ -11,7 +11,7 @@ export default ( job ) => {
         const meta = job.metadata.find(( mmeta ) => {
             return (mmeta.id === id);
         });
-        const metas = meta.value.split( /\n|\r/g );
+        const metas = meta && meta.value ? meta.value.split( /\n|\r/g ) : ["", ""];
 
         return {
             head: metas[ 0 ],
