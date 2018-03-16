@@ -155,6 +155,20 @@
 /******************************************************************************
  * Quotes
 *******************************************************************************/
+.sqs-block-html {
+    blockquote {
+        @include h4();
+        @include font-family-medium();
+
+        &:before {
+            content: "\201C";
+            margin-left: -10px;
+        }
+        &:after {
+            content: "\201D";
+        }
+    }
+}
 .quo {}
 .quo__src {
     color: $red;

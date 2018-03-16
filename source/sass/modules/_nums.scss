@@ -36,12 +36,6 @@
         width: 100%;
     }
 
-    h3 {
-        margin-top: 10px;
-        @include h4();
-        @include font-family-medium();
-    }
-
     &:first-child:not( .nums__item--lab ) {
         @include respond( $tablet-breakpoint-small ) {
             margin-bottom: 20px;
