@@ -26,6 +26,9 @@ jobs:
             - run:
                 name: Rebuild node-sass
                 command: npm rebuild node-sass
+            - run:
+                name: Install Squarespace Server
+                command: npm install -g @squarespace/server
             - persist_to_workspace:
                 root: ~/boxen
                 paths:
