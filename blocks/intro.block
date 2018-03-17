@@ -1,7 +1,7 @@
-<div class="intro js-intro screen screen--light ghost -wrap -fzero -text--center is-active">
+<div class="intro js-intro ghost -wrap -fzero -text--center">
     <div class="ghost__child">
         <div class="intro__logo js-intro-logo">
-            {@|apply svg-logo.block}
+            {@|apply svg-lovefightadapt.block}
         </div>
     </div>
 </div>
