@@ -8,6 +8,10 @@
     padding: 0 ($padding-1 / 2);
     width: 33.333333%;
 
+    p > strong {
+        margin-left: -20px;
+    }
+
     @include respond( $mobile-breakpoint-navi ) {
         margin-bottom: $mobile-padding;
         max-width: 100%;
