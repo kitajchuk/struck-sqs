@@ -7,11 +7,13 @@
     position: fixed;
     right: 0;
     top: 0;
-    transition: transform $base-duration $ease;
+    transition: transform $base-duration $ease,
+                visibility $base-duration $ease;
     z-index: $z_layer_intro;
 
     &.is-animated {
         transform: translate3d( 100%, 0, 0 );
+        visibility: hidden;
     }
 }
 .intro__logo {
