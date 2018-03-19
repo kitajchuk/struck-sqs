@@ -101,11 +101,10 @@ class Analytics {
     doGTMPageView () {
         if ( window.dataLayer ) {
             window.dataLayer.push({
-                "gtm.start": Date.now(),
-                "event": "gtm.js"
+                event: "struckPageLoad"
             });
 
-            core.log( "Analytics GTM Pageview" );
+            core.log( "Analytics GTM Pageview", "struckPageLoad" );
         }
     }
 
