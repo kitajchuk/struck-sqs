@@ -3,7 +3,6 @@ import * as core from "../core";
 
 
 export default ( blockJson, imageJson ) => {
-    console.log( imageJson );
     const url = blockJson.url.replace( /\?.*?$/, "" );
     const qrs = "?&api=1&loop=0";
     const path = "https://player.vimeo.com/video/";
