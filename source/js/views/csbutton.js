@@ -3,7 +3,7 @@ export default ( json, data ) => {
 
     let html = "";
     const item = json.items.find(( itm ) => {
-        return (itm.urlId === data.urlId);
+        return (itm.categories && itm.categories.join( "" ) === data.category);
     });
 
     if ( item ) {

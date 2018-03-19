@@ -66,9 +66,7 @@
         <squarespace:block-field id="module-project-{item.id}-statement" columns="12" />
     </div>
 </div>
-{.if item.customContent.hasCasestudy}
-    <div class="page__casestudy -text--right js-view" data-uid="csbutton" data-url="/case-studies" data-url-id="{item.urlId}"></div>
-{.end}
+<div class="page__casestudy js-view" data-uid="csbutton" data-url="/case-studies" data-category="{.repeated section item.categories}{@}{.end}"></div>
 {@|apply module-related.block}
 {@|apply module-backtolist.block}
 <div class="page__modules -wrap">
