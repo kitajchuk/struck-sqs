@@ -28,6 +28,7 @@ class App {
 
         this.bind();
         this.init();
+        this.exec();
     }
 
 
@@ -58,15 +59,6 @@ class App {
     }
 
 
-    /**
-     *
-     * @public
-     * @instance
-     * @method init
-     * @memberof App
-     * @description Initialize application modules.
-     *
-     */
     init () {
         // Core
         this.core.detect.init();
@@ -82,6 +74,13 @@ class App {
 
         // Analytics
         this.analytics = new Analytics();
+    }
+
+
+    exec () {
+        const year = this.core.dom.body.find( ".js-date-year" );
+
+        year[ 0 ].innerHTML = new Date().getFullYear();
     }
 }
 
