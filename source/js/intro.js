@@ -11,7 +11,7 @@ import * as core from "./core";
 const intro = {
     exec () {
         this.duration = 350;
-        this.delay = 80;
+        this.delay = 40;
         this.ids = [
             { id: "love", el: core.dom.intro.find( ".love" ) },
             { id: "fight", el: core.dom.intro.find( ".fight" ) },
@@ -40,7 +40,7 @@ const intro = {
                 this.anim();
             }
 
-        }, (this.duration + (this.delay * len) + this.duration) );
+        }, (this.duration + (this.delay * len)) );
     },
 
 
@@ -50,7 +50,7 @@ const intro = {
             core.dom.intro.addClass( "is-animated" );
             this.resolve();
 
-        }, this.duration * 4 );
+        }, this.duration * 2 );
     }
 };
 
