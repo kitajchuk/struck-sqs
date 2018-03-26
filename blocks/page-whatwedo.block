@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="-expt -wrap">
-        <div class="cols -wrap">
+        <div class="cols cols--numeric -wrap">
             <div class="cols__col -column -vtop anim anim--tr js-lazy-anim">
                 <div class="-northborder -expb">
                     <squarespace:block-field id="module-whatwedo-introcol1" columns="12" />
