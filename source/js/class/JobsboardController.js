@@ -47,7 +47,7 @@ class JobsboardController {
     loadOne () {
         this.one.addClass( "is-active" );
         this.all.addClass( "is-inactive" );
-        this.one[ 0 ].innerHTML = viewJob( this.findJob() );
+        this.one.find( ".js-jobsboard-one-html" )[ 0 ].innerHTML = viewJob( this.findJob() );
     }
 
 

@@ -16,6 +16,9 @@
                 <div class="anim anim--tr js-lazy-anim">
                     <squarespace:block-field id="page-careers-cta-text-blocks" columns="12" />
                 </div>
+                <div class="m -fregular -bump3 -paddr anim anim--tr js-lazy-anim">
+                    <squarespace:block-field id="page-careers-cta-struckis-blocks" columns="12" />
+                </div>
             </div>
         </div>
         <div class="page__cms -wrap anim anim--tr js-lazy-anim">
@@ -25,7 +28,18 @@
             <div class="jobs js-jobsboard-jobs -wrap"></div>
         </div>
     </div>
-    <div class="jobsboard__one job js-jobsboard-one"></div>
+    <div class="jobsboard__one job js-jobsboard-one">
+        <div class="js-jobsboard-one-html"></div>
+        <div class="jobsboard__eeoc -wrap -expb">
+            <div class="-wrap">
+                <div class="job__cols">
+                    <div class="job__col m -fregular -column anim anim--tr js-lazy-anim">
+                        <squarespace:block-field id="page-careers-eeoc-blocks" columns="12" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="page__modules -wrap">
     {@|apply module-instagram.block}

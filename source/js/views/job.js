@@ -1,11 +1,9 @@
 export default ( job ) => {
     const metaIDs = {
-        struckIs: 160451,
-        weNeed: 160452,
-        youAre: 160453,
-        youHave: 160454,
-        youWill: 160455,
-        eeoc: 160456
+        weNeed: 160451,
+        column1: 160453,
+        column2: 160454,
+        column3: 160455,
     };
     const getMeta = ( id ) => {
         const meta = job.metadata.find(( mmeta ) => {
@@ -26,12 +24,12 @@ export default ( job ) => {
             }).join( "" )}
         </ul>`;
     };
-    // const struckIs = getMeta( metaIDs.struckIs );
     const weNeed = getMeta( metaIDs.weNeed );
-    const youAre = getMeta( metaIDs.youAre );
-    const youHave = getMeta( metaIDs.youHave );
-    const youWill = getMeta( metaIDs.youWill );
-    // const eeoc = getMeta( metaIDs.eeoc );
+    const columns = [
+        getMeta( metaIDs.column1 ),
+        getMeta( metaIDs.column2 ),
+        getMeta( metaIDs.column3 )
+    ];
 
     return `
         <div class="page__mast -wrap anim anim--tr js-lazy-anim">
@@ -48,18 +46,15 @@ export default ( job ) => {
         <div class="page__cms -wrap -exp">
             <div class="-wrap">
                 <div class="job__cols">
-                    <div class="job__col -column -vtop anim anim--tr js-lazy-anim">
-                        <div class="p -fbold -northborder">${youAre.head}</div>
-                        ${getList( youAre.body )}
-                    </div>
-                    <div class="job__col -column -vtop anim anim--tr js-lazy-anim">
-                        <div class="p -fbold -northborder">${youHave.head}</div>
-                        ${getList( youHave.body )}
-                    </div>
-                    <div class="job__col -column -vtop anim anim--tr js-lazy-anim">
-                        <div class="p -fbold -northborder">${youWill.head}</div>
-                        ${getList( youWill.body )}
-                    </div>
+                    ${columns.map(( column ) => {
+                        return column.head && column.body[ 0 ] ? `
+                            <div class="job__col -column -vtop anim anim--tr js-lazy-anim">
+                                <div class="p -fbold -northborder">${column.head}</div>
+                                ${getList( column.body )}
+                            </div>
+                        ` : "";
+
+                    }).join( "" )}
                 </div>
             </div>
         </div>

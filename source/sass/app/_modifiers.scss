@@ -259,7 +259,8 @@
 .-fzero {
     font-size: 0;
     }
-.-fregular {
+.-fregular,
+.-fregular p {
     @include font-family-regular();
     }
 .-fmedium {
