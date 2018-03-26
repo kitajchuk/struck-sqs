@@ -71,6 +71,7 @@
 @mixin h2() {
     font-size: $h2-size;
     line-height: $h2-line;
+    max-width: $h2-max-width;
     @include font-family-bold();
 }
 @mixin h3() {
@@ -86,6 +87,7 @@
 @mixin quo() {
     font-size: $quo-size;
     line-height: $quo-line;
+    max-width: $quo-max-width;
     @include font-family-medium();
 }
 @mixin btn() {

@@ -8,16 +8,18 @@
                 {.end}
             </div>
         </div>
-        <div class="page__cta -wrapl -exp -paddr">
-            <div class="-wrapl">
+        <div class="page__cta -wrap -exp">
+            <div class="-wrap">
                 <div class="m -caps -color anim anim--tr js-lazy-anim">
                     <squarespace:block-field id="page-careers-cta-meta-blocks" columns="12" />
                 </div>
                 <div class="anim anim--tr js-lazy-anim">
                     <squarespace:block-field id="page-careers-cta-text-blocks" columns="12" />
                 </div>
-                <div class="m -fregular -bump3 -paddr anim anim--tr js-lazy-anim">
-                    <squarespace:block-field id="page-careers-cta-struckis-blocks" columns="12" />
+                <div class="m -fregular -bump3 anim anim--tr js-lazy-anim">
+                    <div class="-max-txt">
+                        <squarespace:block-field id="page-careers-cta-struckis-blocks" columns="12" />
+                    </div>
                 </div>
             </div>
         </div>

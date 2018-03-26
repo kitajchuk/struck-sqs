@@ -10,8 +10,8 @@
     </div>
 </div>
 <div class="page__intro -exp">
-    <div class="-wrapl -paddr">
-        <div class="-wrapl">
+    <div class="-wrap">
+        <div class="-wrap">
             <div class="m -caps -color anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-casestudy-{item.id}-challengemeta" columns="12" />
             </div>
@@ -86,7 +86,7 @@
 </div>
 <div class="page__quote -wrap -exp">
     <div class="-rel">
-        <div class="-wrap -paddr -exp">
+        <div class="-wrap -exp">
             <squarespace:block-field id="module-casestudy-{item.id}-quote" columns="12" />
         </div>
         <div class="page__zone js-lazy-anim">

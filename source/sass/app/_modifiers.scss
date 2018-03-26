@@ -50,19 +50,8 @@
         padding-right: $mobile-padding;
     }
 }
-.-paddr {
-    padding-right: 24vw;
-
-    @include respond( $mobile-breakpoint ) {
-        padding-right: $mobile-padding * 2;
-    }
-}
-.-paddr2 {
-    padding-right: 16vw;
-
-    @include respond( $mobile-breakpoint ) {
-        padding-right: $mobile-padding * 2;
-    }
+.-max-txt {
+    max-width: 700px;
 }
 .-full {
     width: 100%;

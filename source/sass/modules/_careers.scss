@@ -1,7 +1,11 @@
 /******************************************************************************
  * Careers — Greenhouse.io jobsboard elements
 *******************************************************************************/
-.jobsboard {}
+.jobsboard {
+    .h2 {
+        max-width: 100%;
+    }
+}
 .jobsboard__all,
 .jobsboard__one {
     visibility: hidden;
