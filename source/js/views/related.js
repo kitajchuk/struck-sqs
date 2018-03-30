@@ -28,7 +28,7 @@ export default ( json, data ) => {
     if ( item ) {
         ret = `
             <a class="related__text__link -column js-gtm-event" data-ec="site interaction" data-ea="${eventAction}" data-el="Related items: ${item.title}" href="${item.fullUrl}">
-                <div class="m -caps">${item.title}</div>
+                <div class="m m--bump -caps">${item.title}</div>
                 <div class="h4 -fmedium">${item.customContent.relatedBlurb}</div>
                 <div class="related__link m -color -plusline -bump">+ <span>${data.cta}</span></div>
             </a>
@@ -46,7 +46,7 @@ export default ( json, data ) => {
     } else {
         ret = `
             <div class="related__text__link -column">
-                <div class="m -caps">This is not real</div>
+                <div class="m m--bump -caps">This is not real</div>
                 <div class="h4 -fmedium">Seriously, this is not supposed to be here.</div>
                 <div class="related__link m -color -plusline -bump">+ <span>This hash won't work</span></div>
             </div>
