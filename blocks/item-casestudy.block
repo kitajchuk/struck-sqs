@@ -1,12 +1,14 @@
-<div class="page__cover cover js-cover js-cover-scroll -cover js-lazy-image" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}">
-    <div class="-wrap -pagepad">
-        <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
-            <squarespace:block-field id="module-casestudy-{item.id}-covermeta" columns="12" />
+<div class="page__cover__scroll js-cover-scroll">
+    <div class="page__cover cover js-cover -cover js-lazy-image" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}">
+        <div class="-wrap -pagepad">
+            <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
+                <squarespace:block-field id="module-casestudy-{item.id}-covermeta" columns="12" />
+            </div>
+            <div class="h1 -mast -light anim anim--tr js-lazy-anim">
+                <squarespace:block-field id="module-casestudy-{item.id}-covertitle" columns="12" />
+            </div>
+            <div class="h4 -light -fbold -bump3 anim anim--tr js-lazy-anim">A Case Study.</div>
         </div>
-        <div class="h1 -mast -light anim anim--tr js-lazy-anim">
-            <squarespace:block-field id="module-casestudy-{item.id}-covertitle" columns="12" />
-        </div>
-        <div class="h4 -light -fbold -bump3 anim anim--tr js-lazy-anim">A Case Study.</div>
     </div>
 </div>
 <div class="page__intro -exp">

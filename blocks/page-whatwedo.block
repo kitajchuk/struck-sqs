@@ -1,5 +1,7 @@
-<div class="page__video js-cover js-cover-scroll anim anim--tr js-lazy-anim">
-    <squarespace:block-field id="module-whatwedo-fsvideo" columns="12" />
+<div class="page__cover__scroll js-cover-scroll">
+    <div class="page__video js-cover anim anim--tr js-lazy-anim">
+        <squarespace:block-field id="module-whatwedo-fsvideo" columns="12" />
+    </div>
 </div>
 <div class="page__intro -expt">
     <div class="-wrap">
