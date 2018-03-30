@@ -41,7 +41,7 @@ class CoverController extends Controller {
                 const bounds = el.getBoundingClientRect();
                 const scroll = this.elements.eq( i ).is( ".js-cover-scroll" );
 
-                if ( bounds.top <= 0 && bounds.bottom > 0 ) {
+                if ( bounds.top <= 0 && bounds.bottom > 0 && !scroll ) {
                     isCover = true;
                 }
 
