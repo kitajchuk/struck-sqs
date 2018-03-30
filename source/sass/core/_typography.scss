@@ -85,6 +85,9 @@
         font-size: $m-size;
     }
 }
+.m--bump {
+    margin-bottom: $meta-bump;
+}
 
 
 /******************************************************************************
@@ -176,7 +179,6 @@
     }
 .quo__txt {
     @include quo();
-    margin-top: $meta-bump !important;
 
     @include respond-min( $mobile-breakpoint ) {
         font-size: $quo-size-2;

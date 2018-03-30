@@ -1,7 +1,7 @@
 <div class="page__locations -wrap -exp -pagepad">
     <div class="onetwo -wrapl">
         <div class="onetwo__info -column">
-            <div class="m -caps -color anim anim--tr js-lazy-anim">
+            <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-whoweare-locmeta" columns="12" />
             </div>
             <div class="anim anim--tr js-lazy-anim">

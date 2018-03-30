@@ -19,7 +19,7 @@
 </div>
 <div class="page__about -wrap -bgcolor -exp js-cover">
     <div class="-wrap">
-        <div class="m -caps -color2 anim anim--tr js-lazy-anim">
+        <div class="m m--bump -caps -color2 anim anim--tr js-lazy-anim">
             <squarespace:block-field id="module-home-about-meta" columns="12" />
         </div>
         <div class="-light anim anim--tr js-lazy-anim">

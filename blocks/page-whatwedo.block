@@ -4,7 +4,7 @@
 <div class="page__intro -expt">
     <div class="-wrap">
         <div class="-wrap">
-            <div class="m -caps -color anim anim--tr js-lazy-anim">
+            <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-whatwedo-intrometa" columns="12" />
             </div>
             <div class="anim anim--tr js-lazy-anim">
@@ -61,7 +61,7 @@
             <squarespace:block-field id="module-whatwedo-partnerimage" columns="12" />
         </div>
         <div class="onetwo__info -column -wrapl">
-            <div class="m -caps -color anim anim--tr js-lazy-anim">
+            <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-whatwedo-partnermeta" columns="12" />
             </div>
             <div class="anim anim--tr js-lazy-anim">

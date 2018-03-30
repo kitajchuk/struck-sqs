@@ -1,6 +1,6 @@
 <div class="page__cover js-cover-scroll -pagepad">
     <div class="page__mast -wrap">
-        <div class="m -caps -color anim anim--tr js-lazy-anim">
+        <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
             <squarespace:block-field id="module-project-{item.id}-mastmeta" columns="12" />
         </div>
         <div class="anim anim--tr js-lazy-anim">
@@ -14,7 +14,7 @@
 <div class="page__intro -exp">
     <div class="-wrap">
         <div class="-wrap">
-            <div class="m -caps -color anim anim--tr js-lazy-anim">
+            <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-project-{item.id}-intrometa" columns="12" />
             </div>
             <div class="anim anim--tr js-lazy-anim">
