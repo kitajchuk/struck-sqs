@@ -168,7 +168,16 @@
     }
 .page__button {
     padding-top: $padding-1 * 2;
+
+    @include respond( $break-tablet-medium ) {
+        padding-top: 18vw;
+    }
 }
 .page__related {
     text-align: center;
+}
+.page__casestudy {
+    @include respond( $break-tablet-medium ) {
+        display: none;
+    }
 }

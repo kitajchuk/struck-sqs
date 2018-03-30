@@ -12,6 +12,10 @@
         padding-bottom: 60px;
         padding-top: 60px;
     }
+
+    @include respond( $break-tablet-medium ) {
+        padding-bottom: 0;
+    }
 }
 .related__label {
     @include respond( $mobile-breakpoint ) {
@@ -30,6 +34,24 @@
     @include respond( $mobile-breakpoint ) {
         padding-left: $mobile-padding * 2;
         padding-right: $mobile-padding * 2;
+    }
+}
+.related__toggle--casestudy {
+    @include respond( $break-tablet-medium ) {
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+
+    .related__img__link {
+        @include respond( $break-tablet-medium ) {
+            transform: translateY( 30px );
+            width: 100%;
+        }
+    }
+}
+.related__toggle--project {
+    @include respond( $break-tablet-medium ) {
+        display: none;
     }
 }
 .related__info {
@@ -75,7 +97,7 @@
     }
 }
 .related__link {
-    transform: translateX( -12px );
+    transform: translateX( -10px );
 }
 .related__text__link {
     max-width: 320px;

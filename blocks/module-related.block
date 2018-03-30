@@ -2,10 +2,10 @@
     <div class="related js-toggles -bggrey">
         <div class="related__label m -color -caps -wrap anim anim--tr js-lazy-anim">Related Items</div>
         <div class="related__toggles">
-            <div class="related__toggle -wrap -exp0 anim anim--tr js-lazy-anim">
+            <div class="related__toggle related__toggle--casestudy -wrap -exp0 anim anim--tr js-lazy-anim">
                 <div class="related__info js-toggles-toggler js-view" data-target=".js-toggles-target--casestudy" data-uid="related" data-url="/case-studies" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View case study"></div>
             </div>
-            <div class="related__toggle -wrap -exp0 anim anim--tr js-lazy-anim">
+            <div class="related__toggle related__toggle--project -wrap -exp0 anim anim--tr js-lazy-anim">
                 <div class="related__info js-toggles-toggler js-view" data-target=".js-toggles-target--project" data-uid="related" data-url="/portfolio" data-tags="{item.tags}" data-item-id="{item.id}" data-cta="View project"></div>
             </div>
         </div>
