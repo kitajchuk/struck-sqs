@@ -21,6 +21,10 @@
     @include btn();
     transition: color $base-duration $ease;
 
+    @include respond( $mobile-breakpoint-small ) {
+        font-size: 10px;
+    }
+
     .btn__cell {
         overflow: hidden;
         position: relative;
@@ -107,7 +111,6 @@
 .btns {
     .btn {
         @include respond( $mobile-breakpoint-small ) {
-            font-size: 10px;
             width: 100%;
         }
 
