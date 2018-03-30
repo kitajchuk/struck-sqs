@@ -17,6 +17,7 @@ $csbutton-size: 56px;
     overflow: hidden;
     position: fixed;
     right: 0;
+    text-transform: uppercase;
     transition: width $base-duration $ease;
     width: $csbutton-size;
     z-index: $z_layer_header;
