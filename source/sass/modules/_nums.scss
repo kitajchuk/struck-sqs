@@ -106,6 +106,7 @@
 
         @include respond-min( $mobile-breakpoint ) {
             font-size: $m-size-2;
+            transform: translateX( 20px );
         };
 
         @include respond-min( $desktop-breakpoint ) {
