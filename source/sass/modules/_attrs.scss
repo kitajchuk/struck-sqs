@@ -34,7 +34,7 @@
 .attrs__num {
     position: absolute;
     left: 4vw;
-    top: 14px;
+    top: 10px;
 
     @include respond( $mobile-breakpoint ) {
         left: 2vw;
