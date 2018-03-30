@@ -176,7 +176,7 @@
     }
 .quo__txt {
     @include quo();
-    margin-top: 20px !important;
+    margin-top: $meta-bump !important;
 
     @include respond-min( $mobile-breakpoint ) {
         font-size: $quo-size-2;
