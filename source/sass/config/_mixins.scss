@@ -88,7 +88,7 @@
     font-size: $quo-size;
     line-height: $quo-line;
     max-width: $quo-max-width;
-    @include font-family-medium();
+    @include font-family-bold();
 }
 @mixin btn() {
     @include font-family-bold();
@@ -107,6 +107,7 @@
     padding: 0;
     position: relative;
     outline: 0;
+    text-transform: uppercase;
     -webkit-appearance: none;
     width: auto;
 }
