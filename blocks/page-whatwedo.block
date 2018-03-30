@@ -14,32 +14,32 @@
     </div>
     <div class="-expt -wrap">
         <div class="cols cols--numeric -wrap">
-            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim">
+            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim" data-num="1.">
                 <div class="-northborder -expb">
                     <squarespace:block-field id="module-whatwedo-introcol1" columns="12" />
                 </div>
             </div>
-            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim">
+            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim"  data-num="2.">
                 <div class="-northborder -expb">
                     <squarespace:block-field id="module-whatwedo-introcol2" columns="12" />
                 </div>
             </div>
-            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim">
+            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim"  data-num="3.">
                 <div class="-northborder -expb">
                     <squarespace:block-field id="module-whatwedo-introcol3" columns="12" />
                 </div>
             </div>
-            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim">
+            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim"  data-num="4.">
                 <div class="-northborder -expb">
                     <squarespace:block-field id="module-whatwedo-introcol4" columns="12" />
                 </div>
             </div>
-            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim">
+            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim"  data-num="5.">
                 <div class="-northborder -expb">
                     <squarespace:block-field id="module-whatwedo-introcol5" columns="12" />
                 </div>
             </div>
-            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim">
+            <div class="cols__col -column -vtop anim anim--tr js-lazy-anim"  data-num="6.">
                 <div class="-northborder -expb">
                     <squarespace:block-field id="module-whatwedo-introcol6" columns="12" />
                 </div>

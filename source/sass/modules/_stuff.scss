@@ -9,8 +9,21 @@
     width: 33.333333%;
 
     .cols--numeric & {
-        p > strong {
-            margin-left: -20px;
+        &:before {
+            @include p();
+            @include font-family-bold();
+            content: attr( data-num );
+            position: absolute;
+            padding-top: 31px;
+            transform: translateX( -20px );
+
+            @include respond-min( $mobile-breakpoint ) {
+                font-size: $p-size-2;
+            };
+
+            @include respond-min( $desktop-breakpoint ) {
+                font-size: $p-size-3;
+            }
         }
     }
 
