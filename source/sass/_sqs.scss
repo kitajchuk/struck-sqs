@@ -55,21 +55,36 @@ body.sqs-edit-mode .sqs-layout[data-type="block-field"].empty {
     width: 42px !important;
 
     &:before {
+        font-weight: bold;
         left: 50% !important;
         position: absolute !important;
         top: 50% !important;
         transform: translateX( -50% ) translateY( -50% ) !important;
+
+        @include respond( $mobile-breakpoint-small ) {
+            font-size: 14px;
+        }
     }
 
     @include respond( $mobile-breakpoint-small ) {
-        display: none !important;
+        border-radius: 30px !important;
+        height: 30px !important;
+        width: 30px !important;
     }
 }
 .sqs-gallery-controls .next {
     transform: translateY( -50% ) translateX( -30px ) !important;
+
+    @include respond( $mobile-breakpoint-small ) {
+        transform: translateY( -50% ) translateX( -10px ) !important;
+    }
 }
 .sqs-gallery-controls .previous {
     transform: translateY( -50% ) translateX( 30px ) !important;
+
+    @include respond( $mobile-breakpoint-small ) {
+        transform: translateY( -50% ) translateX( 10px ) !important;
+    }
 }
 
 

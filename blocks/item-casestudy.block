@@ -1,5 +1,6 @@
 <div class="page__cover__scroll js-cover-scroll">
-    <div class="page__cover cover js-cover -cover js-lazy-image" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}">
+    <div class="page__cover cover cover--casestudy js-cover -cover js-lazy-image" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}">
+        <div class="cover__overlay"></div>
         <div class="-wrap -pagepad">
             <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-casestudy-{item.id}-covermeta" columns="12" />
