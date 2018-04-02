@@ -88,6 +88,10 @@
             max-width: 300px;
             transition: width $base-duration $ease $base-duration;
             width: 0;
+
+            @include respond( $mobile-breakpoint ) {
+                margin: 20px 0;
+            }
         }
     }
 }

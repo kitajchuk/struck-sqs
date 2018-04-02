@@ -1,4 +1,4 @@
-<div class="page__locations -wrap -exp -pagepad">
+<div class='page__locations -wrap -exp {.equal? collection.id "5a5d4d43652dea16057ec4db"}-pagepad{.end}'>
     <div class="onetwo -wrapl">
         <div class="onetwo__info -column">
             <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">

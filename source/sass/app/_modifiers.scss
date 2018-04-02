@@ -4,25 +4,48 @@
 .-exp {
     padding-bottom: #{"~\"calc( #{$padding-1} + 50px )\""};
     padding-top: #{"~\"calc( #{$padding-1} + 50px )\""};
+
+    @include respond( $mobile-breakpoint ) {
+        padding-bottom: #{"~\"calc( #{$padding-1 / 2} + 30px )\""};
+        padding-top: #{"~\"calc( #{$padding-1 / 2} + 30px )\""};
     }
+}
 .-exp0 {
     padding-bottom: 40px;
     padding-top: 40px;
-    }
+}
 .-expt {
     padding-top: #{"~\"calc( #{$padding-1} + 50px )\""};
+
+    @include respond( $mobile-breakpoint ) {
+        padding-top: #{"~\"calc( #{$padding-1 / 2} + 30px )\""};
     }
+}
 .-expb {
     padding-bottom: #{"~\"calc( #{$padding-1} + 50px )\""};
+
+    @include respond( $mobile-breakpoint ) {
+        padding-bottom: #{"~\"calc( #{$padding-1 / 2} + 30px )\""};
     }
+}
 .-exp2 {
     padding-bottom: #{"~\"calc( #{$expander-1} + 50px )\""};
     padding-top: #{"~\"calc( #{$expander-1} + 50px )\""};
+
+    @include respond( $mobile-breakpoint ) {
+        padding-bottom: #{"~\"calc( #{$expander-1 / 2} + 30px )\""};
+        padding-top: #{"~\"calc( #{$expander-1 / 2} + 30px )\""};
     }
+}
 .-exp3 {
     padding-bottom: #{"~\"calc( #{$expander-2} + 50px )\""};
     padding-top: #{"~\"calc( #{$expander-2} + 50px )\""};
+
+    @include respond( $mobile-breakpoint ) {
+        padding-bottom: #{"~\"calc( #{$expander-2 / 2} + 50px )\""};
+        padding-top: #{"~\"calc( #{$expander-2 / 2} + 50px )\""};
     }
+}
 .-wrap {
     padding-left: $padding-1;
     padding-right: $padding-1;

@@ -18,17 +18,17 @@
     width: 120px;
 
     @include respond( $mobile-breakpoint ) {
-        border-radius: 100px;
-        height: 100px;
-        width: 100px;
+        border-radius: 70px;
+        height: 70px;
+        width: 70px;
     };
 
     h1 {
-        font-size: $h2-size;
+        font-size: $h3-size;
 
         @include respond-min( $mobile-breakpoint ) {
             font-size: $h1-size;
-        };
+        }
 
         @include respond-min( $desktop-breakpoint ) {
             font-size: $h1-size;

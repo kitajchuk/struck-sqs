@@ -57,7 +57,8 @@
     }
 .m,
 .m p,
-.footer .sqs-block p {
+.footer .sqs-block p,
+.stats__label p {
     @include m();
 
     @include respond-min( $mobile-breakpoint ) {
