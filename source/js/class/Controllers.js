@@ -10,6 +10,7 @@ import AspectController from "./AspectController";
 import TogglesController from "./TogglesController";
 import FSMediaController from "./FSMediaController";
 import AnimateController from "./AnimateController";
+import ScrollController from "./ScrollController";
 
 
 /**
@@ -71,6 +72,7 @@ class Controllers {
         this.push( "drag", core.dom.body.find( core.config.dragSelector ), DragController, true );
         this.push( "social", core.dom.body.find( core.config.socialSelector ), SocialController, true );
         this.push( "jobsboard", core.dom.body.find( core.config.jobsboardSelector ), JobsboardController, true );
+        this.push( "scrolls", core.dom.body, ScrollController, true );
 
         this.images = this.element.find( core.config.lazyImageSelector );
         this.imageController = new ImageController( this.images );
