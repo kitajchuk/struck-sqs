@@ -36,7 +36,7 @@ class SocialController {
 
     loadMD () {
         $.ajax({
-            url: "https://hook.io/struck/medium-feed",
+            url: "https://hook.io/struck/medium",
             method: "GET",
             dataType: "json"
 
