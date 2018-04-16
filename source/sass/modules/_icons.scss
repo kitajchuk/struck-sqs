@@ -34,6 +34,12 @@
             background-color: $white;
         }
 
+        @include respond( $mobile-breakpoint ) {
+            @include state( "cover", "view" ) {
+                background-color: $black;
+            }
+        }
+
         &:before {
             background-color: $red;
             content: "";

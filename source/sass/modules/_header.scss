@@ -32,9 +32,11 @@
     }
 
     @include respond( $mobile-breakpoint ) {
+        background-color: $white;
+        padding-bottom: $mobile-padding;
         padding-left: $mobile-padding;
         padding-right: $mobile-padding;
-        padding-top: 30px;
+        padding-top: $mobile-padding;
     }
 }
 .header__logo {
@@ -43,7 +45,7 @@
     overflow: hidden;
 
     @include respond( $mobile-breakpoint ) {
-        height: 40px;
+        height: 35px;
     }
 
     .-svg--logo {

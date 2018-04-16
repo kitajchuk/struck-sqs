@@ -8,6 +8,12 @@
     @include state( "cover", "view" ) {
         fill: $white;
     }
+
+    @include respond( $mobile-breakpoint ) {
+        @include state( "cover", "view" ) {
+            fill: $red;
+        }
+    }
 }
 .-svg--medium-logo {
     fill: $grey2;
