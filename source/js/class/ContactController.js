@@ -79,7 +79,9 @@ class ContactController {
         // Phone
         "phone-yui_3_17_2_1_1513626979285_43483": ["", "", "", ""],
         // Message
-        "textarea-yui_3_17_2_17_1513626979285_3714": ""
+        "textarea-yui_3_17_2_17_1513626979285_3714": "",
+        // Select Menu
+        "select-yui_3_17_2_1_1523901252791_11879": ""
     }*/
     saveForm ( key ) {
         return $.ajax({
