@@ -129,14 +129,14 @@ class ContactController {
             );
 
         } else {
-            this.clear();
-
             this.analytics.doEvent(
                 "form",
                 "form submit: success",
                 "Contact Form",
                 "FALSE"
             );
+
+            this.pipedrive();
         }
     }
 
@@ -158,6 +158,19 @@ class ContactController {
                 "Contact Form",
                 "FALSE"
             );
+        });
+    }
+
+
+    pipedrive () {
+        $.ajax({
+            url: "https://hook.io/struck/pipedrive",
+            method: "GET",
+            dataType: "json",
+            data: this.data
+
+        }).then(( json ) => {
+            this.clear();
         });
     }
 

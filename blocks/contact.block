@@ -39,7 +39,7 @@
                 </select>
             </div>
         </div>
-        <div class="m -light -bump anim anim--tr js-lazy-anim">*Required</div>
+        <div class="m -light -bump -text--right anim anim--tr js-lazy-anim">*Required</div>
         <div class="-bump6">
             <div class="-column -column--2of4 anim anim--tr js-lazy-anim">
                 <button class="btn btn--light js-contact-submit">

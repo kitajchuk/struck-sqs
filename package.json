@@ -19,7 +19,8 @@
     "url": "ssh://git@bitbucket.org:kitajchuk/struck-sqs.git"
   },
   "dependencies": {
-    "@squarespace/core": "^1.1.0"
+    "@squarespace/core": "^1.1.0",
+    "request-promise": "^4.2.2"
   },
   "devDependencies": {
     "@squarespace/toolbelt": "^0.8.4",
@@ -58,7 +59,7 @@
     "properjs-template": "~0.2",
     "properjs-throttle": "^0.3.0",
     "properjs-tween": "~0.2",
-    "request": "^2.83.0",
+    "request": "^2.85.0",
     "sass-loader": "^6.0.2",
     "svg-inline-loader": "^0.8.0",
     "webpack": "^2.2.1"
