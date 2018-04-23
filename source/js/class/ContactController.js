@@ -108,7 +108,22 @@ class ContactController {
     gather () {
         this.data = {};
         this.fields.forEach(( el ) => {
-            this.data[ el.name ] = el.value;
+            if ( el.name === "phone-yui_3_17_2_1_1513626979285_43483" ) {
+                // Sanitize all non-digit characters from the value
+                // EG: (555) 555-5555 becomes 5555555555
+                const phone = el.value.replace( /\D/g, "" );
+
+                // This will handle US phone numbers fairly well...
+                this.data[ el.name ] = [
+                    phone.slice( 0, phone.length - 10 ),
+                    phone.slice( phone.length - 10, phone.length - 7 ),
+                    phone.slice( phone.length - 7, phone.length - 4 ),
+                    phone.slice( phone.length - 4, phone.length )
+                ];
+
+            } else {
+                this.data[ el.name ] = el.value;
+            }
         });
     }
 
@@ -163,15 +178,20 @@ class ContactController {
 
 
     pipedrive () {
-        $.ajax({
-            url: "https://hook.io/struck/pipedrive",
-            method: "GET",
-            dataType: "json",
-            data: this.data
+        if ( this.data[ "select-yui_3_17_2_1_1523901252791_11879" ] === "New Business" ) {
+            $.ajax({
+                url: "https://hook.io/struck/pipedrive",
+                method: "GET",
+                dataType: "json",
+                data: this.data
 
-        }).then(( json ) => {
+            }).then(() => {
+                this.clear();
+            });
+
+        } else {
             this.clear();
-        });
+        }
     }
 
 
