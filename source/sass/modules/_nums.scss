@@ -53,10 +53,6 @@
     }
 
     .page__stats & {
-        > .sqs-layout {
-            padding: 0 ($padding-1 / 2);
-        }
-
         h1 {
             font-size: $h1-size;
             margin-bottom: 20px;
@@ -97,29 +93,23 @@
 }
 .nums__item--lab {
     position: relative;
+    display: flex;
+    align-items: flex-start;
+
+    .page__details & {
+        @include respond( $tablet-breakpoint-small ) {
+            max-width: 33.333333%;
+        }
+    }
+
+    .sqs-layout {
+        display: inline-block;
+    }
 
     &:before {
         content: attr( data-num );
         display: inline-block;
-        left: 0;
-        padding-right: 2vw;
-        position: absolute;
-        top: 0;
-        transform: translateX( -3vw );
+        padding-right: 1vw;
         @include m();
-
-        @include respond-min( $mobile-breakpoint ) {
-            font-size: $m-size-2;
-            transform: translateX( 20px );
-        };
-
-        @include respond-min( $desktop-breakpoint ) {
-            font-size: $m-size-3;
-        }
-
-        .page__stats & {
-            top: 10px;
-            transform: none;
-        }
     }
 }

@@ -54,6 +54,14 @@
         padding-left: $mobile-padding;
         padding-right: $mobile-padding;
     }
+
+    // Normalize contained <wrap>'s for mobile
+    > .-wrap {
+        @include respond( $mobile-breakpoint ) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }
 .-wraph {
     padding-left: $padding-1 / 2;
@@ -64,6 +72,14 @@
 
     @include respond( $mobile-breakpoint ) {
         padding-left: $mobile-padding;
+    }
+
+    // Normalize contained <wrap>'s for mobile
+    > .-wrapl {
+        @include respond( $mobile-breakpoint ) {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 .-wrapr {

@@ -39,15 +39,41 @@
     font-size: $p-size;
     line-height: $p-line;
     @include font-family-regular();
+
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $p-size-2;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $p-size-3;
+    }
+
+    i,
+    em {
+        @include em();
+        }
+    b,
+    strong {
+        @include font-family-bold();
+        }
 }
 @mixin m() {
     font-size: $m-size;
     letter-spacing: $m-kern;
     line-height: $m-line;
     @include font-family-bold();
+
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $m-size-2;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $m-size-3;
+    }
 }
 @mixin li() {
     @include p();
+    margin-left: 15px;
 }
 @mixin ol-li() {
     list-style: decimal;

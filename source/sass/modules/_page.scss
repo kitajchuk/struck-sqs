@@ -188,6 +188,12 @@
             padding-top: 0;
         }
     }
+    .-wrap {
+        @include respond( $mobile-breakpoint ) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }
 .page__intro {
     & + .page__details {

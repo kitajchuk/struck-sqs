@@ -20,6 +20,12 @@
     padding: 0 $padding-1;
     position: relative;
     width: 15vw;
+    display: flex;
+    align-items: flex-start;
+
+    .sqs-layout {
+        display: inline-block;
+    }
 
     @include respond( $mobile-breakpoint ) {
         width: 100%;
@@ -32,12 +38,8 @@
     }
 }
 .attrs__num {
-    position: absolute;
-    left: 4vw;
-    top: 10px;
-
-    @include respond( $mobile-breakpoint ) {
-        left: 2vw;
-        top: 7px;
-    }
+    padding-right: 10px;
+    padding-top: 5px;
+    display: inline-block;
+    margin-left: -24px;
 }

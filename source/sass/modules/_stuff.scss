@@ -3,34 +3,33 @@
 *******************************************************************************/
 .cols {
     margin: 0 (-$padding-1 / 2);
+
+    @include respond( $mobile-breakpoint-navi ) {
+        margin: 0;
     }
+}
 .cols__col {
     padding: 0 ($padding-1 / 2);
     width: 33.333333%;
 
-    .cols--numeric & {
-        &:before {
-            @include p();
-            @include font-family-bold();
-            content: attr( data-num );
-            position: absolute;
-            padding-top: 31px;
-            transform: translateX( -20px );
-
-            @include respond-min( $mobile-breakpoint ) {
-                font-size: $p-size-2;
-            };
-
-            @include respond-min( $desktop-breakpoint ) {
-                font-size: $p-size-3;
-            }
-        }
-    }
-
     @include respond( $mobile-breakpoint-navi ) {
         margin-bottom: $mobile-padding;
         max-width: 100%;
+        padding: 0;
         width: 100%;
+    }
+}
+.cols__num {
+    @include font-family-bold();
+    display: inline-block;
+    padding-right: 10px;
+}
+.cols__wrap {
+    display: flex;
+    align-items: flex-start;
+
+    .sqs-layout {
+        display: inline-block;
     }
 }
 

@@ -13,37 +13,11 @@
     @include respond-min( $desktop-breakpoint ) {
         font-size: $p-size-3;
     }
-
-    i,
-    em {
-        @include em();
-        }
-    b,
-    strong {
-        @include font-family-bold();
-        }
 }
 .li,
 .cms li,
 .sqs-block li {
     @include li();
-
-    @include respond-min( $mobile-breakpoint ) {
-        font-size: $p-size-2;
-    };
-
-    @include respond-min( $desktop-breakpoint ) {
-        font-size: $p-size-3;
-    }
-
-    i,
-    em {
-        @include em();
-        }
-    b,
-    strong {
-        @include font-family-bold();
-        }
 }
 .ol .li,
 .cms ol li,
@@ -60,14 +34,6 @@
 .footer .sqs-block p,
 .stats__label p {
     @include m();
-
-    @include respond-min( $mobile-breakpoint ) {
-        font-size: $m-size-2;
-    };
-
-    @include respond-min( $desktop-breakpoint ) {
-        font-size: $m-size-3;
-    }
 }
 .mp,
 .mp p {
