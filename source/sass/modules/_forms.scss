@@ -23,6 +23,8 @@
 
     @include respond( $mobile-breakpoint-navi ) {
         margin-top: 0;
+        max-width: 100%;
+        width: 100%;
     }
 }
 .inp--sel-wrap {
@@ -30,6 +32,7 @@
     position: relative;
 
     @include respond( $mobile-breakpoint-navi ) {
+        display: block;
         margin-top: 10px;
     }
 
@@ -44,6 +47,11 @@
         position: absolute;
         top: 50%;
         right: 0;
+    }
+}
+.req {
+    @include respond( $mobile-breakpoint-navi ) {
+        padding-right: 5px;
     }
 }
 .btn {
@@ -138,32 +146,28 @@
     }
 }
 .btns {
-    .btn {
-        @include respond( $mobile-breakpoint-small ) {
-            width: 100%;
-        }
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
-        @include respond( $break-mobile-small ) {
-            width: 75%;
-        }
+    @include respond( $mobile-breakpoint-small ) {
+        justify-content: space-between;
     }
 }
 .btns__btn {
-    @include respond( $mobile-breakpoint-small ) {
-        width: 50%;
-    }
-
-    @include respond( $break-mobile-small ) {
+    @include respond( 340px ) {
         display: block;
         width: 100%;
     }
 
     & + .btns__btn {
-        @include respond-min( $mobile-breakpoint-small ) {
-            margin-left: $padding-1 / 2;
+        margin-left: $padding-1 / 2;
+
+        @include respond( $mobile-breakpoint-small ) {
+            margin-left: 0;
         }
 
-        @include respond( $break-mobile-small ) {
+        @include respond( 340px ) {
             margin-top: 20px;
         }
     }
