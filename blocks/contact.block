@@ -24,7 +24,7 @@
             <input class="inp js-contact-field -bump3" type="text" name="email-yui_3_17_2_1_1513626979285_25400" placeholder="*Email" />
         </div>
         <div class="anim anim--tr js-lazy-anim">
-            <input class="inp js-contact-field -bump3" type="text" name="phone-yui_3_17_2_1_1513626979285_43483" placeholder="*Phone: 123-456-7890" />
+            <input class="inp js-contact-field -bump3" type="text" name="phone-yui_3_17_2_1_1513626979285_43483" placeholder="*Phone: ###-###-####" />
         </div>
         <div class="anim anim--tr js-lazy-anim">
             <textarea class="inp inp--txt js-contact-field -bump3" name="textarea-yui_3_17_2_17_1513626979285_3714" placeholder="*Message"></textarea>

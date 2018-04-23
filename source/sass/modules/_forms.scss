@@ -20,10 +20,18 @@
 .inp--sel {
     max-width: 250px;
     width: 250px;
+
+    @include respond( $mobile-breakpoint-navi ) {
+        margin-top: 0;
     }
+}
 .inp--sel-wrap {
     display: inline-block;
     position: relative;
+
+    @include respond( $mobile-breakpoint-navi ) {
+        margin-top: 10px;
+    }
 
     &:after {
         content: "";
