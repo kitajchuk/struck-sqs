@@ -1,5 +1,5 @@
 import * as core from "../core";
-import Controller from "properjs-controller";
+import ScrollController from "properjs-scrollcontroller";
 
 
 /**
@@ -11,13 +11,12 @@ import Controller from "properjs-controller";
  * @classdesc Handle fullbleed cover image moments.
  *
  */
-class CoverController extends Controller {
+class CoverController {
     constructor ( elements ) {
-        super();
-
         this.elements = elements;
         this.isCoverActive = false;
         this.isScrollActive = false;
+        this.activeCoverData = null;
 
         this.start();
     }
@@ -32,42 +31,64 @@ class CoverController extends Controller {
      *
      */
     start () {
-        // Call on parent cycle
-        this.go(() => {
-            let isCover = false;
-            let isScroll = false;
+        this.scroller = new ScrollController();
+        this.scroller.on( "scroll", () => {
+            this.scrollHandler();
+        });
 
-            this.elements.forEach(( el, i ) => {
-                const bounds = el.getBoundingClientRect();
-                const scroll = this.elements.eq( i ).is( ".js-cover-scroll" );
+        this.scrollHandler();
+    }
 
-                if ( bounds.top <= 0 && bounds.bottom > 0 && !scroll ) {
-                    isCover = true;
-                }
 
-                if ( scroll ) {
-                    isScroll = (bounds.bottom >= window.innerHeight);
-                }
-            });
+    scrollHandler () {
+        const scrollY = this.scroller.getScrollY();
+        let isCover = false;
+        let isScroll = false;
+        let data = null;
 
-            if ( isCover && !this.isCoverActive ) {
-                this.isCoverActive = true;
-                core.dom.html.addClass( "is-cover-view" );
+        this.elements.forEach(( el, i ) => {
+            const bounds = el.getBoundingClientRect();
+            const cover = this.elements.eq( i );
+            const scroll = cover.is( ".js-cover-scroll" );
+            const overScroll = (scrollY < 0 && Math.abs( scrollY ) === Math.abs( bounds.top ));
 
-            } else if ( !isCover && this.isCoverActive ) {
-                this.isCoverActive = false;
-                core.dom.html.removeClass( "is-cover-view" );
+            if ( (overScroll || (bounds.top <= 0 && bounds.bottom > 0)) && !scroll ) {
+                isCover = true;
+                data = cover.data();
             }
 
-            if ( isScroll && !this.isScrollActive ) {
-                this.isScrollActive = true;
-                core.dom.html.addClass( "is-page-scroll" );
-
-            } else if ( !isScroll && this.isScrollActive ) {
-                this.isScrollActive = false;
-                core.dom.html.removeClass( "is-page-scroll" );
+            if ( scroll ) {
+                isScroll = (bounds.bottom >= window.innerHeight);
             }
         });
+
+        if ( isCover && !this.isCoverActive ) {
+            this.isCoverActive = true;
+            core.dom.html.addClass( "is-cover-view" );
+
+            if ( data.cover ) {
+                this.activeCoverData = data.cover;
+                core.dom.html.addClass( `is-cover-view--${this.activeCoverData}` );
+            }
+
+        } else if ( !isCover && this.isCoverActive ) {
+            this.isCoverActive = false;
+            core.dom.html.removeClass( "is-cover-view" );
+
+            if ( this.activeCoverData ) {
+                core.dom.html.removeClass( `is-cover-view--${this.activeCoverData}` );
+                this.activeCoverData = null;
+            }
+        }
+
+        if ( isScroll && !this.isScrollActive ) {
+            this.isScrollActive = true;
+            core.dom.html.addClass( "is-page-scroll" );
+
+        } else if ( !isScroll && this.isScrollActive ) {
+            this.isScrollActive = false;
+            core.dom.html.removeClass( "is-page-scroll" );
+        }
     }
 
 
@@ -81,7 +102,13 @@ class CoverController extends Controller {
      */
     destroy () {
         core.dom.html.removeClass( "is-cover-view is-page-scroll" );
-        this.stop();
+
+        if ( this.activeCoverData ) {
+            core.dom.html.removeClass( `is-cover-view--${this.activeCoverData}` );
+        }
+
+        this.scroller.destroy();
+        this.scroller = null;
     }
 }
 

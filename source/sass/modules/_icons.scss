@@ -38,6 +38,10 @@
             @include state( "cover", "view" ) {
                 background-color: $black;
             }
+
+            @include state( "cover", "view--splash" ) {
+                background-color: $white !important;
+            }
         }
 
         &:before {

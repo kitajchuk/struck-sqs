@@ -1,8 +1,8 @@
 <div class="page__cover__scroll js-cover-scroll">
-    <div class="page__cover cover cover--casestudy js-cover -cover js-lazy-image" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}">
+    <div class="page__cover cover cover--casestudy js-cover -cover js-lazy-image" data-cover="splash" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}">
         <div class="cover__overlay"></div>
         <div class="-wrap -pagepad">
-            <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
+            <div class="m m--bump -caps -light anim anim--tr js-lazy-anim">
                 <squarespace:block-field id="module-casestudy-{item.id}-covermeta" columns="12" />
             </div>
             <div class="h1 -mast -light anim anim--tr js-lazy-anim">
@@ -125,7 +125,7 @@
     </div>
 </div>
 {.if item.customContent.hasStats}
-    <div class="page__stats cover cover--auto js-cover -wrap -exp">
+    <div class="page__stats cover cover--auto js-cover -wrap -exp js-hitme">
         <div class="nums -light -wraph">
             <div class="nums__item nums__item--big nums__item--lab anim anim--tr js-lazy-anim" data-num="1.">
                 <squarespace:block-field id="module-casestudy-{item.id}-stats1" columns="12" />
@@ -145,6 +145,14 @@
             <div class="nums__item nums__item--big nums__item--lab anim anim--tr js-lazy-anim" data-num="6.">
                 <squarespace:block-field id="module-casestudy-{item.id}-stats6" columns="12" />
             </div>
+        </div>
+        <div class="page__stats__btn -expt -text--center">
+            <button class="btn btn--light js-hitme-button">
+                <div class="btn__cell">
+                    <div class="btn__one">See more</div>
+                    <div class="btn__two">See more</div>
+                </div>
+            </button>
         </div>
     </div>
 {.end}

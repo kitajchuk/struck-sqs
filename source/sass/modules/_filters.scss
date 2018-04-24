@@ -5,7 +5,8 @@
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    }
+    -webkit-overflow-scrolling: touch;
+}
 .filters__item,
 .filters__label {
     line-height: 1;

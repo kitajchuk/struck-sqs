@@ -32,7 +32,7 @@ export default ( json, data ) => {
                 <div class="h4 -fmedium">${item.customContent.relatedBlurb}</div>
                 <div class="related__link m -color -plusline -bump">+ <span>${data.cta}</span></div>
             </a>
-            <a class="related__img__link -column">
+            <a class="related__img__link -column js-gtm-event" data-ec="site interaction" data-ea="${eventAction}" data-el="Related items: ${item.title}" href="${item.fullUrl}">
                 <img class="image js-lazy-image" data-img-src="${image.assetUrl}" />
             </a>
         `;

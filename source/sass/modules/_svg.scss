@@ -13,6 +13,10 @@
         @include state( "cover", "view" ) {
             fill: $red;
         }
+
+        @include state( "cover", "view--splash" ) {
+            fill: $white;
+        }
     }
 }
 .-svg--medium-logo {

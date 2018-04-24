@@ -37,6 +37,10 @@
         padding-left: $mobile-padding;
         padding-right: $mobile-padding;
         padding-top: $mobile-padding;
+
+        @include state( "cover", "view--splash" ) {
+            background-color: transparent !important;
+        }
     }
 }
 .header__logo {

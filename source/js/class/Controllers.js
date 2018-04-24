@@ -11,6 +11,7 @@ import TogglesController from "./TogglesController";
 import FSMediaController from "./FSMediaController";
 import AnimateController from "./AnimateController";
 import ScrollController from "./ScrollController";
+import HitmeController from "./HitmeController";
 
 
 /**
@@ -73,6 +74,7 @@ class Controllers {
         this.push( "social", core.dom.body.find( core.config.socialSelector ), SocialController, true );
         this.push( "jobsboard", core.dom.body.find( core.config.jobsboardSelector ), JobsboardController, true );
         this.push( "scrolls", core.dom.body, ScrollController, true );
+        this.push( "hitme", core.dom.body.find( ".js-hitme" ), HitmeController, true );
 
         this.images = this.element.find( core.config.lazyImageSelector );
         this.imageController = new ImageController( this.images );

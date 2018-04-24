@@ -62,6 +62,12 @@
             padding-right: 0;
         }
     }
+    > .-wraph {
+        @include respond( $mobile-breakpoint-navi ) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }
 .-wraph {
     padding-left: $padding-1 / 2;

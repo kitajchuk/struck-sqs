@@ -28,6 +28,21 @@
     @include respond( $tablet-breakpoint ) {
         width: 50%;
     }
+
+    &:nth-child( 4 ),
+    &:nth-child( 5 ),
+    &:nth-child( 6 ) {
+        .page__stats & {
+            @include respond( $mobile-breakpoint-navi ) {
+                display: none;
+            }
+        }
+        .page__stats.is-hit & {
+            @include respond( $mobile-breakpoint-navi ) {
+                display: flex;
+            }
+        }
+    }
 }
 .nums__item {
     @include respond( $mobile-breakpoint-navi ) {
@@ -99,6 +114,10 @@
     .page__details & {
         @include respond( $tablet-breakpoint-small ) {
             max-width: 33.333333%;
+        }
+
+        @include respond( $mobile-breakpoint-navi ) {
+            max-width: 100%;
         }
     }
 
