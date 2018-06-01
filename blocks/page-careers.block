@@ -16,7 +16,7 @@
                 <div class="anim anim--tr js-lazy-anim">
                     <squarespace:block-field id="page-careers-cta-text-blocks" columns="12" />
                 </div>
-                <div class="m -fregular -bump3 anim anim--tr js-lazy-anim">
+                <div class="p -fregular -bump3 anim anim--tr js-lazy-anim">
                     <div class="-max-txt">
                         <squarespace:block-field id="page-careers-cta-struckis-blocks" columns="12" />
                     </div>
