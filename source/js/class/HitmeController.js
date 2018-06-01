@@ -15,9 +15,15 @@ class Hitme {
     constructor ( element ) {
         this.element = element;
         this.button = this.element.find( ".js-hitme-button" );
-        this.anims = this.element.find( ".js-lazy-anim" );
+        this.items = this.element.find( ".js-hitme-item" );
+        this.empty = this.element.find( ".empty" );
 
-        this.bind();
+        if ( this.empty.length >= (this.items.length / 2) ) {
+            this.element.addClass( "is-hit" );
+
+        } else {
+            this.bind();
+        }
     }
 
 
