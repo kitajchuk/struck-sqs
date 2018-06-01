@@ -72,6 +72,13 @@ body.sqs-edit-mode .sqs-layout[data-type="block-field"].empty {
         width: 30px !important;
     }
 }
+#module-project-5b04aa75758d46cab82df543-images {
+    .sqs-gallery-controls .previous,
+    .sqs-gallery-controls .next {
+        border-color: $black !important;
+        color: $black !important;
+    }
+}
 .sqs-gallery-controls .next {
     transform: translateY( -50% ) translateX( -30px ) !important;
 
