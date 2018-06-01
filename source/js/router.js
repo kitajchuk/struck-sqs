@@ -33,6 +33,7 @@ const router = {
         this.bindEmpty();
         this.initPages();
         this.prepPages();
+        this.bindHash();
 
         core.emitter.on( "app--page-teardown", () => this.topper() );
         core.emitter.on( "app--anim-request", () => {
@@ -40,8 +41,13 @@ const router = {
                 this.controllers.animController.handle();
             }
         });
+    },
 
-        core.log( "[Router initialized]", this );
+
+    bindHash () {
+        if ( window.location.hash === "#contact" ) {
+            navi.openContact();
+        }
     },
 
 
@@ -59,7 +65,7 @@ const router = {
 
 
     bindSystemLinks () {
-        const contacts = core.dom.body.find( "[href='#js-controller--contact']" );
+        const contacts = core.dom.body.find( "[href='#contact']" );
 
         contacts.addClass( "js-controller--contact" );
         contacts.forEach(( el, i ) => {
