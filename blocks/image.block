@@ -3,12 +3,16 @@
     {.var @vars item.systemDataVariants}
     {.var @bleed info.stretch}
     {.var @dims item.originalSize}
+    {.var @alt info.altText}
+    {.var @title item.filename}
 {.or}
     {.var @url assetUrl}
     {.var @vars systemDataVariants}
     {.var @bleed @url}
     {.var @dims originalSize}
+    {.var @alt title}
+    {.var @title filename}
 {.end}
 <div class="media anim anim--tr {.if @bleed}media--fs{.or}{.end} js-media js-lazy-anim {.if @bleed}js-cover{.or}-wrap{.end}">
-    <img class="media__node js-media-node image js-lazy-image" data-img-src="{@url}" data-variants="{@vars}" data-original="{@dims}" />
+    <img class="media__node js-media-node image js-lazy-image" data-img-src="{@url}" data-variants="{@vars}" data-original="{@dims}" alt="{@alt}" title="{@title}" />
 </div>
