@@ -65,16 +65,16 @@ class Controllers {
     exec () {
         this.controllers = [];
 
-        this.push( "video", core.dom.body.find( ".sqs-block-video" ), VideoController, true );
-        this.push( "view", core.dom.body.find( core.config.viewSelector ), ViewController, true );
-        this.push( "cover", core.dom.body.find( core.config.coverSelector ), CoverController, true );
-        this.push( "fsmedia", core.dom.body.find( core.config.fsmediaSelector ), FSMediaController, true );
-        this.push( "toggle", core.dom.body.find( core.config.togglesSelector ), TogglesController, true );
-        this.push( "drag", core.dom.body.find( core.config.dragSelector ), DragController, true );
-        this.push( "social", core.dom.body.find( core.config.socialSelector ), SocialController, true );
-        this.push( "jobsboard", core.dom.body.find( core.config.jobsboardSelector ), JobsboardController, true );
-        this.push( "scrolls", core.dom.body, ScrollController, true );
-        this.push( "hitme", core.dom.body.find( ".js-hitme" ), HitmeController, true );
+        this.push( "cover", this.element.find( core.config.coverSelector ), CoverController, true );
+        this.push( "video", this.element.find( ".sqs-block-video" ), VideoController, true );
+        this.push( "view", this.element.find( core.config.viewSelector ), ViewController, true );
+        this.push( "fsmedia", this.element.find( core.config.fsmediaSelector ), FSMediaController, true );
+        this.push( "toggle", this.element.find( core.config.togglesSelector ), TogglesController, true );
+        this.push( "drag", this.element.find( core.config.dragSelector ), DragController, true );
+        this.push( "social", this.element.find( core.config.socialSelector ), SocialController, true );
+        this.push( "jobsboard", this.element.find( core.config.jobsboardSelector ), JobsboardController, true );
+        this.push( "scrolls", this.element, ScrollController, true );
+        this.push( "hitme", this.element.find( ".js-hitme" ), HitmeController, true );
 
         this.images = this.element.find( core.config.lazyImageSelector );
         this.imageController = new ImageController( this.images );
