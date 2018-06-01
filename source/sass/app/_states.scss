@@ -158,6 +158,21 @@
             }
         }
     }
+
+    // Text Links
+    .h2,
+    .cms h2,
+    .sqs-block h2 {
+        a:hover {
+            color: $black;
+
+            &:after {
+                left: 0;
+                right: auto;
+                width: 100%;
+            }
+        }
+    }
 }
 
 .is-touchable {

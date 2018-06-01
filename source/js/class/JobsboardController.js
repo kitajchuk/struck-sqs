@@ -40,7 +40,13 @@ class JobsboardController {
     loadAll () {
         this.all.addClass( "is-active" );
         this.one.addClass( "is-inactive" );
-        this.jobs[ 0 ].innerHTML = viewJobs( this.json.jobs );
+
+        if ( !this.json.jobs.length ) {
+            this.all.addClass( "is-nojobs" );
+
+        } else {
+            this.jobs[ 0 ].innerHTML = viewJobs( this.json.jobs );
+        }
     }
 
 

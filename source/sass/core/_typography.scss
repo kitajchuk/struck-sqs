@@ -28,7 +28,7 @@
 .cms ul li,
 .sqs-block ul li {
     @include ul-li();
-    }
+}
 .m,
 .m p,
 .footer .sqs-block p,
@@ -87,8 +87,31 @@
 .sqs-block h2 {
     @include h2();
 
+    a {
+        color: $red;
+        position: relative;
+        transition: color $base-duration $ease;
+
+        &:after {
+            background-color: $black;
+            bottom: -5px;
+            content: "";
+            height: 3px;
+            position: absolute;
+            right: 0;
+            transition: width $base-duration $ease;
+            width: 0;
+        }
+    }
+
     @include respond-min( $mobile-breakpoint ) {
         font-size: $h2-size-2;
+
+        a {
+            &:after {
+                height: 5px;
+            }
+        }
     };
 
     @include respond-min( $desktop-breakpoint ) {

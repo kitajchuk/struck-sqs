@@ -25,6 +25,12 @@
 }
 
 // Editor
+body.sqs-edit-mode {
+    .jobsboard__all.is-nojobs .page__nojobs {
+        display: block !important;
+        outline: 1px solid $red;
+    }
+}
 body.sqs-edit-mode .sqs-layout[data-type="block-field"].empty {
     min-height: 200px !important;
     min-width: 200px !important;

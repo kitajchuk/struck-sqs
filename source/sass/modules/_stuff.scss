@@ -36,26 +36,6 @@
 
 
 /******************************************************************************
- * Kit of Parts
-*******************************************************************************/
-.kop {
-    .sqs-block-html,
-    .sqs-block-code,
-    .sqs-block-quote {
-        .sqs-block-content {
-            padding-left: $padding-1;
-            padding-right: $padding-1;
-        }
-    }
-    .sqs-block-spacer {
-        background-color: $red4;
-        height: 1px;
-        margin: $expander-1 0;
-        }
-}
-
-
-/******************************************************************************
  * Module — Animated underline
 *******************************************************************************/
 .module-linker {
