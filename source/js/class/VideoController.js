@@ -1,4 +1,3 @@
-// import $ from "properjs-hobo";
 import * as core from "../core";
 import videoView from "../views/video";
 import Analytics from "./Analytics";
@@ -42,13 +41,12 @@ class Video {
             }
         });
 
-        this.element
-            .on( "mouseenter", ".js-embed-playbtn", () => {
-                this.element.addClass( "is-play-button" );
+        this.element.on( "mouseenter", ".js-embed-playbtn", () => {
+            this.element.addClass( "is-play-button" );
 
-            }).on( "mouseleave", ".js-embed-playbtn", () => {
-                this.element.removeClass( "is-play-button" );
-            });
+        }).on( "mouseleave", ".js-embed-playbtn", () => {
+            this.element.removeClass( "is-play-button" );
+        });
     }
 
 
@@ -58,6 +56,7 @@ class Video {
         this.element[ 0 ].innerHTML = videoView( this.data.blockJson, this.data.imageJson );
         this.iframe = this.element.find( ".js-embed-iframe" );
         this.iframe[ 0 ].src = this.iframe.data().src;
+        this.id = this.iframe[ 0 ].id;
 
         core.util.loadImages( this.element.find( core.config.lazyImageSelector ), core.util.noop );
         core.emitter.fire( "app--anim-request" );
@@ -66,9 +65,13 @@ class Video {
 
     postEmbed ( method, value ) {
         const data = {
-            value,
             method
         };
+
+        if ( value ) {
+            data.value = value;
+        }
+
         const message = JSON.stringify( data );
 
         this.iframe[ 0 ].contentWindow.postMessage( message, "*" );
@@ -76,16 +79,17 @@ class Video {
 
 
     onMessage ( e ) {
-        const data = JSON.parse( e.data );
+        const message = JSON.parse( e.data );
         const title = this.data.blockJson.html.match( /title\=\"(.*?)\"/ );
+        const isSelf = (message.player_id && message.player_id === this.id);
 
-        if ( data.event === "ready" ) {
+        if ( message.event === "ready" ) {
             this.postEmbed( "addEventListener", "play" );
             this.postEmbed( "addEventListener", "pause" );
             this.postEmbed( "addEventListener", "finish" );
             this.postEmbed( "addEventListener", "playProgress" );
 
-        } else if ( data.event === "play" ) {
+        } else if ( message.event === "play" && isSelf ) {
             this.isPlaying = true;
             this.element.addClass( "is-embed-playing" );
             this.analytics.doEvent(
@@ -95,7 +99,7 @@ class Video {
                 "FALSE"
             );
 
-        } else if ( data.event === "pause" ) {
+        } else if ( message.event === "pause" && isSelf ) {
             this.isPlaying = false;
             this.analytics.doEvent(
                 "video",
@@ -104,13 +108,13 @@ class Video {
                 "FALSE"
             );
 
-        } else if ( data.event === "finish" ) {
+        } else if ( message.event === "finish" && isSelf ) {
             this.isPlaying = false;
             this.element.removeClass( "is-embed-playing" );
 
-        } else if ( data.event === "playProgress" ) {
+        } else if ( message.event === "playProgress" && isSelf ) {
             this.milestones.forEach(( milestone ) => {
-                const percent = data.data.percent * 100;
+                const percent = message.data.percent * 100;
 
                 if ( percent >= milestone.hit && !milestone.met ) {
                     milestone.met = true;
@@ -127,7 +131,7 @@ class Video {
 
 
     play () {
-        this.postEmbed( "play", "" );
+        this.postEmbed( "play", null );
     }
 
 
