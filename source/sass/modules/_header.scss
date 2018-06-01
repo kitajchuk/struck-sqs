@@ -15,6 +15,11 @@
         pointer-events: none;
     }
 
+    @include state( "page", "controller" ) {
+        opacity: 0;
+        pointer-events: none;
+    }
+
     @include state( "navi", "open" ) {
         transform: translate3d( 50vw, 0, 0 );
 

@@ -185,6 +185,13 @@ const router = {
             core.dom.html.addClass( "is-uid-page" );
         }
 
+        if ( this.view === "case-studies" && this.uid ) {
+            core.dom.html.addClass( "is-cover-view is-cover-view--splash" );
+
+        } else {
+            core.dom.html.removeClass( "is-cover-view is-cover-view--splash" );
+        }
+
         navi.active( this.view );
     },
 
@@ -241,13 +248,13 @@ const router = {
      *
      */
     changePageIn ( /* data */ ) {
-        core.dom.html.removeClass( "is-page-controller" );
         this.execSquarespace();
         this.bindSystemLinks();
         this.execEmptyBlocks();
 
         setTimeout(() => {
             this.controllers.animate();
+            core.dom.html.removeClass( "is-page-controller" );
 
         }, this.pageDuration );
     },
@@ -292,6 +299,7 @@ const router = {
      */
     topper () {
         window.scrollTo( 0, 0 );
+        core.dom.html.removeClass( "is-scroll-down" ).addClass( "is-scroll-up" );
     },
 
 
