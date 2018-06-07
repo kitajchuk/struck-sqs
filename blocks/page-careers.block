@@ -29,7 +29,7 @@
         <div class="page__jobs -wrap -exp">
             <div class="jobs js-jobsboard-jobs -wrap"></div>
         </div>
-        <div class="page__nojobs -wrap -exp">
+        <div class="page__nojobs cms--alt -wrap -exp">
             <squarespace:block-field id="page-careers-nojobs-blocks" columns="12" />
         </div>
     </div>

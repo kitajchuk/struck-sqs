@@ -87,6 +87,15 @@
 .sqs-block h2 {
     @include h2();
 
+    @include respond-min( $mobile-breakpoint ) {
+        font-size: $h2-size-2;
+    };
+
+    @include respond-min( $desktop-breakpoint ) {
+        font-size: $h2-size-3;
+    }
+}
+.cms--alt h2 {
     a {
         color: $red;
         position: relative;
@@ -105,18 +114,12 @@
     }
 
     @include respond-min( $mobile-breakpoint ) {
-        font-size: $h2-size-2;
-
         a {
             &:after {
                 height: 5px;
             }
         }
     };
-
-    @include respond-min( $desktop-breakpoint ) {
-        font-size: $h2-size-3;
-    }
 }
 .h3,
 .cms h3,
