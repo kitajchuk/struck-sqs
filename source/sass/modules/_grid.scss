@@ -58,7 +58,7 @@
     }
 .grid__title {
     left: 0;
-    padding: $mobile-padding 0 0 $mobile-padding;
+    padding: $mobile-padding $mobile-padding 0 $mobile-padding;
     position: absolute;
     top: 0;
     }
@@ -89,6 +89,17 @@
 
     .grid__item--gif & {
         transition: none;
+
+        &:after {
+            background-color: $black;
+            content: "";
+            height: 100%;
+            opacity: 0;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
     }
 }
 .grid__desc {
