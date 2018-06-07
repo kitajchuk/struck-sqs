@@ -230,6 +230,12 @@
 }
 
 .is-contact-open {
+    overflow-y: hidden;
+
+    body {
+        overflow-y: hidden;
+    }
+
     .contact {
         .icon-wrap--ex {
             .icon--ex {

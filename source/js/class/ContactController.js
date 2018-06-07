@@ -52,7 +52,12 @@ class ContactController {
     clear () {
         this.data = {};
         this.fields.removeClass( "is-error" ).forEach(( el ) => {
-            el.value = "";
+            if ( /^select/.exec( el.name ) ) {
+                el.selectedIndex = 0;
+
+            } else {
+                el.value = "";
+            }
         });
     }
 
