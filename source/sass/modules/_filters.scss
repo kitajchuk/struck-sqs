@@ -2,15 +2,20 @@
  * Filters, as in tags for Portfolio and Casestudies
 *******************************************************************************/
 .filters {
-    overflow-x: auto;
-    overflow-y: hidden;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
 }
 .filters__item,
 .filters__label {
     line-height: 1;
     }
+.filters__list {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
 .filters__item {
     span {
         transition: color $base-duration $ease;
