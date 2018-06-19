@@ -26,4 +26,4 @@ build
 
 
 # Stuff
-hook.io
+hook.io/*.js
