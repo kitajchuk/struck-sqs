@@ -6,3 +6,8 @@
 {.or equal? collection.id "5a381da824a6949ae324f655"}
     {@|apply page-casestudies.block}
 {.end}
+
+{# Drafts #}
+{.or equal? collection.id "5b27f65c8a922d3a5839a751"}
+    {@|apply page-drafts.block}
+{.end}

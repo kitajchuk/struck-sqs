@@ -6,9 +6,9 @@
 {.end}
 
 <div class="page__wrap" data-uid="{collection.urlId}">
-    {# Kit of Parts #}
-    {.equal? collection.id "5a380abc41920241ebc31acf"}
-        {@|apply page-kop.block}
+    {# 404 #}
+    {.equal? collection.id "5b19650f562fa719baaa901e"}
+        {@|apply page-404.block}
 
     {# Home #}
     {.or equal? collection.id "5a3d805e24a6946755571ece"}
