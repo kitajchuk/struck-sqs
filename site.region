@@ -64,7 +64,6 @@
         <script type="text/javascript" src="/scripts/greensock.tweenlite.js?v={squarespace.template-revision}"></script>
         <script type="text/javascript" src="/scripts/greensock.draggable.js?v={squarespace.template-revision}"></script>
         <script type="text/javascript" src="/scripts/app.js?v={squarespace.template-revision}"></script>
-        <script></script>
         {squarespace-footers}
     </body>
 </html>
