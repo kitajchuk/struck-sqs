@@ -92,6 +92,7 @@ const navi = {
         }
 
         this.contact.clear();
+        this.contact.reset();
     },
 
 

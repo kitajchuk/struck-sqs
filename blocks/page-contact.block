@@ -1,0 +1,10 @@
+<div class="contact-info -pagepad -wrap -expb">
+    {@content}
+    <div class="-exp">
+        <squarespace:block-field id="module-contact-submit-success" columns="12" />
+    </div>
+    <div class="-exp">
+        <squarespace:block-field id="module-contact-cta-static" columns="12" />
+        <squarespace:block-field id="module-contact-cta-hover" columns="12" />
+    </div>
+</div>

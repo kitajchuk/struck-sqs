@@ -24,7 +24,7 @@ class ContactController {
             this.form = this.element.find( ".js-contact-form" );
             this.fields = this.element.find( ".js-contact-field" );
             this.submit = this.element.find( ".js-contact-submit" );
-            this.reset = this.element.find( ".js-contact-reset" );
+            this.resetBtn = this.element.find( ".js-contact-reset" );
             this.analytics = new Analytics();
             this.data = {};
 
@@ -38,7 +38,7 @@ class ContactController {
 
 
     bind () {
-        this.reset.on( "click", () => {
+        this.resetBtn.on( "click", () => {
             this.clear();
         });
 
@@ -59,6 +59,11 @@ class ContactController {
                 el.value = "";
             }
         });
+    }
+
+
+    reset () {
+        this.element.removeClass( "is-success" );
     }
 
 
@@ -155,6 +160,8 @@ class ContactController {
                 "Contact Form",
                 "FALSE"
             );
+
+            this.element.addClass( "is-success" );
 
             this.pipedrive();
         }

@@ -7,6 +7,9 @@
             </div>
         </div>
     </div>
+    <div class="contact__success js-contact-success">
+        <squarespace:block-field id="module-contact-submit-success" columns="12" />
+    </div>
     <div class="contact__form js-contact-form">
         <div class="h2 -light anim anim--tr js-lazy-anim">Contact</div>
         <div class="m -light -bump3 anim anim--tr js-lazy-anim">\ <a href="tel:{websiteSettings.contactPhoneNumber}" target="_blank">{websiteSettings.contactPhoneNumber}</a></div>
@@ -15,19 +18,19 @@
         <div class="m -light anim anim--tr js-lazy-anim">\ <a href="mailto:jobs@struck.com" target="_blank">jobs@struck.com</a></div>
         <div class="m -color anim anim--tr js-lazy-anim">\ <a href="/locations/">Locations</a></div>
         <div class="anim anim--tr js-lazy-anim">
-            <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_41600" placeholder="*Name" />
+            <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_41600" placeholder="*Name" maxlength="100" />
         </div>
         <div class="anim anim--tr js-lazy-anim">
-            <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_24222" placeholder="*Company" />
+            <input class="inp js-contact-field -bump3" type="text" name="text-yui_3_17_2_1_1513626979285_24222" placeholder="*Company" maxlength="100" />
         </div>
         <div class="anim anim--tr js-lazy-anim">
-            <input class="inp js-contact-field -bump3" type="text" name="email-yui_3_17_2_1_1513626979285_25400" placeholder="*Email" />
+            <input class="inp js-contact-field -bump3" type="email" name="email-yui_3_17_2_1_1513626979285_25400" placeholder="*Email" spellcheck="false" maxlength="100" />
         </div>
         <div class="anim anim--tr js-lazy-anim">
-            <input class="inp js-contact-field -bump3" type="text" name="phone-yui_3_17_2_1_1513626979285_43483" placeholder="*Phone: ###-###-####" />
+            <input class="inp js-contact-field -bump3" type="tel" name="phone-yui_3_17_2_1_1513626979285_43483" placeholder="*Phone: ###-###-####" maxlength="50" />
         </div>
         <div class="anim anim--tr js-lazy-anim">
-            <textarea class="inp inp--txt js-contact-field -bump3" name="textarea-yui_3_17_2_17_1513626979285_3714" placeholder="*Message"></textarea>
+            <textarea class="inp inp--txt js-contact-field -bump3" name="textarea-yui_3_17_2_17_1513626979285_3714" placeholder="*Message" maxlength="250"></textarea>
         </div>
         <div class="anim anim--tr js-lazy-anim">
             <div class="m -light -bump3">*I want to talk about</div>

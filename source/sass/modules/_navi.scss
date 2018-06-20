@@ -80,6 +80,15 @@
         padding-bottom: 110px;
         width: #{"~\"calc( 100vw - 65px )\""};
     }
+
+    &.is-success {
+        .contact__form {
+            display: none;
+        }
+        .contact__success {
+            display: block;
+        }
+    }
 }
 .contact__header {
     left: 0;
@@ -95,4 +104,7 @@
         padding-right: $mobile-padding;
         padding-top: 36px;
     }
+}
+.contact__success {
+    display: none;
 }
