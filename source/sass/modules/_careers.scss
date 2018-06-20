@@ -1,9 +1,6 @@
 /******************************************************************************
  * Careers — Greenhouse.io jobsboard elements
 *******************************************************************************/
-.page__nojobs {
-    display: none;
-}
 .jobsboard {
     .h2 {
         max-width: 100%;
@@ -24,10 +21,7 @@
 .jobsboard__all {
     &.is-nojobs {
         .page__jobs {
-            display: none;
-        }
-        .page__nojobs {
-            display: block;
+            padding-top: 0;
         }
     }
 }
