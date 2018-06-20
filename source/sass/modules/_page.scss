@@ -227,3 +227,13 @@
         }
     }
 }
+
+
+
+// 404
+.pagenotfound {
+    .sqs-block-html p,
+    .sqs-block-horizontalrule {
+        max-width: $mobile-breakpoint;
+    }
+}
