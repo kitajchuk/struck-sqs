@@ -44,6 +44,7 @@
     }
 }
 .onetwo__image {
+    vertical-align: top;
     width: 50%;
 
     @include respond( $mobile-breakpoint ) {
