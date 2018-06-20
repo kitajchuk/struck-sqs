@@ -14,6 +14,24 @@
         font-size: $p-size-3;
     }
 }
+p {
+    a {
+        color: $black;
+        position: relative;
+        transition: color $base-duration $ease;
+
+        &:after {
+            background-color: $black;
+            bottom: -5px;
+            content: "";
+            height: 2px;
+            position: absolute;
+            right: 0;
+            transition: width $base-duration $ease;
+            width: 0;
+        }
+    }
+}
 .li,
 .cms li,
 .sqs-block li {
@@ -94,32 +112,6 @@
     @include respond-min( $desktop-breakpoint ) {
         font-size: $h2-size-3;
     }
-}
-.cms--alt h2 {
-    a {
-        color: $red;
-        position: relative;
-        transition: color $base-duration $ease;
-
-        &:after {
-            background-color: $black;
-            bottom: -5px;
-            content: "";
-            height: 3px;
-            position: absolute;
-            right: 0;
-            transition: width $base-duration $ease;
-            width: 0;
-        }
-    }
-
-    @include respond-min( $mobile-breakpoint ) {
-        a {
-            &:after {
-                height: 5px;
-            }
-        }
-    };
 }
 .h3,
 .cms h3,
