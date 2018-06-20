@@ -1,6 +1,7 @@
 import * as core from "../core";
 import videoView from "../views/video";
 import Analytics from "./Analytics";
+import ResizeController from "properjs-resizecontroller";
 
 
 
@@ -25,6 +26,7 @@ class Video {
             { hit: 75, met: false },
             { hit: 100, met: false }
         ];
+        this.resizer = new ResizeController();
 
         this.bind();
         this.load();
@@ -47,6 +49,18 @@ class Video {
         }).on( "mouseleave", ".js-embed-playbtn", () => {
             this.element.removeClass( "is-play-button" );
         });
+
+        this.resizer.on( "resize", this.onResize.bind( this ) );
+    }
+
+
+    onResize () {
+        if ( this.filter ) {
+            const frameBox = this.iframe[ 0 ].getBoundingClientRect();
+
+            this.filter[ 0 ].style.width = `${frameBox.width}px`;
+            this.filter[ 0 ].style.height = `${frameBox.height}px`;
+        }
     }
 
 
@@ -56,10 +70,12 @@ class Video {
         this.element[ 0 ].innerHTML = videoView( this.data.blockJson, this.data.imageJson );
         this.iframe = this.element.find( ".js-embed-iframe" );
         this.iframe[ 0 ].src = this.iframe.data().src;
+        this.filter = this.element.find( ".js-embed-filter" );
         this.id = this.iframe[ 0 ].id;
 
         core.util.loadImages( this.element.find( core.config.lazyImageSelector ), core.util.noop );
         core.emitter.fire( "app--anim-request" );
+        this.onResize();
     }
 
 
@@ -138,6 +154,12 @@ class Video {
     destroy () {
         if ( this._onMessage ) {
             window.removeEventListener( "message", this._onMessage, false );
+        }
+
+        if ( this.resizer ) {
+            this.resizer.off( "resize" );
+            this.resizer.destroy();
+            this.resizer = null;
         }
     }
 }

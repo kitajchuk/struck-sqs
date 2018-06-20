@@ -14,7 +14,9 @@ export default ( blockJson, imageJson ) => {
             </div>
 
             <div class="embed__poster embed__overlay js-embed-poster js-lazy-image -cover -text--center" data-img-src="${imageJson.src}?format=${imageJson.imageResolution || 'original'}"></div>
-            <div class="embed__poster embed__filter js-embed-poster js-lazy-image -cover" data-img-src="${imageJson.src}?format=${imageJson.imageResolution || 'original'}"></div>
+            <div class="embed__clipper">
+                <div class="embed__filter js-embed-filter js-lazy-image -cover" data-img-src="${imageJson.src}?format=${imageJson.imageResolution || 'original'}"></div>
+            </div>
             <div class="embed__playbtn js-embed-playbtn">
                 <svg class="embed__svg embed__svg--circle"><circle class="js-embed-playbtn-circle" /></svg>
                 <div class="embed__playbtn__label p -fbold -caps -light">Play</div>
