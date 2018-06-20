@@ -1,5 +1,29 @@
 export default ( json/*, data*/ ) => {
-    const items = [].concat( json[ 0 ].items ).concat( json[ 1 ].items );
+    // const items = [].concat( json[ 0 ].items ).concat( json[ 1 ].items );
+    let flip = false;
+    const items = [];
+
+    // Ordering:
+    // CPP
+    // PPC
+    // CPP
+    // ...
+    while ( json[ 0 ].items.length || json[ 1 ].items.length ) {
+        // P | P | C
+        if ( flip ) {
+            items.push( json[ 1 ].items.shift() );
+            items.push( json[ 1 ].items.shift() );
+            items.push( json[ 0 ].items.shift() );
+
+        // C | P | P
+        } else {
+            items.push( json[ 0 ].items.shift() );
+            items.push( json[ 1 ].items.shift() );
+            items.push( json[ 1 ].items.shift() );
+        }
+
+        flip = !flip;
+    }
 
     return items.map(( item ) => {
         const classMod = (item.customContent.customType === "customProject" ? "4up" : "2up");
@@ -12,7 +36,7 @@ export default ( json/*, data*/ ) => {
 
         }).join( "" ) : "";
 
-        return item.starred ? `
+        return `
             <a class="grid__item ${gifClass} grid__item--${classMod} -column js-gtm-event" data-ec="site interaction" data-ea="${eventAction}" data-el="${item.title}" href="${item.fullUrl}">
                 <div class="grid__item-wrap anim anim--tr js-lazy-anim">
                     <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="${item.assetUrl}" data-variants="${item.systemDataVariants}" data-original="${aspectRatio}"></div>
@@ -35,8 +59,7 @@ export default ( json/*, data*/ ) => {
                     </div>
                 </div>
             </a>
-
-        ` : ``;
+        `;
 
     }).join( "" );
 };

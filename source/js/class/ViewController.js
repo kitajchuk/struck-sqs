@@ -36,6 +36,7 @@ class View {
     init () {
         this.load().then( ( json ) => {
             this.json = json;
+            this.mutate();
             this.render();
             this.exec();
             this.done();
@@ -99,6 +100,26 @@ class View {
                 runner();
             }
         });
+    }
+
+
+    /**
+     *
+     * @instance
+     * @description Apply data mutations before rendering
+     * @memberof View
+     * @method mutate
+     *
+     */
+    mutate () {
+        // Grid view should only show featured posts
+        if ( this.uid === "grid" ) {
+            this.json.forEach(( obj, i ) => {
+                this.json[ i ].items = this.json[ i ].items.filter(( itm ) => {
+                    return itm.starred;
+                });
+            });
+        }
     }
 
 
