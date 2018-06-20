@@ -44,3 +44,20 @@ $delay: 40;
         }
     }
 }
+.intro__nojs {
+    color: $white;
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate3d( -50%, -50%, 0 );
+
+    .nojs & {
+        display: block;
+    }
+
+    .sqs-block-horizontalrule hr {
+        background-color: $white;
+        color: $white;
+    }
+}

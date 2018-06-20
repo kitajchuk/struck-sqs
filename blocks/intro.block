@@ -3,5 +3,8 @@
         <div class="intro__logo js-intro-logo">
             {@|apply svg-lovefightadapt.block}
         </div>
+        <div class="intro__nojs">
+            <squarespace:block-field id="module-nojs" columns="12" />
+        </div>
     </div>
 </div>

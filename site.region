@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="nojs">
     <head>
         {## Google Tag Manager ##}
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -8,6 +8,9 @@
         '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-MBNT9L5');</script>
         {## End Google Tag Manager ##}
+        {## No-JS handling ##}
+        <script>document.documentElement.className = ""; // Removes the `.nojs` class from <html></script>
+        {## End No-JS handling ##}
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="apple-touch-icon" sizes="57x57" href="/assets/touch/apple-touch-icon-57x57.png?v={squarespace.template-revision}" />

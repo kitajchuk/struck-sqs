@@ -10,6 +10,10 @@
     {.equal? collection.id "5b19650f562fa719baaa901e"}
         {@|apply page-404.block}
 
+    {# No JS #}
+    {.or equal? collection.id "5b2ab4f46d2a736bcc498273"}
+        {@|apply page-nojs.block}
+
     {# Home #}
     {.or equal? collection.id "5a3d805e24a6946755571ece"}
         {@|apply page-home.block}
