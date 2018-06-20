@@ -18,9 +18,15 @@ export default ( blockJson, imageJson ) => {
                 <div class="embed__filter js-embed-filter js-lazy-image -cover" data-img-src="${imageJson.src}?format=${imageJson.imageResolution || 'original'}"></div>
             </div>
             <div class="embed__playbtn js-embed-playbtn">
-                <svg class="embed__svg embed__svg--circle"><circle class="js-embed-playbtn-circle" /></svg>
+                <svg class="embed__svg embed__svg--circle">
+                    <circle class="c1 js-embed-playbtn-circle" r="60px" cx="60px" cy="60px" />
+                    <circle class="c2 js-embed-playbtn-circle" r="50px" cx="50px" cy="50px" />
+                    <circle class="c3 js-embed-playbtn-circle" r="32px" cx="32px" cy="32px" />
+                </svg>
                 <div class="embed__playbtn__label p -fbold -caps -light">Play</div>
-                <svg class="embed__svg embed__svg--polygon"><polygon points="0 0 0 18 15 9 0 0"></polygon></svg>
+                <svg class="embed__svg embed__svg--polygon">
+                    <polygon points="0 0 0 18 15 9 0 0"></polygon>
+                </svg>
             </div>
         </div>
     `;

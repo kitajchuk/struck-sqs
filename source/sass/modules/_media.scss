@@ -53,13 +53,18 @@
 }
 .embed__clipper {
     cursor: pointer;
-    height: 6.875vw;
+    height: 120px;
     left: 50%;
     overflow: hidden;
     position: absolute;
     top: 50%;
     transform: translate3d( -50%, -50%, 0 );
-    width: 6.875vw;
+    width: 120px;
+
+    @include respond( $break-laptop-medium ) {
+        height: 100px;
+        width: 100px;
+    }
 
     @include respond( $tablet-breakpoint ) {
         height: 64px;
@@ -73,12 +78,27 @@
 }
 .embed__playbtn {
     cursor: pointer;
-    height: 6.875vw;
+    height: 120px;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate3d( -50%, -50%, 0 );
-    width: 6.875vw;
+    width: 120px;
+
+    @include respond( $break-laptop-medium ) {
+        height: 100px;
+        width: 100px;
+    }
+
+    @include respond( $tablet-breakpoint ) {
+        height: 64px;
+        width: 64px;
+    }
+
+    @include state( "embed", "playing" ) {
+        opacity: 0;
+        pointer-events: none;
+    }
 
     .embed__svg {
         overflow: visible;
@@ -111,9 +131,6 @@
         stroke-width: 2;
         stroke-dashoffset: 0;
         stroke-dasharray: 1000;
-        r: 3.4375vw;
-        cx: 3.4375vw;
-        cy: 3.4375vw;
         fill: none;
         transform-origin: center;
         transform: rotate( 180deg );
@@ -122,21 +139,31 @@
             animation: circle 1500ms 1;
         }
 
-        @include respond( $tablet-breakpoint ) {
-            r: 32px;
-            cx: 32px;
-            cy: 32px;
+        &.c1 {
+            display: block;
+
+            @include respond( $break-laptop-medium ) {
+                display: none;
+            }
         }
-    }
+        &.c2 {
+            display: none;
 
-    @include state( "embed", "playing" ) {
-        opacity: 0;
-        pointer-events: none;
-    }
+            @include respond( $break-laptop-medium ) {
+                display: block;
+            }
 
-    @include respond( $tablet-breakpoint ) {
-        height: 64px;
-        width: 64px;
+            @include respond( $tablet-breakpoint ) {
+                display: none;
+            }
+        }
+        &.c3 {
+            display: none;
+
+            @include respond( $tablet-breakpoint ) {
+                display: block;
+            }
+        }
     }
 }
 .embed__playbtn__label {
@@ -163,8 +190,12 @@
     position: absolute;
     top: 50%;
     transform: translate3d( -50%, -50%, 0 );
-    clip-path: circle( 3.4375vw at 50% 50% );
+    clip-path: circle( 60px at 50% 50% );
     filter: blur( 6px );
+
+    @include respond( $break-laptop-medium ) {
+        clip-path: circle( 50px at 50% 50% );
+    }
 
     @include respond( $tablet-breakpoint ) {
         clip-path: circle( 32px at 50% 50% );
