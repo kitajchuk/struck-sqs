@@ -64,9 +64,11 @@
  * Module — Animated text hover
 *******************************************************************************/
 .hover-text {
-    h1 {
+    h1, h2, h3 {
         cursor: pointer;
-        }
+        max-width: 100%;
+        @include h1();
+    }
 }
 .hover-text__wrap {
     position: relative;
