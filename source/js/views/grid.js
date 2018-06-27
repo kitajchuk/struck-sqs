@@ -31,6 +31,7 @@ export default ( json/*, data*/ ) => {
         const aspectRatio = (item.customContent.customType === "customProject" ? "415x492" : "850x492");
         const eventAction = (item.customContent.customType === "customProject" ? "portfolio" : "case-studies");
         const gifClass = (item.customContent.animatedGif ? "grid__item--gif" : "");
+        const description = (item.customContent.customType === "customProject" ? "" : item.excerpt);
         const tagsHtml = item.tags ? item.tags.map(( tag ) => {
             return `<div class="filters__item p -light -column">${tag}</div>`;
 
@@ -44,9 +45,7 @@ export default ( json/*, data*/ ) => {
                         ${item.customContent.animatedGif ? `
                             <div class="grid__gif js-lazy-image js-aspect -cover" data-img-src="${item.customContent.animatedGif.assetUrl}" data-variants="${item.customContent.animatedGif.systemDataVariants}" data-original="${aspectRatio}"></div>
                         ` : ``}
-                        <div class="grid__desc cms -light">
-                            ${item.excerpt}
-                        </div>
+                        ${description ? `<div class="grid__desc cms -light">${description}</div>` : ``}
                     </div>
                     <div class="grid__info">
                         <div class="grid__title m -light -caps">${item.title}</div>
