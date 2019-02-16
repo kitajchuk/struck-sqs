@@ -49,15 +49,12 @@ class SocialController {
 
 
     loadIG () {
-        this.igID = "19123138";
-        this.igToken = "19123138.dd20812.84764c7c6cb44d15a805837b76fdc017";
-
         $.ajax({
-            url: `https://api.instagram.com/v1/users/${this.igID}/media/recent`,
+            url: `/struck-instagram/`,
             method: "GET",
-            dataType: "jsonp",
+            dataType: "json",
             data: {
-                access_token: this.igToken
+                format: "json"
             }
 
         }).then(( json ) => {
