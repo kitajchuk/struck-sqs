@@ -2,7 +2,7 @@ export default ( blockJson, imageJson ) => {
     const url = blockJson.url.replace( /\?.*?$/, "" );
     const path = "https://player.vimeo.com/video/";
     const id = url.split( "/" ).pop();
-    const qrs = `?&api=1&loop=0&player_id=${id}`;
+    const qrs = `?&wmode=opaque&api=1&loop=0&autoplay=1&player_id=${id}`;
     const source = `${path}${id}${qrs}`;
     const aspect = (blockJson.height || 9) / (blockJson.width || 16) * 100;
     const original = `${(blockJson.width || 16)}x${(blockJson.height || 9)}`;

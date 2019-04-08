@@ -5,6 +5,71 @@ import ResizeController from "properjs-resizecontroller";
 
 
 
+// Local public instances hash ( resets )
+let _instances = {};
+const _onMessageInstance = ( message, instance ) => {
+    const title = instance.data.blockJson.html.match( /title\=\"(.*?)\"/ );
+    const isSelf = (message.player_id && message.player_id === instance.id);
+
+    if ( message.event === "ready" && isSelf ) {
+        instance.postEmbed( "addEventListener", "play" );
+        instance.postEmbed( "addEventListener", "pause" );
+        instance.postEmbed( "addEventListener", "finish" );
+        instance.postEmbed( "addEventListener", "playProgress" );
+
+    } else if ( message.event === "play" && isSelf ) {
+        instance.isPlaying = true;
+        instance.element.addClass( "is-embed-playing" );
+        instance.analytics.doEvent(
+            "video",
+            "play",
+            (title ? title[ 1 ] : "TitleNotParsed"),
+            "FALSE"
+        );
+
+    } else if ( message.event === "pause" && isSelf ) {
+        instance.isPlaying = false;
+        instance.analytics.doEvent(
+            "video",
+            "pause",
+            (title ? title[ 1 ] : "TitleNotParsed"),
+            "FALSE"
+        );
+
+    } else if ( message.event === "finish" && isSelf ) {
+        instance.isPlaying = false;
+        instance.element.removeClass( "is-embed-playing" );
+
+    } else if ( message.event === "playProgress" && isSelf ) {
+        instance.milestones.forEach(( milestone ) => {
+            const percent = message.data.percent * 100;
+
+            if ( percent >= milestone.hit && !milestone.met ) {
+                milestone.met = true;
+                instance.analytics.doEvent(
+                    "video",
+                    `${milestone.hit}%`,
+                    (title ? title[ 1 ] : "TitleNotParsed"),
+                    "FALSE"
+                );
+            }
+        });
+    }
+};
+
+// Local public window.onmessage binding ( once )
+window.addEventListener( "message", ( e ) => {
+    const message = JSON.parse( e.data );
+    const instance = _instances[ message.player_id ];
+
+    if ( instance ) {
+        _onMessageInstance( message, instance );
+    }
+
+}, false );
+
+
+
 /**
  *
  * @public
@@ -30,13 +95,32 @@ class Video {
 
         this.bind();
         this.load();
+        this.push();
+    }
+
+
+    push () {
+        if ( !_instances[ this.id ] ) {
+            _instances[ this.id ] = this;
+        }
+    }
+
+
+    load () {
+        this.image = this.element.find( "img" );
+        this.data.imageJson = this.image.data();
+        this.element[ 0 ].innerHTML = videoView( this.data.blockJson, this.data.imageJson );
+        this.iframe = this.element.find( ".js-embed-iframe" );
+        this.filter = this.element.find( ".js-embed-filter" );
+        this.id = this.iframe[ 0 ].id;
+
+        core.util.loadImages( this.element.find( core.config.lazyImageSelector ), core.util.noop );
+        core.emitter.fire( "app--anim-request" );
+        this.onResize();
     }
 
 
     bind () {
-        this._onMessage = this.onMessage.bind( this );
-        window.addEventListener( "message", this._onMessage, false );
-
         this.element.on( "click", ".js-embed-playbtn", () => {
             if ( !this.isPlaying ) {
                 this.play();
@@ -64,21 +148,6 @@ class Video {
     }
 
 
-    load () {
-        this.image = this.element.find( "img" );
-        this.data.imageJson = this.image.data();
-        this.element[ 0 ].innerHTML = videoView( this.data.blockJson, this.data.imageJson );
-        this.iframe = this.element.find( ".js-embed-iframe" );
-        this.iframe[ 0 ].src = this.iframe.data().src;
-        this.filter = this.element.find( ".js-embed-filter" );
-        this.id = this.iframe[ 0 ].id;
-
-        core.util.loadImages( this.element.find( core.config.lazyImageSelector ), core.util.noop );
-        core.emitter.fire( "app--anim-request" );
-        this.onResize();
-    }
-
-
     postEmbed ( method, value ) {
         const data = {
             method
@@ -94,68 +163,15 @@ class Video {
     }
 
 
-    onMessage ( e ) {
-        const message = JSON.parse( e.data );
-        const title = this.data.blockJson.html.match( /title\=\"(.*?)\"/ );
-        const isSelf = (message.player_id && message.player_id === this.id);
-
-        if ( message.event === "ready" ) {
-            this.postEmbed( "addEventListener", "play" );
-            this.postEmbed( "addEventListener", "pause" );
-            this.postEmbed( "addEventListener", "finish" );
-            this.postEmbed( "addEventListener", "playProgress" );
-
-        } else if ( message.event === "play" && isSelf ) {
-            this.isPlaying = true;
-            this.element.addClass( "is-embed-playing" );
-            this.analytics.doEvent(
-                "video",
-                "play",
-                (title ? title[ 1 ] : "TitleNotParsed"),
-                "FALSE"
-            );
-
-        } else if ( message.event === "pause" && isSelf ) {
-            this.isPlaying = false;
-            this.analytics.doEvent(
-                "video",
-                "pause",
-                (title ? title[ 1 ] : "TitleNotParsed"),
-                "FALSE"
-            );
-
-        } else if ( message.event === "finish" && isSelf ) {
-            this.isPlaying = false;
-            this.element.removeClass( "is-embed-playing" );
-
-        } else if ( message.event === "playProgress" && isSelf ) {
-            this.milestones.forEach(( milestone ) => {
-                const percent = message.data.percent * 100;
-
-                if ( percent >= milestone.hit && !milestone.met ) {
-                    milestone.met = true;
-                    this.analytics.doEvent(
-                        "video",
-                        `${milestone.hit}%`,
-                        (title ? title[ 1 ] : "TitleNotParsed"),
-                        "FALSE"
-                    );
-                }
-            });
-        }
-    }
-
-
     play () {
-        this.postEmbed( "play", null );
+        this.postEmbed( "play", "true" );
+        this.isPlaying = true;
+        this.element.addClass( "is-embed-playing" );
+        this.iframe[ 0 ].src = this.iframe.data().src;
     }
 
 
     destroy () {
-        if ( this._onMessage ) {
-            window.removeEventListener( "message", this._onMessage, false );
-        }
-
         if ( this.resizer ) {
             this.resizer.off( "resize" );
             this.resizer.destroy();
@@ -194,6 +210,9 @@ class VideoController {
         this.instances.forEach(( instance ) => {
             instance.destroy();
         });
+
+        // Reset local public instances
+        _instances = {};
     }
 }
 
