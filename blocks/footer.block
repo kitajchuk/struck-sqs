@@ -7,7 +7,7 @@
             <ul class="footer__social social">
                 {.repeated section website.socialAccounts}
                     <li class="social__li -column">
-                        <a href="{profileUrl}" class="social__a m js-gtm-event" data-ec="navigation" data-ea="footer" data-el="{serviceName}" target="_blank">{serviceName}</a>
+                        <a href="{profileUrl}" class="social__a m js-gtm-event" data-ec="navigation" data-ea="footer" data-el="{screenname}" target="_blank">{screenname}</a>
                     </li>
                 {.end}
             </ul>
