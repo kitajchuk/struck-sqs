@@ -23,7 +23,7 @@
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
-    "@squarespace/toolbelt": "^0.8.8",
+    "@squarespace/toolbelt": "^0.10.3",
     "autoprefixer": "^6.7.6",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
@@ -36,7 +36,7 @@
     "fg-loadjs": "^1.0.0",
     "file-loader": "^0.10.1",
     "hammerjs": "^2.0.8",
-    "node-sass": "^4.5.0",
+    "node-sass": "^4.14.0",
     "on-build-webpack": "^0.1.0",
     "open": "0.0.5",
     "paramalama": "~0.2",
@@ -47,7 +47,7 @@
     "properjs-controller": "~0.2",
     "properjs-debounce": "^0.2.0",
     "properjs-easing": "~0.2",
-    "properjs-hobo": "^0.3.18",
+    "properjs-hobo": "^0.3.26",
     "properjs-imageloader": ">=0.3.1",
     "properjs-lager": "^0.1.2",
     "properjs-mediabox": "~0.3",
