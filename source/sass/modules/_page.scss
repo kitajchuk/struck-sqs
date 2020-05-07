@@ -210,6 +210,16 @@
         }
     }
 }
+.page__intro__info {
+    width: 100%;
+    max-width: 720px;
+
+    .sqs-block-horizontalrule hr {
+        background-color: $grey2;
+        color: $grey2;
+        margin: 60px 0 30px;
+        }
+}
 .page__stats {
     .page__stats__btn {
         display: none;

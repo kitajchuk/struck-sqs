@@ -6,11 +6,13 @@
 <div class="page__intro -expt">
     <div class="-wrap">
         <div class="-wrap">
-            <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
-                <squarespace:block-field id="module-whatwedo-intrometa" columns="12" />
-            </div>
-            <div class="anim anim--tr js-lazy-anim">
-                <squarespace:block-field id="module-whatwedo-introhead" columns="12" />
+            <div class="page__intro__info">
+                <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
+                    <squarespace:block-field id="module-whatwedo-intrometa" columns="12" />
+                </div>
+                <div class="anim anim--tr js-lazy-anim">
+                    <squarespace:block-field id="module-whatwedo-introhead" columns="12" />
+                </div>
             </div>
         </div>
     </div>
