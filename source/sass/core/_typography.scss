@@ -134,33 +134,44 @@ p {
         }
     }
 }
-.quo {}
+.quo {
+    position: relative;
+
+    @include respond( $mobile-breakpoint ) {
+        padding-left: $mobile-padding;
+        padding-right: $mobile-padding;
+    }
+}
 .quo__src {
     color: $red;
-    }
+}
 .quo__txt {
     @include quo();
 
     @include respond-min( $mobile-breakpoint ) {
         font-size: $quo-size-2;
-    };
+    }
 
     @include respond-min( $desktop-breakpoint ) {
         font-size: $quo-size-3;
     }
 
-    &:after {
+    &:before {
         @include font-family-bold();
         color: $red4;
-        content: "\201C \201D";
-        display: block;
+        // content: "\201C \201D";
+        content: "\201C";
+        display: inline-block;
         font-size: $quo-quos;
-        margin-top: 20px;
         line-height: 1;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        transform: translate3d( -100%, 0, 0 );
 
         @include respond-min( $mobile-breakpoint ) {
             font-size: $quo-quos-2;
-        };
+        }
 
         @include respond-min( $desktop-breakpoint ) {
             font-size: $quo-quos-3;
