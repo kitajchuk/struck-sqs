@@ -102,6 +102,11 @@ body.sqs-edit-mode .sqs-layout[data-type="block-field"].empty {
 #module-home-quote {
     padding-bottom: $padding-1;
 }
+#module-home-about-headline {
+    h2 {
+        max-width: 720px;
+    }
+}
 .sqs-gallery-block-stacked .image-wrapper {
     line-height: 0;
     margin: 0;
