@@ -64,7 +64,6 @@
     height: 100vh;
     left: 0;
     overflow-y: auto;
-    padding-bottom: $padding-1;
     position: fixed;
     top: 0;
     transform: translate3d( -100%, 0, 0 );
@@ -89,6 +88,9 @@
             display: block;
         }
     }
+}
+.contact__form {
+    padding-bottom: $padding-1;
 }
 .contact__header {
     left: 0;
