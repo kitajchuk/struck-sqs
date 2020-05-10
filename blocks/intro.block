@@ -1,7 +1,8 @@
 <div class="intro js-intro ghost -wrap -fzero -text--center">
     <div class="ghost__child">
         <div class="intro__logo js-intro-logo">
-            {@|apply svg-lovefightadapt.block}
+            {###@|apply svg-lovefightadapt.block###}
+            {@|apply svg-experienceaffinity.block}
         </div>
         <div class="intro__nojs">
             <squarespace:block-field id="module-nojs" columns="12" />

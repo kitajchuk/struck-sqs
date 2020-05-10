@@ -12,10 +12,18 @@ const intro = {
     exec () {
         this.duration = 350;
         this.delay = 40;
+
+        // lovefightadapt
+        // this.ids = [
+        //     { id: "love", el: core.dom.intro.find( ".love" ) },
+        //     { id: "fight", el: core.dom.intro.find( ".fight" ) },
+        //     { id: "adapt", el: core.dom.intro.find( ".adapt" ) }
+        // ];
+
+        // experienceaffinity
         this.ids = [
-            { id: "love", el: core.dom.intro.find( ".love" ) },
-            { id: "fight", el: core.dom.intro.find( ".fight" ) },
-            { id: "adapt", el: core.dom.intro.find( ".adapt" ) }
+            { id: "experience", el: core.dom.intro.find( ".experience" ) },
+            { id: "affinity", el: core.dom.intro.find( ".affinity" ) }
         ];
 
         return new Promise(( resolve, reject ) => {
@@ -28,7 +36,7 @@ const intro = {
 
     anim () {
         const obj = this.ids.shift();
-        const len = obj.el.find( "path" ).length;
+        const len = obj.el.find( "path, rect, polygon" ).length;
 
         obj.el.addClass( "is-animated" );
 

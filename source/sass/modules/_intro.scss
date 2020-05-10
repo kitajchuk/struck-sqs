@@ -1,5 +1,13 @@
 $delay: 40;
 
+// lovefightadapt
+// $width: 128px;
+// $height: 23px;
+
+// experienceaffinity
+$width: 238px;
+$height: 27px;
+
 
 .intro {
     background-color: $red;
@@ -20,26 +28,36 @@ $delay: 40;
     }
 }
 .intro__logo {
-    width: 128px;
+    width: $width;
 
     svg {
         fill: $white;
         width: 100%;
 
-        path {
-            transition: transform $base-duration $ease;
-            transform: translate3d( 0, 23px, 0 );
+        g {
+            path,
+            rect,
+            polygon {
+                transition: transform $base-duration $ease;
+                transform: translate3d( 0, $height, 0 );
+            }
         }
 
         g.is-animated {
-            path {
+            path,
+            rect,
+            polygon {
                 transform: translate3d( 0, 0, 0 );
             }
         }
 
-        @for $i from 1 through 6 {
-            path:nth-child( #{$i} ) {
-                transition-delay: #{$i * $delay}ms;
+        @for $i from 1 through 10 {
+            g {
+                path:nth-child( #{$i} ),
+                rect:nth-child( #{$i} ),
+                polygon:nth-child( #{$i} ) {
+                    transition-delay: #{$i * $delay}ms;
+                }
             }
         }
     }
