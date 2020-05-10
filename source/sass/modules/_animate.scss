@@ -17,7 +17,7 @@
 .anim--tr {
     opacity: 0;
     transform: translate3d( 0, $padding-1, 0 );
-    transition-property: transform opacity;
+    transition-property: transform, opacity;
 
     &.is-animated {
         opacity: 1;

@@ -83,6 +83,25 @@
         </div>
     </div>
 </div>
+<div class="page__attrs attrs -bgcolor -wrap -exp2 js-cover">
+    <div class="m m--bump -caps -color2 anim anim--tr js-lazy-anim">
+        <squarespace:block-field id="module-whatwedo-attrsmeta" columns="12" />
+    </div>
+    <div class="attrs__group -light -bump">
+        <div class="attrs__attr -column anim anim--tr js-lazy-anim">
+            <div class="m attrs__num">1.</div>
+            <squarespace:block-field id="module-whatwedo-attr1" columns="12" />
+        </div>
+        <div class="attrs__attr -column anim anim--tr js-lazy-anim">
+            <div class="m attrs__num">2.</div>
+            <squarespace:block-field id="module-whatwedo-attr2" columns="12" />
+        </div>
+        <div class="attrs__attr -column anim anim--tr js-lazy-anim">
+            <div class="m attrs__num">3.</div>
+            <squarespace:block-field id="module-whatwedo-attr3" columns="12" />
+        </div>
+    </div>
+</div>
 <div class="page__images">
     <squarespace:block-field id="module-whatwedo-images" columns="12" />
 </div>

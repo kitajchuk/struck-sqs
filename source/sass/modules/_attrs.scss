@@ -31,8 +31,19 @@
         display: inline-block;
     }
 
+    @include respond( $break-ipad-pro-width ) {
+        box-sizing: border-box;
+        width: 50%;
+    }
+
     @include respond( $mobile-breakpoint ) {
         width: 100%;
+    }
+
+    & + .attrs__attr:nth-child( n+3 ) {
+        @include respond( $break-ipad-pro-width ) {
+            margin-top: $padding-1;
+        }
     }
 
     & + .attrs__attr {
