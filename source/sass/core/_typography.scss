@@ -101,6 +101,10 @@ p {
 .cms h3,
 .sqs-block h3 {
     @include h3();
+
+    > strong {
+        @include font-family-bold();
+    }
 }
 .h4,
 .cms h4,

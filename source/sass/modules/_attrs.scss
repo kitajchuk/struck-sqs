@@ -13,27 +13,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 (-$padding-1);
-
-    @include respond( $mobile-breakpoint ) {
-        margin: 0;
-    }
 }
 .attrs__attr {
-    box-sizing: content-box;
-    padding: 0 $padding-1;
     position: relative;
-    width: 15vw;
+    width: 25%;
     display: flex;
     align-items: flex-start;
+    padding-left: 25px;
 
     .sqs-layout {
         display: inline-block;
     }
 
     @include respond( $break-ipad-pro-width ) {
-        box-sizing: border-box;
-        width: 50%;
+        width: 45%;
     }
 
     @include respond( $mobile-breakpoint ) {
@@ -54,7 +47,6 @@
 }
 .attrs__num {
     padding-right: 10px;
-    padding-top: 5px;
     display: inline-block;
     margin-left: -24px;
 }
