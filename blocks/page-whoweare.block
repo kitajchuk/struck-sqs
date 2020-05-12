@@ -13,6 +13,7 @@
         </div>
     </div>
 </div>
+{###
 <div class="page__attrs attrs -bgcolor -wrap -exp2 js-cover">
     <div class="-wrap">
         <div class="m m--bump -caps -color2 anim anim--tr js-lazy-anim">
@@ -31,6 +32,14 @@
                 <div class="m attrs__num">3.</div>
                 <squarespace:block-field id="module-whoweare-attr3" columns="12" />
             </div>
+        </div>
+    </div>
+</div>
+###}
+<div class="page__intro -bgcolor -wrap -exp2 js-cover">
+    <div class="-light -wrap">
+        <div class="onetwo__info">
+            <squarespace:block-field id="module-whoweare-intro" columns="12" />
         </div>
     </div>
 </div>
