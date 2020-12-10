@@ -1,11 +1,11 @@
 <div class="page__grid grid -wrap -exp">
     {.repeated section items}
-        <a class='grid__item {.if customContent.animatedGif}grid__item--gif{.end} grid__item--{.equal? customContent.customType "customProject"}4up{.or}2up{.end} -column js-gtm-event' data-ec="site interaction" data-ea="{collection.urlId}" data-el="{title}" href="{fullUrl}">
+        <a class='grid__item {.if customContent.animatedGif}grid__item--gif{.end} grid__item--{.equal? customContent.customType "customCasestudy"}2up{.or}4up{.end} -column js-gtm-event' data-ec="site interaction" data-ea="{collection.urlId}" data-el="{title}" href="{fullUrl}">
             <div class="grid__item-wrap anim anim--tr js-lazy-anim">
-                <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original='{.equal? customContent.customType "customProject"}415x492{.or}850x492{.end}'></div>
+                <div class="grid__image js-lazy-image js-aspect -cover" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original='{.equal? customContent.customType "customCasestudy"}850x492{.or}415x492{.end}'></div>
                 <div class="grid__hover">
                     {.if customContent.animatedGif}
-                        <div class="grid__gif js-lazy-image js-aspect -cover" data-img-src="{customContent.animatedGif.assetUrl}" data-variants="{customContent.animatedGif.systemDataVariants}" data-original='{.equal? customContent.customType "customProject"}415x492{.or}850x492{.end}'></div>
+                        <div class="grid__gif js-lazy-image js-aspect -cover" data-img-src="{customContent.animatedGif.assetUrl}" data-variants="{customContent.animatedGif.systemDataVariants}" data-original='{.equal? customContent.customType "customCasestudy"}850x492{.or}415x492{.end}'></div>
                     {.end}
                     {.equal? customContent.customType "customCasestudy"}
                         <div class="grid__desc cms -light">
@@ -21,7 +21,7 @@
                         {.end}
                     </div>
                     <div class="grid__cta">
-                        <div class="p -fbold -light">+ <span>View {.equal? customContent.customType "customProject"}Project{.or}Case Study{.end}</span></div>
+                        <div class="p -fbold -light">+ <span>View {.equal? customContent.customType "customProject"}Project{.or equal? customContent.customType "customCasestudy"}Case Study{.or}Post{.end}</span></div>
                     </div>
                 </div>
             </div>
