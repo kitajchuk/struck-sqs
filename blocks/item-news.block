@@ -1,0 +1,28 @@
+{.section item}
+    <div class="page__cover js-cover-scroll -pagepad">
+        <div class="page__mast -wrap">
+            <div class="m m--bump -caps -color anim anim--tr js-lazy-anim">
+                <p>News</p>
+            </div>
+            <div class="anim anim--tr js-lazy-anim">
+                <h1 class="h1">{title}</h1>
+            </div>
+        </div>
+        <div class="page__image -bump3">
+            <div class="sqs-block-image">
+                <div class="media anim anim--tr js-media js-lazy-anim">
+                    <img class="media__node js-media-node image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original="{originalSize}" alt="{title}" title="{title}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page__news -wrap -exp">
+        <div class="cms -max-txt">
+            {body}
+        </div>
+    </div>
+{.end}
+{@|apply module-backtolist.block}
+<div class="page__modules -wrap">
+    {@|apply module-contact.block}
+</div>
