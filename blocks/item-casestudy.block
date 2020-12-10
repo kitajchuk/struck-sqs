@@ -81,12 +81,42 @@
         </div>
     </div>
 </div>
-<div class="page__images">
-    <squarespace:block-field id="module-casestudy-{item.id}-images1" columns="12" />
-</div>
-<div class="page__gallery -wrap -expt anim anim--tr js-lazy-anim">
-    <squarespace:block-field id="module-casestudy-{item.id}-gallery" columns="12" />
-</div>
+{.if item.customContent.bioTech}
+    <div class="page__biotech -wrap">
+        {.repeated section item.customContent.bioTech}
+            <div class="page__biotech__item">
+                <div class="page__biotech__img">
+                    <div class="media anim anim--tr js-media js-lazy-anim">
+                        <img class="media__node js-media-node image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original="{originalSize}" alt="{title}" title="{title}" />
+                    </div>
+                </div>
+                <div class="page__biotech__details -expb -bump4">
+                    <div class="nums -northborder">
+                        <div class="nums__item nums__item--auto m -caps -color -column -vtop anim anim--tr js-lazy-anim">
+                            <squarespace:block-field id="module-casestudy-{item.id}-biotech1-{@index}" columns="12" />
+                        </div>
+                        <div class="nums__item nums__item--auto nums__item--lab p -column -vtop anim anim--tr js-lazy-anim" data-num="i.">
+                            <squarespace:block-field id="module-casestudy-{item.id}-biotech2-{@index}" columns="12" />
+                        </div>
+                        <div class="nums__item nums__item--auto nums__item--lab p -column -vtop anim anim--tr js-lazy-anim" data-num="ii.">
+                            <squarespace:block-field id="module-casestudy-{item.id}-biotech3-{@index}" columns="12" />
+                        </div>
+                        <div class="nums__item nums__item--auto nums__item--lab p -column -vtop anim anim--tr js-lazy-anim" data-num="iii.">
+                            <squarespace:block-field id="module-casestudy-{item.id}-biotech4-{@index}" columns="12" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {.end}
+    </div>
+{.or}
+    <div class="page__images">
+        <squarespace:block-field id="module-casestudy-{item.id}-images1" columns="12" />
+    </div>
+    <div class="page__gallery -wrap -expt anim anim--tr js-lazy-anim">
+        <squarespace:block-field id="module-casestudy-{item.id}-gallery" columns="12" />
+    </div>
+{.end}
 <div class="page__quote -wrap -exp">
     <div class="-rel">
         <div class="-wrap -exp">
